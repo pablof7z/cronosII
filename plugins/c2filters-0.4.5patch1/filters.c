@@ -1041,6 +1041,8 @@ plugin_filters_draw_edit_filter_window(gint edit)
 		headers = g_list_append(headers, "Reply-To:");
 		headers = g_list_append(headers, "Date:");
 		headers = g_list_append(headers, "Subject:");
+		headers = g_list_append(headers, "X-Loop:");
+		headers = 
 		headers = g_list_append(headers, _("Message Body"));
 		headers = g_list_append(headers, _("Entire Message"));
 
