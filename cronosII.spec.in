@@ -1,7 +1,7 @@
 %define name		cronosII
 %define prefix		/usr
 %define sysconfdir		/etc
-%define RELEASE		1
+%define RELEASE		2
 %define rel	%{?CUSTOM_RELEASE} %{!?$CUSTOM_RELEASE:%RELEASE}
 
 Summary: Cronos II is a well featured, flexible mail client for GNOME.
