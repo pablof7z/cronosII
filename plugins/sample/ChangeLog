@@ -1,0 +1,22 @@
+Thur 21 Mar 2002 Angel Ramos <seamus@debian.org>
+	* Modified sample.c source in order to compile and compile alone.
+	* Included all the headers that sample.c need to compile. I have
+	  modified the headers for alone compilation success.
+	* Added 'fPIC' to the Makefile in order to compile on hppa
+          architecture.
+	* Tested on Debian GNU/Linux.
+
+Thur 7 Feb 2002 Pete <petergozz@users.sf.net>
+	* Moved Makefile to MakefileORIG to check I wasn't including it in
+	* package builds. (yes I know I wasn't but ..)
+
+Wed 12 Dec 2001 Peter Gossner <petergozz@users.sourceforge.net>
+	* Added to object and static object files which I had obviously
+	* forgotten to cvs add...DOH.
+
+Sat 01 Dec 2001 Peter Gossner <petergozz@users.sourceforge.net>
+	* Removed support for mainwindow status messages as the plugin
+	would not build with it. (its just commented out so give it a go
+	YMMV)
+	* Please see ../README for install instructions.
+
