@@ -1074,10 +1074,12 @@ make_message (WidgetsComposer *widget, Requires require) {
 
   if (attachments) {
     fprintf (fd, _("This is a multipart message in MIME format.\n"
-	  		    "The fact that you reached this text means that your\n"
-			    "mail client does not understand MIME messages and you will\n"
-			    "not be understand the attachments. You should consider moving\n"
-			    "to another mail client or to a higher version.\n\n"));
+	  	   "The fact that you reached this text means that your\n"
+		   "mail client does not understand MIME messages and you will\n"
+		   "not be able to understand the attachments. You should consider moving\n"
+		   "to another mail client or to a higher version.\n"
+		   "For further information, connect to http://cronosII.sourceforge.net\n"
+		   "or contact cronosII@users.sourceforge.net\n"));
     for (s = parts; s; s = s->next) {
       fprintf (fd, CHAR (s->data));
       c2_free (s->data);

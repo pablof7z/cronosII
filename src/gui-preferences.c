@@ -538,7 +538,7 @@ static void on_prefs_ok_btn_clicked_write_mailboxes (Mailbox *head, FILE *fd) {
     c2_free (buf);
     buf = g_strconcat (getenv ("HOME"), ROOT, "/", mailbox->name, ".mbx/index", NULL);
     if ((file = fopen (buf, "w")) == NULL) {
-      cronos_error (errno, _("Creating the index directory for the nex mailbox"), ERROR_WARNING);
+      cronos_error (errno, _("Creating the index directory for the new mailbox"), ERROR_WARNING);
       c2_free (buf);
       continue;
     }

@@ -12,18 +12,20 @@ src/gui-decision_dialog.c
 src/gui-export.c
 src/gui-import.c
 src/gui-logo.c
+src/gui-message_big.c
 src/gui-preferences.c
 src/gui-print.c
 src/gui-select_file.c
 src/gui-select_mailbox.c
 src/gui-window_checking.c
+src/gui-window_composer.c
+src/gui-window_debug.c
 src/gui-window_main.c
 src/gui-window_main_callbacks.c
 src/gui-window_message.c
 src/index.c
 src/init.c
 src/mailbox.c
-src/mailbox.h
 src/message.c
 src/net.c
 src/plugin.c
@@ -32,3 +34,4 @@ src/smtp.c
 src/spool.c
 src/utils.c
 src/version.c
+src/mailbox.h
