@@ -15,6 +15,7 @@
 <!entity jeremy "witti@onramp.net">
 <!entity spaghetty "spaghetty@libero.it">
 <!entity marc "mustangg@users.sourceforge.net">
+<!entity dan "ralptheracoon@uk2.net">
 <!ENTITY FDL SYSTEM "fdl.sgml"> 
 <!entity shortcuts SYSTEM "shortcuts_table.sgml">
 <!entity gtk-brief SYSTEM "gtk-brief.sgml">
@@ -41,7 +42,7 @@
 Hope this is of some help.
      </para>
      </dedication>
-     <preface><title>Foreword</title>.
+     <preface><title>Foreword</title>
    <para>This is the Users Manual (Compiled Version) for CronosII an email application born of the frustrations of  existing email applications and the coding aspirations of a small team of coders scattered rarely across the face of this big blue marble we all call home.
 </para>
 <para>Cronos aspires to simplicity, efficacy,stability and most importantly; whatever else it's users want it to be.</para>

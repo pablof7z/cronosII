@@ -1,6 +1,6 @@
 This  Directory contains a clunky work around to have plugins working on CronosII -MR2
 
-There are at least two ways of installing the plugins.
+There are at least three ways of installing the plugins.
 1.  (the quick and nasty way)
 ######################################################################
 To install the built binaries :
@@ -27,7 +27,7 @@ A solution to a  non-asked question :
 You may have a problem with the INSTALL step if you have more than one version of cronosII-config on your system. eg. You have installed to different prefixes and or you have been using the new scratch version. Do a ]make uninstall then make install for  a quick fix. Otherwise you will have to locate the offending versions and uninstall by hand. (which and type are handy here).
 
 
-ELSE
+ELSE IF
 ###########################################################
 2.  A  more graceful way in that the binaries will be built to your system.
 
@@ -35,7 +35,7 @@ ELSE
 ######################################################################
 a/ download the source tar ball for CronosII 0.2.1
 	< http://sourceforge.net/project/showfiles.php?group_id=7093 >
-b/. Important:  back up your current ~/.cronos directory (or just move it)
+b/. Important:  back up your current ~/.CronosII directory (or just move it)
 
 c/ install the 0.2.1 package.
 	(if you still have a .cronosII directory from vers2.2.0 or up the app will seg fault on launch -- don't worry you wont be using it )
@@ -49,8 +49,44 @@ all should be well.
 
 ####################################################################
 
-this works .
-(just don't ask me why :))
+
+ELSE
+####################################################################
+3: This taken from Bosco's README in the c2filters-0.4.5pre1 (which is included in the MR2 source package).
+It works fine just be a carefull while you have root permissions !
+<quote>
+
+If you have trouble building (i.e. missing working cronosII 0.2.1 headers),
+take the following steps:
+
+1) Download CronosII 0.2.1 from http://www.cronosii.net/ 
+	(or http://cronosii.sourceforge.net/Active_Site/downloads.php)
+2) Extract the CronosII 0.2.1 source
+3) su to root
+4) rm -rf /usr/local/include/cronosII; rm /usr/local/include/cronosII.h
+5) cd cronosII-0.2.1/src
+6) ./configure
+7) mkdir /usr/local/include/cronosII
+8) cp *.h /usr/local/include/cronosII/
+9) cp ../*.h /usr/local/include/cronosII/
+10) cp cronosII.h /usr/local/include/
+
+NOTE: Only try this if you cannot build filters normally! Think about the
+commands you are giving before you hit enter!
+
+TODO:
+* import/export config files
+* document functions (CronosII style)
+* fix bugs as you find them
+* make code prettier and/or more efficient as you see fit
+* make gui prettier and/or more usable as you see fit
+* Implement more possible actions on messages:
+     - Expunge?
+     - Play a sound?
+     - more?
+</quote>
+
+#################################################################
 
 Finally: The alterations made to the sample plugin cause a dialog to open each time CronosII checks your mail. Click it an it goes away. It's sort of handy at first  but can be annoying. Feel free to fix this.
 

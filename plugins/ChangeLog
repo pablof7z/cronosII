@@ -1,3 +1,8 @@
+Sat 15 Dec 2001 Pete <petergozz@users.sourceforge.net>
+	* Updated Filters to Bosco's final version.
+	* Updated source docs to reflect this.
+	
+
 Wed 13 Dec 2001 Pete <gossner@arcom.com.au>
 	* Brought the filters up to the latest version I could find. (0.4.0)
 	* Note make dist will fail due to the inclusion of filters and fortune

@@ -7,9 +7,9 @@ EXTRA_DIST = plugin.html \
 	fortune/README \
 	fortune/fortune.o \
 	fortune/fortune.so \
-	filters/Changelog \
-	filters/Makefile \
-	filters/README \
-	filters/filters.c \
-	filters/filters.o \
-	filters/filters.so
+	c2filters-0.4.5pre1/Changelog \
+	c2filters-0.4.5pre1/Makefile \
+	c2filters-0.4.5pre1/README \
+	c2filters-0.4.5pre1/filters.c \
+	c2filters-0.4.5pre1/filters.o \
+	c2filters-0.4.5pre1/filters.so
