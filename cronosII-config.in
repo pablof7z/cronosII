@@ -21,6 +21,10 @@ pkglibdir=${libdir}/@PACKAGE@
 pkgincludedir=${includedir}/@PACKAGE@
 MODULE_VERSION=@PACKAGE@-@VERSION@
 module_dirs="$libdir"
+#and because this might come in handy for debugging
+
+devversion='-cvs-MR2-pre'
+
 
 # stolen from gnome-libs who stoled it from autoconf
 if (echo "testing\c"; echo 1,2,3) | grep c >/dev/null; then
@@ -32,11 +36,11 @@ if (echo "testing\c"; echo 1,2,3) | grep c >/dev/null; then
   fi
 else
   ac_n= ac_c='\c' ac_t=
-fi
+fi 
 
 usage()
 {
-    exit_code=$1
+    exit_code=$1 
 
     cat <<EOF
 Usage: cronosII-config [OPTION]
@@ -45,6 +49,7 @@ Generic options
   --version	output gnome version information.
   --help	display this help and exit.
   --features    features that Cronos II was compiled with
+  --dev  build reference for developers 
 
 Install directories cronosII was configured to
   --prefix --mandir  --includedir  --datadir
@@ -65,6 +70,10 @@ while test $# -gt 0; do
     case $1 in
     --version)
 	echo @PACKAGE@ @VERSION@
+	exit 0
+	;;
+   --dev)
+	echo @PACKAGE@ @VERSION@ $devversion
 	exit 0
 	;;
     --features)

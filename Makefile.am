@@ -10,13 +10,13 @@ cronosinclude_HEADERS = config.h
 
 EXTRA_DIST =			\
 	cronosII.spec		\
-	cronosII.desktop	\
+	cronosII.desktop		\
 	c2addrbook.desktop	\
 	cronosII-gmc.desktop	\
 	c2addrbook-gmc.desktop	\
 	cronosII.spec		\
-	AUTHORS			\
-	COPYING			\
+	AUTHORS		\
+	COPYING		\
 	FEATURES		\
 	NEWS			\
 	README			\
@@ -29,3 +29,4 @@ Applicationsdir = $(datadir)/gnome/apps/Applications
 Applications_DATA = c2addrbook.desktop
 GMCdir = $(datadir)/mc/templates
 GMC_DATA = cronosII-gmc.desktop c2addrbook-gmc.desktop
+

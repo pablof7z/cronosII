@@ -3,7 +3,7 @@ AM_CONFIG_HEADER(config.h)
 
 C2_PLUGIN_MAJOR_VERSION=0
 C2_PLUGIN_MINOR_VERSION=2
-C2_PLUGIN_MICRO_VERSION=1
+C2_PLUGIN_MICRO_VERSION=2
 AM_INIT_AUTOMAKE(cronosII, 0.2.2)
 
 AC_PROG_CC
@@ -21,6 +21,7 @@ ALL_LINGUAS="br de es fr it"
 AM_GNU_GETTEXT
 
 CFLAGS="-Wall"
+
 
 dnl *************************************************************************
 dnl ** configure switches ***************************************************
@@ -67,7 +68,7 @@ if test "_$sedpath" = _; then
 fi
 
 dnl Create the X-MAILER field
-XMAILER="Cronos II $VERSION"
+XMAILER="CronosII $VERSION"
 AC_PATH_PROG(unamepath, uname)
 if test "_$unamepath" = _; then
   AC_MSG_WARN("Cannot find uname: system is unknown")
@@ -267,6 +268,7 @@ else
 fi
 
 echo Building to install under ......... .: $prefix
-echo CronosII  \*\*CVS version Pre Maintenance Release 2  \*\*
+
 echo configure complete, type \'make\' to start compiling
-echo
+
+
