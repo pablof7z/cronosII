@@ -21,9 +21,9 @@
 #  define XMAILER "Cronos II" 
 #endif
 #if USE_GNOME
-#  include <gnome.h>
+#include <gnome.h>
 #else
-#  include <gtk/gtk.h>
+#include <gtk/gtk.h>
 #endif
 #include <errno.h>
 #include <time.h>
