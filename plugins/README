@@ -22,6 +22,10 @@ They should work on most other systems i686 and up.
 With CronosII-0.2.2 installed.
 
 (thats a totally uneducated guess really )
+A solution to a  non-asked question :
+
+You may have a problem with the INSTALL step if you have more than one version of cronosII-config on your system. eg. You have installed to different prefixes and or you have been using the new scratch version. Do a ]make uninstall then make install for  a quick fix. Otherwise you will have to locate the offending versions and uninstall by hand. (which and type are handy here).
+
 
 ELSE
 ###########################################################
@@ -48,8 +52,9 @@ all should be well.
 this works .
 (just don't ask me why :))
 
+Finally: The alterations made to the sample plugin cause a dialog to open each time CronosII checks your mail. Click it an it goes away. It's sort of handy during but can be annoying. Feel free to fix this.
 
-If anybody has a fix for this I would be eager to hear about it.
+If anybody has a fix for this or any other bugs; I would be eager to hear about it.
 
 mail to: gossner@arcom.com.au
 
