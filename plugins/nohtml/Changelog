@@ -1,3 +1,6 @@
+Sun Apr 14 2002 Dan <madprof@madprof.net>
+	- Made BR tag case insensitive.
+	- My first CVS commit! :)
 
 Sun Apr 14 2002 Pete <petergozz@users.sf.net>
 	- Moved all of Dans good work into the source tree.
