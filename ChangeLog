@@ -1,7 +1,9 @@
+
 Wed Apr 17 2002 pete <petergozz@users.sf.net>
 	* Updates checked into gui-about.* 
 	* Update to splash image (lost the orig xcf)
 	* Deadline of 20th set for release.
+	* Commenced updating docs nb. nohtml is in plugins.sgml
 	
 Mon Apr 15 2002  pete <petergozz@users.sf.net>
 	* Updates and fixmes to src/guiabout.c splash dialog 

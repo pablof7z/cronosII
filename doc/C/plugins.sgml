@@ -5,19 +5,20 @@
 <subtitle>Extensions to &app;</subtitle>
 <note>
 <para>This written for the final release of the original Cronos II. i.e. CronosII-0.2.2-mr2. <para>
-<para>Users of<emphasis> binary packages</emphasis> (DEB's and RPM's) should not need to do any of this as of version cronosii-0.2.2-22 </para>
+<para>Users of<emphasis>i386 binary packages</emphasis> (DEB's and RPM's) should not need to manually install any of the plugins. The standard tarball release should also manually install the plugins for you. </para>
 </note>
-<para>Included with the MR2 release of &app; are three Plugins. These are:
+<para>Included with the MR2 / Eclipse release of &app; are four Plugins. These are:
  <orderedlist>
       <listitem><para><link linkend="plugin-sample">Sample</link></para></listitem>
       <listitem><para><link linkend="plugin-fortune">Fortune</link></para></listitem>
       <listitem><para><link linkend="plugin-filters">Filters</link></para></listitem>
+	  <listitem><para><link linkend="plugin-nohtml">NoHtml</link></para></listitem>
 </orderedlist>
 </para>
 <sect2 id=plugin-install>
 <title>Installing</title>
 <note>
-<para> a normal "./configure --prefix=/usr && make && make install" should now install the plugins. The binaries are, perhaps a little unusually, held as copies in the top source directory. This is a work around (that works) however they do need to be in that location to install correctly.</para>
+<para> A normal "./configure --prefix=/usr && make && make install" should now install the plugins. The binaries are, perhaps a little unusually, held as copies in the top source directory. This is a work around (that works) however they do need to be in that location to install correctly.</para>
 <para>Try<programlisting>cp -r plugins/*/*.so ./</programlisting>
 From the top level directory if they are not.</para>
 </note>
@@ -80,13 +81,22 @@ Support for wild-cards is enabled and this makes configuration reasonably simple
 <para>Next select which part of the Email you want to filter with. e.g. From:. Then <emphasis>ADD</emphasis> it to the list. The rule will be written to the display area below.</para>
 <para>Now leaving the same string in place choose "TO" and add that to the list as well.</para>
 <para>Now just because this is an example select<programlisting> "Match Any Rules".</programlisting> This radio button essentially allows you to  filter by ALL these rules (and) or filter by ANY of these rules (or).</para>
-<para> Next select The "Action" tab. Here for example we could select to send the filtered Email to Drafts, Garbage, "MyMailbox" or any other mailboxes we have configured.</para><para>The filter will now find any mail with "your-email-address" in the TO: or FROM: fields of the mail header.</para>
+<para> Next select The "Action" tab. Here for example we could select to send the filtered Email to Drafts, Garbage, "My-Mailbox" or any other mailboxes we have configured.</para><para>The filter will now find any mail with "your-email-address" in the TO: or FROM: fields of the mail header.</para>
 <para>Currently you may only move messages to those present on the pop-out list.  Any top level mailboxes you add will appear on this list</para>
 <para>OK, so we have made a filtering rule and given the application some action to take when it finds a mail that matches the rule.<programlisting> Click OK to exit the "New Rule" dialog, then "Exit" "Cronos II Message Filters"</programlisting> (this writes the rule to your &app; configure directory). Finally select<programlisting> "Apply" and "OK"</programlisting> and go ahead and test it.</para>
 <para>  To test it mail something to yourself and see if it ends up in the correct place. :) With just a little practice and thought you will be able to do all sorts of things with your mail. Don't forget, wild-cards make for a much simpler experience. </para>
 </example>
-
-
+</sect3>
+<sect2 id="plugin-nohtml">
+<title>NoHtml</title>
+<para>The newest addition to the set of plugins for Cronos II is Daniel Fairheads "NoHtml". This effective Plugin strips the html tags from your mail. It is not a "html parser" (CronosII Scratch can do that) but rather "a tag re-interpreter". It strips the content from between the html tags and replaces the content (where appropriate) with the plain text (ASCII) equivalent. </para>
+<sect3 id="nohtml-config">
+<title>Configure</title>
+<para>To set "NoHtml" up select the plugins configuration dialog: 
+<programlisting>settings ==> preferences ==> plugins</programlisting> 
+Choose Load and the "select a file" dialog should open, choose "nohtml.so and click "OK""</para>
+<para>The "select a file" dialog should go away leaving nohtml (and any other plugins you have loaded) on the list in the plugins window. Select:
+<programlisting>nohtml ==> configure</programlisting> The "NoHtml" configuration dialog should open. </para>
 </sect3>
 </sect2>
 
