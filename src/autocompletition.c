@@ -10,6 +10,7 @@
 #include "utils.h"
 
 GCompletion *EMailCompletion = NULL;
+GCompletion *AddrCompletion = NULL;
 
 GtkWidget *alternatives_window = NULL;
 GtkWidget *contacts_window = NULL;
@@ -113,6 +114,7 @@ autocompletition_key_pressed (GtkWidget *entry, GdkEventKey *key, WidgetsCompose
     start = ptr;
    
     matches = g_completion_complete (EMailCompletion, pattern, NULL);
+    if (!matches) matches = g_completion_complete (AddrCompletion, pattern, NULL);
     if (g_list_length (matches) == 1) {
       char *sel;
 
@@ -238,6 +240,24 @@ autocompletition_generate_emailcompletion (void) {
 
   if (list)
     g_completion_add_items (EMailCompletion, list);
+
+  /* This will generate the AddrCompletion too */
+  if (AddrCompletion)
+    g_completion_clear_items (AddrCompletion);
+  else
+    AddrCompletion = g_completion_new (NULL);
+
+  for (i = 0;;i++) {
+    if ((card = c2_address_book_card_get (i)) == NULL) break;
+    if (!card->email) continue;
+
+    str = g_strdup_printf ("%s", C2VCARDEMAIL (card->email->data)->address);
+
+    list = g_list_append (list, str);
+  }
+
+  if (list)
+    g_completion_add_items (AddrCompletion, list);
 }
 
 void
