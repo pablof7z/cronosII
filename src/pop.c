@@ -534,7 +534,7 @@ dont_use_top:
       }
     }
     
-    if (streq (selected_mbox, account->mailbox->name)) {
+    if (streq (selected_mbox, mailbox)) {
       row[0] = "";
       row[1] = "";
       row[2] = "";

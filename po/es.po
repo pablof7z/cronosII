@@ -1,26 +1,29 @@
-#: src/gui-addrbook.c:2986 src/gui-addrbook.c:2988 src/gui-addrbook.c:3004
-#: src/gui-addrbook.c:3010 src/gui-addrbook.c:3012 src/gui-addrbook.c:3014
-#: src/gui-addrbook.c:3016 src/gui-addrbook.c:3018 src/gui-addrbook.c:3020
-#: src/gui-addrbook.c:3022 src/gui-addrbook.c:3024 src/gui-addrbook.c:3026
-#: src/gui-addrbook.c:3028 src/gui-addrbook.c:3030 src/gui-addrbook.c:3032
-#: src/gui-addrbook.c:3034 src/gui-addrbook.c:3036 src/gui-addrbook.c:3038
-#: src/gui-addrbook.c:3040 src/gui-addrbook.c:3042 src/gui-addrbook.c:3044
-#: src/gui-addrbook.c:3046 src/gui-addrbook.c:3048 src/gui-addrbook.c:3050
-#: src/gui-addrbook.c:3052 src/gui-addrbook.c:3054 src/gui-addrbook.c:3056
-#: src/gui-addrbook.c:3058 src/gui-addrbook.c:3060 src/gui-addrbook.c:3062
-#: src/gui-addrbook.c:3064 src/gui-addrbook.c:3066 src/gui-addrbook.c:3068
-#: src/gui-addrbook.c:3070 src/gui-addrbook.c:3076
+# Copyright (C) 2000-2001 Pablo Fernández Navarro.
+# Pablo Fernández Navarro <cronosII@users.sourceforge.net>, 2001.
+#
+#: src/gui-addrbook.c:2987 src/gui-addrbook.c:2989 src/gui-addrbook.c:3005
+#: src/gui-addrbook.c:3011 src/gui-addrbook.c:3013 src/gui-addrbook.c:3015
+#: src/gui-addrbook.c:3017 src/gui-addrbook.c:3019 src/gui-addrbook.c:3021
+#: src/gui-addrbook.c:3023 src/gui-addrbook.c:3025 src/gui-addrbook.c:3027
+#: src/gui-addrbook.c:3029 src/gui-addrbook.c:3031 src/gui-addrbook.c:3033
+#: src/gui-addrbook.c:3035 src/gui-addrbook.c:3037 src/gui-addrbook.c:3039
+#: src/gui-addrbook.c:3041 src/gui-addrbook.c:3043 src/gui-addrbook.c:3045
+#: src/gui-addrbook.c:3047 src/gui-addrbook.c:3049 src/gui-addrbook.c:3051
+#: src/gui-addrbook.c:3053 src/gui-addrbook.c:3055 src/gui-addrbook.c:3057
+#: src/gui-addrbook.c:3059 src/gui-addrbook.c:3061 src/gui-addrbook.c:3063
+#: src/gui-addrbook.c:3065 src/gui-addrbook.c:3067 src/gui-addrbook.c:3069
+#: src/gui-addrbook.c:3071 src/gui-addrbook.c:3077
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Cronos II 0.2.2\n"
-"POT-Creation-Date: 2001-04-08 16:15-0300\n"
-"PO-Revision-Date: 2001-02-22 01:57-0300\n"
+"POT-Creation-Date: 2001-04-13 18:18-0300\n"
+"PO-Revision-Date: 2001-04-13 19:12-0300\n"
 "Last-Translator: Pablo Fernández Navarro <cronosII@users.sourceforge.net>\n"
-"Language-Team: Cronos II Developers Team "
-"<cronosii-developer@lists.sourceforge.net>\n"
+"Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ISO-8859-1\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Type: text/plain; charset=iso-9660-1\n"
+"Content-Transfer-Encoding: bit-8\n"
 
 #: src/account.c:68
 #, c-format
@@ -28,7 +31,7 @@ msgid ""
 "An unknown protocol has been set, not suported by the current version of "
 "Cronos II: %s\n"
 msgstr ""
-"Un protocolo desconocido se ha especificado, no soportado por la versión "
+"Un protocolo desconocido ha sido seteado, no soportado por la versión "
 "corriente de Cronos II: %s\n"
 
 #: src/account.c:83
@@ -38,187 +41,166 @@ msgid ""
 "the mailbox linked list.\n"
 "This might cause serious bugs in the future.\n"
 msgstr ""
-"No se pudo encontrar la carpeta con ID %d, especificado en tu archivo de "
-"configuración en la lista linkeada de carpetas.\n"
+"Imposible encontrar el buzón con ID %d, especificado en su configuración en "
+"la lista de buzones.\n"
 "Esto puede causar serios problemas en el futuro.\n"
 
 #: src/addrbook.c:210
-#, fuzzy
 msgid "Couldn't open the GnomeCard file\n"
-msgstr "No se encontró el buzón Borradores"
+msgstr "Imposible abrir el archivo de GnomeCard.\n"
 
 #: src/addrbook.c:822
-#, fuzzy
 msgid "Couldn't open the GnomeCard file"
-msgstr "No se encontró el buzón Borradores"
+msgstr "Imposible abrir el archivo de GnomeCard.\n"
 
-#: src/autocompletition.c:482 src/gui-window_main.c:1355
-#, fuzzy
+#: src/autocompletition.c:502 src/gui-window_main.c:1355
 msgid "Contacts"
-msgstr "Fuentes"
+msgstr "Contactos"
 
-#: src/autocompletition.c:500 src/gui-addrbook.c:1111
+#: src/autocompletition.c:520 src/gui-addrbook.c:1112
 msgid "Groups"
 msgstr "Grupos"
 
 #: src/check.c:124
-#, fuzzy, c-format
+#, c-format
 msgid "Checking Account: %s"
-msgstr "Chequeando Cuenta: %s"
+msgstr "Chequeando cuenta: %s"
 
 #: src/check.c:128
-#, fuzzy
 msgid "Checking account %v of %u"
 msgstr "Chequeando cuenta %v de %u"
 
 #: src/check.c:149
-#, fuzzy
 msgid "Checked account %v of %u"
-msgstr "Chequeando cuenta %v de %u"
+msgstr "Cuenta chequeada %v de %u"
 
 #: src/check.c:172
 msgid "Checking account %s [%%v of %%u]"
-msgstr "Chequeando cuenta %s [%%v of %%u]"
+msgstr "Chequeando cuenta %s [%%v de %%u]"
 
 #: src/error.c:75
-#, fuzzy
 msgid "Unknown reason"
-msgstr "Error desconocido"
+msgstr "Razón desconocida"
 
 #: src/exit.c:66 src/exit.c:85
 msgid "Opening the main DB file of the Garbage Mailbox for deleting all mails"
-msgstr "Abriendo el archivo principal de la Base de Datos the la carpeta Basura para "
-"borrar correos"
+msgstr ""
+"Abriendo el archivo principal de la DB del buzón Basura para eliminar todos "
+"los correos-e"
 
 #: src/gnomefilelist.c:142
-#, fuzzy
 msgid "Go back to a previous directory"
-msgstr "Volver a un directorio anterior"
+msgstr "Volver al directorio anterior"
 
 #: src/gnomefilelist.c:144
-#, fuzzy
 msgid "Go to selected directory"
 msgstr "Ir al directorio seleccionado"
 
 #: src/gnomefilelist.c:146
-#, fuzzy
 msgid "Go to parent directory"
-msgstr "Ir al directorio padre"
+msgstr "Volver al directorio padre"
 
 #: src/gnomefilelist.c:148
-#, fuzzy
 msgid "Go to the Home directory"
 msgstr "Ir al Directorio Personal"
 
 #: src/gnomefilelist.c:151
 msgid "Refresh listing"
-msgstr "Refrescar listado"
+msgstr "Actualizar listado"
 
 #: src/gnomefilelist.c:154
-#, fuzzy
 msgid "Delete file"
-msgstr "Borrar archivo"
+msgstr "Eliminar archivo"
 
 #: src/gnomefilelist.c:156
-#, fuzzy
 msgid "Rename file"
 msgstr "Renombrar archivo"
 
 #: src/gnomefilelist.c:162
-#, fuzzy
 msgid "Directory: "
-msgstr "Directorio:"
+msgstr "Directorio: "
 
 #: src/gnomefilelist.c:195
 msgid "Directories"
 msgstr "Directorios"
 
 #: src/gnomefilelist.c:216
-#, fuzzy
 msgid "Files"
 msgstr "Archivos"
 
 #: src/gnomefilelist.c:223
-#, fuzzy
 msgid "Selection: "
-msgstr "Selección:"
+msgstr "Selección: "
 
 #: src/gui-about.c:50
 msgid "A powerful GNOME mail client."
-msgstr "Un poderoso cliente de correo para GNOME."
+msgstr "Un poderoso cliente de correo-e para GNOME"
 
 #: src/gui-about.c:56 src/gui-logo.c:80
 msgid "Visit the Cronos II homepage"
-msgstr "Visita el sitio de Cronos II"
+msgstr "Visite el sitio de Cronos II"
 
-#: src/gui-addrbook.c:52 src/gui-addrbook.c:666 src/gui-preferences.c:1567
+#: src/gui-addrbook.c:52 src/gui-addrbook.c:667 src/gui-preferences.c:1567
 msgid "Name"
 msgstr "Nombre"
 
 #: src/gui-addrbook.c:53
-#, fuzzy
 msgid "E-Mail Address"
-msgstr "Correo electrónico"
+msgstr "Dirección de Correo-e"
 
 #: src/gui-addrbook.c:54
-#, fuzzy
 msgid "Comments"
-msgstr "Fuentes"
+msgstr "Comentarios"
 
 #: src/gui-addrbook.c:64
-#, fuzzy
 msgid "Cronos II Address Book"
-msgstr "Libreta de Direcciones de Cronos II"
+msgstr "Libreta de Direcciónes de Cronos II"
 
 #: src/gui-addrbook.c:146
 msgid ""
 "No entry match your search.\n"
 "Start from the beggining?"
-msgstr "No se encontró ninguna entrada para su búsqueda.\n"
-"¿Comenzar desde el principio?"
+msgstr ""
+"No se encontraron resultados.\n"
+"¿Comenzar búsqueda desde el comienzo?"
 
 #: src/gui-addrbook.c:158
 msgid "No entry match your search.\n"
-msgstr "No se encontró ninguna entrada para su búsqueda.\n"
+msgstr "No se encontraron resultados.\n"
 
 #: src/gui-addrbook.c:216
 msgid "_New card"
-msgstr "_Nuevo contacto"
+msgstr "_Nueva tarjeta"
 
 #: src/gui-addrbook.c:217
 msgid "Create a new card"
-msgstr "Crear un nuevo contacto"
+msgstr "Crear una nueva tarjeta"
 
 #: src/gui-addrbook.c:223
 msgid "_Edit card"
-msgstr "_Editar contacto"
+msgstr "_Editar tarjeta"
 
 #: src/gui-addrbook.c:224 src/gui-addrbook.c:316
-#, fuzzy
 msgid "Edit the selected card"
-msgstr "Editar el contacto seleccionado"
+msgstr "Editar tarjeta seleccionada"
 
 #: src/gui-addrbook.c:230
-#, fuzzy
 msgid "_Delete card"
-msgstr "_Borrar contacto"
+msgstr "_Eliminar tarjeta"
 
 #: src/gui-addrbook.c:231 src/gui-addrbook.c:327
-#, fuzzy
 msgid "Delete the selected card"
-msgstr "Borrar el contacto seleccionado"
+msgstr "Eliminar la tarjeta seleccionada"
 
 #: src/gui-addrbook.c:238
-#, fuzzy
 msgid "_Close"
 msgstr "_Cerrar"
 
 #: src/gui-addrbook.c:239
-#, fuzzy
 msgid "Close the Address Book"
-msgstr "Cerrar la Libreta de Direcciones"
+msgstr "_Cerrar la Libreta de Direcciones"
 
-#: src/gui-addrbook.c:291 src/gui-composer.c:811 src/gui-composer.c:1225
+#: src/gui-addrbook.c:291 src/gui-composer.c:811 src/gui-composer.c:1227
 #: src/gui-decision_dialog.c:104 src/gui-decision_dialog.c:113
 #: src/gui-window_main.c:1256
 msgid "Save"
@@ -243,493 +225,467 @@ msgstr "Editar"
 #: src/gui-addrbook.c:326 src/gui-preferences.c:1652
 #: src/gui-window_main.c:1288
 msgid "Delete"
-msgstr "Borrar"
+msgstr "Eliminar"
 
-#: src/gui-addrbook.c:339 src/gui-composer.c:857
+#: src/gui-addrbook.c:339 src/gui-composer.c:857 src/gui-window_composer.c:276
 msgid "Close"
 msgstr "Cerrar"
 
 #: src/gui-addrbook.c:340
-#, fuzzy
 msgid "Close this window"
-msgstr "Cerrar este mensaje"
+msgstr "Cerrar esta ventana"
 
 #: src/gui-addrbook.c:361
-#, fuzzy
 msgid "Search: "
 msgstr "Buscar: "
 
 #: src/gui-addrbook.c:373
 msgid "Group View: "
-msgstr "Vista de grupo:"
+msgstr "Vista de Grupo: "
 
-#: src/gui-addrbook.c:478
-#, fuzzy
+#: src/gui-addrbook.c:479
 msgid "New Contact"
-msgstr "Nueva Contacto"
+msgstr "Nuevo Contacto"
 
-#: src/gui-addrbook.c:478
-#, fuzzy
+#: src/gui-addrbook.c:479
 msgid "Edit Contact"
 msgstr "Editar Contacto"
 
 #. labels
-#: src/gui-addrbook.c:679
-#, fuzzy
+#: src/gui-addrbook.c:680
 msgid "Salutation:"
 msgstr "Saludación:"
 
-#: src/gui-addrbook.c:686
-#, fuzzy
+#: src/gui-addrbook.c:687
 msgid "First Name:"
-msgstr "Primer nombre:"
+msgstr "Primer Nombre:"
 
-#: src/gui-addrbook.c:693
-#, fuzzy
+#: src/gui-addrbook.c:694
 msgid "Middle Name:"
-msgstr "Segundo nombre:"
+msgstr "Segundo Nombre:"
 
-#: src/gui-addrbook.c:700
-#, fuzzy
+#: src/gui-addrbook.c:701
 msgid "Last Name:"
 msgstr "Apellido:"
 
-#: src/gui-addrbook.c:707
+#: src/gui-addrbook.c:708
 msgid "Suffix:"
 msgstr "Sufijo:"
 
-#: src/gui-addrbook.c:720
-#, fuzzy
+#: src/gui-addrbook.c:721
 msgid "Show Name:"
 msgstr "Mostrar Nombre:"
 
-#: src/gui-addrbook.c:738
+#: src/gui-addrbook.c:739
 msgid "Mr."
 msgstr "Sr."
 
 #. Mr. Mister
-#: src/gui-addrbook.c:739
+#: src/gui-addrbook.c:740
 msgid "Mrs."
 msgstr "Sra."
 
 #. Mrs. Mistress
-#: src/gui-addrbook.c:740
+#: src/gui-addrbook.c:741
 msgid "Dr."
 msgstr "Dr."
 
-#: src/gui-addrbook.c:793
+#: src/gui-addrbook.c:794
 msgid "Sr."
 msgstr "Padre"
 
 #. Sr. ????
-#: src/gui-addrbook.c:794
+#: src/gui-addrbook.c:795
 msgid "Jr."
 msgstr "Hijo"
 
 #. birthday label
-#: src/gui-addrbook.c:828
+#: src/gui-addrbook.c:829
 msgid "Birthday:"
 msgstr "Cumpleaños"
 
 #. frame
-#: src/gui-addrbook.c:857
+#: src/gui-addrbook.c:858
 msgid "Organization"
 msgstr "Organización"
 
 #. labels
-#: src/gui-addrbook.c:870 src/gui-preferences.c:2932
-#, fuzzy
+#: src/gui-addrbook.c:871 src/gui-preferences.c:2932
 msgid "Name:"
 msgstr "Nombre:"
 
-#: src/gui-addrbook.c:877
-#, fuzzy
+#: src/gui-addrbook.c:878
 msgid "Title:"
 msgstr "Título:"
 
-#: src/gui-addrbook.c:921
-#, fuzzy
+#: src/gui-addrbook.c:922
 msgid "Personal Information"
 msgstr "Información Personal"
 
 #. label
-#: src/gui-addrbook.c:1210
+#: src/gui-addrbook.c:1211
 msgid "Web Site:"
 msgstr "Sitio Web:"
 
 #. frame
-#: src/gui-addrbook.c:1228
+#: src/gui-addrbook.c:1229
 msgid "E-mail data"
-msgstr "Correo electrónico"
+msgstr "Datos de correo-e"
 
 #. label
-#: src/gui-addrbook.c:1244
-#, fuzzy
+#: src/gui-addrbook.c:1245
 msgid "Address:"
 msgstr "Dirección:"
 
 #. frame
-#: src/gui-addrbook.c:1258 src/gui-addrbook.c:1846 src/gui-addrbook.c:2350
+#: src/gui-addrbook.c:1259 src/gui-addrbook.c:1847 src/gui-addrbook.c:2351
 #: src/gui-preferences.c:1566
 msgid "Type"
 msgstr "Tipo"
 
 #. btns
-#: src/gui-addrbook.c:1271
+#: src/gui-addrbook.c:1272
 msgid "America On-Line"
 msgstr ""
 
-#: src/gui-addrbook.c:1277
+#: src/gui-addrbook.c:1278
 msgid "Apple Link"
 msgstr ""
 
-#: src/gui-addrbook.c:1283
+#: src/gui-addrbook.c:1284
 msgid "AT&T"
 msgstr ""
 
-#: src/gui-addrbook.c:1289
+#: src/gui-addrbook.c:1290
 msgid "CIS"
 msgstr ""
 
-#: src/gui-addrbook.c:1295
+#: src/gui-addrbook.c:1296
 msgid "e-World"
 msgstr ""
 
-#: src/gui-addrbook.c:1301
-#, fuzzy
+#: src/gui-addrbook.c:1302
 msgid "Internet"
 msgstr ""
 
-#: src/gui-addrbook.c:1308
+#: src/gui-addrbook.c:1309
 msgid "IBM"
 msgstr ""
 
-#: src/gui-addrbook.c:1314
+#: src/gui-addrbook.c:1315
 msgid "MCI"
 msgstr ""
 
-#: src/gui-addrbook.c:1320
+#: src/gui-addrbook.c:1321
 msgid "Power Share"
 msgstr ""
 
-#: src/gui-addrbook.c:1326
-#, fuzzy
+#: src/gui-addrbook.c:1327
 msgid "Prodigy"
-msgstr "Prioridad"
+msgstr ""
 
-#: src/gui-addrbook.c:1332
+#: src/gui-addrbook.c:1333
 msgid "TLX"
 msgstr ""
 
-#: src/gui-addrbook.c:1338
+#: src/gui-addrbook.c:1339
 msgid "X400"
 msgstr ""
 
-#: src/gui-addrbook.c:1354 src/gui-addrbook.c:1895 src/gui-addrbook.c:2427
+#: src/gui-addrbook.c:1355 src/gui-addrbook.c:1896 src/gui-addrbook.c:2428
 msgid "Add"
-msgstr "Añadir"
+msgstr "Adherir"
 
-#: src/gui-addrbook.c:1364 src/gui-addrbook.c:1905 src/gui-addrbook.c:2437
+#: src/gui-addrbook.c:1365 src/gui-addrbook.c:1906 src/gui-addrbook.c:2438
 msgid "Modify"
 msgstr "Modificar"
 
-#: src/gui-addrbook.c:1374 src/gui-addrbook.c:1915 src/gui-addrbook.c:2447
+#: src/gui-addrbook.c:1375 src/gui-addrbook.c:1916 src/gui-addrbook.c:2448
 msgid "Remove"
-msgstr "Remover"
+msgstr "Renombrar"
 
 #. frame
-#: src/gui-addrbook.c:1388
+#: src/gui-addrbook.c:1389
 msgid "E-mail list"
-msgstr "Lista de correos-e"
+msgstr "Lista de correo-e"
 
-#: src/gui-addrbook.c:1460
-#, fuzzy
+#: src/gui-addrbook.c:1461
 msgid "Network"
 msgstr "Red"
 
 #. frame
-#: src/gui-addrbook.c:1748
-#, fuzzy
+#: src/gui-addrbook.c:1749
 msgid "Address data"
-msgstr "Dirección"
+msgstr "Datos de dirección"
 
 #. labels
-#: src/gui-addrbook.c:1767
+#: src/gui-addrbook.c:1768
 msgid "Post Office:"
 msgstr "Oficina Postal:"
 
-#: src/gui-addrbook.c:1772
+#: src/gui-addrbook.c:1773
 msgid "Extended:"
 msgstr "Extendido:"
 
-#: src/gui-addrbook.c:1777
+#: src/gui-addrbook.c:1778
 msgid "Street:"
 msgstr "Calle:"
 
-#: src/gui-addrbook.c:1782
+#: src/gui-addrbook.c:1783
 msgid "City:"
 msgstr "Ciudad:"
 
-#: src/gui-addrbook.c:1787
-#, fuzzy
+#: src/gui-addrbook.c:1788
 msgid "Region:"
 msgstr "Región:"
 
-#: src/gui-addrbook.c:1792
+#: src/gui-addrbook.c:1793
 msgid "Postal Code:"
-msgstr "Código Postal"
+msgstr "Código Postal:"
 
-#: src/gui-addrbook.c:1797
-#, fuzzy
+#: src/gui-addrbook.c:1798
 msgid "Country:"
 msgstr "País:"
 
 #. btns
-#: src/gui-addrbook.c:1859 src/gui-addrbook.c:2371
+#: src/gui-addrbook.c:1860 src/gui-addrbook.c:2372
 msgid "Home"
-msgstr "Casa"
+msgstr "Hogar"
 
-#: src/gui-addrbook.c:1863 src/gui-addrbook.c:2367
+#: src/gui-addrbook.c:1864 src/gui-addrbook.c:2368
 msgid "Work"
 msgstr "Trabajo"
 
-#: src/gui-addrbook.c:1867
+#: src/gui-addrbook.c:1868
 msgid "Postal Box"
 msgstr "Caja Postal"
 
-#: src/gui-addrbook.c:1871
+#: src/gui-addrbook.c:1872
 msgid "Parcel"
 msgstr "Parcela"
 
-#: src/gui-addrbook.c:1875
+#: src/gui-addrbook.c:1876
 msgid "Domestic"
 msgstr "Domestico"
 
-#: src/gui-addrbook.c:1879
-#, fuzzy
+#: src/gui-addrbook.c:1880
 msgid "International"
 msgstr "Internacional"
 
 #. frame
-#: src/gui-addrbook.c:1929
-#, fuzzy
+#: src/gui-addrbook.c:1930
 msgid "Address list"
 msgstr "Lista de direcciones"
 
-#: src/gui-addrbook.c:2001
-#, fuzzy
+#: src/gui-addrbook.c:2002
 msgid "Addresses"
 msgstr "Direcciones"
 
 #. frame
-#: src/gui-addrbook.c:2322
+#: src/gui-addrbook.c:2323
 msgid "Telephone data"
-msgstr "Teléfono"
+msgstr "Datos de teléfono"
 
 #. label
-#: src/gui-addrbook.c:2338
-#, fuzzy
+#: src/gui-addrbook.c:2339
 msgid "Number:"
 msgstr "Número:"
 
 #. btns
-#: src/gui-addrbook.c:2363
-#, fuzzy
+#: src/gui-addrbook.c:2364
 msgid "Preferred"
 msgstr "Preferido"
 
-#: src/gui-addrbook.c:2375
-#, fuzzy
+#: src/gui-addrbook.c:2376
 msgid "Voice"
 msgstr "Voz"
 
-#: src/gui-addrbook.c:2379
+#: src/gui-addrbook.c:2380
 msgid "Fax"
 msgstr "Fax"
 
-#: src/gui-addrbook.c:2383
-#, fuzzy
+#: src/gui-addrbook.c:2384
 msgid "Message Recorder"
-msgstr "Grabador de mensajes"
+msgstr "Grabadora de mensajes"
 
-#: src/gui-addrbook.c:2387
+#: src/gui-addrbook.c:2388
 msgid "Cellular"
 msgstr "Celular"
 
-#: src/gui-addrbook.c:2391
+#: src/gui-addrbook.c:2392
 msgid "Pager"
-msgstr "Paginador"
+msgstr "Buscapersonas"
 
-#: src/gui-addrbook.c:2395
+#: src/gui-addrbook.c:2396
 msgid "Bulletin Board"
-msgstr "Pizarra de boletines"
+msgstr "Pizarra Boletín"
 
-#: src/gui-addrbook.c:2399
-#, fuzzy
+#: src/gui-addrbook.c:2400
 msgid "Modem"
 msgstr "Modem"
 
-#: src/gui-addrbook.c:2403
+#: src/gui-addrbook.c:2404
 msgid "Car"
-msgstr "Automovil"
+msgstr "Automóvil"
 
-#: src/gui-addrbook.c:2407
+#: src/gui-addrbook.c:2408
 msgid "ISDN"
 msgstr "ISDN"
 
-#: src/gui-addrbook.c:2411
-#, fuzzy
+#: src/gui-addrbook.c:2412
 msgid "Video"
 msgstr "Video"
 
 #. frame
-#: src/gui-addrbook.c:2461
+#: src/gui-addrbook.c:2462
 msgid "Phone list"
-msgstr "Lista de teléfonos"
+msgstr "Lista de teléfono"
 
-#: src/gui-addrbook.c:2534
-#, fuzzy
+#: src/gui-addrbook.c:2535
 msgid "Phone"
-msgstr "Teléfono."
+msgstr "Teléfono"
 
 #. label
-#: src/gui-addrbook.c:2857
+#: src/gui-addrbook.c:2858
 msgid "Categories:"
-msgstr "Categorias"
+msgstr "Categorías:"
 
 #. label
-#: src/gui-addrbook.c:2872
+#: src/gui-addrbook.c:2873
 msgid "Comment:"
-msgstr "Comentario:"
+msgstr "Comentarios:"
 
 #. frame
-#: src/gui-addrbook.c:2895
+#: src/gui-addrbook.c:2896
 msgid "Security"
 msgstr "Seguridad"
 
 #. label
-#: src/gui-addrbook.c:2906
+#: src/gui-addrbook.c:2907
 msgid "Public Key:"
-msgstr "Clave pública"
+msgstr "Clave pública:"
 
 #. btns
-#: src/gui-addrbook.c:2934
+#: src/gui-addrbook.c:2935
 msgid "PGP"
 msgstr "PGP"
 
-#: src/gui-addrbook.c:2944
+#: src/gui-addrbook.c:2945
 msgid "X509"
 msgstr "X509"
 
-#: src/gui-addrbook.c:2953
+#: src/gui-addrbook.c:2954
 msgid "Etcetera"
 msgstr "Etcétera"
 
-#: src/gui-addrbook.c:2973
+#: src/gui-addrbook.c:2974
 msgid "Provide the personal information of this contact in this page."
-msgstr "Provea la información personal del contacto en esta página"
+msgstr "Provea información personal sobre el contacto en esta página."
 
-#: src/gui-addrbook.c:2975
+#: src/gui-addrbook.c:2976
 msgid ""
 "Contacts can be organizated by groups for a better Address Book\n"
 "management. Select here the groups where you want this contact to\n"
 "be found."
 msgstr ""
-"Los contactos pueden ser organizados por grupos para un mejor\n"
-"manejo de la libreta. Seleccione aquí los grupos donde quiere\n"
+"Los contactos pueden ser organizados por grupos para un mejor manejo de\n"
+"la Libreta de Direcciones. Seleccione aquí los grupos donde desea\n"
 "encontrar este contacto."
 
-#: src/gui-addrbook.c:2990
+#: src/gui-addrbook.c:2991
 msgid "First name of contact"
 msgstr "Primer nombre del contacto"
 
-#: src/gui-addrbook.c:2992
+#: src/gui-addrbook.c:2993
 msgid "Middle name of contact"
 msgstr "Segundo nombre del contacto"
 
-#: src/gui-addrbook.c:2994
+#: src/gui-addrbook.c:2995
 msgid "Last name of contact"
 msgstr "Apellido del contacto"
 
-#: src/gui-addrbook.c:2996
+#: src/gui-addrbook.c:2997
 msgid "Type here the name you want to represent this contact in the list"
-msgstr "Tipee aquí el nombre con que quiere representar este contacto\n"
-"en la lista."
+msgstr ""
+"Escriba aquí el nombre con el que desea representar este contact\n"
+"en la lista"
 
-#: src/gui-addrbook.c:2998
+#: src/gui-addrbook.c:2999
 msgid "Birthday of the contact"
-msgstr "Aniversario de nacimiento de este contacto."
+msgstr "Fecha de nacimiento de este contacto"
 
-#: src/gui-addrbook.c:3000
+#: src/gui-addrbook.c:3001
 msgid "Organization where this person works."
-msgstr "Organización donde esta persona contacto."
+msgstr "Organización donde esta persona trabaja."
 
-#: src/gui-addrbook.c:3002
+#: src/gui-addrbook.c:3003
 msgid "Role of the person in the organization."
-msgstr "Cargo de la persona en la organización."
+msgstr "Cargo que esta persona ocupa en la organización."
 
-#: src/gui-addrbook.c:3006
+#: src/gui-addrbook.c:3007
 msgid ""
 "Type here the name of a new group or select an existent one from the pull "
 "down list."
 msgstr ""
-"Tipee aquí el nombre de un nuevo grupo o seleccione uno existente de la "
+"Escriba aquó el nombre del nuevo grupo o seleccione uno ya existente de la\n"
 "lista."
 
-#: src/gui-addrbook.c:3008
+#: src/gui-addrbook.c:3009
 msgid "Homepage of this contact's web site"
-msgstr "Sitio de este contacto"
+msgstr "Sitio web de este contacto"
 
-#: src/gui-addrbook.c:3072
+#: src/gui-addrbook.c:3073
 msgid "Any other thing?"
-msgstr "Alguna otra cosa?"
+msgstr "¿Alguna otra cosa?"
 
-#: src/gui-addrbook.c:3074
+#: src/gui-addrbook.c:3075
 msgid "Public PGP or GnuPG key."
-msgstr "Clave pública PGP o GnuPGP"
+msgstr "Clave pública PGP o GnuPG."
 
 #: src/gui-composer.c:210
 msgid "Composer"
-msgstr "Compositor"
+msgstr "Componedor"
 
 #. * labels *
-#: src/gui-composer.c:243 src/gui-print.c:284 src/gui-window_main.c:306
-#: src/gui-window_message.c:343 src/pop.c:820
+#: src/gui-composer.c:243 src/gui-message_big.c:107 src/gui-print.c:284
+#: src/gui-window_composer.c:301 src/gui-window_main.c:306
+#: src/gui-window_message.c:343 src/pop.c:829
 msgid "Account:"
 msgstr "Cuenta:"
 
 #. * To *
-#: src/gui-composer.c:248 src/gui-print.c:285 src/gui-window_main.c:234
-#: src/gui-window_message.c:271
+#: src/gui-composer.c:248 src/gui-print.c:285 src/gui-window_composer.c:305
+#: src/gui-window_main.c:234 src/gui-window_message.c:271
 msgid "To:"
 msgstr "Para:"
 
 #. * CC *
-#: src/gui-composer.c:253 src/gui-print.c:287 src/gui-window_main.c:252
-#: src/gui-window_message.c:289
+#: src/gui-composer.c:253 src/gui-print.c:287 src/gui-window_composer.c:309
+#: src/gui-window_main.c:252 src/gui-window_message.c:289
 msgid "CC:"
 msgstr "CC:"
 
 #. * BCC *
-#: src/gui-composer.c:258 src/gui-window_main.c:270
-#: src/gui-window_message.c:307
+#: src/gui-composer.c:258 src/gui-window_composer.c:313
+#: src/gui-window_main.c:270 src/gui-window_message.c:307
 msgid "BCC:"
 msgstr "BCC:"
 
 #. * SUBJECT *
-#: src/gui-composer.c:263 src/gui-print.c:288 src/gui-window_main.c:288
-#: src/gui-window_message.c:325 src/pop.c:832
+#: src/gui-composer.c:263 src/gui-message_big.c:118 src/gui-print.c:288
+#: src/gui-window_composer.c:317 src/gui-window_main.c:288
+#: src/gui-window_message.c:325 src/pop.c:841
 msgid "Subject:"
-msgstr "Asunto:"
+msgstr "Asunto"
 
 #: src/gui-composer.c:276 src/gui-composer.c:287
 #, c-format
 msgid "%d. %s <%s>"
-msgstr "%d. %s <%d>"
+msgstr "%d. %s <%s>"
 
 #: src/gui-composer.c:304 src/gui-composer.c:347 src/gui-composer.c:387
 msgid "Use Address Book to add contact"
-msgstr "Utilizar Libreta de direcciones para añadir contacto"
+msgstr "Utilizar Libreta de Direcciones para adherir un contacto"
 
 #: src/gui-composer.c:420
 #, c-format
@@ -747,7 +703,7 @@ msgstr "Adherir un archivo adjunto"
 
 #: src/gui-composer.c:463
 msgid "Remove selected attachment"
-msgstr "Remover archivo adjunto seleccionado"
+msgstr "Remover el adjunto seleccionado"
 
 #: src/gui-composer.c:531
 #, c-format
@@ -770,19 +726,16 @@ msgstr "Cuenta"
 
 #: src/gui-composer.c:588 src/gui-window_main.c:817
 #: src/gui-window_main_callbacks.c:105 src/gui-window_message.c:116
-#, fuzzy
 msgid "To"
 msgstr "Para"
 
 #: src/gui-composer.c:594 src/gui-window_main.c:823
 #: src/gui-window_message.c:122
-#, fuzzy
 msgid "CC"
 msgstr "CC"
 
 #: src/gui-composer.c:600 src/gui-window_main.c:829
 #: src/gui-window_message.c:128
-#, fuzzy
 msgid "BCC"
 msgstr "BCC"
 
@@ -793,36 +746,30 @@ msgstr "Asunto"
 
 #: src/gui-composer.c:612 src/gui-window_main.c:847
 #: src/gui-window_message.c:146
-#, fuzzy
 msgid "Priority"
 msgstr "Prioridad"
 
 #: src/gui-composer.c:623
-#, fuzzy
 msgid "_Send"
 msgstr "_Enviar"
 
 #: src/gui-composer.c:624 src/gui-composer.c:791
-#, fuzzy
 msgid "Send this message"
 msgstr "Enviar este mensaje"
 
-#: src/gui-composer.c:630
-msgid "Send to _queue"
+#: src/gui-composer.c:630 src/gui-window_composer.c:186
+msgid "Send _Later"
 msgstr "Enviar _más tarde"
 
 #: src/gui-composer.c:631
-#, fuzzy
 msgid "Send this message later"
 msgstr "Enviar este mensaje más tarde"
 
 #: src/gui-composer.c:639 src/gui-composer.c:640
-#, fuzzy
 msgid "Save to file"
-msgstr "Guardar en archivo"
+msgstr "Guardar a un archivo"
 
 #: src/gui-composer.c:653
-#, fuzzy
 msgid "_File"
 msgstr "_Archivo"
 
@@ -832,53 +779,45 @@ msgstr "Insertar un archivo"
 
 #: src/gui-composer.c:660
 msgid "_Signature"
-msgstr "_Firma"
+msgstr "_Firmar"
 
 #: src/gui-composer.c:661
-#, fuzzy
 msgid "Insert signature"
-msgstr "Insertar archivo"
+msgstr "Insertar una firma"
 
 #: src/gui-composer.c:667
 msgid "Attachment"
 msgstr "Adjunto"
 
 #: src/gui-composer.c:668
-#, fuzzy
 msgid "Insert an attachment"
-msgstr "Insertar un adjunto"
+msgstr "Insertar un archivo adjunto"
 
 #: src/gui-composer.c:682 src/gui-composer.c:684
 msgid "_Insert"
 msgstr "_Insertar"
 
 #: src/gui-composer.c:791 src/gui-window_main.c:1232
-#, fuzzy
 msgid "Send"
 msgstr "Enviar"
 
 #: src/gui-composer.c:801
-#, fuzzy
 msgid "Send to queue"
 msgstr "Enviar más tarde"
 
 #: src/gui-composer.c:801
-#, fuzzy
 msgid "Send this message to the queue folder"
-msgstr "Guardar este mensaje a un archivo"
+msgstr "Enviar este mensaje al Buzón de Salida"
 
 #: src/gui-composer.c:811
-#, fuzzy
 msgid "Save this message to the Drafts mailbox"
-msgstr "Guardar este mensaje en el buzón Borrador"
+msgstr "Guardar este mensaje en el Buzón Borrador"
 
 #: src/gui-composer.c:819
-#, fuzzy
 msgid "To File"
 msgstr "A Archivo"
 
 #: src/gui-composer.c:819
-#, fuzzy
 msgid "Save this message to a file"
 msgstr "Guardar este mensaje a un archivo"
 
@@ -891,7 +830,6 @@ msgid "Sign"
 msgstr "Firmar"
 
 #: src/gui-composer.c:837
-#, fuzzy
 msgid "Sign this message"
 msgstr "Firmar este mensaje"
 
@@ -901,89 +839,91 @@ msgstr "Adjuntos"
 
 #: src/gui-composer.c:847
 msgid "Show attachments list"
-msgstr "Mostrar lista de archivos adjuntos"
+msgstr "Mostrar lista de adjuntos"
 
 #: src/gui-composer.c:857
-#, fuzzy
 msgid "Close this message"
 msgstr "Cerrar este mensaje"
 
-#: src/gui-composer.c:1076 src/gui-composer.c.c:275
+#: src/gui-composer.c:1076
+#, fuzzy
 msgid ""
 "This is a multipart message in MIME format.\n"
 "The fact that you reached this text means that your\n"
 "mail client does not understand MIME messages and you will\n"
-"not be understand the attachments. You should consider moving\n"
+"not be able to understand the attachments. You should consider moving\n"
 "to another mail client or to a higher version.\n"
-"\n"
+"For further information, connect to http://cronosII.sourceforge.net\n"
+"or contact cronosII@users.sourceforge.net\n"
 msgstr ""
 "Este es un mensaje multipart en formato MIME.\n"
-"El hecho de que hayas alcanzado este texto significa que su\n"
-"cliente de email no comprende mensajes MIME y usted no será capaz de "
-"entender\n"
-"los archivos adjuntos. Debería considerar cambiar de cliente de email o "
-"actualizar\n"
-"a una versión mayor.\n"
+"El hecho de que pueda leer este texto significa que\n"
+"su cliente de correo electrónico no comprende el formato\n"
+"MIME por lo que Ud. no podrá comprender los archivos\n"
+"adjuntos. Ud. debería considerar utilizar otro cliente\n"
+"de correos electrónicos o utilizar una nueva versión\n"
+"del que posee actualmente.\n"
+"Para más información, conectese a http://cronosII.sourceforge.net\n"
+"o contacte a cronosII@users.sourceforge.net\n"
+"\n"
 
-#: src/gui-composer.c:1223 src/gui-window_main_callbacks.c:1114
-#, fuzzy
+#: src/gui-composer.c:1225 src/gui-window_main_callbacks.c:1114
 msgid "Confirmation"
 msgstr "Confirmación"
 
-#: src/gui-composer.c:1224
-#, fuzzy
+#: src/gui-composer.c:1226
 msgid ""
 "This message was modified.\n"
 "Are you sure you want to close it?"
 msgstr ""
-"El mensaje fue modificado.\n"
+"Este mensaje ha sido modificado.\n"
 "¿Esta seguro que desea cerrarlo?"
 
-#: src/gui-composer.c:1225 src/gui-decision_dialog.c:100
+#: src/gui-composer.c:1227 src/gui-decision_dialog.c:100
+#: src/gui-window_composer.c:160
 msgid "Yes"
 msgstr "Sí"
 
-#: src/gui-composer.c:1225 src/gui-decision_dialog.c:102
+#: src/gui-composer.c:1227 src/gui-decision_dialog.c:102
+#: src/gui-window_composer.c:160
 msgid "No"
 msgstr "No"
 
-#: src/gui-composer.c:1276
-#, fuzzy
+#: src/gui-composer.c:1278
 msgid "Couldn't open the directory for adding the attachments"
-msgstr "No se pudo abrir el directorio para adherir los adjuntos"
+msgstr "Imposible abrir el directorio para adherir los adjuntos"
 
-#: src/gui-composer.c:1480 src/gui-composer.c:1574
+#: src/gui-composer.c:1482 src/gui-composer.c:1576
+#: src/gui-window_composer.c:116
 msgid "Opening mailbox's index file"
-msgstr "Abriendo el archivo principal de la carpeta"
+msgstr "Abriendo el archivo index del buzón"
 
-#: src/gui-composer.c:1481 src/gui-composer.c:1575
+#: src/gui-composer.c:1483 src/gui-composer.c:1577
 msgid "Failed to append the mail in the index file."
-msgstr "Fallo al intentar añadir el correo en el archivo principal de la DB."
+msgstr "Fallo al escribir el correo-e en el archivo index."
 
-#: src/gui-composer.c:1502 src/gui-composer.c:1596 src/pop.c:458
-#, fuzzy
+#: src/gui-composer.c:1504 src/gui-composer.c:1598 src/pop.c:471
 msgid "Opening the mail file"
-msgstr "Abriendo el archivo de correo"
+msgstr "Abriendo el archivo del correo-e"
 
-#: src/gui-composer.c:1503 src/gui-composer.c:1597
+#: src/gui-composer.c:1505 src/gui-composer.c:1599
 msgid "Failed to write the mail in its file."
-msgstr "Fallo al escribir el correo en su propia en su archivo."
+msgstr "Fallo al escribir el correo-e en su propio archivo."
 
-#: src/gui-composer.c:1524 src/gui-composer.c:1617 src/gui-composer.c:1668
+#: src/gui-composer.c:1526 src/gui-composer.c:1619 src/gui-composer.c:1670
 msgid "Message saved successfully."
-msgstr "Mensaje salvado exitosamente."
-
-#: src/gui-composer.c:1648
-#, fuzzy
-msgid "Opening the selected file"
-msgstr "Abriendo los archivos seleccionados"
+msgstr "Mensaje guardado correctamente."
 
 #: src/gui-composer.c:1650
-msgid "Failed to write the mail in the selected file."
-msgstr "Fallo al escribir el correo en el archivo seleccionado."
+msgid "Opening the selected file"
+msgstr "Abriendo el archivo seleccionado"
 
-#: src/gui-composer.c:1657
-#, fuzzy, c-format
+#: src/gui-composer.c:1652
+msgid "Failed to write the mail in the selected file."
+msgstr "Fallo al escribir el correo-e en el archivo seleccionado"
+
+#: src/gui-composer.c:1659
+#, c-format
 msgid ""
 "To: %s\n"
 "Subject: %s\n"
@@ -992,24 +932,22 @@ msgid ""
 "\n"
 "%s\n"
 msgstr ""
-"De: %s\n"
 "Para: %s\n"
-"Fecha: %s\n"
 "Asunto: %s\n"
+"Fecha: %s\n"
+"Cuenta: %s\n"
 "\n"
 "%s\n"
 
-#: src/gui-composer.c:1733
-#, fuzzy
+#: src/gui-composer.c:1735
 msgid "Opening the selected file for reading"
 msgstr "Abriendo el archivo seleccionado para lectura"
 
-#: src/gui-composer.c:1734
+#: src/gui-composer.c:1736
 msgid "Failed to insert the file."
 msgstr "Fallo al insertar el archivo."
 
-#: src/gui-composer.c:1748
-#, fuzzy
+#: src/gui-composer.c:1750
 msgid "File inserted successfully."
 msgstr "Archivo insertado exitosamente."
 
@@ -1018,9 +956,9 @@ msgid "OK"
 msgstr "OK"
 
 #: src/gui-export.c:65 src/gui-import.c:65
-#, fuzzy, c-format
+#, c-format
 msgid "The mailbox %s couldn't be found."
-msgstr "El nombre de buzón %s ya esta tomado."
+msgstr "El buzón %s no pudo ser encontrado"
 
 #. ---> Edit here for adding supported mailbox format <---
 #: src/gui-export.c:73 src/gui-export.c:106 src/gui-import.c:73
@@ -1029,57 +967,48 @@ msgid "Spool"
 msgstr "Spool"
 
 #: src/gui-export.c:76 src/gui-import.c:76
-#, fuzzy, c-format
+#, c-format
 msgid "The mailbox type %s is not supported."
-msgstr "El nombre de buzón %s ya esta tomado."
+msgstr "El buzón de tipo %s no es soportado."
 
 #: src/gui-export.c:83
 msgid "Unable to export mailbox."
-msgstr "No se pudo exportar el buzón."
+msgstr "Imposible exportar el buzón."
 
 #: src/gui-export.c:85
-#, fuzzy
 msgid "One message exported succesfully"
 msgstr "Un mensaje exportado exitosamente"
 
 #: src/gui-export.c:87
-#, fuzzy, c-format
+#, c-format
 msgid "%d messages exported succesfully"
 msgstr "%d mensajes exportados exitosamente"
 
 #: src/gui-export.c:108
-#, fuzzy
 msgid "Export Mailbox"
 msgstr "Exportar Buzón"
 
 #: src/gui-export.c:117 src/gui-import.c:117
-#, fuzzy
 msgid "Mailbox type"
-msgstr "Tipo de Buzones"
+msgstr "Tipo de Buzón"
 
 #: src/gui-export.c:127
-#, fuzzy
 msgid "From Mailbox"
-msgstr "De Buzón"
+msgstr "Desde Buzón"
 
-#: src/gui-export.c:163 src/gui-import.c:164
+#: src/gui-export.c:163 src/gui-import.c:164 src/gui-window_debug.c:87
 msgid "File"
 msgstr "Archivo"
 
 #: src/gui-export.c:204
-#, fuzzy
 msgid "Couldn't open the selected file for exporting the mailbox"
-msgstr "No se pudo abrir el archivo seleccionado para exportar el buzón"
+msgstr "Imposible abrir el archivo seleccionado para exportar el buzón"
 
 #: src/gui-export.c:211
-#, fuzzy
 msgid "Couln't open the main DB file for exporting the mailbox"
-msgstr ""
-"No se pudo abriro el archivo principal de la Base de Datos para exportar el "
-"Buzón"
+msgstr "No se pudo abrir el archivo de la base de datos para exportar el buzón"
 
 #: src/gui-export.c:230
-#, fuzzy
 msgid "Exporting..."
 msgstr "Exportando..."
 
@@ -1088,50 +1017,76 @@ msgstr "Exportando..."
 #: src/gui-window_main_callbacks.c:1064 src/gui-window_main_callbacks.c:1299
 #: src/gui-window_main_callbacks.c:1385 src/gui-window_main_callbacks.c:1470
 msgid "Done."
-msgstr "Hecho."
+msgstr "Terminado."
 
 #: src/gui-import.c:82
 msgid "Unable to import mailbox."
-msgstr "No se pudo importar el buzón."
+msgstr "Imposible importar buzón."
 
 #: src/gui-import.c:84
-#, fuzzy
 msgid "One message imported succesfully"
 msgstr "Un mensaje importado exitosamente"
 
 #: src/gui-import.c:86
-#, fuzzy, c-format
+#, c-format
 msgid "%d messages imported succesfully"
 msgstr "%d mensajes importados exitosamente"
 
 #: src/gui-import.c:108
-#, fuzzy
 msgid "Import Mailbox"
 msgstr "Importar Buzón"
 
 #: src/gui-import.c:127
-#, fuzzy
 msgid "Destination Mailbox"
-msgstr "Buzón Destino"
+msgstr "Buzón destino"
 
 #: src/gui-import.c:214
 msgid "Couldn't open the specified file for importing messages"
-msgstr "No se pudo abrir el archivo especificado para importar los mensajes"
+msgstr "Imposible abrir el archivo especificado para importar mensajes"
 
 #: src/gui-import.c:224
-#, fuzzy
 msgid "Importing..."
 msgstr "Importando..."
 
 #: src/gui-import.c:232
-#, fuzzy
 msgid "Couldn't open the main DB file for appending the imported message"
-msgstr "No se pudo abrir el archivo principal para adherir el nuevo correo"
+msgstr "Imposible abrir el principal archivo de la base de datos para escribir el mensaje importado"
 
 #: src/gui-import.c:252
-#, fuzzy
 msgid "Couldn't open the mail file for writing the imported message"
-msgstr "No se pudo abrir el archivo de correo para escribirlo"
+msgstr "Imposible abrir el archivo del correo-e para escribir el mensaje importado"
+
+#: src/gui-message_big.c:56
+msgid "Download message?"
+msgstr "¿Obtener mensaje?"
+
+#: src/gui-message_big.c:64
+msgid ""
+"A message bigger than what you allowed to automatically download has been "
+"found."
+msgstr ""
+"Un mensaje más grande de lo que Ud. autorizó a obtener automaticamente ha "
+"sido encontrado."
+
+#. * From *
+#: src/gui-message_big.c:74 src/gui-print.c:283 src/gui-window_main.c:213
+#: src/gui-window_message.c:250 src/pop.c:780
+msgid "From:"
+msgstr "De:"
+
+#. * DATE *
+#: src/gui-message_big.c:96 src/gui-print.c:286 src/gui-window_main.c:325
+#: src/gui-window_message.c:362 src/pop.c:801
+msgid "Date:"
+msgstr "Fecha:"
+
+#: src/gui-message_big.c:129 src/pop.c:863
+msgid "Size:"
+msgstr "Tamaño:"
+
+#: src/gui-message_big.c:188 src/pop.c:914
+msgid "Do you want to download it?"
+msgstr "¿Desea obtenerlo?"
 
 #: src/gui-preferences.c:192
 msgid "Preferences"
@@ -1142,25 +1097,24 @@ msgid "General"
 msgstr "General"
 
 #: src/gui-preferences.c:238
-#, fuzzy
 msgid "Mail"
-msgstr "E-Mail"
+msgstr "Correo-e"
 
 #: src/gui-preferences.c:436 src/gui-preferences.c:2660
 msgid "when required."
-msgstr ""
+msgstr "cuando sea requerido."
 
 #: src/gui-preferences.c:437 src/gui-preferences.c:2663
 msgid "when it is opened."
-msgstr ""
+msgstr "cuando es abierto."
 
 #: src/gui-preferences.c:527
 msgid "Checking if the directory of the mailbox exists"
-msgstr "Chequeando si existe el directorio de buzones"
+msgstr "Chequeando si el directorio del buzón existe"
 
 #: src/gui-preferences.c:541
-msgid "Creating the index directory for the nex mailbox"
-msgstr "Creando el archivo principal de la base de datos para el nuevo buzón"
+msgid "Creating the index directory for the new mailbox"
+msgstr "Creando el directorio del buzón nuevo"
 
 #: src/gui-preferences.c:691
 msgid "Unknown"
@@ -1171,35 +1125,31 @@ msgid ""
 "You must select a mailbox where to store messages downloaded from this "
 "account."
 msgstr ""
-"Debe seleccionar algun buzón donde guardar los mensajes bajados desde esta "
-"cuenta."
+"Debe seleccionar un buzón donde guardar los mensajes obtenidos desde esta cuenta"
 
 #: src/gui-preferences.c:903
-#, fuzzy
 msgid "Edit Account"
 msgstr "Editar Cuenta"
 
 #: src/gui-preferences.c:903
-#, fuzzy
 msgid "New Account"
-msgstr "Nueva Cuenta"
+msgstr "Crear Cuenta"
 
 #: src/gui-preferences.c:920 src/gui-preferences.c:1565
 msgid "Account Name"
-msgstr "Nombre de cuenta"
+msgstr "Nombre de Cuenta"
 
 #: src/gui-preferences.c:923
 msgid "Name: "
 msgstr "Nombre: "
 
 #: src/gui-preferences.c:926
-#, fuzzy
 msgid "E-Mail: "
-msgstr "E-Mail"
+msgstr "Correo-e: "
 
 #: src/gui-preferences.c:961
 msgid "User Name: "
-msgstr "Nombre de usuario:"
+msgstr "Usuario: "
 
 #: src/gui-preferences.c:964
 msgid "Password: "
@@ -1220,9 +1170,8 @@ msgid "Port: "
 msgstr "Puerto: "
 
 #: src/gui-preferences.c:1030
-#, fuzzy
 msgid "File: "
-msgstr "Archivo:"
+msgstr "Archivo: "
 
 #: src/gui-preferences.c:1047
 msgid ".."
@@ -1240,16 +1189,15 @@ msgstr "Buzón"
 
 #: src/gui-preferences.c:1187
 msgid "Automatically append signature"
-msgstr "Firmar automaticamente"
+msgstr "Automaticamente escribir firma"
 
 #: src/gui-preferences.c:1197
 msgid "Signature"
 msgstr "Firma"
 
 #: src/gui-preferences.c:1207
-#, fuzzy
 msgid "Keep messages on the server."
-msgstr "Guardar mensajes en el servidor."
+msgstr "Dejar los mensajes en el servidor."
 
 #: src/gui-preferences.c:1216
 msgid "Activate this account"
@@ -1260,32 +1208,28 @@ msgid "Advanced"
 msgstr "Avanzado"
 
 #: src/gui-preferences.c:1319 src/gui-preferences.c:1350
-#, fuzzy
 msgid "Account Type"
 msgstr "Tipo de Cuenta"
 
 #: src/gui-preferences.c:1358
-#, fuzzy
 msgid "POP3 Account"
 msgstr "Cuenta POP3"
 
 #: src/gui-preferences.c:1365
-#, fuzzy
 msgid "Spool Account"
 msgstr "Cuenta Spool"
 
 #: src/gui-preferences.c:1568
 msgid "E-Mail"
-msgstr "E-Mail"
+msgstr "Correo-e"
 
 #: src/gui-preferences.c:1688
 msgid "Up"
 msgstr "Arriba"
 
 #: src/gui-preferences.c:1717
-#, fuzzy
 msgid "Down"
-msgstr "Abajo."
+msgstr "Abajo"
 
 #: src/gui-preferences.c:1739
 msgid "Accounts"
@@ -1294,17 +1238,17 @@ msgstr "Cuentas"
 #: src/gui-preferences.c:1781
 #, c-format
 msgid "The mailbox name %s is already taken."
-msgstr "El nombre de buzón %s ya esta tomado."
+msgstr "El buzón con nombre %s ya está tomado."
 
 #: src/gui-preferences.c:1789 src/gui-preferences.c:1851
 #, c-format
 msgid "Couldn't found %s in the list\n"
-msgstr "No se puede encontrar %s en la lista\n"
+msgstr "Imposible encontrar %s en la lista\n"
 
 #: src/gui-preferences.c:1844
 #, c-format
 msgid "You can't delete the mailbox %s because it's a special mailbox\n"
-msgstr "No se puede borrar el buzón %s por que es un buzón especial\n"
+msgstr "No puede eliminar el buzón %s ya que es un buzón especial\n"
 
 #. **********
 #. ** Frame **
@@ -1319,7 +1263,7 @@ msgstr "Buzones"
 #. **********
 #: src/gui-preferences.c:1941
 msgid "New Mailbox Name: "
-msgstr "Nombre de buzón nuevo: "
+msgstr "Nombre de nuevo buzón: "
 
 #. ***************
 #. ** Add Button **
@@ -1333,83 +1277,77 @@ msgstr "Adherir Buzón"
 #. ******************
 #: src/gui-preferences.c:1964
 msgid "Delete Mailbox"
-msgstr "Borrar Buzón"
+msgstr "Eliminar Buzón"
 
 #. **********
 #. ** Frame **
 #. **********
 #: src/gui-preferences.c:1996
-#, fuzzy
 msgid "Check for mail timeout (in minutes)"
-msgstr "Tiempo de espera para chequear las cuentas en minutos"
+msgstr "Cantidad de minutos entre chequeos automáticos"
 
 #. **********
 #. ** Frame **
 #. **********
 #: src/gui-preferences.c:2012
 msgid "Seconds before marking a mail as readed"
-msgstr "Segundos antes de marcar un correo como leído"
+msgstr "Segundos antes de marcar un mensaje como leído"
 
 #. **********
 #. ** Frame **
 #. **********
 #: src/gui-preferences.c:2028
-#, fuzzy
 msgid "Repling and forwarding"
-msgstr "Respondiendo y reenviando"
+msgstr "Contestando y Reenviando"
 
 #. **********
 #. ** Label **
 #. **********
 #: src/gui-preferences.c:2042
-#, fuzzy
 msgid "String to prepend to the original mail: "
-msgstr "Prefijar los siguientes caracteres al mensaje original: "
+msgstr "Caracteres a añadir al comienzo de cada linea del mensaje original: "
 
 #. **********
 #. ** label **
 #. **********
 #: src/gui-preferences.c:2064
 msgid "Ask before downloading messages bigger than "
-msgstr "Preguntar antes de bajar mensajes más grandes que "
+msgstr "Preguntar antes de obtener mensajes mayores a "
 
 #. ******************
 #. ** Empty Garbage **
 #. ******************
 #: src/gui-preferences.c:2086
 msgid "Empty Garbage on exit"
-msgstr "Vaciar la carpeta Basura al salir"
+msgstr "Vaciar el buzón Basura a la salida"
 
 #. ****************
 #. ** Keep a copy **
 #. ****************
 #: src/gui-preferences.c:2094
 msgid "Store a copy of sent mails in the Outbox mailbox"
-msgstr "Guardar una copia de los correos enviados en el Buzón de Salida"
+msgstr "Guardar una copia de los correos enviados en el buzón de "
 
 #. * Check for mail at start *
 #: src/gui-preferences.c:2100
-#, fuzzy
 msgid "Check for mail at start up."
-msgstr "Tiempo de espera para chequear las cuentas en minutos"
+msgstr "Obtener correos al inicio del programa."
 
 #: src/gui-preferences.c:2105
 msgid "Whether to check activated accounts when Cronos II starts or not."
-msgstr ""
+msgstr "Seleccione si las cuentas activadas deberían ser chequeadas cuando Cronos II comienza."
 
 #: src/gui-preferences.c:2107
 msgid "Options"
 msgstr "Opciones"
 
 #: src/gui-preferences.c:2155
-#, fuzzy
 msgid "Font Selection"
-msgstr "Seleccionar fuente"
+msgstr "Selección de fuente"
 
 #: src/gui-preferences.c:2169
-#, fuzzy
 msgid "Peter was in the field"
-msgstr "Tomando las estadísticas del archivo"
+msgstr "Pedro estaba en el campo"
 
 #. **********
 #. ** Frame **
@@ -1430,18 +1368,11 @@ msgid ""
 "%n = New messages in selected mailbox,\n"
 "%M = Selected mailbox."
 msgstr ""
-"Caracteres de conversión:\n"
-"%a = Nombre de la aplicación (Cronos II),\n"
-"%v = Versión,\n"
-"%m = Mensajes en la carpeta seleccionada,\n"
-"%n = Mensajes nuevos en la carpeta seleccionada,\n"
-"%M = Nombre de la carpeta seleccionada."
 
 #. **********
 #. ** Frame **
 #. **********
 #: src/gui-preferences.c:2241
-#, fuzzy
 msgid "Toolbar"
 msgstr "Barra de herramientas"
 
@@ -1450,15 +1381,15 @@ msgstr "Barra de herramientas"
 #. ******************
 #: src/gui-preferences.c:2255
 msgid "Icons and text"
-msgstr "Texto e Iconos"
+msgstr "Íconos y texto"
 
 #: src/gui-preferences.c:2263
 msgid "Icons only"
-msgstr "Sólo Iconos"
+msgstr "Íconos unicamente"
 
 #: src/gui-preferences.c:2271
 msgid "Text only"
-msgstr "Sólo Texto"
+msgstr "Texto unicamente"
 
 #: src/gui-preferences.c:2278 src/gui-preferences.c:2282
 msgid "Interface"
@@ -1480,19 +1411,16 @@ msgid "Read Message List"
 msgstr "Lista de mensajes leídos"
 
 #: src/gui-preferences.c:2331
-#, fuzzy
 msgid "Printing"
-msgstr "Imprimir"
+msgstr "Impresión"
 
 #: src/gui-preferences.c:2426
-#, fuzzy
 msgid "Fonts"
 msgstr "Fuentes"
 
 #: src/gui-preferences.c:2461
-#, fuzzy
 msgid "Replying and forwarding"
-msgstr "Respondiendo y reenviando"
+msgstr "Contestando y Reenviando"
 
 #. ***********
 #. ** Labels **
@@ -1503,18 +1431,16 @@ msgstr "Mensaje original:"
 
 #: src/gui-preferences.c:2498
 msgid "Miscellaneous"
-msgstr "Misceláneos"
+msgstr "Miscelaneo"
 
 #. ***********
 #. ** Labels **
 #. ***********
 #: src/gui-preferences.c:2506
-#, fuzzy
 msgid "Message body text color:"
-msgstr "Color del cuerpo del mensaje:"
+msgstr "Color del texto del cuerpo del mensaje:"
 
 #: src/gui-preferences.c:2526
-#, fuzzy
 msgid "Colors"
 msgstr "Colores"
 
@@ -1523,7 +1449,7 @@ msgstr "Colores"
 #. **********
 #: src/gui-preferences.c:2569
 msgid "Timeout for net related stuff: "
-msgstr "Tiempo de espera para cosas relacionadas con la red: "
+msgstr "Tiempo de muerte para cosas relacionadas con la red: "
 
 #. **********
 #. ** label **
@@ -1534,53 +1460,53 @@ msgstr " segundos."
 
 #: src/gui-preferences.c:2598
 msgid "Use persistent SMTP connection: "
-msgstr ""
+msgstr "Utilizar conexión SMTP persistente: "
 
 #: src/gui-preferences.c:2604 src/gui-preferences.c:2654
 msgid ""
 "Keep connected to the SMTP host to use again that connection to send "
 "outgoing messages"
 msgstr ""
+"Quedarse conectado con el servidor SMTP para reutilizar la conexión al enviar "
+"mensajes"
 
 #: src/gui-preferences.c:2616 src/gui-preferences.c:2631
-#, fuzzy
 msgid "Persistant connection to the SMTP host"
-msgstr "Conectando al servidor SMTP..."
+msgstr "Conexión persistente al servidor SMTP"
 
 #. * Label *
 #: src/gui-preferences.c:2643
 msgid "Initialize Address Book"
-msgstr ""
+msgstr "Inizalizar la Libreta de Direcciones"
 
 #: src/gui-preferences.c:2657
 msgid "at start."
-msgstr ""
+msgstr "al comienzo."
 
 #: src/gui-preferences.c:2745 src/plugin.c:166
-#, fuzzy, c-format
+#, c-format
 msgid "Couldn't create the directory %s: %s"
-msgstr "Conexión rechazada por el servidor"
+msgstr "Imposible crear el directorio %s: %s"
 
 #. * Frame *
 #: src/gui-preferences.c:2827
 msgid "Loaded Plug-Ins"
-msgstr "Plug-Ins Cargados"
+msgstr "Plug-Ins cargados"
 
 #: src/gui-preferences.c:2861
 msgid "Load..."
 msgstr "Cargar..."
 
 #: src/gui-preferences.c:2878
-#, fuzzy
 msgid "Unload"
-msgstr "No leído"
+msgstr "Descargar"
 
 #: src/gui-preferences.c:2896
 msgid "Configure"
 msgstr "Configurar"
 
 #. * Frame *
-#: src/gui-preferences.c:2910 src/version.c:118
+#: src/gui-preferences.c:2910 src/gui-window_debug.c:90 src/version.c:119
 msgid "Information"
 msgstr "Información"
 
@@ -1601,9 +1527,8 @@ msgstr "URL:"
 
 #. * Description *
 #: src/gui-preferences.c:2999
-#, fuzzy
 msgid "Description:"
-msgstr "Descripción"
+msgstr "Descipción:"
 
 #: src/gui-preferences.c:3016
 msgid "Plug-Ins"
@@ -1611,23 +1536,22 @@ msgstr "Plug-Ins"
 
 #: src/gui-print.c:67 src/gui-print.c:464 src/gui-window_main.c:1266
 msgid "Print"
-msgstr "Imprimir"
+msgstr "Impresión"
 
 #: src/gui-print.c:83
 msgid "Printing command: "
-msgstr "Comando para imprimir: "
+msgstr "Comando de impresión: "
 
 #: src/gui-print.c:87
 msgid "Number of copies: "
-msgstr "Cantidad de copias: "
+msgstr "Número de copias: "
 
 #: src/gui-print.c:162
-#, fuzzy
 msgid "Opening the temporary file"
-msgstr "Abriendo el archivo de correo temporal"
+msgstr "Abriendo el archivo temporal"
 
 #: src/gui-print.c:171
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "From:\t   %s\n"
 "Account: %s\n"
@@ -1636,24 +1560,12 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
-"De: %s\n"
-"Para: %s\n"
-"Fecha: %s\n"
+"De:\t   %s\n"
+"Cuenta: %s\n"
+"Fecha:  %s\n"
 "Asunto: %s\n"
 "\n"
-"%s\n"
-
-#. * From *
-#: src/gui-print.c:283 src/gui-window_main.c:213 src/gui-window_message.c:250
-#: src/pop.c:771
-msgid "From:"
-msgstr "De:"
-
-#. * DATE *
-#: src/gui-print.c:286 src/gui-window_main.c:325 src/gui-window_message.c:362
-#: src/pop.c:792
-msgid "Date:"
-msgstr "Fecha:"
+"%s"
 
 #: src/gui-print.c:412 src/gui-print.c:438
 #, c-format
@@ -1661,12 +1573,10 @@ msgid "Page %d of %d"
 msgstr "Página %d de %d"
 
 #: src/gui-print.c:489
-#, fuzzy
 msgid "Print Preview"
-msgstr "Vista Previa de Impresión"
+msgstr "Vista previa de Impresión"
 
 #: src/gui-select_file.c:64
-#, fuzzy
 msgid "Select a file"
 msgstr "Seleccionar un archivo"
 
@@ -1675,185 +1585,247 @@ msgid "Select a mailbox"
 msgstr "Seleccionar un buzón"
 
 #: src/gui-window_checking.c:85
-#, fuzzy
 msgid "Cronos II: Get New Mail"
-msgstr "Cronos II: Obtener Nuevos Correos"
+msgstr "Cronos II: Obtener nuevos mensajes"
 
 #: src/gui-window_checking.c:108
 msgid "%p%% downloaded"
-msgstr "%p%% bajado"
+msgstr "%p%% obtenido"
+
+#: src/gui-window_composer.c:59
+#, fuzzy, c-format
+msgid "Composer: %s"
+msgstr "Compositor: %s"
+
+#: src/gui-window_composer.c:62 src/gui-window_composer.c:235
+#, fuzzy
+msgid "Cronos II Composer"
+msgstr "Compositor de Cronos II"
+
+#: src/gui-window_composer.c:103
+#, fuzzy
+msgid "Couldn't found the Drafts mailbox"
+msgstr "Imposible encontrar el buzón Borrador"
+
+#: src/gui-window_composer.c:129
+msgid "Opening mail's file"
+msgstr "Abriendo el archivo de correo-e"
+
+#: src/gui-window_composer.c:134
+#, c-format
+msgid ""
+"From: %s\n"
+"To: %s\n"
+"Date: %s\n"
+"Subject: %s\n"
+"\n"
+"%s\n"
+msgstr ""
+"De: %s\n"
+"Para: %s\n"
+"Fecha: %s\n"
+"Asunto: %s\n"
+"\n"
+"%s\n"
+
+#: src/gui-window_composer.c:158
+msgid "Confirm closing"
+msgstr "Confirmar el cerrado"
+
+#: src/gui-window_composer.c:159
+msgid ""
+"Message was modified.\n"
+"Are you sure you want to close it?"
+msgstr ""
+
+#: src/gui-window_composer.c:160
+msgid "Save to Drafts"
+msgstr ""
+
+#: src/gui-window_composer.c:179
+msgid "_Send Now"
+msgstr ""
+
+#: src/gui-window_composer.c:257
+msgid "Send Now"
+msgstr ""
+
+#: src/gui-window_composer.c:266
+msgid "Send Later"
+msgstr ""
+
+#: src/gui-window_debug.c:68
+msgid "Cronos II Debugging System"
+msgstr ""
+
+#: src/gui-window_debug.c:88
+msgid "Line"
+msgstr ""
+
+#: src/gui-window_debug.c:89
+msgid "Function"
+msgstr ""
+
+#: src/gui-window_debug.c:97
+msgid "Keep a logging file"
+msgstr ""
 
 #: src/gui-window_main.c:177 src/gui-window_main.c:805
 #: src/gui-window_main_callbacks.c:107 src/gui-window_message.c:104
 msgid "From"
-msgstr "De"
+msgstr ""
 
 #: src/gui-window_main.c:178 src/gui-window_main.c:835
 #: src/gui-window_message.c:134
-#, fuzzy
 msgid "Date"
-msgstr "Fecha"
+msgstr ""
 
 #. * PRIORITY *
 #: src/gui-window_main.c:343 src/gui-window_message.c:380
-#, fuzzy
 msgid "Priority:"
-msgstr "Prioridad: "
+msgstr ""
 
 #: src/gui-window_main.c:390
 msgid "Show the attachment list of this message"
-msgstr "Mostrar la lista de archivos adjuntos de este mensaje"
+msgstr ""
 
 #: src/gui-window_main.c:401
 msgid "Hide the attachment list of this message"
-msgstr "Ocultar la lista de archivos adjuntos de este mensaje"
+msgstr ""
 
 #: src/gui-window_main.c:443
 msgid "Set/Unset the attachment list as sticky"
-msgstr "Hacer/Deshacer la lista de archivos adjuntos como pegajosa"
+msgstr ""
 
 #: src/gui-window_main.c:467
 msgid "Show the Checking Window."
-msgstr "Mostrar la venta de chequeo."
+msgstr ""
 
 #: src/gui-window_main.c:496
 msgid "_Unread"
-msgstr "_No leído"
+msgstr ""
 
 #: src/gui-window_main.c:497
-#, fuzzy
 msgid "Mark the selected mails as unread"
-msgstr "Marcar los mensajes seleccionados como no leídos"
+msgstr ""
 
 #: src/gui-window_main.c:503
 msgid "Rea_d"
-msgstr "_Leído"
+msgstr ""
 
 #: src/gui-window_main.c:504
-#, fuzzy
 msgid "Mark the selected mails as read"
-msgstr "Marcar los mensajes seleccionados como leídos"
+msgstr ""
 
 #: src/gui-window_main.c:510
-#, fuzzy
 msgid "_Replied"
-msgstr "_Respondido"
+msgstr ""
 
 #: src/gui-window_main.c:511
-#, fuzzy
 msgid "Mark the selected mails as replied"
-msgstr "Marcar los mensajes seleccionados como respondidos"
+msgstr ""
 
 #: src/gui-window_main.c:517
-#, fuzzy
 msgid "_Forwarded"
-msgstr "Reen_viado"
+msgstr ""
 
 #: src/gui-window_main.c:518
-#, fuzzy
 msgid "Mark the selected mails as forwarded"
-msgstr "Marcar los mensajes seleccionados como reenviados"
+msgstr ""
 
 #: src/gui-window_main.c:534 src/gui-window_main.c:962
 msgid "_Previous"
-msgstr "_Anterior"
+msgstr ""
 
 #: src/gui-window_main.c:535 src/gui-window_main.c:963
 msgid "Show the previous message in the current mailbox"
-msgstr "Mostrar el mensaje anterior en el buzón actual"
+msgstr ""
 
 #: src/gui-window_main.c:541 src/gui-window_main.c:969
 msgid "_Next"
-msgstr "_Siguiente"
+msgstr ""
 
 #: src/gui-window_main.c:542 src/gui-window_main.c:970
 msgid "Show the next message in the current mailbox"
-msgstr "Mostrar el mensaje siguiente en el buzón actual"
+msgstr ""
 
 #: src/gui-window_main.c:552 src/gui-window_main.c:903
 msgid "_Reply"
-msgstr "_Responder"
+msgstr ""
 
 #: src/gui-window_main.c:559 src/gui-window_main.c:910
 msgid "Reply _all"
-msgstr "Responder _a todos"
+msgstr ""
 
 #: src/gui-window_main.c:566 src/gui-window_main.c:917
 msgid "_Forward"
-msgstr "Reen_viar"
+msgstr ""
 
 #: src/gui-window_main.c:574 src/gui-window_main.c:940
 msgid "_Delete"
-msgstr "_Borrar"
+msgstr ""
 
 #: src/gui-window_main.c:581 src/gui-window_main.c:947
 msgid "_Expunge"
-msgstr "_Expungar"
+msgstr ""
 
 #: src/gui-window_main.c:589 src/gui-window_main.c:925
 msgid "_Copy"
-msgstr "_Copiar"
+msgstr ""
 
 #: src/gui-window_main.c:596 src/gui-window_main.c:932
 msgid "_Move"
-msgstr "_Mover"
+msgstr ""
 
 #: src/gui-window_main.c:604 src/gui-window_main.c:955
 msgid "Mar_k"
-msgstr "Mar_car"
+msgstr ""
 
 #: src/gui-window_main.c:626 src/gui-window_message.c:65
 msgid "Open"
-msgstr "Abrir"
+msgstr ""
 
 #: src/gui-window_main.c:632 src/gui-window_message.c:72
-#, fuzzy
 msgid "_View"
-msgstr "_Vista"
+msgstr ""
 
 #: src/gui-window_main.c:638 src/gui-window_message.c:79
-#, fuzzy
 msgid "_Save"
-msgstr "_Guardar"
+msgstr ""
 
 #: src/gui-window_main.c:729
-#, fuzzy
 msgid "_All Accounts"
-msgstr "_Todas las Cuentas"
+msgstr ""
 
 #: src/gui-window_main.c:730
-#, fuzzy
 msgid "Check all accounts"
-msgstr "Chequear todas las cuentas"
+msgstr ""
 
 #: src/gui-window_main.c:744
 msgid "_Connect"
 msgstr ""
 
 #: src/gui-window_main.c:745
-#, fuzzy
 msgid "Connect to the SMTP server"
-msgstr "Conectando al servidor SMTP..."
+msgstr ""
 
 #: src/gui-window_main.c:751
 msgid "_Disconnect"
 msgstr ""
 
 #: src/gui-window_main.c:752
-#, fuzzy
 msgid "Disconnect from the SMTP server"
-msgstr "Conectando al servidor SMTP..."
+msgstr ""
 
 #. Get New Mail
 #: src/gui-window_main.c:765
 msgid "_Get New Mail"
-msgstr "_Obtener Nuevos Correos"
+msgstr ""
 
 #. Send queue messages
 #: src/gui-window_main.c:772
-#, fuzzy
 msgid "_Send Queued Messages"
-msgstr "Enviar este mensaje"
+msgstr ""
 
 #: src/gui-window_main.c:773
 msgid "Send mail from the Queue mailbox now"
@@ -1873,168 +1845,163 @@ msgstr ""
 
 #: src/gui-window_main.c:870
 msgid "_Import"
-msgstr "_Importar"
+msgstr ""
 
 #: src/gui-window_main.c:871
 msgid "Import a mailbox from a different format"
-msgstr "Importar un buzón de un formato distinto"
+msgstr ""
 
 #: src/gui-window_main.c:876
 msgid "_Export"
-msgstr "_Exportar"
+msgstr ""
 
 #: src/gui-window_main.c:877
 msgid "Export a mailbox to a different format"
-msgstr "Exportar un buzón de formato distinto"
+msgstr ""
 
 #: src/gui-window_main.c:892
 msgid "_Compose"
-msgstr "_Componer"
+msgstr ""
 
 #: src/gui-window_main.c:893
 msgid "Open the Composer window"
-msgstr "Abrir la ventana de Compositor"
+msgstr ""
 
 #: src/gui-window_main.c:904
 msgid "Reply to sender of the selected message"
-msgstr "Responder al remitente de los mensajes seleccionados"
+msgstr ""
 
 #: src/gui-window_main.c:911
 msgid "Reply to all recipients of the selected message"
-msgstr "Responder a todos los recipientes de los mensajes seleccionados"
+msgstr ""
 
 #: src/gui-window_main.c:918
 msgid "Forward the selected message"
-msgstr "Reenviar los mensajes seleccionados"
+msgstr ""
 
 #: src/gui-window_main.c:941
 msgid "Delete the selected messages"
-msgstr "Borrar los mensajes seleccionados"
+msgstr ""
 
 #: src/gui-window_main.c:948
 msgid "Expunge the selected messages"
-msgstr "Expungar los mensajes seleccionados"
+msgstr ""
 
 #: src/gui-window_main.c:996
-#, fuzzy
 msgid "Address Book"
-msgstr "Dirección en uso"
+msgstr ""
 
 #: src/gui-window_main.c:997 src/gui-window_main.c:1356
-#, fuzzy
 msgid "Open the Cronos II Address Book"
-msgstr "Abrir la ventana Matabichos de Cronos II"
+msgstr ""
 
 #: src/gui-window_main.c:1012
 msgid "Bug Report"
-msgstr "Reportar Error"
+msgstr ""
 
 #: src/gui-window_main.c:1013
-#, fuzzy
 msgid "Open the bug report window"
-msgstr "Abrir la venta de reporte de errores"
+msgstr ""
 
 #: src/gui-window_main.c:1034 src/gui-window_main.c:1036
 msgid "M_ailbox"
-msgstr "_Buzón"
+msgstr ""
 
 #: src/gui-window_main.c:1040 src/gui-window_main.c:1042
 msgid "_Message"
-msgstr "_Mensaje"
+msgstr ""
 
 #: src/gui-window_main.c:1217
 msgid "Check"
-msgstr "Chequear"
+msgstr ""
 
 #: src/gui-window_main.c:1218
 msgid "Get New Mail"
-msgstr "Obtener Nuevos Correos"
+msgstr ""
 
 #: src/gui-window_main.c:1233
-#, fuzzy
 msgid "Send Queued Messages"
-msgstr "Enviar este mensaje"
+msgstr ""
 
 #: src/gui-window_main.c:1243
 msgid "Compose"
-msgstr "Componer"
+msgstr ""
 
 #: src/gui-window_main.c:1244
 msgid "Compose a new mail"
-msgstr "Componer un nuevo mensaje"
+msgstr ""
 
 #: src/gui-window_main.c:1257
 msgid "Save the selected mails to a file"
-msgstr "Guardar los mensajes seleccionados a un archivo"
+msgstr ""
 
 #: src/gui-window_main.c:1267
 msgid "Print the selected mails"
-msgstr "Imprimir los mensajes seleccionados"
+msgstr ""
 
 #: src/gui-window_main.c:1278
 msgid "Search"
-msgstr "Buscar"
+msgstr ""
 
 #: src/gui-window_main.c:1279
 msgid "Search for a message"
-msgstr "Buscar un mensaje"
+msgstr ""
 
 #: src/gui-window_main.c:1289
 msgid "Delete the selected mails"
-msgstr "Borrar los mensajes seleccionados"
+msgstr ""
 
 #: src/gui-window_main.c:1300
 msgid "Reply"
-msgstr "Responder"
+msgstr ""
 
 #: src/gui-window_main.c:1301
 msgid "Reply the selected mails"
-msgstr "Responder los mensajes seleccionados"
+msgstr ""
 
 #: src/gui-window_main.c:1310
 msgid "Reply All"
-msgstr "A Todos"
+msgstr ""
 
 #: src/gui-window_main.c:1311
 msgid "Reply to all recipients the selected mails"
-msgstr "Responder a todos los recipientes de los mensajes seleccionados"
+msgstr ""
 
 #: src/gui-window_main.c:1320
 msgid "Forward"
-msgstr "Reenviar"
+msgstr ""
 
 #: src/gui-window_main.c:1321
 msgid "Forward the selected mails"
-msgstr "Reenviar los mensajes seleccionados"
+msgstr ""
 
 #: src/gui-window_main.c:1332
 msgid "Previous"
-msgstr "Anterior"
+msgstr ""
 
 #: src/gui-window_main.c:1333
 msgid "Show previous message"
-msgstr "Mostrar el mensaje seleccionado"
+msgstr ""
 
 #: src/gui-window_main.c:1342
 msgid "Next"
-msgstr "Siguiente"
+msgstr ""
 
 #: src/gui-window_main.c:1343
 msgid "Show next message"
-msgstr "Mostrar el siguiente mensaje"
+msgstr ""
 
 #: src/gui-window_main.c:1368
 msgid "Quit"
-msgstr "Salir"
+msgstr ""
 
 #: src/gui-window_main.c:1369
 msgid "Quit Cronos II"
-msgstr "Salir de Cronos II"
+msgstr ""
 
 #: src/gui-window_main_callbacks.c:158
-#, fuzzy
 msgid "The message couldn't be found"
-msgstr "El nombre de buzón %s ya esta tomado."
+msgstr ""
 
 #: src/gui-window_main_callbacks.c:359
 msgid "Add Card"
@@ -2043,72 +2010,67 @@ msgstr ""
 #: src/gui-window_main_callbacks.c:435
 #, c-format
 msgid "No program associated to type %s"
-msgstr "No hay un programa asociado al typo %s"
+msgstr ""
 
 #: src/gui-window_main_callbacks.c:484
 #, c-format
 msgid "Cannot write to temporary file: %s"
-msgstr "No se pudo escribir en un archivo temporal: %s"
+msgstr ""
 
 #: src/gui-window_main_callbacks.c:534
-#, fuzzy, c-format
+#, c-format
 msgid "Cannot write in selected file: %s"
-msgstr "No se pudo escribir en el archivo seleccionado: %s"
+msgstr ""
 
 #: src/gui-window_main_callbacks.c:543
-#, fuzzy
 msgid "Parts saved succesfully"
-msgstr "Archivo adjunto guardado exitosamente."
+msgstr ""
 
 #: src/gui-window_main_callbacks.c:545
-#, fuzzy
 msgid "Part saved succesfully"
-msgstr "Archivo adjunto guardado exitosamente."
+msgstr ""
 
 #: src/gui-window_main_callbacks.c:708 src/gui-window_main_callbacks.c:922
 msgid "Deleting..."
-msgstr "Borrando..."
+msgstr ""
 
 #: src/gui-window_main_callbacks.c:724 src/gui-window_main_callbacks.c:1186
-#, fuzzy, c-format
+#, c-format
 msgid "Opening the file %s: %s\n"
-msgstr "Abriendo el archivo de correo"
+msgstr ""
 
 #: src/gui-window_main_callbacks.c:739 src/gui-window_main_callbacks.c:1200
-#, fuzzy, c-format
+#, c-format
 msgid "Opening the %s index file %s: %s\n"
-msgstr "Abriendo el archivo de correo"
+msgstr ""
 
 #: src/gui-window_main_callbacks.c:1036
 msgid "Expunging..."
-msgstr "Expungando..."
+msgstr ""
 
 #: src/gui-window_main_callbacks.c:1110
 #, c-format
 msgid "Are you sure you want to expunge %d messages?"
-msgstr "¿Esta seguro que desea expungar %d mensajes?"
+msgstr ""
 
 #: src/gui-window_main_callbacks.c:1113
-#, fuzzy
 msgid "Are you sure you want to expunge the selected message?"
-msgstr "¿Esta seguro que desea expungar %d mensajes?"
+msgstr ""
 
 #: src/gui-window_main_callbacks.c:1174 src/gui-window_main_callbacks.c:1356
-#, fuzzy
 msgid "Moving..."
-msgstr "Moviendo..."
+msgstr ""
 
 #: src/gui-window_main_callbacks.c:1451
 msgid "Copying..."
-msgstr "Copiando..."
+msgstr ""
 
 #: src/gui-window_main_callbacks.c:1557
-#, fuzzy
 msgid "Opening the selected file for writing"
-msgstr "Abriendo el archivo seleccionado para escribir"
+msgstr ""
 
 #: src/gui-window_main_callbacks.c:1564
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "From: %s\n"
 "Subject: %s\n"
@@ -2117,79 +2079,63 @@ msgid ""
 "\n"
 "%s\n"
 msgstr ""
-"De: %s\n"
-"Para: %s\n"
-"Fecha: %s\n"
-"Asunto: %s\n"
-"\n"
-"%s\n"
 
 #: src/gui-window_main_callbacks.c:1797
-#, fuzzy
 msgid "Opening the index file"
-msgstr "Abriendo el archivo de correo"
+msgstr ""
 
 #: src/gui-window_main_callbacks.c:1807
-#, fuzzy
 msgid "Opening the tmp file"
-msgstr "Abriendo el archivo de correo"
+msgstr ""
 
 #: src/gui-window_main_callbacks.c:1886
 msgid "Speed Up"
 msgstr ""
 
 #: src/gui-window_main_callbacks.c:1913
-#, fuzzy
 msgid "Garbage:"
-msgstr "Basura"
+msgstr ""
 
 #: src/gui-window_main_callbacks.c:1918
 msgid "Speed up:"
 msgstr ""
 
 #: src/gui-window_main_callbacks.c:1992
-#, fuzzy
 msgid "Opening the main DB file of the mailbox"
-msgstr "Abriendo el archivo principal de la Base de Datos"
+msgstr ""
 
 #: src/gui-window_message.c:184
 msgid "Window Message Reader"
-msgstr "Ventana de Lectura de Mensajes"
+msgstr ""
 
 #: src/gui-window_message.c:584
-#, fuzzy
 msgid "Message Properties"
-msgstr "Propiedades del mensaje"
+msgstr ""
 
 #: src/index.c:87
-#, fuzzy
 msgid "Opening the mailbox main DB file"
-msgstr "Abriendo el archivo principal de la Base de Datos"
+msgstr ""
 
 #: src/init.c:193
 #, c-format
 msgid "Unknown command in config file: %s"
-msgstr "Comando desconocido en el archivo de configuración: %s"
+msgstr ""
 
 #: src/init.c:217
-#, fuzzy
 msgid "Reading the config file"
-msgstr "Abriendo el archivo de correo"
+msgstr ""
 
 #: src/mailbox.c:166
-#, fuzzy
 msgid "Failed to open the main DB file"
-msgstr "Fallo al escribir el correo en su propia en su archivo."
+msgstr ""
 
 #: src/message.c:92
-#, fuzzy
 msgid "Stating the file"
-msgstr "Tomando las estadísticas del archivo"
+msgstr ""
 
 #: src/message.c:111
-#, fuzzy
 msgid "Opening the mail file for retrieving it"
-msgstr "Abriendo el archivo de correo para cargarlo"
+msgstr ""
 
 #: src/message.c:396
 #, c-format
@@ -2197,39 +2143,32 @@ msgid ""
 "This message uses a MIME-Version unsupported by Cronos II: %s.\n"
 "This might affect the interpretation of it."
 msgstr ""
-"Este mensaje utiliza un MIME-Version no soportada por Cronos II: %s.\n"
-"Esto puede afectar la manera en que es interpretado."
 
 #: src/message.c:433 src/message.c:438 src/message.c:514 src/message.c:520
 msgid "This message claims to be multipart but it seems that it's broken.\n"
-msgstr "Este mensaje dice tener varias partes pero parece estar roto.\n"
+msgstr ""
 
 #: src/message.c:896
-#, fuzzy
 msgid "Opening the main DB file for reading the number of messages in it"
 msgstr ""
-"Abriendo el archivo principal de la Base de Datos para leer el número de "
-"mensajes en él"
 
-#: src/net.c:105
-#, fuzzy
+#: src/net.c:107
 msgid "Couldn't resolve the server"
-msgstr "No se pudo resolver la dirección del servidor"
+msgstr ""
 
 #: src/plugin.c:48
 #, c-format
 msgid "The %s is not a valid module (failed call to module_init)\n"
-msgstr "%s no es un módulo valido (fallo al llamar a module_init)\n"
+msgstr ""
 
 #: src/plugin.c:98
 #, c-format
 msgid "Unable to find Plug-In with name %s\n"
-msgstr "No se pudo encontrar Plug-In con nombre %s\n"
+msgstr ""
 
 #: src/plugin.c:263
-#, fuzzy
 msgid "Couldn't open the Plug-Ins directory"
-msgstr "No se pudo abrir el directorio de Plug-Ins"
+msgstr ""
 
 #: src/plugin.c:302
 #, c-format
@@ -2237,158 +2176,128 @@ msgid ""
 "The dynamic module %s has already registered a callback for the signal %d.\n"
 "Each dynamic module can register just one callback for each signal.\n"
 msgstr ""
-"El módulo dinámico %s ya a registrado una función de retrollamada para la "
-"señal %d.\n"
-"Cada módulo dinámico puede registrar solo una función de retrollamada para "
-"cada señal.\n"
 
 #: src/plugin.c:334
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "There's no callback function attached to the signam %d in the dynamic module "
 "%s.\n"
 msgstr ""
-"No hay función de retrollamada en el módulo dinámico adjuntada a la señal "
-"%d.\n"
 
-#: src/pop.c:116 src/smtp.c:835
+#: src/pop.c:119 src/smtp.c:835
 msgid "Failed to create socket"
-msgstr "Fallo al crear el socket"
+msgstr ""
 
-#: src/pop.c:144
-#, fuzzy
+#: src/pop.c:147
 msgid "Logging in..."
-msgstr "Entrando al sistema..."
+msgstr ""
 
-#: src/pop.c:196
+#: src/pop.c:199
 msgid "Checking for number of mails in server..."
-msgstr "Chequeando el número de mensajes en el servidor..."
+msgstr ""
 
-#: src/pop.c:218
+#: src/pop.c:221
 msgid "No messages in server"
-msgstr "No hay mensajes en el servidor"
+msgstr ""
 
-#: src/pop.c:219
+#: src/pop.c:222
 msgid "No messages to download"
-msgstr "No hay mensajes para bajar"
+msgstr ""
 
-#: src/pop.c:225
+#: src/pop.c:228
 #, c-format
 msgid "%d messages in server"
-msgstr "%d mensajes en el servidor"
+msgstr ""
 
-#: src/pop.c:227
+#: src/pop.c:230
 msgid "1 message in server"
-msgstr "1 mensaje en el servidor"
+msgstr ""
 
 #. UIDL is optional for POP servers,
 #. * so I won't complain if server doesn't like it
-#: src/pop.c:257
+#: src/pop.c:260
 #, c-format
 msgid "The POP server of the account %s doesn't support UIDL."
-msgstr "El servidor POP de la cuenta %s no soporta UIDL."
+msgstr ""
 
-#: src/pop.c:300
+#: src/pop.c:303
 #, c-format
 msgid "The POP server of the account %s doesn't support LIST."
-msgstr "El servidor POP de la cuenta %s no soporta LIST."
+msgstr ""
 
-#: src/pop.c:329
+#: src/pop.c:332
 #, c-format
 msgid "The POP server of the account %s doesn't support TOP."
-msgstr "El servidor POP de la cuenta %s no soporta TOP."
+msgstr ""
 
-#: src/pop.c:381 src/spool.c:84
+#: src/pop.c:384 src/spool.c:84
 msgid "%p%% downloaded (%v of %u messages)"
-msgstr "%p%% bajados (%v de %u mensajes)"
+msgstr ""
 
-#: src/pop.c:457
-#, fuzzy
+#: src/pop.c:470
 msgid "Error opening the file where to store the new mail"
-msgstr "Error creando el archivo donde guardar el nuevo correo"
+msgstr ""
 
-#: src/pop.c:476
-#, fuzzy
+#: src/pop.c:485
 msgid "Error opening the main DB file to store the new mail"
 msgstr ""
-"Error abriendo el archivo principal de la Base de Datos para guardar el "
-"nuevo correo"
 
-#: src/pop.c:477
-#, fuzzy
+#: src/pop.c:486
 msgid "Opening the main DB file"
-msgstr "Abriendo el archivo principal de la Base de Datos"
+msgstr ""
 
-#: src/pop.c:575 src/spool.c:179
-#, fuzzy, c-format
+#: src/pop.c:584 src/spool.c:179
+#, c-format
 msgid "%d messages downloaded."
-msgstr "%d mensajes han sido bajados."
+msgstr ""
 
-#: src/pop.c:577 src/spool.c:181
-#, fuzzy
+#: src/pop.c:586 src/spool.c:181
 msgid "1 message downloaded."
-msgstr "1 mensaje ha sido bajado."
+msgstr ""
 
-#: src/pop.c:650
-#, fuzzy
+#: src/pop.c:659
 msgid "Operation timeout."
-msgstr "Tiempo fuera para la conexión"
+msgstr ""
 
-#: src/pop.c:683
+#: src/pop.c:692
 msgid "Creating the UIDL database"
-msgstr "Creando la base de datos de UIDL"
+msgstr ""
 
-#: src/pop.c:689 src/pop.c:719
+#: src/pop.c:698 src/pop.c:728
 msgid "Opening the UIDL database"
-msgstr "Abriendo la base de datos de UIDL"
+msgstr ""
 
-#: src/pop.c:752
-#, fuzzy
+#: src/pop.c:761
 msgid "Confirm message downloading"
-msgstr "Confirmar la bajada de un mensaje"
+msgstr ""
 
-#: src/pop.c:760
-#, fuzzy
+#: src/pop.c:769
 msgid ""
 "There's a message bigger than what you allowed to automatically download."
 msgstr ""
-"Un mensaje más grande de lo que se permitió bajar automaticamente ha sido "
-"encontrado."
 
-#: src/pop.c:813
+#: src/pop.c:822
 msgid ""
 "Since the server doesn't support advanced POP commands very little "
 "information about this message could be extracted."
 msgstr ""
-"Ya que el servidor no soporta comandos avanzados de protocolo POP muy poca "
-"información pudo ser extraída."
 
-#: src/pop.c:854
-msgid "Size:"
-msgstr "Tamaño:"
-
-#: src/pop.c:905
-msgid "Do you want to download it?"
-msgstr "¿Desea bajarlo?"
-
-#: src/pop.c:943
+#: src/pop.c:952
 msgid "Incorrect Password"
-msgstr "Contraseña incorrecta"
+msgstr ""
 
-#: src/pop.c:946
+#: src/pop.c:955
 #, c-format
 msgid "The password of the account %s is wrong"
-msgstr "La contraseña de la cuenta %s es incorrecta"
+msgstr ""
 
-#: src/pop.c:954
-#, fuzzy
+#: src/pop.c:963
 msgid "Username:"
-msgstr "Nombre de usuario:"
+msgstr ""
 
-#: src/pop.c:958
-#, fuzzy
+#: src/pop.c:967
 msgid "Password:"
-msgstr "Contraseña: "
+msgstr ""
 
 #: src/smtp.c:121 src/smtp.c:216 src/smtp.c:330 src/smtp.c:446 src/smtp.c:532
 #: src/smtp.c:871 src/smtp.c:932
@@ -2400,123 +2309,98 @@ msgid ""
 "The SMTP server aborted the delivery of the message because the storage "
 "location has been exceed."
 msgstr ""
-"El servidor SMTP ha abortado el envio del mensaje porque la capacidad de "
-"locación ha sido excedida."
 
 #: src/smtp.c:136 src/smtp.c:259 src/smtp.c:338 src/smtp.c:468
 msgid ""
 "Error in the delivery of the message because it has ocurred an error in the "
 "SMTP server."
 msgstr ""
-"Error en el envio del mensaje porque ha ocurrido un error en el servidor "
-"SMTP."
 
 #: src/smtp.c:143 src/smtp.c:266 src/smtp.c:352 src/smtp.c:475
 msgid ""
 "The SMTP server aborted the delivery of the message because there's not "
 "enough system storage."
 msgstr ""
-"El servidor SMTP ha abortado el envio del mensaje porque no hay suficiente "
-"capacidad en el sistema."
 
 #: src/smtp.c:150 src/smtp.c:273 src/smtp.c:359 src/smtp.c:942
 msgid ""
 "The SMTP server isn't RFC821 complaiment, please send me an E-Mail with the "
 "hostname address."
 msgstr ""
-"El servidor SMTP no es compatible con el RFC 821, por favor, envie un correo "
-"a cronosII@users.sourceforge.net con la dirección del servidor."
 
 #: src/smtp.c:157 src/smtp.c:280 src/smtp.c:366 src/smtp.c:885 src/smtp.c:951
 msgid "The SMTP server is not available."
-msgstr "El servidor SMTP no esta disponible."
+msgstr ""
 
 #: src/smtp.c:224 src/smtp.c:252
 msgid ""
 "The SMTP server aborted the delivery of the message because the mailbox is "
 "unavailable."
 msgstr ""
-"El servidor SMTP ha abortado el envio del mensaje porque la carpeta no esta "
-"disponible."
 
 #: src/smtp.c:231
 msgid ""
 "The SMTP server aborted the delivery of the message because the user is not "
 "local."
 msgstr ""
-"El servidor SMTP ha abortado el envio del mensaje porque el usuario no es "
-"local."
 
 #: src/smtp.c:245
 msgid ""
 "The SMTP server aborted the delivery of the message because the mailbox name "
 "is not allowed."
 msgstr ""
-"El servidor SMTP ha abortado el envio del mensaje porque el nombre de "
-"carpeta no es permitido."
 
 #: src/smtp.c:461
 msgid ""
 "The SMTP server aborted the delivery of the message because the transaction "
 "failed."
 msgstr ""
-"El servidor SMTP ha abortado el envio del mensaje porque la transacción ha "
-"fallado."
 
 #: src/smtp.c:814
 msgid "Resolving SMTP host..."
-msgstr "Resolviendo el servidor SMTP..."
+msgstr ""
 
 #: src/smtp.c:845
-#, fuzzy
 msgid "Connecting to the SMTP host..."
-msgstr "Conectando al servidor SMTP..."
+msgstr ""
 
 #: src/smtp.c:879
 msgid "The SMTP server has closed the transmission channel."
-msgstr "El servidor SMTP ha cerrado el canal de transmición"
+msgstr ""
 
 #: src/spool.c:63 src/spool.c:187
-#, fuzzy
 msgid "Couldn't open the specified file."
-msgstr "No se encontró el buzón Borradores"
+msgstr ""
 
 #: src/spool.c:74
-#, fuzzy
 msgid "Couldn't open the main DB file for appending the new messages"
-msgstr "Abriendo el archivo principal para adherir el nuevo correo"
+msgstr ""
 
 #: src/spool.c:126
-#, fuzzy
 msgid "Couldn't open the mail file for writing the new message"
-msgstr "No se pudo abrir el archivo de correo para escribir el nuevo mensaje"
+msgstr ""
 
 #: src/utils.c:1074
-#, fuzzy
 msgid "Couldn't open the source file to do a binary copy"
-msgstr "No se pudo abrir el archivo de origen para realizar una copia binaria"
+msgstr ""
 
 #: src/utils.c:1079
-#, fuzzy
 msgid "Couldn't open the target file to do a binary copy"
-msgstr "No se pudo abrir el archivo de destino para realizar una copia binaria"
+msgstr ""
 
 #: src/utils.c:1115
-#, fuzzy
 msgid "Opening a file for moving it into other (from)"
-msgstr "Abriendo el archivo de correo para cargarlo"
+msgstr ""
 
 #: src/utils.c:1121
-#, fuzzy
 msgid "Opening a file for moving it into other (dest)"
-msgstr "Abriendo el archivo de correo para cargarlo"
+msgstr ""
 
 #: src/utils.c:1585
-#, fuzzy
 msgid "No command has been passed."
-msgstr "No se ha pasado ningún comando."
+msgstr ""
 
-#: src/version.c:120
+#: src/version.c:121
 msgid ""
 "You have installed a new version of Cronos II.\n"
 "Since this is the first time you run this version\n"
@@ -2526,226 +2410,3 @@ msgid ""
 "this software.\n"
 "To do so, click the Close button and restart the application."
 msgstr ""
-
-#~ msgid "Active?"
-#~ msgstr "¿Activo?"
-
-#~ msgid "Description"
-#~ msgstr "Descripción"
-
-#~ msgid "Filters"
-#~ msgstr "Filtros"
-
-#~ msgid "A, B, C, D, E, etc."
-#~ msgstr "A, B, C, D, E, etc."
-
-#~ msgid "Cronos II Debugging System"
-#~ msgstr "Sistema matabichos de Cronos II"
-
-#~ msgid "Line"
-#~ msgstr "Linea"
-
-#~ msgid "Function"
-#~ msgstr "Función"
-
-#~ msgid "Keep a logging file"
-#~ msgstr "Guardar un archivo de sucesos"
-
-#~ msgid "_Debug"
-#~ msgstr "_Matabichos"
-
-#~ msgid "Open the Debugging System Window"
-#~ msgstr "Abrir la ventana del Sistema Matabichos"
-
-#~ msgid "Debug"
-#~ msgstr "Matarbichos"
-
-#~ msgid ""
-#~ "The message \"%s\" couldn't been sent because the specified SMTP hostname\n"
-#~ "of the account \"%s\" couldn't been resolved.\n"
-#~ "This probably means that you have a wrong address or that the server\n"
-#~ "is currently down."
-#~ msgstr ""
-#~ "El mensaje \"%s\" no pudo ser enviado por que el servidor SMTP especificado\n"
-#~ "de la cuenta \"%s\" no pudo ser encontrado.\n"
-#~ "Esto significa que la dirección del servidor es incorrecto o que no el "
-#~ "servidor\n"
-#~ "este caído."
-
-#~ msgid "Opening the printer device"
-#~ msgstr "Abriendo el dispositivo de impresión"
-
-#~ msgid "A"
-#~ msgstr "A"
-
-#~ msgid "Check accounts for new mails"
-#~ msgstr "Chequear las cuentas por nuevos correos"
-
-#~ msgid "Message's Source"
-#~ msgstr "Código del mensaje"
-
-#~ msgid "Path already exists"
-#~ msgstr "El camino ya existe"
-
-#~ msgid "Binary file is being executed"
-#~ msgstr "El archivo binario está siendo ejecutado"
-
-#~ msgid "Access Denied"
-#~ msgstr "Acceso denegado"
-
-#~ msgid "Path too long"
-#~ msgstr "Camino demasiado largo"
-
-#~ msgid "File doesn't exist"
-#~ msgstr "Archivo inexistente"
-
-#~ msgid "Process achieved max opened files"
-#~ msgstr "El proceso ha alcanzado la máxima cantidad de archivos abiertos"
-
-#~ msgid "System achieved max opened files"
-#~ msgstr "El sistema ha alcanzado la máxima cantidad de archivos abiertos"
-
-#~ msgid "Not enough memory"
-#~ msgstr "Memoria insuficiente"
-
-#~ msgid "System read-only"
-#~ msgstr "Sistema en modo solo lectura"
-
-#~ msgid "Too much sym links to access file"
-#~ msgstr "Demasiados linqueos simbólicos para acceder al archivo"
-
-#~ msgid "Not enough space in device"
-#~ msgstr "No hay suficiente espacio en el dispositivo"
-
-#~ msgid "Path not accessible"
-#~ msgstr "Camino no accesible"
-
-#~ msgid "Some directory doesn't exist in the path"
-#~ msgstr "Algún directorio no existe en el camino"
-
-#~ msgid "Some directory isn't a directory in the path"
-#~ msgstr "Algún directorio no es un directorio en el camino"
-
-#~ msgid "Too much sym links to access directory"
-#~ msgstr "Demasiados linqueos simbólicos para acceder al directorio"
-
-#~ msgid "Unknown protocol"
-#~ msgstr "Protocolo desconocido"
-
-#~ msgid "Descriptor's table's full"
-#~ msgstr "Tabla de descriptor de archivos llena"
-
-#~ msgid "File's table's full"
-#~ msgstr "Tabla de archivo llena"
-
-#~ msgid "Permission denied"
-#~ msgstr "Permiso denegado"
-
-#~ msgid "Not enough space in buffer"
-#~ msgstr "No hay espacio libre en el buffer"
-
-#~ msgid "Bad file descriptor"
-#~ msgstr "Descriptor de archivo erroneo"
-
-#~ msgid "The socket structure address is outside the user's address space"
-#~ msgstr ""
-#~ "La estructura de socket esta fuera de la dirección de espacio del usuario"
-
-#~ msgid "Descriptor is not asociated with a socket"
-#~ msgstr "El descriptor no esta asociado a un socket"
-
-#~ msgid "Socket already connected"
-#~ msgstr "Socket ya conectado"
-
-#~ msgid "Net unreacheable"
-#~ msgstr "Net inalcanzable"
-
-#~ msgid "Connection in progress"
-#~ msgstr "Conexión en progreso"
-
-#~ msgid "Host not found"
-#~ msgstr "Host no encontrado"
-
-#~ msgid "Hostname hasn't an IP address"
-#~ msgstr "El nombre de host no tiene una dirección IP asociada"
-
-#~ msgid "Unrecoverable error in nameserver"
-#~ msgstr "Error irrecuperable en el servidor de nombres"
-
-#~ msgid "Temporal server error, try again later"
-#~ msgstr "Error temporal del servidor, intente más tarde"
-
-#~ msgid "BUG: Unkown function in error.c:"
-#~ msgstr "BUG: Función desconocida en error.c:"
-
-#~ msgid "Download message?"
-#~ msgstr "¿Bajar mensaje?"
-
-#~ msgid "Modify Account List"
-#~ msgstr "Modificar la lista de cuentas"
-
-#~ msgid "Server"
-#~ msgstr "Servidor"
-
-#~ msgid "When sending an E-Mail"
-#~ msgstr "Cuando se envia un correo"
-
-#~ msgid "Keep a copy in Outbox"
-#~ msgstr "Guardar una copia en la Bandeja de Salida"
-
-#~ msgid "Appareance"
-#~ msgstr "Apariencia"
-
-#~ msgid " seconds. (Lower Connection = Higher Timeout)"
-#~ msgstr " segundos."
-
-#~ msgid "Composer: %s"
-#~ msgstr "Compositor: %s"
-
-#~ msgid "Opening mail's file"
-#~ msgstr "Abriendo el archivo de correo"
-
-#~ msgid "Confirm closing"
-#~ msgstr "Confirmar el cierre"
-
-#~ msgid "Send _Later"
-#~ msgstr "Enviar _más tarde"
-
-#~ msgid "P"
-#~ msgstr "P"
-
-#~ msgid "Disconnecting the socket. Termination normally"
-#~ msgstr "Desconectado el socket. Terminación normal"
-
-#~ msgid "Connection aborted (timeout)"
-#~ msgstr "Conexión abortado por tiempo muerto"
-
-#~ msgid "Unable to connect"
-#~ msgstr "No se logró conectar"
-
-#~ msgid "Error in the arguments passed to cronos_connect"
-#~ msgstr "Error en los argumentos pasados a cronos_connect"
-
-#~ msgid "Creating socket"
-#~ msgstr "Creando socket"
-
-#~ msgid "Sending connection request"
-#~ msgstr "Enviando requisito de conexión"
-
-#~ msgid "Check canceled by user"
-#~ msgstr "Chequeo cancelado por el usuario"
-
-#~ msgid "An unknown command has been passed to cronos_write"
-#~ msgstr "Un comando desconocido ha sido pasado a cronos_read"
-
-#~ msgid "Downloading message %v of %u (%p%%)"
-#~ msgstr "Bajando mensaje %v de %u (%p%%)"
-
-#~ msgid "An internal error has occurred."
-#~ msgstr "Un error interno ha ocurrido."
-
-#~ msgid "Inbox"
-#~ msgstr "Bandeja de Entrada"
-
-#~ msgid "Outbox"
-#~ msgstr "Bandeja de Salida"
