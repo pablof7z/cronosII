@@ -37,7 +37,6 @@ action_at_start							(void);
 int main (int argc, char **argv) {
   pthread_t thread;
   Mailbox *queue=NULL;
-  int old_version[3];
 
   g_thread_init (NULL);
   gtk_set_locale ();

@@ -357,7 +357,7 @@ on_wm_mime_select_icon (GnomeIconList *gil, int num, GdkEvent *event) {
   
   if (streq (mime->type, "text") && streq (mime->subtype, "x-vcard")) {
     main_window_menu_attach_add_item (_("Add Card"), DATADIR "/cronosII/pixmap/mcard.png",
-					GTK_SIGNAL_FUNC (on_wm_mime_add_card_activate), num);
+					GTK_SIGNAL_FUNC (on_wm_mime_add_card_activate), (gpointer) num);
     main_window_menu_attach_add_item (NULL, NULL, NULL, NULL);
   }
 }
@@ -770,7 +770,7 @@ on_delete_clicked_thread (void) {
 	  
 	  fprintf (fd_garbage, "%s\r%s\r%s\r%s\r%s\r%s\r%s\r%d\n",
 	      buf[0], buf[1], buf[2], buf[3], buf[4], buf[5], buf[6], new_mid);
-	  mids_to_add = g_list_append (mids_to_add, (void*) new_mid);
+	  mids_to_add = g_list_append (mids_to_add, (gpointer) new_mid);
 	  c2_free (buf[0]);
 	  c2_free (buf[1]);
 	  c2_free (buf[2]);
@@ -1229,7 +1229,7 @@ on_move_mail_clicked_thread (char *str_mailbox) {
 	
 	fprintf (fd_mailbox, "%s\r%s\r%s\r%s\r%s\r%s\r%s\r%d\n",
 	    buf[0], buf[1], buf[2], buf[3], buf[4], buf[5], buf[6], new_mid);
-	mids_to_add = g_list_append (mids_to_add, (void*) new_mid);
+	mids_to_add = g_list_append (mids_to_add, (gpointer) new_mid);
 	c2_free (buf[0]);
 	c2_free (buf[1]);
 	c2_free (buf[2]);

@@ -446,8 +446,8 @@ autocompletation_display_contacts (GtkWidget *entry) {
   GtkWidget *scroll;
   GtkWidget *clist;
   GtkWidget *frame;
-  GList *l, *grp, *l2, *l3;
-  int i, groups;
+  GList *l, *grp;
+  int groups;
   gint x, y, height, width, depth;
   GtkRequisition r;
   GdkColor grey = { 0, 0xdcdc, 0xdcdc, 0xdcdc };

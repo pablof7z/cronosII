@@ -18,7 +18,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2001-04-09 17:34-0300\n"
+"POT-Creation-Date: 2001-04-12 09:21-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -192,7 +192,7 @@ msgstr ""
 msgid "Close the Address Book"
 msgstr ""
 
-#: src/gui-addrbook.c:291 src/gui-composer.c:811 src/gui-composer.c:1225
+#: src/gui-addrbook.c:291 src/gui-composer.c:811 src/gui-composer.c:1227
 #: src/gui-decision_dialog.c:104 src/gui-decision_dialog.c:113
 #: src/gui-window_main.c:1256
 msgid "Save"
@@ -219,7 +219,7 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
-#: src/gui-addrbook.c:339 src/gui-composer.c:857
+#: src/gui-addrbook.c:339 src/gui-composer.c:857 src/gui-window_composer.c:276
 msgid "Close"
 msgstr ""
 
@@ -632,31 +632,33 @@ msgid "Composer"
 msgstr ""
 
 #. * labels *
-#: src/gui-composer.c:243 src/gui-print.c:284 src/gui-window_main.c:306
+#: src/gui-composer.c:243 src/gui-message_big.c:107 src/gui-print.c:284
+#: src/gui-window_composer.c:301 src/gui-window_main.c:306
 #: src/gui-window_message.c:343 src/pop.c:829
 msgid "Account:"
 msgstr ""
 
 #. * To *
-#: src/gui-composer.c:248 src/gui-print.c:285 src/gui-window_main.c:234
-#: src/gui-window_message.c:271
+#: src/gui-composer.c:248 src/gui-print.c:285 src/gui-window_composer.c:305
+#: src/gui-window_main.c:234 src/gui-window_message.c:271
 msgid "To:"
 msgstr ""
 
 #. * CC *
-#: src/gui-composer.c:253 src/gui-print.c:287 src/gui-window_main.c:252
-#: src/gui-window_message.c:289
+#: src/gui-composer.c:253 src/gui-print.c:287 src/gui-window_composer.c:309
+#: src/gui-window_main.c:252 src/gui-window_message.c:289
 msgid "CC:"
 msgstr ""
 
 #. * BCC *
-#: src/gui-composer.c:258 src/gui-window_main.c:270
-#: src/gui-window_message.c:307
+#: src/gui-composer.c:258 src/gui-window_composer.c:313
+#: src/gui-window_main.c:270 src/gui-window_message.c:307
 msgid "BCC:"
 msgstr ""
 
 #. * SUBJECT *
-#: src/gui-composer.c:263 src/gui-print.c:288 src/gui-window_main.c:288
+#: src/gui-composer.c:263 src/gui-message_big.c:118 src/gui-print.c:288
+#: src/gui-window_composer.c:317 src/gui-window_main.c:288
 #: src/gui-window_message.c:325 src/pop.c:841
 msgid "Subject:"
 msgstr ""
@@ -740,7 +742,7 @@ msgstr ""
 msgid "Send this message"
 msgstr ""
 
-#: src/gui-composer.c:630
+#: src/gui-composer.c:630 src/gui-window_composer.c:186
 msgid "Send _Later"
 msgstr ""
 
@@ -833,62 +835,66 @@ msgid ""
 "This is a multipart message in MIME format.\n"
 "The fact that you reached this text means that your\n"
 "mail client does not understand MIME messages and you will\n"
-"not be understand the attachments. You should consider moving\n"
+"not be able to understand the attachments. You should consider moving\n"
 "to another mail client or to a higher version.\n"
-"\n"
+"For further information, connect to http://cronosII.sourceforge.net\n"
+"or contact cronosII@users.sourceforge.net\n"
 msgstr ""
 
-#: src/gui-composer.c:1223 src/gui-window_main_callbacks.c:1114
+#: src/gui-composer.c:1225 src/gui-window_main_callbacks.c:1114
 msgid "Confirmation"
 msgstr ""
 
-#: src/gui-composer.c:1224
+#: src/gui-composer.c:1226
 msgid ""
 "This message was modified.\n"
 "Are you sure you want to close it?"
 msgstr ""
 
-#: src/gui-composer.c:1225 src/gui-decision_dialog.c:100
+#: src/gui-composer.c:1227 src/gui-decision_dialog.c:100
+#: src/gui-window_composer.c:160
 msgid "Yes"
 msgstr ""
 
-#: src/gui-composer.c:1225 src/gui-decision_dialog.c:102
+#: src/gui-composer.c:1227 src/gui-decision_dialog.c:102
+#: src/gui-window_composer.c:160
 msgid "No"
 msgstr ""
 
-#: src/gui-composer.c:1276
+#: src/gui-composer.c:1278
 msgid "Couldn't open the directory for adding the attachments"
 msgstr ""
 
-#: src/gui-composer.c:1480 src/gui-composer.c:1574
+#: src/gui-composer.c:1482 src/gui-composer.c:1576
+#: src/gui-window_composer.c:116
 msgid "Opening mailbox's index file"
 msgstr ""
 
-#: src/gui-composer.c:1481 src/gui-composer.c:1575
+#: src/gui-composer.c:1483 src/gui-composer.c:1577
 msgid "Failed to append the mail in the index file."
 msgstr ""
 
-#: src/gui-composer.c:1502 src/gui-composer.c:1596 src/pop.c:471
+#: src/gui-composer.c:1504 src/gui-composer.c:1598 src/pop.c:471
 msgid "Opening the mail file"
 msgstr ""
 
-#: src/gui-composer.c:1503 src/gui-composer.c:1597
+#: src/gui-composer.c:1505 src/gui-composer.c:1599
 msgid "Failed to write the mail in its file."
 msgstr ""
 
-#: src/gui-composer.c:1524 src/gui-composer.c:1617 src/gui-composer.c:1668
+#: src/gui-composer.c:1526 src/gui-composer.c:1619 src/gui-composer.c:1670
 msgid "Message saved successfully."
 msgstr ""
 
-#: src/gui-composer.c:1648
+#: src/gui-composer.c:1650
 msgid "Opening the selected file"
 msgstr ""
 
-#: src/gui-composer.c:1650
+#: src/gui-composer.c:1652
 msgid "Failed to write the mail in the selected file."
 msgstr ""
 
-#: src/gui-composer.c:1657
+#: src/gui-composer.c:1659
 #, c-format
 msgid ""
 "To: %s\n"
@@ -899,15 +905,15 @@ msgid ""
 "%s\n"
 msgstr ""
 
-#: src/gui-composer.c:1733
+#: src/gui-composer.c:1735
 msgid "Opening the selected file for reading"
 msgstr ""
 
-#: src/gui-composer.c:1734
+#: src/gui-composer.c:1736
 msgid "Failed to insert the file."
 msgstr ""
 
-#: src/gui-composer.c:1748
+#: src/gui-composer.c:1750
 msgid "File inserted successfully."
 msgstr ""
 
@@ -956,7 +962,7 @@ msgstr ""
 msgid "From Mailbox"
 msgstr ""
 
-#: src/gui-export.c:163 src/gui-import.c:164
+#: src/gui-export.c:163 src/gui-import.c:164 src/gui-window_debug.c:87
 msgid "File"
 msgstr ""
 
@@ -1016,6 +1022,36 @@ msgstr ""
 msgid "Couldn't open the mail file for writing the imported message"
 msgstr ""
 
+#: src/gui-message_big.c:56
+msgid "Download message?"
+msgstr ""
+
+#: src/gui-message_big.c:64
+msgid ""
+"A message bigger than what you allowed to automatically download has been "
+"found."
+msgstr ""
+
+#. * From *
+#: src/gui-message_big.c:74 src/gui-print.c:283 src/gui-window_main.c:213
+#: src/gui-window_message.c:250 src/pop.c:780
+msgid "From:"
+msgstr ""
+
+#. * DATE *
+#: src/gui-message_big.c:96 src/gui-print.c:286 src/gui-window_main.c:325
+#: src/gui-window_message.c:362 src/pop.c:801
+msgid "Date:"
+msgstr ""
+
+#: src/gui-message_big.c:129 src/pop.c:863
+msgid "Size:"
+msgstr ""
+
+#: src/gui-message_big.c:188 src/pop.c:914
+msgid "Do you want to download it?"
+msgstr ""
+
 #: src/gui-preferences.c:192
 msgid "Preferences"
 msgstr ""
@@ -1041,7 +1077,7 @@ msgid "Checking if the directory of the mailbox exists"
 msgstr ""
 
 #: src/gui-preferences.c:541
-msgid "Creating the index directory for the nex mailbox"
+msgid "Creating the index directory for the new mailbox"
 msgstr ""
 
 #: src/gui-preferences.c:691
@@ -1431,7 +1467,7 @@ msgid "Configure"
 msgstr ""
 
 #. * Frame *
-#: src/gui-preferences.c:2910 src/version.c:119
+#: src/gui-preferences.c:2910 src/gui-window_debug.c:90 src/version.c:119
 msgid "Information"
 msgstr ""
 
@@ -1486,18 +1522,6 @@ msgid ""
 "%s"
 msgstr ""
 
-#. * From *
-#: src/gui-print.c:283 src/gui-window_main.c:213 src/gui-window_message.c:250
-#: src/pop.c:780
-msgid "From:"
-msgstr ""
-
-#. * DATE *
-#: src/gui-print.c:286 src/gui-window_main.c:325 src/gui-window_message.c:362
-#: src/pop.c:801
-msgid "Date:"
-msgstr ""
-
 #: src/gui-print.c:412 src/gui-print.c:438
 #, c-format
 msgid "Page %d of %d"
@@ -1521,6 +1545,76 @@ msgstr ""
 
 #: src/gui-window_checking.c:108
 msgid "%p%% downloaded"
+msgstr ""
+
+#: src/gui-window_composer.c:59
+#, c-format
+msgid "Composer: %s"
+msgstr ""
+
+#: src/gui-window_composer.c:62 src/gui-window_composer.c:235
+msgid "Cronos II Composer"
+msgstr ""
+
+#: src/gui-window_composer.c:103
+msgid "Couldn't found the Drafts mailbox"
+msgstr ""
+
+#: src/gui-window_composer.c:129
+msgid "Opening mail's file"
+msgstr ""
+
+#: src/gui-window_composer.c:134
+#, c-format
+msgid ""
+"From: %s\n"
+"To: %s\n"
+"Date: %s\n"
+"Subject: %s\n"
+"\n"
+"%s\n"
+msgstr ""
+
+#: src/gui-window_composer.c:158
+msgid "Confirm closing"
+msgstr ""
+
+#: src/gui-window_composer.c:159
+msgid ""
+"Message was modified.\n"
+"Are you sure you want to close it?"
+msgstr ""
+
+#: src/gui-window_composer.c:160
+msgid "Save to Drafts"
+msgstr ""
+
+#: src/gui-window_composer.c:179
+msgid "_Send Now"
+msgstr ""
+
+#: src/gui-window_composer.c:257
+msgid "Send Now"
+msgstr ""
+
+#: src/gui-window_composer.c:266
+msgid "Send Later"
+msgstr ""
+
+#: src/gui-window_debug.c:68
+msgid "Cronos II Debugging System"
+msgstr ""
+
+#: src/gui-window_debug.c:88
+msgid "Line"
+msgstr ""
+
+#: src/gui-window_debug.c:89
+msgid "Function"
+msgstr ""
+
+#: src/gui-window_debug.c:97
+msgid "Keep a logging file"
 msgstr ""
 
 #: src/gui-window_main.c:177 src/gui-window_main.c:805
@@ -2005,7 +2099,7 @@ msgstr ""
 msgid "Opening the main DB file for reading the number of messages in it"
 msgstr ""
 
-#: src/net.c:105
+#: src/net.c:107
 msgid "Couldn't resolve the server"
 msgstr ""
 
@@ -2133,14 +2227,6 @@ msgstr ""
 msgid ""
 "Since the server doesn't support advanced POP commands very little "
 "information about this message could be extracted."
-msgstr ""
-
-#: src/pop.c:863
-msgid "Size:"
-msgstr ""
-
-#: src/pop.c:914
-msgid "Do you want to download it?"
 msgstr ""
 
 #: src/pop.c:952

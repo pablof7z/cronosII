@@ -171,9 +171,9 @@ c2_version_is_minor_or_equal_to_version (C2Version *old_version, const char *str
 
   ask_version = c2_version_get_version_from_string (str_ask_version);
 
-  if ((old_version->major <= ask_version->major) &&
+  if (((old_version->major <= ask_version->major) &&
       (old_version->minor <= ask_version->minor) &&
-      (old_version->micro <= ask_version->micro) ||
+      (old_version->micro <= ask_version->micro)) ||
       (strne (old_version->patch, ask_version->patch))) ret = TRUE;
 
   c2_free (ask_version->patch);
@@ -222,7 +222,7 @@ c2_version_get_version_from_string (const char *string) {
 	  if (!ptr3) break;
 	  ptr4 = g_strdup (ptr3);
 	  c2_free (buf);
-	  buf = ptr4;
+	  buf = CHAR (ptr4);
 	default:
 	  if (!version->patch)
 	    version->patch = g_strdup (buf);

@@ -107,7 +107,7 @@ c2_address_book_fill (C2AddressBook *addrbook, C2AddressBookFillType type, const
     fields[2] = card->comment;
 
     gtk_clist_append (GTK_CLIST (my_addrbook->clist), fields);
-    gtk_clist_set_row_data (GTK_CLIST (gaddrbook->clist), GTK_CLIST (gaddrbook->clist)->rows-1, card);
+    gtk_clist_set_row_data (GTK_CLIST (gaddrbook->clist), GTK_CLIST (gaddrbook->clist)->rows-1, (gpointer) card);
   }
   gtk_clist_thaw (GTK_CLIST (my_addrbook->clist));
 }
