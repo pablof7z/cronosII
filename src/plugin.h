@@ -25,9 +25,9 @@ extern "C" {
 #include <gnome.h>
 #ifdef HAVE_CONFIG_H
 #  include <config.h>
-#else
-#  include <cronosII.h>
-#endif
+  /*#else
+    #  include <cronosII.h>*/
+#endif 
 
 #if USE_PLUGINS
   
