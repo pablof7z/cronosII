@@ -1,3 +1,12 @@
+Thu Nov 29 07:48:41 CST 2001 Peter Gossner <petergozz@users.sourceforge.net>
+	applied the MadProfs (aka  Daniel Fairhead ) patches to net.c
+	and  gui-composer.c
+
+Wed Nov 28	Peter Gossner <petergozz@users.sourceforge.net>
+	Some minor graphics updates.
+	Fixed the lack of splash image .
+	
+
 Mon Nov 12 16:41:09 CST 2001  Peter Gossner <petergozz@users.sourceforge.net>
 	Not much new just some tidy ups and updates to config.in.
 	updated configure messages in prep for some more work.
