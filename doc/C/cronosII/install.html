@@ -1,0 +1,1013 @@
+<HTML
+><HEAD
+><TITLE
+>Installing CronosII</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.33"><LINK
+REL="HOME"
+TITLE="Help Manual Version ver2.1  for  CronosII-0.1.0"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE="Help Manual Version ver2.1  for  CronosII-0.1.0"
+HREF="index.html"><LINK
+REL="NEXT"
+TITLE="Using CronosII"
+HREF="using-cronosii.html"></HEAD
+><BODY
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Help Manual Version ver2.1  for  CronosII-0.1.0</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="index.html"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="using-cronosii.html"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="INSTALL"
+>Installing CronosII</A
+></H1
+><P
+>      <SPAN
+CLASS="APPLICATION"
+>CronosII</SPAN
+>  Is built using the <SPAN
+CLASS="APPLICATION"
+>GNU Autoconf and Automake </SPAN
+>Tools and friends.
+       Intergration with Gnome is fairly comprehensive.
+       </P
+><P
+>      You may also run this application under a "pure" GTK environment without Gnome. 
+      </P
+><P
+>      This should enable CronosII to be installed anywhere the GIMP Tool Kit is available including 
+      ports of GTK to the <SPAN
+CLASS="TRADEMARK"
+> Windows </SPAN
+><SUP
+><FONT
+SIZE="-4"
+>TM</FONT
+></SUP
+>  Operating System.
+      </P
+><DIV
+CLASS="IMPORTANT"
+><BLOCKQUOTE
+CLASS="IMPORTANT"
+><P
+><B
+>Important: </B
+>      To build and run CronosII-0.1.0 you need to have the following libraries installed:
+      </P
+><P
+>      (my apologies to <SPAN
+CLASS="TRADEMARK"
+>Windows</SPAN
+><SUP
+><FONT
+SIZE="-4"
+>TM</FONT
+></SUP
+> Users  I'm not sure what they need beyond GTK)
+      </P
+><P
+>Please let me know so that I can update this manual. <TT
+CLASS="EMAIL"
+>&#60;<A
+HREF="mailto:gossner@arcom.com.au"
+>gossner@arcom.com.au</A
+>&#62;</TT
+> 
+      or see <A
+HREF="authors.html"
+>the section called <I
+>Authors</I
+></A
+>
+      </P
+><P
+></P
+><UL
+><LI
+><P
+>       <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+> glib-config --version</PRE
+></TD
+></TR
+></TABLE
+>
+      glib-1.2.8 or later
+      </P
+></LI
+><LI
+><P
+>      <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>gtk-config --version</PRE
+></TD
+></TR
+></TABLE
+>
+      gtk-1.2.8 or later
+      </P
+></LI
+><LI
+><P
+>       <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+> gnome-config --version</PRE
+></TD
+></TR
+></TABLE
+>
+       To use with GNOME  your working gnome libs will need to be fairly recent
+       <SPAN
+CLASS="APPLICATION"
+>gnome-libs 1.2.5</SPAN
+>  are on this system (and all is well), earlier versions may well work.
+      </P
+></LI
+><LI
+><P
+>      To use the Gnome Print Utility you will need <SPAN
+CLASS="APPLICATION"
+> libgnomeprint.so.11.2.4</SPAN
+> or later wherever you have 
+      your Gnome libraries installed. For Example:
+      </P
+><P
+>      <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>ls /usr/lib/libgnomeprint.*</PRE
+></TD
+></TR
+></TABLE
+> or
+      <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>ls /usr/local/lib/libgnomeprint.*</PRE
+></TD
+></TR
+></TABLE
+>
+      </P
+></LI
+><LI
+><P
+>      You will of course have to have the usual<SPAN
+CLASS="APPLICATION"
+> GNU </SPAN
+>tools on hand as well. 
+      </P
+><P
+>     <I
+CLASS="EMPHASIS"
+> Though if you have a working GNU / LINUX  (or BSD?) system (with GTK onboard) all should be more than just fine.</I
+>
+      </P
+></LI
+></UL
+></BLOCKQUOTE
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="INSTALLING"
+>Installation</A
+></H2
+><P
+>      <SPAN
+CLASS="APPLICATION"
+>CronosII</SPAN
+> may arrived packaged in a number of formats.
+      </P
+><P
+>The most likely are shown here:</P
+><P
+></P
+><OL
+TYPE="1"
+><LI
+><P
+>Gzipped Source Tarballs</P
+><P
+>These look like this<SPAN
+CLASS="APPLICATION"
+> CronosII.-0.1.0.tar.gz</SPAN
+>
+      </P
+><P
+>See <A
+HREF="install.html#GZIPPED"
+>the section called <I
+>GNU Zipped Source Packages</I
+></A
+> for install instructions.
+      </P
+></LI
+><LI
+><P
+>Bzip2 Tarballs</P
+><P
+> This is less likely at the moment, however they will usually look like this:</P
+><P
+>     <SPAN
+CLASS="APPLICATION"
+> CronosII-0.1.0.tar.bz2 </SPAN
+>
+     </P
+><P
+>See <A
+HREF="install.html#BZIPPED"
+>  Bzipped </A
+>
+      for install instructions.
+      </P
+></LI
+><LI
+><P
+>Finally CronosII is available as a <SPAN
+CLASS="APPLICATION"
+>Redhat Package Manager - Package.</SPAN
+></P
+><P
+>These RPM's should look like this:</P
+><P
+><SPAN
+CLASS="APPLICATION"
+>CronosII-0.1.0.ixxx.rpm</SPAN
+></P
+><P
+> Instructions for these are at<A
+HREF="install.html#RPMS"
+> Red Hat Packages</A
+></P
+></LI
+></OL
+><DIV
+CLASS="NOTE"
+><BLOCKQUOTE
+CLASS="NOTE"
+><P
+><B
+>Note: </B
+>    If you are installing from tar balls please read the README  and INSTALL files (at least)
+     in the source. These are likely to be more up to date than this manual.
+    </P
+><P
+> Other formats are possible not least of which are zip and debs.
+   Support for these or other formats may be added should the demand for them warrant it.
+   </P
+></BLOCKQUOTE
+></DIV
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="GZIPPED"
+>GNU Zipped Source Packages</A
+></H3
+><FONT
+COLOR="RED"
+>gzip</FONT
+><P
+>These are the most common method of distributing application packages (and other stuff ) in the UNIX / LINUX world.  </P
+><P
+>To install CronosII from the same directory as the package :</P
+><P
+></P
+><OL
+TYPE="1"
+><LI
+><P
+>   <I
+CLASS="EMPHASIS"
+>[user@ X]#</I
+>
+   <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+> tar zxvf CronosII-0.1.0.tar.gz</PRE
+></TD
+></TR
+></TABLE
+>
+   </P
+></LI
+><LI
+><P
+>   <I
+CLASS="EMPHASIS"
+>[user@ X]#</I
+>
+   <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>cd CronosII-0.1.0</PRE
+></TD
+></TR
+></TABLE
+>
+   </P
+></LI
+><LI
+><P
+>   <I
+CLASS="EMPHASIS"
+>[user @ CronosII-0.1.0] #</I
+>
+   <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+> ./configure</PRE
+></TD
+></TR
+></TABLE
+>
+   </P
+></LI
+><LI
+><P
+>   <I
+CLASS="EMPHASIS"
+>[user @CronosII-0.1.0] #</I
+>
+   <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+> ./make</PRE
+></TD
+></TR
+></TABLE
+></P
+></LI
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>[user @CronosII-0.1.0] #</I
+>
+   <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>su</PRE
+></TD
+></TR
+></TABLE
+></P
+></LI
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>[user @CronosII-0.1.0] #</I
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+> password: your-root-password</PRE
+></TD
+></TR
+></TABLE
+>
+   </P
+></LI
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>[root @CronosII-0.1.0] #</I
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+> ./make install</PRE
+></TD
+></TR
+></TABLE
+>
+   </P
+></LI
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>[root @CronosII-0.1.0] #</I
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+> exit</PRE
+></TD
+></TR
+></TABLE
+>
+   </P
+></LI
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>[user @CronosII-0.1.0] #</I
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+> cronos</PRE
+></TD
+></TR
+></TABLE
+>
+   </P
+></LI
+></OL
+><DIV
+CLASS="NOTE"
+><BLOCKQUOTE
+CLASS="NOTE"
+><P
+><B
+>Note: </B
+>The text between&#8220; [ and ] &#8221;is a representation of  your terminal prompt. 
+   Yours will  be different to that shown and may change markedly when you <SPAN
+CLASS="APPLICATION"
+>"su" </SPAN
+>to root.</P
+></BLOCKQUOTE
+></DIV
+><P
+>For further instruction and options for using<SPAN
+CLASS="APPLICATION"
+> configure</SPAN
+> and 
+   <SPAN
+CLASS="APPLICATION"
+>make </SPAN
+>commands please see the documentation in the tar ball.</P
+><DIV
+CLASS="TIP"
+><BLOCKQUOTE
+CLASS="TIP"
+><P
+><B
+>Tip: </B
+><SPAN
+CLASS="APPLICATION"
+>#configure --help</SPAN
+></P
+><P
+><SPAN
+CLASS="APPLICATION"
+># man make</SPAN
+></P
+></BLOCKQUOTE
+></DIV
+></DIV
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="BZIPPED"
+>Bzipped Tar Balls</A
+></H3
+><P
+>This mode of distribution uses a powerful compression method (<SPAN
+CLASS="APPLICATION"
+> # man bzip2 </SPAN
+> ) 
+   that is deliberately  very similar  to gzip at the command line. It is impressive how much size and download time  can be saved using this
+compression method. </P
+><P
+>Installation with bzip2 is nearly identical to gnuzip.</P
+><P
+>To install CronosII from the same directory as the package :</P
+><P
+></P
+><OL
+TYPE="1"
+><LI
+><P
+>   	<I
+CLASS="EMPHASIS"
+>[user@ X]#</I
+>
+   	<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+> tar Ixvf CronosII-0.1.0.tar.bz2</PRE
+></TD
+></TR
+></TABLE
+>
+   	</P
+></LI
+><LI
+><P
+>   <I
+CLASS="EMPHASIS"
+>[user@ X]#</I
+>
+   <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>cd CronosII-0.1.0
+   </PRE
+></TD
+></TR
+></TABLE
+>
+   </P
+></LI
+><LI
+><P
+>   <I
+CLASS="EMPHASIS"
+>[user @ CronosII-0.1.0]#</I
+>
+   <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+> ./configure</PRE
+></TD
+></TR
+></TABLE
+>
+   </P
+></LI
+><LI
+><P
+>   <I
+CLASS="EMPHASIS"
+>[user @CronosII-0.1.0]#</I
+>
+   <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+> ./make</PRE
+></TD
+></TR
+></TABLE
+>
+   </P
+></LI
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>[user @CronosII-0.1.0]#</I
+>
+   <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>su</PRE
+></TD
+></TR
+></TABLE
+>
+   </P
+></LI
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>[user @CronosII-0.1.0]#</I
+>
+   <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+> password: your-root-password</PRE
+></TD
+></TR
+></TABLE
+>
+   </P
+></LI
+><LI
+><P
+>   <I
+CLASS="EMPHASIS"
+>[root @CronosII-0.1.0]#</I
+>
+   <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>./make install</PRE
+></TD
+></TR
+></TABLE
+>
+   </P
+></LI
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>[root @CronosII-0.1.0]#</I
+>
+   <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+> exit</PRE
+></TD
+></TR
+></TABLE
+>
+   </P
+></LI
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>[user @CronosII-0.1.0]#</I
+>
+   <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+> cronos</PRE
+></TD
+></TR
+></TABLE
+>
+   </P
+></LI
+></OL
+></DIV
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="RPMS"
+>Red Hat Packages</A
+></H3
+><P
+>These packages are used by many LINUX distributions as a simple and
+       effective way of installing software and keeping issues like dependencies in order.
+       Other distributions have their own equally useful approaches that achieve similar ends.</P
+><P
+> Installation may be undertaken from the command line,or a  GUI front end to RPM
+       like <SPAN
+CLASS="APPLICATION"
+>GNORPM</SPAN
+> . 
+       In all cases root level permissions are required to install system wide.
+       </P
+><P
+>At the command line do the following as ROOT  from the same directory as you have the package. :</P
+><P
+></P
+><OL
+TYPE="1"
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>[root@x]#</I
+>
+       <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>       <SPAN
+CLASS="APPLICATION"
+>rpm -Uvh CronosII-0.1.0</SPAN
+>
+       </PRE
+></TD
+></TR
+></TABLE
+>
+       </P
+></LI
+><LI
+><P
+>       <I
+CLASS="EMPHASIS"
+>[root@x]#</I
+>
+       <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><SPAN
+CLASS="APPLICATION"
+>exit</SPAN
+></PRE
+></TD
+></TR
+></TABLE
+></P
+><P
+> or<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><SPAN
+CLASS="APPLICATION"
+> login </SPAN
+></PRE
+></TD
+></TR
+></TABLE
+>
+       to your normal account
+       </P
+></LI
+><LI
+><P
+><I
+CLASS="EMPHASIS"
+>[user@x]#</I
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+><SPAN
+CLASS="APPLICATION"
+> cronos</SPAN
+></PRE
+></TD
+></TR
+></TABLE
+></P
+></LI
+></OL
+><DIV
+CLASS="TIP"
+><BLOCKQUOTE
+CLASS="TIP"
+><P
+><B
+>Tip: </B
+>As CronosII tarballs include a <I
+CLASS="EMPHASIS"
+>spec </I
+> file you may build your own <SPAN
+CLASS="APPLICATION"
+>RPM</SPAN
+>
+  		 by typing the following from the command line:</P
+><P
+>  (as  root) <I
+CLASS="EMPHASIS"
+>[root@x]#</I
+>
+  		 <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>rpm -ta CronosII-0.1.0.tar.gz</PRE
+></TD
+></TR
+></TABLE
+></P
+><P
+> This should (all going well) build a package ready for you to install as a standard
+  		 <SPAN
+CLASS="APPLICATION"
+>RPM</SPAN
+> as shown<A
+HREF="install.html#RPMS"
+> above.</A
+></P
+></BLOCKQUOTE
+></DIV
+></DIV
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="index.html"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="using-cronosii.html"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Help Manual Version ver2.1  for  CronosII-0.1.0</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Using CronosII</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

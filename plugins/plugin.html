@@ -1,0 +1,529 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="Content-Type" content="text/html">
+</head>
+
+<body bgcolor="#FFFFFF" lang="en">
+<h1>Cronos II Plugins Development</h1>
+
+<h2>For version 0.2.0, 17 Feb 2001</h2>
+<i>Pablo Fernández Navarro</i> <a
+href="mailto:cronosII@users.sourceforge.net">&lt;cronosII@users.sourceforge.net&gt;</a>
+
+<p><a
+href="http://cronosII.sourceforge.net">http://cronosII.sourceforge.net</a></p>
+
+<p></p>
+<hr color="#000000" noshade="noshade">
+
+<h1>Table of Contents</h1>
+<ol>
+  <li><a href="#Introduction">Introduction</a>
+    <ol>
+      <li><a href="#What is a plugin">What is a plugin?</a></li>
+    </ol>
+  </li>
+  <li><a href="#Signals">Signals</a>
+    <ol>
+      <li><a href="#Theory of Signals and Callbacks">Theory of Signals and
+        Callbacks</a></li>
+      <li><a href="#Connecting">Connecting</a></li>
+      <li><a href="#Disconnecting">Disconnecting</a></li>
+      <li><a href="#Using the interface">Using the interface</a></li>
+      <li><a href="#Signal List">Signal List</a></li>
+    </ol>
+  </li>
+  <li><a href="#Required Functions">Required Functions</a>
+    <ol>
+      <li><a href="#module_init">module_init</a></li>
+      <li><a href="#module_cleanup">module_cleanup</a></li>
+    </ol>
+  </li>
+  <li><a href="#Optional Functions">Optional Functions</a>
+    <ol>
+      <li><a href="#Configure">Configure</a></li>
+    </ol>
+  </li>
+  <li><a href="#Tips for writing Cronos II Plugins">Tips for writing Cronos II
+    Plugins</a></li>
+  <li><a href="#Final words">Final words on...</a>
+    <ol>
+      <li><a href="#Final words on API">API</a></li>
+      <li><a href="#Final words on distributing">Distributing</a></li>
+    </ol>
+  </li>
+</ol>
+
+<p></p>
+<hr noshade="noshade" color="#000000">
+
+<h1><a name="Introduction">Introduction</a></h1>
+
+<blockquote>
+  While you read this manual and code your plugin, I recommend you open the
+  <em>sample plugin</em> which comes in the source distribution of Cronos II.
+  ( In the directory /plugins/sample/sample.c) Then  you can see how  plugins
+  are structured. When you code your own plugin you should code with that same
+  structure to avoid confusing errors.<br>
+</blockquote>
+
+<h3><a name="What is a plugin">What is a plugin?</a></h3>
+
+<blockquote>
+  A plugin is a compiled module which can be loaded dynamically by a program,
+  in this case, Cronos II.<br>
+  The term <i>Dynamic Loading</i> means that the module can be loaded on the
+  fly, while the program is running.
+
+  <p>Plugins are designed to fulfill an specific task, like decoding incoming
+  messages and encoding outgoing messages (GnuPG plugin), randomly selecting a
+  signature, or any other thing you can think of, you can even make changes to
+  the UI (User Interface) of Cronos II.</p>
+
+  <p>Plugins development might sound like a really difficult thing if this is
+  your first attempt to do such a thing. Actually, the development of plugins
+  for Cronos II is a really simple task thanks to the API Cronos II brings to
+  you.</p>
+</blockquote>
+<hr noshade="noshade">
+
+<h1><a name="Signals">Signals</a></h1>
+
+<h3><a name="Theory of Signals and Callbacks">Theory of Signals and
+Callbacks</a></h3>
+
+<blockquote>
+  Cronos II Plugins Development is done through <i>signals</i>. (Note that
+  these signals are not the same as the Unix system signals, and are not
+  implemented using them, although the terminology is almost identical.) When
+  an event occurs, such as the downloading of a new message, the appropriate
+  signal will be <i>emitted</i> by Cronos II.
+
+  <p>When a signal is emitted, all functions <i>connected</i> to that signal
+  are called passing specific signal parameters.<br>
+  Plugins which don't connect to any signal are useless plugins, so you should
+  <b>always</b> connect your plugin to a signal.</p>
+</blockquote>
+
+<h3><a name="Connecting">Connecting</a></h3>
+
+<blockquote>
+  <p>The way to connect to a signal is by calling a function in the
+  initialization function of the module, which will always be
+  <i>module_init</i>.</p>
+
+  <table border="0" cellpadding="5">
+   
+      <tr>
+        <td bgcolor="#DDDDDD" align="right"><pre type=MACHINE>c2_dynamic_module_signal_connect (const char *module_name, C2DynamicModuleSignal signal,C2DynamicModuleSignalFunc func);</pre>
+        </td>
+      </tr>
+    
+  </table>
+
+  <p>Where the first argument is the name of the module, the second argument
+  is the type of signal (View <a href="#Signal List">Signal List</a>). The
+  third argument is a function of type C2DynamicModuleSignalFunc which will be
+  called when this signal is emitted.</p>
+  The functions of type C2DynamicModuleSignalFunc look like this:
+
+  <table border="0" cellpadding="5">
+    <tbody>
+      <tr>
+        <td bgcolor="#DDDDDD" align="right"><pre type=MACHINE>void function (void *arg1, void *arg2, void *arg3, void *arg4, void *arg4, void *arg5);</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Note that they  may also ignore any or all of the arg* variables, ie:</p>
+
+  <table border="0" cellpadding="5">
+    <tbody>
+      <tr>
+        <td bgcolor="#DDDDDD" align="right"><pre type=MACHINE>void function (void *arg1, void *arg2);</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>When you connect to a signal, some data, of an specific type will be
+  passed to the function you connected (called a <i>function callback</i>),
+  thus  you might want to specify the type of variable in the function
+  definition.</p>
+
+  <p>Ie. You might want to use a function callback of type:</p>
+
+  <table border="0" cellpadding="5">
+    <tbody>
+      <tr>
+        <td bgcolor="#DDDDDD" align="right"><pre type=MACHINE>void function (const char *message, const char *username);</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>for a signal that passes such arguments instead of:</p>
+
+  <table border="0" cellpadding="5">
+    <tbody>
+      <tr>
+        <td bgcolor="#DDDDDD" align="right"><pre type=MACHINE>void function (void *arg1, void *arg2);</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>This works just like GTK+ or GNOME.</p>
+
+  <p>Note that when you pass the third argument to the function
+  <i>c2_dynamic_module_signal_connect</i> you should always use the macro
+  <i>C2_DYNAMIC_MODULE_SIGNAL_FUNC  (function)</i> to ensure the cast is
+  correctly done.</p>
+</blockquote>
+
+<h3><a name="Disconnecting">Disconnecting</a></h3>
+
+<blockquote>
+  Connected signals can be disconnected, once you don't want to use them any
+  more or when the module is required to clean up <br>
+  (View <a href="#module_cleanup">module_cleanup</a>).The way to do this is
+  calling the function:
+
+  <table border="0" cellpadding="5">
+    <tbody>
+      <tr>
+        <td bgcolor="#DDDDDD" align="right"><pre type=MACHINE>void c2_dynamic_module_signal_disconnect (const char *module_name, C2DynamicModuleSignal signal);</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Where the first argument is the name of the module and the second is the
+  type of signal.</p>
+</blockquote>
+
+<h3><a name="Using the interface">Using the interface</a></h3>
+
+<blockquote>
+  Callback functions are called out of the main thread, outside of where the
+  gtk_main function is being executed. Thus  if you want to do draw something
+  in the user interface (ie. a window) you must call two
+  functions.<i>gdk_threads_enter ()</i> is called <b>before</b> doing anything
+  that would update the interface, like calling gtk_widget_show or something
+  like that. <i>gdk_threads_leave ()</i> is called <b>after</b> updating the
+  interface.If you want to do a callback that draws a simple window you should
+  code something like this:
+
+  <table border="0" cellpadding="5">
+    <tbody>
+      <tr>
+        <td bgcolor="#DDDDDD"><pre type=MACHINE>void graphic_function (void) {
+  GtkWidget *window;
+
+  window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+  gtk_window_set_title (GTK_WINDOW (window), "Sample window");
+  
+  gdk_threads_enter ();
+  gtk_widget_show (window);
+  gdk_threads_leave ();
+}</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3><a name="Signal List">Signal List</a></h3>
+
+<blockquote>
+
+  <table border="0" cellpadding="5" bgcolor="#DDDDDD">
+    <tbody>
+      <tr>
+        <td><pre type=MACHINE>C2_DYNAMIC_MODULE_CHECK_NEW_SESSION</pre>
+        </td>
+        <td><pre type=MACHINE>(int length)</pre>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2"><pre type=MACHINE>@length: Number of accounts to be checked.</pre>
+          <pre type=MACHINE>Definition: This signal is emitted every time a checking session is about to start or some
+account is added to the checking queue while active.<br>
+
+          </pre>
+        </td>
+      </tr>
+      <tr>
+        <td><pre type=MACHINE>C2_DYNAMIC_MODULE_CHECK_NEW_ACCOUNT</pre>
+        </td>
+        <td><pre type=MACHINE>(Account *account)</pre>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2"><pre type=MACHINE>@account: Account to be checked.</pre>
+          <pre type=MACHINE>Definition: This signal is emitted every time  checking of an account is about to start.<br>
+
+          </pre>
+        </td>
+      </tr>
+      <tr>
+        <td><pre type=MACHINE>C2_DYNAMIC_MODULE_MESSAGE_DOWNLOAD_POP</pre>
+        </td>
+        <td><pre type=MACHINE>(Message *message)</pre>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2"><pre type=MACHINE>@message: Message downloaded.</pre>
+          <pre type=MACHINE>Definition: This signal is emitted every time a message is downloaded from a POP account.<br>
+
+          </pre>
+        </td>
+      </tr>
+      <tr>
+        <td><pre type=MACHINE>C2_DYNAMIC_MODULE_MESSAGE_DOWNLOAD_SPOOL</pre>
+        </td>
+        <td><pre type=MACHINE>(Message *message)</pre>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2"><pre type=MACHINE>@message: Message downloaded.</pre>
+          <pre type=MACHINE>Definition: This signal is emitted every time a message is downloaded from a SPOOL account.<br>
+
+          </pre>
+        </td>
+      </tr>
+      <tr>
+        <td><pre type=MACHINE>C2_DYNAMIC_MODULE_COMPOSER_SEND</pre>
+        </td>
+        <td><pre type=MACHINE>(Message *message)</pre>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2"><pre type=MACHINE>@message: Message to be sent.</pre>
+          <pre type=MACHINE>Definition: This signal is emitted every time a message is about to be sent.<br>
+
+          </pre>
+        </td>
+      </tr>
+      <tr>
+        <td><pre type=MACHINE>C2_DYNAMIC_MODULE_COMPOSER_INSERT_SIGNATURE</pre>
+        </td>
+        <td><pre type=MACHINE>(char **signature)</pre>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2"><pre type=MACHINE>@*signature: Signature to be added.</pre>
+          <pre type=MACHINE>Definition: This signal is emitted every time a signature is going to be appended to a
+message in the composer window.<br>
+
+          </pre>
+        </td>
+      </tr>
+      <tr>
+        <td><pre type=MACHINE>C2_DYNAMIC_MODULE_WINDOW_FOCUS</pre>
+        </td>
+        <td><pre type=MACHINE>(const char *type)</pre>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2"><pre type=MACHINE>@type: Name of window. (ie. main, composer, checker)</pre>
+          <pre type=MACHINE>Definition: This signal is emitted every time a window gains focus.<br>
+
+          </pre>
+        </td>
+      </tr>
+      <tr>
+        <td><pre type=MACHINE>C2_DYNAMIC_MODULE_MESSAGE_OPEN</pre>
+        </td>
+        <td><pre type=MACHINE>(Message *message, const char *type)</pre>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2"><pre type=MACHINE>@message: Message to be opened.
+@type: Type of opening. (preview, composer, message)</pre>
+          <pre type=MACHINE>Definition: This signal is emitted every time a message is opened in someway to take
+some action on it.
+<b>Note:</b> This signal is emitted from the gdk thread, so be careful how you use it!</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+<hr noshade="noshade">
+
+<h1><a name="Required Functions">Required Functions</a></h1>
+
+<h3><a name="module_init">module_init</a></h3>
+
+<blockquote>
+  The function module_init is the first function called of any module. The
+  structure  of this function is as follows:
+
+  <table border="0" cellpadding="5">
+    <tbody>
+      <tr>
+        <td bgcolor="#DDDDDD"><pre type=MACHINE>char *module_init (int major_version, int minor_version, int micro_version, C2DynamicModule *module);</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>This function should return NULL on success or an string describing why
+  the module hasn't  been loaded.<br>
+  The first argument of this function is major version number of the Cronos II
+  running version, the second argument is the minor version and the third
+  argument is the micro version.<br>
+  The major version is the first number of the version (<b>0</b>.2.0).<br>
+  The minor version is the second number of the version (0.<b>2</b>.0).<br>
+  The micro version is the third number of the version (0.2.<b>0</b>).<br>
+  The fourth argument is a pointer to an allocated C2DynamicModule object that
+  this function should fill with valid information.</p>
+  This function should do the following things in this order (plus anything
+  else you require):
+  <ul>
+    <li>Check if the Cronos II version is better or equal to the version you
+      requite. This is done because your module might need some special API
+      provided by some version. For example, plugins are supported since
+      version 0.2.0, therefore  you should always require, at least, this
+      version.</li>
+    <li>Check if this plugin is already loaded using the function <a
+      href="#Functions List-c2_dynamic_module_find">c2_dynamic_module_find</a>.</li>
+    <li>Set up module (some module information):
+      <ul>
+        <li><b>name:</b> Name of the plugin (eg. "GnuPG"),</li>
+        <li><b>version:</b> Version of the plugin (eg. "0.1"),</li>
+        <li><b>author:</b> Name and email of the author of the plugin (e.g.
+          "Pablo Fernández Navarro
+        &lt;cronosII@users.sourcefroge.net&gt;"),</li>
+        <li><b>url:</b> URL where this plugin can be downloaded (e.g.
+          "http://cronosII.sourceforge.net"),</li>
+        <li><b>description:</b> A description of what this plugin does (ie.
+          "Decodes incoming encoded messages and encodes outgoing
+        messages"),</li>
+        <li><b>configure:</b> Pointer to a function that will be called when
+          the user wants to configure the plugin (View <a
+          href="#Configure">Configure</a>). If you don't want your users to
+          configure the plugin you should set it to NULL,</li>
+        <li><b>configfile:</b> This should be set  to the return of the
+          function <a
+          href="#Functions List-c2_dynamic_module_get_config_file">c2_dynamic_module_get_config_file</a>.</li>
+      </ul>
+    </li>
+    <li>Load the configuration (if your plugin uses configuration).</li>
+    <li>Connect the signals (View <a href="#Connecting">Connecting</a>)</li>
+  </ul>
+</blockquote>
+
+<h3><a name="module_cleanup">module_cleanup</a></h3>
+
+<blockquote>
+  The function module_cleanup is the function called when the user wants to
+  unload the plugin or when Cronos II is exiting.
+
+  <p>The typography of this function is as follows:</p>
+
+  <table border="0" cellpadding="5">
+    <tbody>
+      <tr>
+        <td bgcolor="#DDDDDD"><pre type=MACHINE>void module_cleanup (C2DynamicModule *module);</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>The first and unique argument is a pointer to the C2DynamicModule
+  containing the plugin information.</p>
+  This function should do the following things and anything else you require:
+  <ul>
+    <li>Disconnect <b>all</b> connected signals.</li>
+  </ul>
+</blockquote>
+<hr noshade="noshade">
+
+<h1><a name="Optional Functions">Optional Functions</a></h1>
+
+<h3><a name="Configure">Configure</a></h3>
+
+<blockquote>
+  You may  want the user to be able to configure the plugin.
+
+  <p>eg. The sample plugin does a simple task:  when a mail  <i>from a
+  specific address</i> arrives the user is notified with a simple
+  <b>gnome_ok_dialog</b>.<br>
+  The part that we will talk about in this section is the <i>from a  specific
+  address</i>.<br>
+  How can you know which  address  should be waiting for notifying the user?
+  Simple, with a configuration window.</p>
+
+  <p>You might noticed that the Preferences dialog, in the section of
+  "Plug-Ins" is the one that handles the stuff related to the plugins. There's
+  a button named "Configure".<br>
+  When that button is pressed the function pointed by module-&gt;configure is
+  called unless you set  module-&gt;configure to NULL.</p>
+</blockquote>
+<hr noshade="noshade">
+
+<h1><a name="Tips for writing Cronos II Plugins">Tips for writing Cronos II
+Plugins</a></h1>
+
+<blockquote>
+  Cronos II gives you a tool for correctly installing the plugin, you should
+  really use it.
+
+  <p>This tool is called <i>cronosII-config</i>, it gets installed when you
+  install Cronos II. By using it you will know where to install the plugin
+  (`cronosII-config --datadir`/plugins) and what version is currently
+  installed.</p>
+
+  <p>You should always keep in mind that Cronos II is designed for GNOME, thus
+  you should always try to design interfaces with the look &amp; feel of
+  GNOME, using gnome_stock_button and similar functions ( the libgnomeui
+  library).</p>
+
+  <p>Cronos II hasn't many signals (yet). If you need to work with a signal
+  that is currently not emitted (like a signal when a message is deleted), you
+  should just mail me asking for it at <a
+  href="mailto:cronosII@users.sourceforge.net">cronosII@users.sourceforge.net</a>.
+  I will add it for you as soon as I can do it.</p>
+
+  <p>(Please, include in your request how your plugin will use it.)</p>
+</blockquote>
+<hr noshade="noshade">
+
+<h1><a name="Final words">Final words on...</a></h1>
+
+<h3><a name="Final words on API">API</a></h3>
+
+<blockquote>
+  Cronos II has an extended API which is getting larger and larger with each
+  new version. Having a list of the API is a hard job which would delay the
+  release of versions too much.
+
+  <p>At the time of programming your plugins you're probably going to need to
+  use this API, unless your plugin does a really simple task, such as showing
+  "Hello world" each time your module is loaded and "Ronnie was playing in the
+  field" each time the module is unloaded.<br>
+  The best way for you to understand the functions in  Cronos II is to read
+  the source files. Most functions are documented in the .c files. Anyway,
+  functions in Cronos II are very intuitive and self describing.<br>
+  If you have any doubt about what a function, or a family of functions does,
+  or how you should work with them you could check some functions that use
+  them (you can locate them  using the GNU <i>grep</i> tool) or you can mail
+  me at <a href="mailto:cronosII@users.sourceforge.net">
+  cronosII@users.sourceforge.net</a>.</p>
+</blockquote>
+
+<h3><a name="Final words on distributing">Distributing</a></h3>
+
+<blockquote>
+  Once you finished writing the first version of your plugin, please, send the
+  URL for  it (if you made a home page for it) or send me the tarball by mail
+  to <a
+  href="mailto:cronosII@users.sourceforge.net">cronosII@users.sourceforge.net</a>.<br>
+</blockquote>
+</body>
+</html>

@@ -1,0 +1,1131 @@
+<HTML
+><HEAD
+><TITLE
+>Configuration</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.33"><LINK
+REL="HOME"
+TITLE="Help Manual Version ver2.1  for  CronosII-0.1.0"
+HREF="index.html"><LINK
+REL="PREVIOUS"
+TITLE="Composing Your Mail"
+HREF="composer.html"><LINK
+REL="NEXT"
+TITLE="Known Bugs and Limitations"
+HREF="bugs.html"></HEAD
+><BODY
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Help Manual Version ver2.1  for  CronosII-0.1.0</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="composer.html"
+>Prev</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="bugs.html"
+>Next</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="SECT1"
+><H1
+CLASS="SECT1"
+><A
+NAME="CONFIGURATION"
+>Configuration</A
+></H1
+><P
+>Before you can use <SPAN
+CLASS="APPLICATION"
+>CronosII </SPAN
+> you will need to do some configuration. 
+  </P
+><P
+>  The first and  most important step is configuring your Accounts.  Please see <A
+HREF="configuration.html#CONFIGURATION-MAIL-ACCOUNTS"
+>the section called <I
+>Accounts</I
+></A
+>
+Everything else should work fine in default configuration. 
+ </P
+><P
+>   Don't worry,  you may not even  need  this manual !
+  </P
+><P
+>  To Set up your Email accounts and other preferences, select
+    <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>Settings -&#62; Preferences.</PRE
+></TD
+></TR
+></TABLE
+>
+     This opens the   <SPAN
+CLASS="INTERFACE"
+>Preferences</SPAN
+> dialog, shown in <A
+HREF="configuration.html#PREFERENCES-FIG"
+>Figure 2</A
+>.
+  </P
+><DIV
+CLASS="FIGURE"
+><P
+><B
+><A
+NAME="PREFERENCES-FIG"
+>Figure 2. Preferences Dialog</A
+></B
+></P
+><P
+><IMG
+SRC="preferences-dialog.gif"></P
+></DIV
+><P
+> The Tree style menu to the left of the dialog gives you access to the following configuration options:</P
+><P
+></P
+><UL
+><LI
+><P
+>General</P
+><P
+>Read <A
+HREF="configuration.html#CONFIGURATION-GENERAL"
+>the section called <I
+>General Options</I
+></A
+></P
+><P
+></P
+><UL
+><LI
+><P
+><A
+HREF="configuration.html#CHECK-MAIL-TIMEOUT"
+>Check Mail Timeout</A
+></P
+></LI
+><LI
+><P
+><A
+HREF="configuration.html#TIME-TILL-TAG"
+>Time till Tag   </A
+></P
+></LI
+><LI
+><P
+><A
+HREF="configuration.html#QUOTE-CHARACTER"
+>Quote Character   </A
+></P
+></LI
+><LI
+><P
+><A
+HREF="configuration.html#MAX-AUTO-DOWNLOAD"
+>Maximum Auto Download Size   </A
+></P
+></LI
+><LI
+><P
+><A
+HREF="configuration.html#AUTO-EMPTY-GARBAGE"
+>Auto Empty Garbage ?   </A
+></P
+></LI
+><LI
+><P
+><A
+HREF="configuration.html#STORE-SENT-MAIL"
+>Store Sent Mail ?</A
+></P
+></LI
+></UL
+></LI
+><LI
+><P
+>Mail</P
+><P
+>Read <A
+HREF="configuration.html#CONFIGURATION-MAIL"
+>the section called <I
+>Mail</I
+></A
+></P
+><P
+></P
+><UL
+><LI
+><P
+><A
+HREF="configuration.html#CONFIGURATION-MAIL-ACCOUNTS"
+>Accounts</A
+></P
+></LI
+><LI
+><P
+><A
+HREF="configuration.html#CONFIGURATION-MAIL-MAILBOXES"
+>Mailboxes</A
+></P
+></LI
+></UL
+></LI
+><LI
+><P
+>Interface</P
+><P
+>Read <A
+HREF="configuration.html#CONFIGURATION-INTERFACE"
+>the section called <I
+>Interface</I
+></A
+></P
+><P
+></P
+><UL
+><LI
+><P
+><A
+HREF="configuration.html#CONFIGURATION-INTERFACE-FONTS"
+>Fonts</A
+></P
+></LI
+><LI
+><P
+><A
+HREF="configuration.html#CONFIGURATION-INTERFACE-COLOURS"
+>Message Colours</A
+></P
+></LI
+></UL
+></LI
+><LI
+><P
+>Advanced</P
+><P
+>Read <A
+HREF="configuration.html#CONFIGURATION-ADVANCED"
+>the section called <I
+>Advanced</I
+></A
+></P
+><P
+></P
+><UL
+><LI
+><P
+><A
+HREF="configuration.html#CONFIGURATION-ADVANCED-NET-TIMEOUT"
+>Net Timeout</A
+></P
+></LI
+></UL
+></LI
+></UL
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="CONFIGURATION-GENERAL"
+>General Options</A
+></H2
+><P
+>The Preferences window opens with a tree style menu of configuration options.</P
+><P
+> The opening interface gives you the <SPAN
+CLASS="GUIMENU"
+>General</SPAN
+> Options.
+  These are labeled on the dialog and are dealt with sequentially below</P
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="CHECK-MAIL-TIMEOUT"
+>Check Mail Timeout</A
+></H3
+><P
+>Slide the drag handle to set the time CronosII will wait between checks
+   (and auto mail download) on  your mail server.</P
+><DIV
+CLASS="CAUTION"
+><P
+></P
+><TABLE
+CLASS="CAUTION"
+BORDER="1"
+WIDTH="100%"
+><TR
+><TD
+ALIGN="CENTER"
+><B
+>Caution</B
+></TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+><P
+>For slow connections set this value high as you will tie up  resources while checking 
+   and downloading</P
+></TD
+></TR
+></TABLE
+></DIV
+></DIV
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="TIME-TILL-TAG"
+>Time till Tag</A
+></H3
+><P
+>Dragging this handle will set the time it takes to mark a mail as having been <SPAN
+CLASS="APPLICATION"
+>Read.</SPAN
+></P
+></DIV
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="QUOTE-CHARACTER"
+>Quote Character</A
+></H3
+><P
+>Enter a character, or string of characters that "Quote" or Identify  the original message when you Reply or Forward a mail.</P
+><P
+>The default is  &#62;  which is used by many people however almost any ASCII characters will be acceptable.</P
+></DIV
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="MAX-AUTO-DOWNLOAD"
+>Maximum Auto Download Size</A
+></H3
+><P
+>This sets a maximum file download size (in Kilobytes)
+   for CronosII to auto retrieve from your mail server.  Should a message exceed your setting CronosII
+   will ask find out what it can about the message and then ask you if it's OK to download. </P
+><P
+>The default setting of <SPAN
+CLASS="APPLICATION"
+>0 </SPAN
+> disables this function.</P
+></DIV
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="AUTO-EMPTY-GARBAGE"
+>Auto Empty Garbage ?</A
+></H3
+><P
+>Checking this will cause your Garbage Mailbox to be emptied when you finish a CronosII session.
+   This will remove those messages permanently.</P
+></DIV
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="STORE-SENT-MAIL"
+>Store Sent Mail ?</A
+></H3
+><P
+>Selecting this check box will allow CronosII to automatically save 
+   a copy of each of your sent mails in the <SPAN
+CLASS="GUIMENU"
+>Outbox.</SPAN
+></P
+></DIV
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="CONFIGURATION-MAIL"
+>Mail</A
+></H2
+><P
+>Setup your accounts and mailboxes here.</P
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="CONFIGURATION-MAIL-ACCOUNTS"
+>Accounts</A
+></H3
+><FONT
+COLOR="RED"
+>Before you get started</FONT
+><P
+>CronosII enables you to have many different POP (Post Office Protocol) accounts.</P
+><P
+>Here's how to set up your first account:</P
+><P
+></P
+><OL
+TYPE="1"
+><LI
+><P
+>Open the <SPAN
+CLASS="INTERFACE"
+>Account Configuration Dialog</SPAN
+>
+  		 from the <A
+HREF="using-cronosii.html#MAINWINDOW"
+>Main Window.</A
+>
+  		<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>Settings -&#62; Preferences -&#62; Mail / Accounts</PRE
+></TD
+></TR
+></TABLE
+>
+  		</P
+></LI
+><LI
+><P
+>The dialog that opens has a large open window with resizable column headers,
+  		 some task buttons to the right, and some completion functions at the bottom. (It's not as bad as it sounds).
+  		 </P
+><P
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+> Select New (on the right)</PRE
+></TD
+></TR
+></TABLE
+>
+  		 A Dialog not unlike a Druid or Wizard opens to steer you onward.
+  		 You need to decide which type of Email account you wish to set up.
+  		 </P
+><P
+>Currently you are given the choice of "Spool" (a UNIX style mail-spool ) or a POP account.
+  		 </P
+><P
+> Click on either of them to get more information.</P
+></LI
+><LI
+><P
+>For now select<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>POP -&#62; NEXT</PRE
+></TD
+></TR
+></TABLE
+>
+  	 </P
+><P
+>For Spool Accounts see <A
+HREF="configuration.html#CONFIGURATION-ACCOUNTS-SPOOL"
+>the section called <I
+>About Spool Accounts</I
+></A
+> below.</P
+><P
+>The <SPAN
+CLASS="INTERFACE"
+>New Account Dialog</SPAN
+> should open.</P
+><P
+>This dialog has 4 tabbed pages where you enter information to configure a functioning account.</P
+><P
+></P
+><OL
+TYPE="a"
+><LI
+><P
+>Account Name</P
+><P
+>Give this account a name. Something to clearly identify it. </P
+></LI
+><LI
+><P
+>Name</P
+><P
+>Your local user name will do here</P
+></LI
+><LI
+><P
+> E-mail</P
+><P
+>Your E-mail address at that account</P
+></LI
+></OL
+></LI
+><LI
+><P
+>Once you have finished entering that..<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>Select Protocol
+  	</PRE
+></TD
+></TR
+></TABLE
+>
+  	</P
+><P
+>Here we have to get a little more exact ! </P
+><P
+> Enter the following
+  	 as provided  by your Internet Service Provider or System Administrator.</P
+><P
+></P
+><OL
+TYPE="a"
+><LI
+><P
+>User Name</P
+><P
+>Enter your user name at your SERVER  [e-x-a-c-t-l-y] </P
+></LI
+><LI
+><P
+>Password</P
+><P
+>Enter the password you were issued (or have set up) </P
+></LI
+><LI
+><P
+>  	 		POP Server:
+  	 		</P
+><P
+>  	 		Enter the name of the pop server (your incoming mailbox at the server)
+  	 		</P
+><P
+>  	 		 This is often in the format of <TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>pop.yourisp.domain.region</PRE
+></TD
+></TR
+></TABLE
+>
+  	 		</P
+></LI
+><LI
+><P
+>  	 		SMTP (Simple Mail Transfer Protocol)
+  	 		 </P
+><P
+>  	 		Enter the name of the out going mail server.
+  	 		</P
+><P
+>  	 		This often looks like
+  	 		<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="90%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>mail.yourisp.domain.region</PRE
+></TD
+></TR
+></TABLE
+>
+  	 		</P
+><P
+>  	 		Check all of this.
+  	 		</P
+></LI
+><LI
+><P
+>Ports</P
+><P
+>The default ports set for the POP and SMTP servers should be fine for most people.
+  	 		</P
+><P
+>  	 		Your ISP or System Administrator should let you know if others are needed. 
+  	 		(firewalls , intranets, mail monitoring,  or other server level issues may be cause for other ports to be used.)
+  	 		</P
+></LI
+></OL
+></LI
+><LI
+><P
+>Mailbox</P
+><P
+>Next choose the Mailbox page</P
+><P
+>Here you can associate <SPAN
+CLASS="GUISUBMENU"
+>This Account</SPAN
+>
+   	 with a<SPAN
+CLASS="GUISUBMENU"
+> Particular Mailbox. </SPAN
+>
+   	If you haven't personalized your mailboxes yet just choose the <SPAN
+CLASS="INTERFACE"
+>INBOX </SPAN
+>
+   	</P
+></LI
+><LI
+><P
+>Advanced</P
+><P
+>Here are two simple check boxes.</P
+><P
+>Keeping the messages on the server is a great way of <I
+CLASS="EMPHASIS"
+>Temporarily</I
+> Storing your mail (off-site).
+   	However some ISP providers may get cross if you build up huge amounts of storage at the server. (and may charge you accordingly)
+   	This function may also be useful for people who work with shared mail. 
+   	</P
+><P
+>By default the new account will be activated (when first you use it)
+   	 to Deactivate the account unselect the second box.
+   	 </P
+></LI
+><LI
+><P
+>OK</P
+><P
+>All finished ? </P
+><P
+> Your new POP account should be ready to use.
+   	 You just repeat the above steps for as many POP accounts as you have, or add later.</P
+></LI
+></OL
+><DIV
+CLASS="SECT4"
+><H4
+CLASS="SECT4"
+><A
+NAME="CONFIGURATION-ACCOUNTS-SPOOL"
+>About Spool Accounts</A
+></H4
+><P
+>   	The process involved in configuring a spool account is much the same as that used  to set 
+   	up a  POP account: See <A
+HREF="configuration.html#CONFIGURATION-MAIL-ACCOUNTS"
+>the section called <I
+>Accounts</I
+></A
+>
+   	</P
+><P
+>Navigate to the accounts setup dialog:</P
+><P
+><TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>Setting -&#62;  Preferences -&#62;  Accounts  -&#62; New</PRE
+></TD
+></TR
+></TABLE
+></P
+><P
+>The Account Type Dialog opens:  Select <SPAN
+CLASS="INTERFACE"
+>Spool</SPAN
+> then<SPAN
+CLASS="INTERFACE"
+> Next.</SPAN
+></P
+><P
+> The <SPAN
+CLASS="GUIMENU"
+>New Accounts</SPAN
+> Dialog Opens:  This is just the same as 
+   	that used in <A
+HREF="configuration.html#CONFIGURATION-MAIL-ACCOUNTS"
+>the section called <I
+>Accounts</I
+></A
+></P
+><P
+> The difference here is that you are asking cronos to download mail from your local network spool account.
+   	Many (most ?) UNIX style environments build you a mailbox somewhere under the
+   	<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+> /var/spool/mail/username </PRE
+></TD
+></TR
+></TABLE
+>
+   	or similar directory when a new User Account is created. .
+   	 </P
+><P
+>The most common Mail server on these systems is<SPAN
+CLASS="APPLICATION"
+> Sendmail.</SPAN
+>
+	</P
+><P
+>	 Now, given that your system is like this,  the following entries need to be made 
+	on the <SPAN
+CLASS="INTERFACE"
+>Protocol</SPAN
+> page of the <SPAN
+CLASS="GUIMENU"
+>New Account Dialog</SPAN
+>:
+	</P
+><P
+></P
+><UL
+><LI
+><P
+>File:</P
+><P
+>Navigate to your mail box under the /var directory...(use the button to the right)
+		</P
+><P
+>Select Your-mail-box.</P
+></LI
+><LI
+><P
+>SMTP</P
+><P
+>Enter your local mail server application name. (try<SPAN
+CLASS="APPLICATION"
+> Sendmail.</SPAN
+>as a default)
+		</P
+></LI
+><LI
+><P
+>Port</P
+><P
+>The default setting of 25 will work fine for most people on<SPAN
+CLASS="APPLICATION"
+> Sendmail.</SPAN
+>
+		I'm not sure about other mail handlers and your<SPAN
+CLASS="APPLICATION"
+> Sendmail.</SPAN
+>port may have been
+		 moved by your distribution or system administrator. Either way 
+		this should be documented somewhere. Resist the temptation to 
+		play with the<SPAN
+CLASS="APPLICATION"
+> Sendmail.</SPAN
+>configuration scripts. (for now)
+		</P
+></LI
+></UL
+><P
+>		 On the remaining  two pages associate a mailbox with this account and choose
+		optionally to keep the mail on the server (advised) and to activate the account (or it won't work).
+		</P
+><P
+>		Select OK and then Apply from the remaining<SPAN
+CLASS="GUISUBMENU"
+>Preferences</SPAN
+>
+		dialog.
+		</P
+><P
+>Close the <SPAN
+CLASS="GUISUBMENU"
+>Preferences</SPAN
+>dialog and you should be ready to go.
+		</P
+><DIV
+CLASS="TIP"
+><BLOCKQUOTE
+CLASS="TIP"
+><P
+><B
+>Tip: </B
+>		You can also use the<SPAN
+CLASS="INTERFACE"
+> spool account </SPAN
+> to check for mail from other
+		compliant Mail Handlers. eg. Pine and Netscape (some small problems).
+		</P
+><P
+>This works for me though it is NOT an &#8220;official&#8221; use of Cronos, it can be very handy.
+		</P
+><P
+>Proceed as above and Navigate to the appropriate Mail /directory/file under your HOME directory and keep<SPAN
+CLASS="APPLICATION"
+> Sendmail.</SPAN
+>as the Server
+		</P
+></BLOCKQUOTE
+></DIV
+></DIV
+><DIV
+CLASS="SECT4"
+><H4
+CLASS="SECT4"
+><A
+NAME="CONFIGURATION-ACCOUNT-EDIT"
+>Edit an Account</A
+></H4
+><P
+>To edit an Account  select (from the Main Window) 
+   	<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>Settings -&#62; Preferences -&#62; Accounts</PRE
+></TD
+></TR
+></TABLE
+>
+   	Next select the account you wish to Edit or Delete from the list of accounts you have set
+   	 up  previously.
+   	 </P
+><P
+>Then to Delete select the delete garbage bin to the right.
+   	 </P
+></DIV
+></DIV
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="CONFIGURATION-MAIL-MAILBOXES"
+>Your Own Mailboxes</A
+></H3
+><P
+>Like most other Email clients CronosII allows you to configure your own mailbox structure.</P
+><P
+>You can not readily remove the following default Mailboxes:</P
+><P
+>The Inbox , The Outbox, The Garbage or the Drafts Mailbox. This is because CronosII refers to them internally when carrying out its general functions.</P
+><DIV
+CLASS="NOTE"
+><BLOCKQUOTE
+CLASS="NOTE"
+><P
+><B
+>Note: </B
+>You may however add sub-directories to these mailboxes if you find that useful.</P
+><P
+> For instance your own "matched" directories under the In and Out boxes may help keep things organised.
+  	</P
+></BLOCKQUOTE
+></DIV
+></DIV
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="CONFIGURATION-INTERFACE"
+>Interface</A
+></H2
+><P
+>Here we configure Fonts and Colours </P
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="CONFIGURATION-INTERFACE-FONTS"
+>Fonts</A
+></H3
+><P
+>Selecting this from the <SPAN
+CLASS="GUIMENU"
+>Tree Menu </SPAN
+> allows configuration of the font style
+  		for the following items:</P
+><P
+>  		<P
+></P
+><TABLE
+BORDER="0"
+><TR
+><TD
+>1. Message Body</TD
+><TD
+>2. Unread Messages</TD
+><TD
+>3. Read Messages</TD
+><TD
+>4. Printing</TD
+></TR
+></TABLE
+><P
+></P
+>
+  		</P
+><P
+>By clicking the <SPAN
+CLASS="GUISUBMENU"
+>Font Icon</SPAN
+> on the right hand side of the dialog
+		a <SPAN
+CLASS="GUIMENU"
+>Font selection</SPAN
+> Dialog will open. Choose the font you wish to apply 
+		to your chosen function. (the text  field will accept text entry and show a sample). You may also set the style and many 
+		other attributes from this dialog.
+  		</P
+><P
+>Once done check OK at the bottom of the Font Select dialog. Then click apply, OK  or continue configuration from the preferences dialog.
+  		</P
+><DIV
+CLASS="NOTE"
+><BLOCKQUOTE
+CLASS="NOTE"
+><P
+><B
+>Note: </B
+>  		This dialog is actually a <SPAN
+CLASS="APPLICATION"
+>GNOME Utility </SPAN
+>and has its own Manual available from the gnome help system.
+  		</P
+><P
+>  		<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>Help System  -&#62; Gnome Documents -&#62; gfontsel</PRE
+></TD
+></TR
+></TABLE
+>
+  		</P
+><P
+> You may also want to read the Gnome Users Guide 
+  		<TABLE
+BORDER="0"
+BGCOLOR="#E0E0E0"
+WIDTH="100%"
+><TR
+><TD
+><PRE
+CLASS="PROGRAMLISTING"
+>Gnome Help System -&#62; Index -&#62; Users Guide</PRE
+></TD
+></TR
+></TABLE
+>
+  		</P
+></BLOCKQUOTE
+></DIV
+></DIV
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="CONFIGURATION-INTERFACE-COLOURS"
+>Message Colours</A
+></H3
+><P
+>CronosII allows you to choose your own colours for some different sections within a message.
+  		</P
+><P
+>Select <SPAN
+CLASS="GUISUBMENU"
+>Colors</SPAN
+> from the Menu and you will be given the option of coloring the 
+  		Reply and forward elements of your mail and the general text color.</P
+><P
+>The square button beneath the feature shows you the current color. Click this to open the <SPAN
+CLASS="APPLICATION"
+>Gnome Color Selector</SPAN
+>
+  		</P
+><P
+>  		This is useful in long and multi-contributor  E-mail (such as you often find on mailing lists). When used
+  		in conjunction with <A
+HREF="configuration.html#QUOTE-CHARACTER"
+>Prepended Characters</A
+>
+  		 It can help make text format E-mail very easy to read and comprehend.</P
+><P
+>  		This <SPAN
+CLASS="APPLICATION"
+>Utility</SPAN
+> has its own manual page which is available from the gnome help system. 
+  		</P
+></DIV
+></DIV
+><DIV
+CLASS="SECT2"
+><H2
+CLASS="SECT2"
+><A
+NAME="CONFIGURATION-ADVANCED"
+>Advanced</A
+></H2
+><P
+>Currently only one function is configurable from here:</P
+><DIV
+CLASS="SECT3"
+><H3
+CLASS="SECT3"
+><A
+NAME="CONFIGURATION-ADVANCED-NET-TIMEOUT"
+>Net Timeout</A
+></H3
+><P
+>Here you set the time CronosII will wait for a response from your server as it asks it various things.</P
+><P
+>Enter the time in seconds or use the arrow buttons to set how long CronosII will try getting responses 
+  		from your ISP. The default should be fine for most people but if you have a dirty or slow connection you could try increasing this time for increased reliability.
+  		.</P
+></DIV
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="composer.html"
+>Prev</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="index.html"
+>Home</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="bugs.html"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Composing Your Mail</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Known Bugs and Limitations</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

@@ -1,0 +1,2094 @@
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook V3.1//EN"[
+      
+<!ENTITY version "-0.1.0"> 
+<!entity manver "ver2.1">
+<!entity pablo "cronosii@users.sourceforge.net">
+<!entity pete "gossner@arcom.com.au">
+<!entity Yves "ymettier@libertysurf.fr">
+<!entity website "http://cronosii.sourceforge.net/">
+<!entity app "CronosII">
+<!entity key "The Default Keyboard Shortcut is:">
+<!ENTITY FDL SYSTEM "fdl.sgml"> 
+]>
+
+
+
+<!-- 
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 1.0.3
+  Template last modified: Nov 16, 2000
+-->
+
+
+<!-- =============Document Header ============================= -->
+
+<article id="index"> <!-- please do not change the id -->
+
+  <artheader>
+    <title>Help Manual Version &manver;  for  &app;&version;</title>
+    <copyright>
+      <year>2000 2001</year>
+      <holder>Pablo Fernández Navarro &pablo;</holder>
+    </copyright>
+     <copyright>
+      <year>2000 2001</year>
+      <holder>Peter Gossner &pete;</holder>
+    </copyright>
+
+  <!-- translators: uncomment this:
+
+  <copyright>
+   <year>2000</year>
+   <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+  </copyright>
+
+   -->
+
+  <!-- do not put authorname in the header except in copyright - use
+  section "authors" below -->
+
+  <!-- Use this legal notice for online documents which depend on -->
+  <!-- core GNOME packages.                                       -->
+  <legalnotice id="legalnotice">
+   <para>
+    Permission is granted to copy, distribute and/or modify this document
+    under the terms of the <ulink type="help" 
+    url="gnome-help:fdl"><citetitle>GNU Free Documentation
+    License</citetitle></ulink>, Version 1.1 or any later version 
+    published by the Free Software Foundation with no Invariant Sections, 
+    no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
+    can be found <ulink type="help" url="gnome-help:fdl">here</ulink>.
+   </para>
+   <para>
+    Many of the names used by companies to distinguish their products and
+    services are claimed as trademarks. Where those names appear in any
+    GNOME documentation, and those trademarks are made aware to the members
+    of the GNOME Documentation Project, the names have been printed in caps
+    or initial caps.
+   </para>
+  </legalnotice>
+
+  <!-- Use this legal notice for documents which are placed on  -->
+  <!-- the web, shipped in any way other than online documents  -->
+  <!-- (eg. PS, PDF, or RTF), or which do not depend on the     -->
+  <!-- core GNOME distribution.                                 -->
+  <!--                                                          -->
+  <!-- If you use this version, you must place the following    -->
+  <!-- line in the document declaration at the top of your      -->
+  <!-- document:                                                -->
+  <!--   <!ENTITY FDL SYSTEM "fdl.sgml">                        -->
+  <!-- and the following line at the bottom of your document    -->
+  <!-- after the last </sect1>.                                 -->
+  <!--   &FDL;                                                  -->
+  <!--
+  <legalnotice id="legalnotice">
+   <para>
+    Permission is granted to copy, distribute and/or modify this document
+    under the terms of the <link linkend="fdl"><citetitle>GNU
+    Free Documentation License</citetitle></link>, Version 1.1 or any later
+    version published by the Free Software Foundation with no Invariant
+    Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the
+    license can be found in <xref linkend="fdl">.
+   </para>
+   <para>
+    Many of the names used by companies to distinguish their products and
+    services are claimed as trademarks. Where those names appear in any
+    GNOME documentation, and those trademarks are made aware to the members
+    of the GNOME Documentation Project, the names have been printed in caps
+    or initial caps.
+   </para>
+  </legalnotice>
+  -->
+
+  <!-- This is the manual version, not application version. --> 
+    <releaseinfo>
+       This is version &manver; of &app; Help- Manual.
+    </releaseinfo>
+
+  </artheader>
+
+ <!-- ============= Document Body ============================= -->
+
+ <!-- ============= Introduction ============================== -->
+  <sect1 id="intro">
+    <title>Introduction</title>
+
+    <para>
+     <application>&app; Version &version;</application> 
+     </para>
+    <para>&app; is an Email Client,  for the  Gnome and GTK environments. Written for users of all levels  <application> &app; </application>
+    is designed to be fast, simply configured,  lightweight and functional.
+    </para>
+    <note> <para>
+      To run <application>&app;</application>, select
+       
+	<guisubmenu>Internet </guisubmenu>
+	<guimenuitem>&app;</guimenuitem>
+        
+      from the <guimenu>Main Menu</guimenu>, or type 
+      <application>cronos</application> on the command line.
+  	</para></note>
+	<para>
+       This Help-Manual &manver; describes 
+      <application>&app;</application> Version &version;
+    </para>
+   
+    <para>Refer to <xref linkend="install"> for Installation instructions.</para>
+     <para>Refer to <xref linkend="configuration"> for post install configuration.</para>
+  </sect1>
+
+
+ <!-- INSTALLATION -->
+ 
+   <sect1 id="install">
+    <title>Installing &app;</title>
+    <para>
+      <application>&app;</application>  Is built using the <application>GNU Autoconf and Automake </application>Tools and friends.
+       Intergration with Gnome is fairly comprehensive.
+       </para>
+       <para>
+      You may also run this application under a "pure" GTK environment without Gnome. 
+      </para>
+      <para>
+      This should enable &app; to be installed anywhere the GIMP Tool Kit is available including 
+      ports of GTK to the <trademark> Windows </trademark>  Operating System.
+      </para>
+      <important>
+      <para>
+      To build and run &app;&version; you need to have the following libraries installed:
+      </para>
+      <para>
+      (my apologies to <trademark>Windows</trademark> Users  I'm not sure what they need beyond GTK)
+      </para>
+      <para>Please let me know so that I can update this manual. <email>&pete;</email> 
+      or see <xref linkend="authors">
+      </para>
+      <itemizedlist>
+      <listitem>
+      <para>
+       <programlisting> glib-config --version</programlisting>
+      glib-1.2.8 or later
+      </para>
+       </listitem>
+       <listitem>
+       <para>
+      <programlisting>gtk-config --version</programlisting>
+      gtk-1.2.8 or later
+      </para>
+     </listitem>
+      <listitem>
+      <para>
+       <programlisting> gnome-config --version</programlisting>
+       To use with GNOME  your working gnome libs will need to be fairly recent
+       <application>gnome-libs 1.2.5</application>  are on this system (and all is well), earlier versions may well work.
+      </para>
+       </listitem>
+       <listitem>
+      <para>
+      To use the Gnome Print Utility you will need <application> libgnomeprint.so.11.2.4</application> or later wherever you have 
+      your Gnome libraries installed. For Example:
+      </para>
+      <para>
+      <programlisting>ls /usr/lib/libgnomeprint.*</programlisting> or
+      <programlisting>ls /usr/local/lib/libgnomeprint.*</programlisting>
+      </para>
+      </listitem>
+      <listitem>
+      <para>
+      You will of course have to have the usual<application> GNU </application>tools on hand as well. 
+      </para>
+      <para>
+     <emphasis> Though if you have a working GNU / LINUX  (or BSD?) system (with GTK onboard) all should be more than just fine.</emphasis>
+      </para>
+      </listitem>
+      </itemizedlist>
+      </important>
+
+		 
+       <sect2 id="installing">
+       <title>Installation</title>
+      <para>
+      <application>&app;</application> may arrived packaged in a number of formats.
+      </para>
+      
+      <para>The most likely are shown here:</para>
+      <orderedlist>
+      <listitem><para>Gzipped Source Tarballs</para>
+      <para>These look like this<application> &app;.&version;.tar.gz</application>
+      </para>
+      <para>See <xref linkend="gzipped"> for install instructions.
+      </para>
+      </listitem>
+      <listitem>
+      <para>Bzip2 Tarballs</para>
+      <para> This is less likely at the moment, however they will usually look like this:</para>
+      <para>
+     <application> &app;&version;.tar.bz2 </application>
+     </para>
+     <para>See <link linkend="bzipped">  Bzipped </link>
+      for install instructions.
+      </para>
+      </listitem>
+      <listitem>
+      <para>Finally &app; is available as a <application>Redhat Package Manager - Package.</application></para>
+      <para>These RPM's should look like this:</para>
+      <para><application>&app;&version;.ixxx.rpm</application></para>
+      <para> Instructions for these are at<link linkend="rpms"> Red Hat Packages</link></para>
+      </listitem>
+      </orderedlist>
+    <note>
+    <para>
+    If you are installing from tar balls please read the README  and INSTALL files (at least)
+     in the source. These are likely to be more up to date than this manual.
+    </para>
+    <para> Other formats are possible not least of which are zip and debs.
+   Support for these or other formats may be added should the demand for them warrant it.
+   </para>
+   </note>
+     
+   <sect3 id="gzipped">
+   <title>GNU Zipped Source Packages</title>
+   <subtitle>gzip</subtitle>
+   <para>These are the most common method of distributing application packages (and other stuff ) in the UNIX / LINUX world.  </para>
+   <para>To install &app; from the same directory as the package :</para>
+   <orderedlist>
+   <listitem>
+   <para>
+   <emphasis>[user@ X]#</emphasis>
+   <programlisting> tar zxvf &app;&version;.tar.gz</programlisting>
+   </para>
+   </listitem>
+   <listitem>
+   <para>
+   <emphasis>[user@ X]#</emphasis>
+   <programlisting>cd &app;&version;</programlisting>
+   </para>
+   </listitem>
+   <listitem>
+   <para>
+   <emphasis>[user @ &app;&version] #</emphasis>
+   <programlisting> ./configure</programlisting>
+   </para>
+   </listitem>
+   <listitem>
+   <para>
+   <emphasis>[user @&app;&version;] #</emphasis>
+   <programlisting> ./make</programlisting></para>
+   </listitem>
+   <listitem><para><emphasis>[user @&app;&version;] #</emphasis>
+   <programlisting>su</programlisting></para>
+   </listitem>
+   <listitem><para><emphasis>[user @&app;&version;] #</emphasis><programlisting> password: your-root-password</programlisting>
+   </para></listitem>
+   <listitem><para><emphasis>[root @&app;&version;] #</emphasis><programlisting> ./make install</programlisting>
+   </para></listitem>
+   <listitem><para><emphasis>[root @&app;&version;] #</emphasis><programlisting> exit</programlisting>
+   </para></listitem>
+   <listitem><para><emphasis>[user @&app;&version;] #</emphasis><programlisting> cronos</programlisting>
+   </para></listitem>
+   </orderedlist>
+   <note><para>The text between<quote> [ and ] </quote>is a representation of  your terminal prompt. 
+   Yours will  be different to that shown and may change markedly when you <application>"su" </application>to root.</para></note>
+   <para>For further instruction and options for using<application> configure</application> and 
+   <application>make </application>commands please see the documentation in the tar ball.</para>
+   <tip><para><application>#configure --help</application></para>
+   <para><application># man make</application></para></tip>   
+   </sect3>
+   
+   <sect3 id="bzipped">
+   <title>Bzipped Tar Balls</title>
+   <para>This mode of distribution uses a powerful compression method (<application> # man bzip2 </application> ) 
+   that is deliberately  very similar  to gzip at the command line. It is impressive how much size and download time  can be saved using this
+compression method. </para>
+   <para>Installation with bzip2 is nearly identical to gnuzip.</para>
+    <para>To install &app; from the same directory as the package :</para>
+   <orderedlist>
+   <listitem>
+   	<para>
+   	<emphasis>[user@ X]#</emphasis>
+   	<programlisting> tar Ixvf &app;&version;.tar.bz2</programlisting>
+   	</para>
+   </listitem>
+   <listitem>
+   <para>
+   <emphasis>[user@ X]#</emphasis>
+   <programlisting>cd &app;&version;
+   </programlisting>
+   </para>
+   </listitem>
+   <listitem>
+   <para>
+   <emphasis>[user @ &app;&version]#</emphasis>
+   <programlisting> ./configure</programlisting>
+   </para>
+   </listitem>
+   <listitem>
+   <para>
+   <emphasis>[user @&app;&version;]#</emphasis>
+   <programlisting> ./make</programlisting>
+   </para>
+   </listitem>
+   <listitem>
+   <para><emphasis>[user @&app;&version;]#</emphasis>
+   <programlisting>su</programlisting>
+   </para>
+   </listitem>
+   <listitem>
+   <para><emphasis>[user @&app;&version;]#</emphasis>
+   <programlisting> password: your-root-password</programlisting>
+   </para>
+   </listitem>
+   <listitem>
+   <para>
+   <emphasis>[root @&app;&version;]#</emphasis>
+   <programlisting>./make install</programlisting>
+   </para>
+   </listitem>
+   <listitem>
+   <para><emphasis>[root @&app;&version;]#</emphasis>
+   <programlisting> exit</programlisting>
+   </para>
+   </listitem>
+   <listitem>
+   <para><emphasis>[user @&app;&version;]#</emphasis>
+   <programlisting> cronos</programlisting>
+   </para>
+   </listitem>
+   </orderedlist>
+   </sect3>
+   
+   <sect3 id="rpms">
+   <title>Red Hat Packages</title>
+      <para>These packages are used by many LINUX distributions as a simple and
+       effective way of installing software and keeping issues like dependencies in order.
+       Other distributions have their own equally useful approaches that achieve similar ends.</para>
+       <para> Installation may be undertaken from the command line,or a  GUI front end to RPM
+       like <application>GNORPM</application> . 
+       In all cases root level permissions are required to install system wide.
+       </para>
+       <para>At the command line do the following as ROOT  from the same directory as you have the package. :</para>
+       <orderedlist>
+       <listitem>
+       <para><emphasis>[root@x]#</emphasis>
+       <programlisting>
+       <application>rpm -Uvh &app;&version</application>
+       </programlisting>
+       </para>
+       </listitem>
+       <listitem>
+       <para>
+       <emphasis>[root@x]#</emphasis>
+       <programlisting><application>exit</application></programlisting></para>
+       <para> or<programlisting><application> login </application></programlisting>
+       to your normal account
+       </para>
+       </listitem>
+       <listitem><para><emphasis>[user@x]#</emphasis><programlisting><application> cronos</application></programlisting></para></listitem>
+       </orderedlist>
+  		<tip><para>As &app; tarballs include a <emphasis>spec </emphasis> file you may build your own <application>RPM</application>
+  		 by typing the following from the command line:</para><para>  (as  root) <emphasis>[root@x]#</emphasis>
+  		 <programlisting>rpm -ta &app;&version;.tar.gz</programlisting></para>
+  		 <para> This should (all going well) build a package ready for you to install as a standard
+  		 <application>RPM</application> as shown<link linkend="rpms"> above.</link></para></tip>   
+       </sect3>
+       </sect2>
+       </sect1>
+       
+       
+       
+<sect1 id="using-cronosII">
+ <title>Using CronosII</title> 
+ <tip>
+ 	<para>To get the most from this manual it would probably be best to have a working version of &app;&version; running
+ next to whichever application you are reading this on.</para>
+ 	<para>Why look at my static  screen-shots when you have the real thing waiting at your fingertips.
+ 	</para>
+ 	<para>See     <xref  linkend="intro"> for how to install and start &app;.</para>
+ </tip>     
+<important>
+	<para>To jump straight to Configuration see <xref linkend="configuration">
+	</para>
+</important>
+ <sect2 id="mainwindow">
+ <title>The Main Window</title>
+ <subtitle>Getting Started</subtitle>
+  <para><interface>Main window</interface>, shown in <xref
+        linkend="main-window-fig">. </para>
+        <!--following commented out for now-->
+<!--<note>This shot was taken with<application> Gnome Screen Shooter</application>
+ Under <application>Enlightenment (ver 0.16.5)</application> using the
+  default <application> Brushed Metal Theme.</application>
+ The window itself is themed by<application> Gnome </application>using
+ the<application> Bluthe Theme</application>.
+  For more information on the<application> X</application> desktop environment,  window managers
+   and how <application>Gnome</application> fits in to all of this, see the
+   <application> Gnome User manual</application>, 
+   accessible from your <application>Panel Help Menu</application>. 
+   </note>-->
+        <!-- ==== Figure ==== -->
+        <figure id="main-window-fig">
+    <title>&app;  Main Window</title>
+    <screenshot>
+    <screeninfo>&app;  Main Window</screeninfo>
+    <graphic fileref="main-window-shot" format="jpg" srccredit="Pete &pete;">
+    </graphic>
+    </screenshot>
+	</figure>
+    <!-- ==== End of Figure ==== -->
+     
+<para>
+The User Interface.
+</para>
+<para> 
+From here all your mailing work and application<link linkend="configuration"> configuration</link> may be undertaken.
+</para>      
+<para> The Window Parts are Tagged with numbers. An explanation of the function of each part follows:</para>
+  <orderedlist>
+  	 <listitem>
+  	 <para>The Window</para>
+ 	 <para>
+ 	 In this case the<emphasis> Window Manager</emphasis> is <application>Enlightenment</application>
+  	The default Window Manager for Gnome is <application>Sawfish</application>.
+   	</para>
+   	<para>
+   	The window manager handles the look  and placement  of application
+    windows and usually other issues including "themes" and session management.
+    </para>
+    </listitem>
+   	<listitem>
+   	<para>The Top or <link linkend="mainwindow-icons">Icon Menu Bar</link>
+   	</para>
+   
+   	<para>
+   	 Selecting these icons gives you access to the basic day to day functions you need to
+   work with your mail or a particular message.
+   </para>
+   	</listitem>       
+  	<listitem>
+  	<para>
+  	The<link linkend="text-menubar"> Text</link> or Second Menu
+   	Bar.
+   	</para>
+   	<para>This bar consists of "buttons" that have fold-outs enabling  control of functions 
+ 	and configuration within the application. Most of the functions and tasks are available through user configurable keyboard shortcuts.
+ 	(Often Called Accelerators).
+  </para>
+  </listitem>
+   <listitem>
+   <para>The Mailbox Window</para>
+   <para>
+   Here you are shown a tree style representation of your mailbox directories.
+   </para>
+   </listitem>
+    <listitem>
+    <para>
+    The View Header Window
+    </para>
+    <para>
+    Here a list of mail headers are shown for the selected Mailbox. 
+    This list is scroll-able via the drag bar on the right hand side.
+    </para>
+    </listitem>
+     <listitem>
+     <para>
+     The View Message Window
+     </para>
+     <para>
+     This shows the message associated with the header selected in the above "View Header Window".
+     This message  is also scroll-able via the right hand scroll bar or by clicking on the message and using the "Up and Down" keys on your keyboard.
+     </para>
+     </listitem>
+      <listitem>
+      <para>
+      The Header Window Columns
+      </para>
+      <para>
+      Identifies the content of each column in the Header Window.
+       To mark an Item for notice click on that header beneath the exclamation mark.
+       </para>
+       </listitem>
+       <listitem>
+       <para>Drag Handle</para>
+        <para>Beneath the numeral "8" on the figure you will find a small handle to move the 
+       divider left or right.<emphasis> Best to just try it and see really.</emphasis>
+       </para>
+       </listitem>
+        <listitem>
+        <para>
+        Scroll Bar
+        </para>
+        <para>
+        A typical "themed" GTK scroll bar. The drag button is sized proportionately to the length of the message.
+        (so the longer the message the smaller the button and the coarser the control you have.)
+        If the drag resolution becomes too awkward try making your window larger (taller).
+        </para>
+        </listitem>
+         <listitem>
+         <para>
+         Progress Bar
+         </para>
+         <para>
+         This lets you know how far through a task &app; is.
+         </para>
+         </listitem>
+         
+</orderedlist>
+
+</sect2>
+</sect1>
+<!--The Main Window Icon Menu Bar-->
+
+<sect1 id="mainwindow-icons">
+
+<title>The Main Window - Icon  Bar</title>
+<subtitle>An explanation of Functions</subtitle>
+<para>Here we explain functions as accessed by moving from left to right across the icon bar</para>
+<note>
+<para>
+All of these functions have user configurable shortcuts.  Please see <xref linkend="keyboard-shortcuts"> for further information.
+</para>
+</note>
+<!--This is how you create a numbered list.-->
+
+<orderedlist>
+        <listitem> 
+        <para><link linkend="icon-check">Check Accounts</link></para>
+        </listitem>
+        <listitem> 
+        <para><link linkend="compose">Compose</link></para>
+        <orderedlist>
+<listitem>
+<para><link linkend="composer-file">File Menu </link></para>
+</listitem>
+<listitem>
+<para><link linkend="composer-edit">Edit Menu</link></para>
+</listitem>
+</orderedlist>
+        </listitem>
+        <listitem> 
+        <para><link linkend="icon-print">Print</link></para>
+        </listitem>
+        <listitem> 
+        <para><link linkend="icon-search">Search</link></para>
+        </listitem>
+        <listitem> 
+        <para><link linkend="icon-delete">Delete</link></para>
+        </listitem>
+        <listitem> 
+        <para><link linkend="icon-reply">Reply</link></para>
+        </listitem>
+        <listitem> 
+        <para><link linkend="icon-reply-all">Reply-All</link></para>
+        </listitem>
+               <listitem>
+        <para><link linkend="icon-forward">Forward</link></para>
+        </listitem>
+                <listitem>
+        <para><link linkend="icon-previous">Previous</link></para>
+        </listitem>
+                <listitem>
+        <para><link linkend="icon-next">Next</link></para>
+        </listitem>
+                <listitem>
+        <para><link linkend="icon-quit">Quit</link></para>
+        </listitem>
+ </orderedlist>
+
+<sect2 id="icon-check" >
+<title>Check Accounts</title>
+<subtitle>The Check Icon</subtitle>
+<para> 
+  Select this to download mail from your accounts.
+  (you must have set up those accounts first of course. </para>
+  <para>
+  See <xref linkend="configuration">  for  configuration instructions.)</para>
+  </sect2>
+  
+  <!--Main Window ICON COMPOSE BUTTON-->
+ <sect2 id="compose" >
+<title>Main Window Icon Toolbar -Compose Button</title>
+<subtitle> The Compose Icon</subtitle>
+<para>
+  Selecting this will open the<interface> Compose Dialog (or Window) </interface>so that you may write a letter.
+  </para>
+    <para>Like the <interface>Main Window</interface> This Window also has Menus (text and Icon) , 
+    Text Entry Fields and a larger space where you write your message.</para>
+    <para>The following functions (tasks) are accessible from the Text Tool Bar.</para>
+    
+    <!--composer text toolbar--> 
+    <para>From the 
+    <link linkend="composer-file"><guimenu>File Menu </guimenu>
+    </link>
+    </para>
+    
+    <orderedlist>
+    <listitem>
+   <para><link linkend="composer-send">Send</link></para>
+   </listitem>
+   <listitem><para><link linkend="composer-save">Save</link></para>
+   </listitem>
+   <listitem>   
+   <para><link linkend="composer-save-to-file">Save to file</link></para>
+   </listitem>
+   <listitem>
+   <para><link linkend="composer-close">Close</link></para>
+   </listitem>
+   </orderedlist>
+   <para>From the <link linkend="composer-edit"><guimenu>Edit Menu</guimenu></link>
+   </para>
+   <orderedlist>
+   <listitem>
+   <para><link linkend="composer-edit-select-all">Select All</link>
+   </para>
+   </listitem>
+   <listitem>
+      <para><link linkend="composer-edit-insert">Insert</link>
+   </para>
+    </listitem>
+    </orderedlist>
+    
+    <!--Composer TEXT BAR- File Menu-->
+ <sect3 id="composer-file">
+ <title>The Composer Window Text Toolbar - File Menu</title>
+      <variablelist>
+		  <varlistentry id="composer-send">
+		  <term><guilabel>Send</guilabel></term>
+	  		<listitem>
+	   		 <para>Also found on the <link linkend="mainwindow-icons">Icon Bar</link> beneath the top bar,
+	   		  this Sends your mail once you have finished writing and addressing it.
+       		</para>
+	  		</listitem>
+		</varlistentry>
+		<varlistentry id="composer-save">
+	  <term><guilabel>Save</guilabel></term>
+	  <listitem>
+	    <para>Saves your mail in its current state to the Drafts Mailbox
+        </para>
+	  </listitem>
+	</varlistentry>
+		<varlistentry id ="composer-save-to-file">
+	 <term> <guilabel>Save To File</guilabel></term>
+	 <listitem>
+	 <para>This opens the<link linkend="select-a-file"> Select A File </link> dialog
+	  where you may save your mail as a new file or overwrite an existing file. 
+	  </para>
+	  <para>You  enter the file name in the bottom entry <quote>selection</quote> field.
+	 </para>
+	 </listitem>
+	 </varlistentry>
+	 	<varlistentry id ="composer-close">
+	 <term> <guilabel>Close</guilabel></term>
+	 <listitem><para>Choose this to close this Composer Window
+	 </para>
+	 </listitem>
+	 </varlistentry>
+	 </variablelist>
+</sect3>
+
+<!--Composer Window Edit Menu-->
+<sect3 id="composer-edit">
+<title>The Composer Window Text Toolbar - Edit Menu</title>
+	 <variablelist>
+	 <varlistentry id="composer-edit-select-all" >
+ <term>
+ <guilabel>Select All</guilabel>
+ </term>
+ <listitem>
+ <para>This selects the total contents of your message.</para>
+ <para>You might use this during Cut and Paste operations or to Delete the entire contents of 
+ a mail whose header information is all you require. (to save typing in a lot of addresses for instance)
+ </para>
+ </listitem>
+ </varlistentry>
+ <varlistentry id="composer-edit-insert">
+ <term >
+ <guilabel>Insert</guilabel>
+ </term>
+ <listitem>
+ <para>Insert the contents of a file into this mail.</para>
+ <para>This opens the <link linkend="select-a-file">Select A File </link>dialog so that you may choose  that file.
+ </para>
+ </listitem>
+ </varlistentry>
+ </variablelist>
+ </sect3>
+ 
+ 
+ <!--Composer ICON bar##############################################-->
+ <sect3 id="composer-icons">
+ <title> The Composer Window - Icon  Toolbar </title>
+<para>The Composer Icon Bar has the following functions available.
+ (Once again from left to right)</para>
+<orderedlist>
+<listitem><para><link linkend="composer-icon-send">Send</link></para></listitem>
+<listitem><para><link linkend="composer-icon-save">Save</link></para></listitem>
+<listitem><para><link linkend="composer-icon-to-file">To File</link></para></listitem>
+<listitem><para><link linkend="composer-icon-insert">Insert</link></para></listitem>
+<listitem><para><link linkend="composer-icon-close">Close</link></para></listitem>
+</orderedlist>
+<tip>
+<para>
+All of these are available from the<link linkend="composer-file"> Compose Window -Text Menu Bar </link>
+ and as <link linkend="keyboard-shortcuts"> Keyboard Shortcuts.</link>
+ </para>
+ </tip>
+ 
+ <variablelist>
+  <varlistentry id="composer-icon-send"><term>
+ <guilabel>Send</guilabel>
+ </term>
+ <listitem>
+ <para>Sends your mail when selected to the mail server via SMTP.</para>
+ </listitem>
+ </varlistentry>
+ <varlistentry id="composer-icon-save"><term>
+ <guilabel>Save</guilabel>
+ </term>
+ <listitem>
+ <para>Save mail to the Drafts mailbox</para>
+ </listitem>
+ </varlistentry>
+ <varlistentry id="composer-icon-to-file"><term>
+ <guilabel>To File</guilabel>
+ </term>
+ <listitem>
+ <para>
+ This opens the<link linkend="select-a-file">Select A File </link>  dialog where you may save your mail as a new file or overwrite an existing file.</para>
+ <para>
+ You  enter the file name in the bottom entry "selection" field.</para>
+ </listitem>
+ </varlistentry>
+     <varlistentry id="composer-icon-insert">
+   <term>
+  <guilabel>Insert</guilabel>
+  </term>
+  <listitem>
+    <para>Insert the contents of another file in this message.</para>
+  </listitem>
+  </varlistentry>
+   <varlistentry id="composer-icon-close">
+  <term>
+  <guilabel>Close</guilabel>
+  </term>
+  <listitem>
+  <para>Close this Composer Window</para>
+  </listitem>
+  </varlistentry>
+  </variablelist>
+ </sect3>
+ </sect2>
+ <!--MainWindow Icons -Print -->
+ 
+ 
+  
+   <sect2 id="icon-print">
+   <title>Main Window Icon Toolbar - - Print Menu</title>
+   <subtitle>Send your mail to a printer or file</subtitle>
+   <para>
+   Selecting this icon opens the <interface>Printer Dialog.</interface>
+   </para>
+   <para>
+   From here you may choose your printer command and type.
+    For example <quote> generic postscript </quote> or to "print" your mail directly to a file.
+    </para>
+    
+   <note>
+   <para>
+   The default setting uses the <application> lpr </application> command.
+   </para>
+   <para>
+    Should you prefer another;  you may enter it in the
+   "printer" window.
+   </para>
+   </note>
+    
+   <para>
+   Other features  include saving in <application> PDF</application> format  and a 
+    <interface>print preview window</interface> available from the bottom row of buttons
+    </para>
+    <para>
+    This dialog is also accesible from the<guisubmenu> "Message Menu"</guisubmenu>  
+    </para>
+    <para>
+    This menu is an interface to the <application>Gnome Print Utility.</application>
+    </para>
+    <para>
+    A manual page should be found under the Gnome Help System. (The Instructions for the printer
+    applet may also be informative)
+    </para>
+   </sect2>
+   
+   
+      <sect2 id="icon-search">
+   <title>Main Window Icon Toolbar - - Search </title>
+   <subtitle>This doesn't do anything (yet)</subtitle>
+   <para>But watch this space for future developments</para>
+      </sect2>
+      
+      
+    <sect2 id="icon-delete">
+   <title>Main Window  Icon Toolbar - - Delete </title>
+   <subtitle>Delete the Selected Message</subtitle>
+   <para>
+   This will send the message selected in your message list to the garbage bin.
+   </para>
+   <para>
+    A quicker way of achieving this is: (after selecting a mail header) to  press "d" on your keyboard  
+    </para>
+   </sect2>
+   
+   <sect2 id="icon-reply">
+   <title>Main Window  Icon Toolbar - - Reply </title>
+   <subtitle>Reply to the selected Message</subtitle>
+   <para>
+   Check this icon to quickly respond to the mail you are reading at the moment.
+   </para>
+   <para>
+   Selecting this will open the
+    <interface>
+    <link linkend="composer">Composer Window</link>
+    </interface> with the  message 
+   <link linkend="quote-character"><quote>Prepended</quote></link> and ready to edit and otherwise respond to.
+   </para>
+   <para>
+   You will find the Recipients address, the relevant account and the subject line filled in.
+    These may all be altered.
+    </para>
+       <para> Shortcut:  <interface>Right-click </interface> on the message header  and choose reply   
+       </para>
+   </sect2>
+   
+   <sect2 id="icon-reply-all">
+   	<title>Main Window  Icon Toolbar - - Reply All </title>
+   	<subtitle>Reply to all Recipients of the selected Message</subtitle>
+  	 <para>
+  	 As for <link linkend="icon-reply">Reply </link> though this time the full list of recipients from the original mail will be sent 
+  	 a copy of this message when you have sent it.
+  	 </para>
+  	 <para>
+  	  Right click on the message and select<application> Reply All </application> as a shortcut.
+  	  </para>  
+   </sect2>
+   
+   <sect2 id="icon-forward">
+   	<title>Main Window  Icon Toolbar - - Forward  </title>
+   		<subtitle>Forward the Selected Message</subtitle>
+   		<para>Choosing this will open the compose window with the selected message
+    	prepended and the original author noted at the top of the message.</para>
+	    <para>You enter the new recipients address(es) into the "TO:" field and 
+	    <interface>Send</interface> the mail on.</para>
+ 	  <para> Right-Click and select <application>Forward </application> to send  a message to somebody else.  </para>
+   </sect2> 
+   
+  
+   <sect2 id="icon-previous">
+  	 <title>Main Window Icon Toolbar- -Previous</title>
+  	 <subtitle>Move up the list</subtitle>
+   	<para>Click here to move your selection UP the list.</para>
+   	<para> Pressing the<emphasis> Z key </emphasis> moves you <emphasis>up </emphasis>
+   	  the list a step at a time. As does the arrow key on your keyboard. </para>
+   	   </sect2>
+   	   
+   	   
+   <sect2 id="icon-next">
+   	<title>Main Window Icon Toolbar - - Next</title>
+   	<subtitle>The next message in the list</subtitle>
+   	<para>The next message down the list may be accessed via this icon.</para>
+   <para> Pressing the<emphasis> X key </emphasis> moves you<emphasis>  down </emphasis>
+    the list a step at a time and so does the down arrow key.</para>
+   </sect2>
+   
+  <sect2 id="icon-quit">
+  	<title>Main Window Icon Toolbar - - Quit</title>
+  	<subtitle>exit</subtitle>
+  	<para>This closes &app;.  All opened Utilities must first be closed for this to work. eg. Gnome Print </para>
+  	<para> Keyboard Shortcut  is  Ctl + Q   </para>
+  	</sect2>
+ </sect1>
+ 
+ <!--MAIN WINDOW TEXT MENUBAR     -->
+ 
+<sect1 id="text-menubar">
+    <title>The Main Window -Text Toolbar </title>
+  
+    <para>
+    This is the second Menu-bar from the top of the main window in its default configuration.
+    </para>
+    
+    <sect2 id="file-text-menubar">
+   <title>The Main Window Text Toolbar -File Menu</title>
+     <para>Selecting this button gives you the following options:</para>
+     <orderedlist>
+     <listitem>
+     <para>
+     <link linkend="file-get-mail">Get New Mail</link>
+     </para>
+     </listitem>
+     <listitem>
+     <para>
+     <link linkend="file-exit">Exit</link>
+     </para>
+     </listitem>
+     </orderedlist>
+     
+    <sect3 id="file-get-mail">
+    <title>Get New Mail</title>
+    <para>Essentially this does  the same as the <link linkend="icon-check">Check Mail Icon.</link></para>
+    </sect3>
+    <sect3 id="file-exit">
+    <title>Exit</title>
+    <para>Exits or <link linkend="icon-quit"> Quits</link> the application.</para>
+    <para>The default Keyboard Shortcut   Ctrl + Q takes you there.</para>
+    </sect3>
+    </sect2>
+     <sect2 id="edit-text-menubar">
+   <title>File</title>
+    <para>This opens a simple fold out that will eventually allow you to undertake searches of the contents of your mail.
+    </para>
+    <para>The Default Keyboard Shortcut is Alt + F</para>
+
+    </sect2>
+     <sect2 id="mailbox-text-menubar">
+   <title>The Main Window Text Toolbar -Mailbox</title>
+    <subtitle>Import and Export Mailboxes</subtitle>
+    <para>Default Keyboard Shortcut is Alt + A</para>
+    <para>Selecting Mailbox allows  you to choose between :</para>
+    <orderedlist>
+    <listitem>
+    <para>
+    <link linkend="importing">Importing a Mailbox</link>
+    </para></listitem>
+    <listitem>
+    <para>
+    <link linkend="exporting">Exporting a Mailbox</link>
+    </para></listitem>
+    </orderedlist>
+    <sect3 id="importing">
+    <title>Importing a Mailbox</title>
+    <para>Default Keyboard Shortcut is  Alt + A then I  </para>
+	<para>This opens the Import Mailbox Dialog</para>
+		<para>This dialog has three main fields.</para>
+	<orderedlist>
+	
+	<listitem>
+	<para>Mailbox Type</para>
+		<para>With a fold out selection box. Currently only "Spool" will be shown,
+		however  &app; successfully imports <application>Pine</application> and <application>Netscape ver4.x</application>
+		Mailboxes and I'm sure many other types would be successful as well.
+		</para>
+		<para> The primary function of this is to allow you to import your /var/mail or /var/spool/mail mailbox.
+		</para>
+	    </listitem>	
+    <listitem>
+    <para>Destination Mailbox</para>
+    <para>A scroll-able list of your configured<link linkend="configuration-mail"> mailboxes </link ></para>
+    <para>Choose the Mailbox you wish to import into.</para>
+    </listitem>
+    
+    <listitem>
+    <para>File entry-field</para>
+    <para>Here you find a text entry area with a navigation button ( .. ) on the right hand side.
+    </para>
+    <para>Selecting this button opens the <link linkend="select-a-file">"Select a File"
+    </link> Dialog.</para>
+    <note>
+    <para>By default this opens to the  /var/spool/mail directory, you may however navigate to any
+     other directory you wish.
+     </para>
+    </note> 
+    </listitem>
+    </orderedlist>
+    <para> Mouse-over help is given on all icons at the top of the dialog. Scroll-bars are
+     included at the Directory and file level and text entry is possible through the bottom text field.</para>
+    
+     <tip
+     <para>
+     The <guisubmenu>Home Icon </guisubmenu> takes you to your home directory
+     </para></tip>
+     
+     <orderedlist>
+     <listitem>
+     <para>Choose the mailbox you require.</para>
+     </listitem>
+     <listitem>
+     	<para>Double-click the file or select and click OK.</para>
+     	<note>
+     	<para>The <link linkend="select-a-file">Select a File  </link> Dialog disappears
+     	</para>
+     	</note>
+     	</listitem>
+     	 
+     <listitem>
+     <para>
+     Check you have selected the destination mailbox
+     </para>
+     </listitem>
+     <listitem>
+     <para>
+     Select OK.</para>
+     <para> The progress bar will show you the action as it happens (usually VERY quickly)
+     </para>
+     </listitem>
+     <listitem><para>
+     Choose the mailbox you loaded the mails into and you should see
+      new (marked as Unread)  mail waiting for your attention.
+      </para>
+      </listitem>
+       </orderedlist>
+  </sect3>
+      
+      <!--EXPORTING A MAILBOX-->
+      
+ <sect3 id="exporting">
+      <title>Exporting a Mailbox</title>
+      <para>Exporting a mailbox is a lot like Importing a mailbox (only backwards).</para>
+      <para>Here are the steps</para>
+      <orderedlist>
+      <listitem>
+      <para>Select the<guisubmenu> Mailbox Menu.</guisubmenu></para>
+       <para>(From the Main Window Text Tool Bar)</para>
+       </listitem>
+      
+      <listitem>
+      <para>The <guisubmenu>Export Mailbox Dialog</guisubmenu> Opens</para>
+      <para>Select the Mailbox you wish to Export</para>
+      <para>(Choose from the scroll-able list.)</para>
+      </listitem>
+      
+      <listitem>
+      <para>Enter the new file  name in the text entry field near the bottom.</para>
+       <para> Or Navigate to the required directory and file via the <quote>Button on the right hand side of the text entry field</quote></para>
+       <para>The <guisubmenu>Select A File dialog</guisubmenu> opens from this.</para>
+       </listitem>
+       
+      <listitem>
+      <para>Close that dialog when your ready </para>
+      </listitem>
+      
+      <listitem>
+      <para>Check <quote>OK</quote></para>
+      <para>All going well ... Your Done.</para>
+      </listitem>
+      </orderedlist>
+  </sect3>
+      
+</sect2>
+   
+     <!--MESSAGE-FOLDOUT--> 
+<sect2 id="message-text-menubar">
+   <title>Main Window Text Toolbar- Message</title>
+   
+    <para>This menu is the most important for day to day mail composition and administration</para>
+    <para> Select this menu to work with any particular message or create a new mail.</para>
+    <para>The following Dialogs are presented here. Many of these are also available from other places .
+    Please follow the Cross-references as shown.</para>
+   <tip> <para>All of these commands may be accessed by right clicking on a message and choosing the action you require.
+    </para></tip>
+    
+    <variablelist>
+
+<varlistentry>
+<term>
+Compose.</term>
+<listitem>
+<para>
+ See <xref linkend="compose-message">
+ </para>
+</listitem>
+
+
+</varlistentry>
+<varlistentry><term>Save</term>
+<listitem>
+<para>
+    See   <xref linkend="text-save">
+    </para>
+    </listitem>
+</varlistentry>
+<varlistentry>
+<term>Print</term>
+<listitem>
+<para>
+    See   <xref linkend="icon-print">
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>Reply</term>
+<listitem>
+<para>
+    See   <xref linkend="icon-reply">
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>Reply All</term>
+<listitem>
+<para>
+    See   <xref linkend="icon-reply-all">
+</para>
+</listitem>
+</varlistentry>
+<varlistentry><term>Forward</term>
+<listitem>
+<para>
+    See   <xref linkend="icon-forward">
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>Copy</term>
+<listitem>
+<para>
+    See   <xref linkend="text-copy">
+</para>
+</listitem>
+</varlistentry>
+<varlistentry>
+<term>Move</term>
+<listitem>
+<para>
+    See   <xref linkend="text-move">
+</para>
+</listitem>
+</varlistentry>
+<varlistentry><term>Delete</term>
+<listitem>
+<para>
+    See   <xref linkend="text-delete">
+</para>
+</listitem>
+</varlistentry>
+<varlistentry><term>Expunge</term>
+<listitem>
+<para>
+    See   <xref linkend="text-expunge">
+</para>
+</listitem>
+</varlistentry>
+<varlistentry><term>Mark</term>
+<listitem>
+<para>
+    See   <xref linkend="text-mark">
+    
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry><term>Previous </term>
+<listitem>
+<para>
+See   <xref linkend="icon-previous">
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry><term>Next</term>
+<listitem>
+<para>
+ See   <xref linkend="icon-next">
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+<sect3 id="text-mark">
+<title>Main Window Text Menu --Mark</title>
+<subtitle>Mark this message as:</subtitle>
+<para>
+This <guisubmenu>Sub-menu</guisubmenu> facilitates identifying your message in someway:
+</para>
+<itemizedlist>
+	<listitem>
+	<para><application>Unread </application></para>
+	<para>Puts the little envelope back next to the message</para>
+	</listitem>
+	<listitem>
+	<para><application>Read</application></para>
+	<para>Removes the Envelope which designates the mail as being read</para>
+	</listitem>
+	<listitem>
+	<para><application>Replied</application></para>
+	<para>Marks the message as Replied to</para>
+	</listitem>
+	<listitem>
+	<para><application>Forwarded</application></para>
+	<para>Marks the message as Forwarded</para>
+	</listitem>
+</itemizedlist>
+</sect3>
+<sect3 id="text-expunge">
+<title>Expunge a Message</title>
+<subtitle>Remove Now</subtitle>
+<para>To remove a message without first sending it to the Garbage Bin select this.</para>
+<warning><para>This will be terminal for that message.  The message will not be recoverable without using file recovery tools (and a lot of work)
+</para></warning>
+<para>A <guimenu>Confirmation Dialog</guimenu> opens to help prevent accidents.</para>
+
+</sect3>
+
+<sect3 id="text-copy">
+<title>Copy a Message</title>
+<subtitle>Save this as a text file</subtitle>
+
+
+<para>This opens the <link linkend="select-a-file">Select a File  </link> dialog so that you may save 
+the mail  as a text file.
+</para>
+</sect3>
+
+<sect3 id="text-move">
+<title>Move this Mail</title>
+<subtitle>Put this mail into a different mailbox.</subtitle>
+
+<para>Shortcut: 	Right -Click mail header and select move.</para>
+<para>The Select a Mailbox  Dialog opens where you choose the Target Mailbox.
+</para>
+</sect3>
+
+<sect3 id="text-delete">
+<title>Delete  this Mail</title>
+<subtitle>Move to the Garbage Bin</subtitle>
+
+<para>Finished with this message ?  Then send it to the Garbage Bin and recycle the space it's taking up.</para>
+</sect3>
+
+<sect3 id="text-save">
+<title>Save to File</title>
+<subtitle>The Select a File Dialog</subtitle>
+<para>This dialog window is available from the Main Window Text <link linkend="message-text-menubar"> -Message</link> Menu.</para>
+<para>
+By right clicking on a message and selecting <guisubmenu>Save</guisubmenu> from the menu that appears.</para>
+<para>(This is actually the same menu.)</para>
+<para>The Default Keyboard Shortcut is  <application>Ctrl s </application></para>
+
+<sect4 id="select-a-file">
+<title>The Select A File Window</title>
+<para>This Window opens to allow you to save the mail you are currently working with as a text file.</para>
+<para>
+The Window is a file browser with:
+</para>
+<orderedlist>
+<listitem>
+<para> A row of functions available from the top icon bar. (From left to right)</para>
+	<orderedlist>
+	<listitem><para>Back one step (back to previous directory)</para></listitem>
+	<listitem><para>Go to the selected directory</para></listitem>
+	<listitem><para>Go up a directory level (to the Parent Directory)</para></listitem>
+	<listitem><para>Go to your /home/you directory (cd ~)</para></listitem>
+	<listitem><para>Refresh the directory listing. (reload)</para></listitem>
+	<listitem><para>Delete the selected file. (Hey be careful out there!)</para></listitem>
+	<listitem><para>Rename the Selected file</para></listitem>
+	</orderedlist>
+</listitem>
+<listitem>
+	<para>Directory</para>
+	<para>A "Directory" text entry field.</para>
+	<orderedlist>
+	<listitem><para>If you know the exact address of the file it is OK and possibly quicker to enter that here and press <application>Enter</application>
+	</para></listitem>
+	<listitem>
+	<para>The <guisubmenu>arrow button</guisubmenu> opens a mini-history to help speed navigation</para>
+	</listitem>
+	</orderedlist>
+</listitem>
+<listitem>
+<para>Beneath these are two mouse friendly columns with scroll bars labeled:</para>
+	<orderedlist>
+	<listitem>
+	<para>Directory</para>
+	<para>Click here to select a directory to move into</para>
+	<para>Unlike the Gnome File Manager, or other <application>Midnight Commander</application>
+	style File Managers this dialog doesn't indicate the presence of sub-directories. By default it also shows your 
+	<application>Dot Files and Directories.</application>
+	</para> 
+	</listitem>
+	
+	<listitem>
+	<para>Files</para>
+	<para>Choose the file you would like to save your mail as.</para>
+	<para>Your selection appears in the "selection" field below</para>
+	</listitem>
+	<listitem>
+	<para>(The Divider)</para>
+	<para>The Divider may be dragged left and
+	 right to make more or less room  on either side</para>
+	 <para> The Window itself can be resized in all directions so 
+	 that you may access more or less information at once.</para>
+	 
+	 </listitem>
+	</orderedlist>
+</listitem>
+<listitem>
+<para>The Selection Field</para>
+<para>Here you can enter a new name for the file you are saving your mail as.</para>
+<para>This field shows you the name of the file you are about to save.</para>
+</listitem>
+<listitem>
+<para>OK and  Close</para>
+<para>Once you have a name and place for your file select <guisubmenu>OK</guisubmenu>
+</para>
+<para>If you change your mind  select
+<guisubmenu> cancel</guisubmenu> and the dialog will disappear.</para>
+</listitem>
+</orderedlist>
+	
+
+</sect4>
+</sect3>
+
+</sect2>
+
+</sect1>
+<sect1 id="composer">
+<title>Composing Your Mail</title>
+
+
+ <sect2 id="composer-window">
+ <title>Composer Window</title>   
+    <sect3 id="compose-message">
+    <title>Compose</title>
+    <subtitle>Write that letter</subtitle>
+    <para>&key; Ctl + N</para>
+    <para>After selecting the Compose  function you are presented with the <link linkend="composer-icons">Mail Compose Window </link>( Dialog.)
+    </para>
+    <para>There are three primary areas and a few different functions available from this dialog.
+    </para>
+    <para>1. 
+    <link linkend="composer-icons">The Top Icon Bar</link> See  <xref linkend="composer-icons"> for more information.
+    </para>
+    <para>2. 
+      <link linkend="address-entry-fields">The Address Entry Fields</link> See <xref linkend="address-entry-fields"> below for more information.
+    </para>
+    <para>3. 
+    <link linkend="text-entry-message"> The Message Entry or Edit Window.</link> See <xref linkend="text-entry-message">below for more information.
+    </para>
+    
+             
+    <sect4 id="account-message">
+    <title>Select Account</title>
+    <para>By default the first account you configured is pre-loaded into this field</para>
+    <para>To choose another account select the arrow
+     on the right hand side of this field and click the account name you require</para>
+      </sect4>
+      
+     <sect4 id="address-entry-fields">
+      <title>Receivers Address</title>
+      <para>These three fields (TO, CC and BCC) are the places you enter the full E-mail address of the person(s)
+      to whom you are writing.</para>
+       <itemizedlist>
+       <listitem>
+       <para>TO</para>
+       <para>The primary person or group your mail is directed to</para>
+       </listitem>
+       <listitem>
+       <para>CC</para>
+       <para> Send a Carbon Copy to this person</para>
+       </listitem>
+       <listitem>
+       <para>BCC</para>
+       <para> Send a<quote> Backup Carbon Copy</quote>.</para>
+       </listitem>
+       </itemizedlist>
+      </sect4>
+       
+       <sect4 id="subject-message">
+       <title>Mail Subject</title>
+       <para>Write a short, clear heading for your mail here</para>
+       </sect4>
+       
+      <sect4 id="text-entry-message">
+   <title>The Mail Body</title>
+    <subtitle>The letter / message itself</subtitle>
+    <para>This is what it is all about . 
+    The primary reason for having a mail application at all.</para>
+    <para> Here you type in your pearls of prose .</para>
+    <para>Please note that basic cut and paste is supported as is including the contents of a file.
+     If you want to be sure that your recipient can read your stuff the safest choice would be plain text but theoretically
+      anything that may be presented as text may be pasted into here.</para>
+     </sect4>
+     
+    </sect3>
+    </sect2> 
+    </sect1>
+   
+ <sect1 id="configuration">
+  <title>Configuration</title>
+  <para>Before you can use <application>&app; </application> you will need to do some configuration. 
+  </para>
+  <para>
+  The first and  most important step is configuring your Accounts.  Please see <xref linkend="configuration-mail-accounts">
+Everything else should work fine in default configuration. 
+ </para>
+  <para>
+   Don't worry,  you may not even  need  this manual !
+  </para>
+  <para>
+  To Set up your Email accounts and other preferences, select
+    <programlisting>Settings -> Preferences.</programlisting>
+     This opens the   <interface>Preferences</interface> dialog, shown in <xref  linkend="preferences-fig">.
+  </para>
+
+  <figure id="preferences-fig">
+   <title>Preferences Dialog</title>
+   <screenshot>
+    <screeninfo>Preferences Dialog</screeninfo>
+    <graphic fileref="preferences-dialog" format="jpg"
+     srccredit="Pete &pete;">
+    </graphic>
+   </screenshot>
+  </figure>
+<para> The Tree style menu to the left of the dialog gives you access to the following configuration options:
+</para>
+<!--Nested Itemizedlist of Config options here-->
+  <itemizedlist>
+  <listitem><para>General</para>
+  <para>Read <xref linkend="configuration-general"></para>
+  		<itemizedlist>
+  		<listitem><para><link linkend="check-mail-timeout">Check Mail Timeout</link></para></listitem>
+  		<listitem><para><link linkend="time-till-tag">Time till Tag   </link></para></listitem>
+  		<listitem><para><link linkend="quote-character">Quote Character   </link></para></listitem>
+  		<listitem><para><link linkend="max-auto-download">Maximum Auto Download Size   </link></para></listitem>
+  		<listitem><para><link linkend="auto-empty-garbage">Auto Empty Garbage ?   </link></para></listitem>
+  		<listitem><para><link linkend="store-sent-mail">Store Sent Mail ?</link></para></listitem>
+  		</itemizedlist>
+   </listitem>
+  <listitem><para>Mail</para>
+  <para>Read <xref linkend="configuration-mail"></para>
+  		<itemizedlist>
+  		<listitem><para><link linkend="configuration-mail-accounts">Accounts</link></para></listitem>
+  		<listitem><para><link linkend="configuration-mail-mailboxes">Mailboxes</link></para></listitem>  
+  		</itemizedlist>
+   </listitem>
+  <listitem<para>Interface</para>
+  <para>Read <xref linkend="configuration-interface"></para>
+  		<itemizedlist>
+  		<listitem><para><link linkend="configuration-interface-fonts">Fonts</link></para></listitem>
+  		<listitem><para><link linkend="configuration-interface-colours">Message Colours</link></para></listitem>
+  		 </itemizedlist>
+   </listitem>
+  <listitem><para>Advanced</para>
+  <para>Read <xref linkend="configuration-advanced"></para>
+  		<itemizedlist>
+  		<listitem><para><link linkend="configuration-advanced-net-timeout">Net Timeout</link></para></listitem>
+  		</itemizedlist>
+   </listitem>
+  
+   </itemizedlist>
+  
+  
+<sect2 id="configuration-general">
+<title>General Options</title>
+  <para>The Preferences window opens with a tree style menu of configuration options.</para>
+  <para> The opening interface gives you the <guimenu>General</guimenu> Options.
+  These are labeled on the dialog and are dealt with sequentially below</para>
+  
+  <sect3 id="check-mail-timeout">
+  <title>Check Mail Timeout</title>
+  <para>Slide the drag handle to set the time &app; will wait between checks
+   (and auto mail download) on  your mail server.</para>
+   <caution><para>For slow connections set this value high as you will tie up  resources while checking 
+   and downloading</para></caution>
+  </sect3>
+  
+    <sect3 id="time-till-tag">
+  <title>Time till Tag</title>
+  <para>Dragging this handle will set the time it takes to mark a mail as having been <application>Read.</application></para>
+  </sect3>
+  
+ <sect3 id="quote-character">
+  <title>Quote Character</title>
+  <para>Enter a character, or string of characters that "Quote" or Identify  the original message when you Reply or Forward a mail.</para>
+  <para>The default is  &gt;  which is used by many people however almost any ASCII characters will be acceptable.</para>
+  
+  </sect3>
+  
+      <sect3 id="max-auto-download">
+  <title>Maximum Auto Download Size</title>
+  <para>This sets a maximum file download size (in Kilobytes)
+   for &app; to auto retrieve from your mail server.  Should a message exceed your setting &app;
+   will ask find out what it can about the message and then ask you if it's OK to download. </para>
+   <para>The default setting of <application>0 </application> disables this function.</para>
+  </sect3>
+  
+   <sect3 id="auto-empty-garbage">
+  <title>Auto Empty Garbage ?</title>
+  <para>Checking this will cause your Garbage Mailbox to be emptied when you finish a &app; session.
+   This will remove those messages permanently.</para>
+  </sect3>
+  
+   <sect3 id="store-sent-mail">
+  <title>Store Sent Mail ?</title>
+  <para>Selecting this check box will allow &app; to automatically save 
+   a copy of each of your sent mails in the <guimenu>Outbox.</guimenu></para>
+</sect3>
+  </sect2>
+  
+  <sect2 id="configuration-mail">
+  <title>Mail</title>
+  <para>Setup your accounts and mailboxes here.</para>
+  
+  	<sect3 id="configuration-mail-accounts">
+  	<title>Accounts</title>
+  	<subtitle>Before you get started</subtitle>
+  	<para>&app; enables you to have many different POP (Post Office Protocol) accounts.</para>
+  	<para>Here's how to set up your first account:</para>
+  	<orderedlist>
+  	<listitem>
+  		<para>Open the <interface>Account Configuration Dialog</interface>
+  		 from the <link linkend="mainwindow">Main Window.</link>
+  		<programlisting>Settings -> Preferences -> Mail / Accounts</programlisting>
+  		</para>
+  	</listitem>
+  	<listitem>
+  		<para>The dialog that opens has a large open window with resizable column headers,
+  		 some task buttons to the right, and some completion functions at the bottom. (It's not as bad as it sounds).
+  		 </para>
+  		 <para><programlisting> Select New (on the right)</programlisting>
+  		 A Dialog not unlike a Druid or Wizard opens to steer you onward.
+  		 You need to decide which type of Email account you wish to set up.
+  		 </para> 
+  		 <para>Currently you are given the choice of "Spool" (a UNIX style mail-spool ) or a POP account.
+  		 </para>
+  		 <para> Click on either of them to get more information.</para>
+  	</listitem>
+  	<listitem>
+  	 <para>For now select<programlisting>POP -> NEXT</programlisting>
+  	 </para>
+  	 <para>For Spool Accounts see <xref linkend="configuration-accounts-spool"> below.</para>
+  	 <para>The <interface>New Account Dialog</interface> should open.</para>
+  	 <para>This dialog has 4 tabbed pages where you enter information to configure a functioning account.</para>
+  	 		<orderedlist>
+  	 		<listitem><para>Account Name</para>
+  	 		<para>Give this account a name. Something to clearly identify it. </para>
+  	 		</listitem>
+  	 		<listitem>
+  	 		<para>Name</para>
+  	 		<para>Your local user name will do here</para>
+  	 		</listitem>
+  	 		<listitem>
+  	 		<para> E-mail</para>
+  	 		<para>Your E-mail address at that account</para>
+  	 		</listitem>
+  	 		</orderedlist>
+  	</listitem>
+  	<listitem>
+  	<para>Once you have finished entering that..<programlisting>Select Protocol
+  	</programlisting>
+  	</para>
+  	<para>Here we have to get a little more exact ! </para>
+  	<para> Enter the following
+  	 as provided  by your Internet Service Provider or System Administrator.</para>
+  	 		<orderedlist>
+  	 		<listitem>
+  	 		<para>User Name</para>
+  	 		<para>Enter your user name at your SERVER  [e-x-a-c-t-l-y] </para>
+  	 		</listitem>
+  	 		
+  	 		<listitem>
+  	 		<para>Password</para>
+  	 		<para>Enter the password you were issued (or have set up) </para>
+  	 		</listitem>
+  	 		
+  	 		<listitem>
+  	 		<para>
+  	 		POP Server:
+  	 		</para>
+  	 		<para>
+  	 		Enter the name of the pop server (your incoming mailbox at the server)
+  	 		</para>
+  	 		<para>
+  	 		 This is often in the format of <programlisting>pop.yourisp.domain.region</programlisting>
+  	 		</para>
+  	 		</listitem>
+  	 		
+  	 		<listitem>
+  	 		<para>
+  	 		SMTP (Simple Mail Transfer Protocol)
+  	 		 </para>
+  	 		<para>
+  	 		Enter the name of the out going mail server.
+  	 		</para>
+  	 		<para>
+  	 		This often looks like
+  	 		<programlisting>mail.yourisp.domain.region</programlisting>
+  	 		</para>
+  	 		<para>
+  	 		Check all of this.
+  	 		</para>
+  	 		</listitem>
+  	 		
+  	 		<listitem>
+  	 		<para>Ports</para>
+  	 		<para>The default ports set for the POP and SMTP servers should be fine for most people.
+  	 		</para>
+  	 		<para>
+  	 		Your ISP or System Administrator should let you know if others are needed. 
+  	 		(firewalls , intranets, mail monitoring,  or other server level issues may be cause for other ports to be used.)
+  	 		</para>
+  	 		</listitem>
+  	 		</orderedlist>
+   </listitem>
+   	<listitem>
+   	<para>Mailbox</para>
+   	<para>Next choose the Mailbox page</para>
+   	<para>Here you can associate <guisubmenu>This Account</guisubmenu>
+   	 with a<guisubmenu> Particular Mailbox. </guisubmenu>
+   	If you haven't personalized your mailboxes yet just choose the <interface>INBOX </interface>
+   	</para>
+   	</listitem>
+   	<listitem>
+   	<para>Advanced</para>
+   	<para>Here are two simple check boxes.</para>
+   	
+   	<para>Keeping the messages on the server is a great way of <emphasis>Temporarily</emphasis> Storing your mail (off-site).
+   	However some ISP providers may get cross if you build up huge amounts of storage at the server. (and may charge you accordingly)
+   	This function may also be useful for people who work with shared mail. 
+   	</para>
+   	<para>By default the new account will be activated (when first you use it)
+   	 to Deactivate the account unselect the second box.
+   	 </para>
+   	 
+   	</listitem>
+   	<listitem>
+   	<para>OK</para>
+   	<para>All finished ? </para>
+   	<para> Your new POP account should be ready to use.
+   	 You just repeat the above steps for as many POP accounts as you have, or add later.</para>
+   	</listitem>
+   	</orderedlist>
+   	
+   	<sect4 id="configuration-accounts-spool">
+   	<title> About Spool Accounts</title>
+   	<para>
+   	The process involved in configuring a spool account is much the same as that used  to set 
+   	up a  POP account: See <xref linkend="configuration-mail-accounts">
+   	</para>
+   	<para>Navigate to the accounts setup dialog:</para>
+   	<para><programlisting>Setting ->  Preferences ->  Accounts  -> New</programlisting></para>
+   	<para>The Account Type Dialog opens:  Select <interface>Spool</interface> then<interface> Next.</interface></para>
+   	<para> The <guimenu>New Accounts</guimenu> Dialog Opens:  This is just the same as 
+   	that used in <xref linkend="configuration-mail-accounts"></para>
+   	<para> The difference here is that you are asking cronos to download mail from your local network spool account.
+   	Many (most ?) UNIX style environments build you a mailbox somewhere under the
+   	<programlisting> /var/spool/mail/username </programlisting>
+   	or similar directory when a new User Account is created. .
+   	 </para>
+	<para>The most common Mail server on these systems is<application> Sendmail.</application>
+	</para>
+	<para>
+	 Now, given that your system is like this,  the following entries need to be made 
+	on the <interface>Protocol</interface> page of the <guimenu>New Account Dialog</guimenu>:
+	</para>
+	<itemizedlist>
+		<listitem><para>File:</para>
+		<para>Navigate to your mail box under the /var directory...(use the button to the right)
+		</para>
+		<para>Select Your-mail-box.</para>
+		</listitem>
+		<listitem>
+		<para>SMTP</para>
+		<para>Enter your local mail server application name. (try<application> Sendmail.</application>as a default)
+		</para>
+		</listitem>
+		<listitem>
+		<para>Port</para>
+		<para>The default setting of 25 will work fine for most people on<application> Sendmail.</application>
+		I'm not sure about other mail handlers and your<application> Sendmail.</application>port may have been
+		 moved by your distribution or system administrator. Either way 
+		this should be documented somewhere. Resist the temptation to 
+		play with the<application> Sendmail.</application>configuration scripts. (for now)
+		</para>
+		</listitem>
+</itemizedlist>
+		
+		<para>
+		 On the remaining  two pages associate a mailbox with this account and choose
+		optionally to keep the mail on the server (advised) and to activate the account (or it won't work).
+		</para>
+		<para>
+		Select OK and then Apply from the remaining<guisubmenu>Preferences</guisubmenu>
+		dialog.
+		</para>
+		<para>Close the <guisubmenu>Preferences</guisubmenu>dialog and you should be ready to go.
+		</para>
+		<tip>
+		<para>
+		You can also use the<interface> spool account </interface> to check for mail from other
+		compliant Mail Handlers. eg. Pine and Netscape (some small problems).
+		</para>
+		<para>This works for me though it is NOT an <quote>official</quote> use of Cronos, it can be very handy.
+		</para>
+		<para>Proceed as above and Navigate to the appropriate Mail /directory/file under your HOME directory and keep<application> Sendmail.</application>as the Server
+		</para>
+		</tip>
+</sect4>
+   	
+   	<sect4 id="configuration-account-edit">
+   	<title>Edit an Account</title>
+   	<para>To edit an Account  select (from the Main Window) 
+   	<programlisting>Settings -> Preferences -> Accounts</programlisting>
+   	Next select the account you wish to Edit or Delete from the list of accounts you have set
+   	 up  previously.
+   	 </para>
+   	 <para>Then to Delete select the delete garbage bin to the right.
+   	 </para>
+   	 
+   	</sect4>
+ </sect3>
+  	
+ <sect3 id="configuration-mail-mailboxes">
+  	<title>Your Own Mailboxes</title>
+  	<para>Like most other Email clients &app; allows you to configure your own mailbox structure.</para>
+  	<para>You can not readily remove the following default Mailboxes:</para>
+  	<para>The Inbox , The Outbox, The Garbage or the Drafts Mailbox. This is because &app; refers to them internally when carrying out its general functions.</para>
+  	<note><para>You may however add sub-directories to these mailboxes if you find that useful.</para>
+  	<para> For instance your own "matched" directories under the In and Out boxes may help keep things organised.
+  	</para>
+  	</note>
+</sect3>
+ </sect2>
+ 
+<sect2 id="configuration-interface">
+  <title>Interface</title>
+  <para>Here we configure Fonts and Colours </para>
+ 	 <sect3 id="configuration-interface-fonts">
+  		<title>Fonts</title>
+  		<para>Selecting this from the <guimenu>Tree Menu </guimenu> allows configuration of the font style
+  		for the following items:</para>
+  		<para>
+  		<simplelist type=horiz columns=4>
+  		<member>1. Message Body</member>
+  		<member>2. Unread Messages</member>
+  		<member>3. Read Messages</member>
+  		<member>4. Printing</member>
+  		</simplelist>
+  		</para>
+  		<para>By clicking the <guisubmenu>Font Icon</guisubmenu> on the right hand side of the dialog
+		a <guimenu>Font selection</guimenu> Dialog will open. Choose the font you wish to apply 
+		to your chosen function. (the text  field will accept text entry and show a sample). You may also set the style and many 
+		other attributes from this dialog.
+  		</para>
+  		<para>Once done check OK at the bottom of the Font Select dialog. Then click apply, OK  or continue configuration from the preferences dialog.
+  		</para>
+  		<note>
+  		<para>
+  		This dialog is actually a <application>GNOME Utility </application>and has its own Manual available from the gnome help system.
+  		</para>
+  		<para>
+  		<programlisting>Help System  -> Gnome Documents -> gfontsel</programlisting>
+  		</para>
+  		<para> You may also want to read the Gnome Users Guide 
+  		<programlisting>Gnome Help System -> Index -> Users Guide</programlisting>
+  		</para>
+  		</note>
+  		
+  		</sect3>
+  <sect3 id="configuration-interface-colours">
+  		<title>Message Colours</title>
+  		<para>&app; allows you to choose your own colours for some different sections within a message.
+  		</para>
+  		<para>Select <guisubmenu>Colors</guisubmenu> from the Menu and you will be given the option of coloring the 
+  		Reply and forward elements of your mail and the general text color.</para>
+  		<para>The square button beneath the feature shows you the current color. Click this to open the <application>Gnome Color Selector</application>
+  		</para>
+  		<para>
+  		This is useful in long and multi-contributor  E-mail (such as you often find on mailing lists). When used
+  		in conjunction with <link linkend="quote-character">Prepended Characters</link>
+  		 It can help make text format E-mail very easy to read and comprehend.</para>
+  		
+  		<para>
+  		This <application>Utility</application> has its own manual page which is available from the gnome help system. 
+  		</para>
+  		</sect3>
+  		
+  </sect2>
+  
+  <sect2 id="configuration-advanced">
+  <title>Advanced</title>
+  <para>Currently only one function is configurable from here:</para>
+  	<sect3 id="configuration-advanced-net-timeout">
+  		<title>Net Timeout</title>
+  		<para>Here you set the time &app; will wait for a response from your server as it asks it various things.</para>
+  		<para>Enter the time in seconds or use the arrow buttons to set how long CronosII will try getting responses 
+  		from your ISP. The default should be fine for most people but if you have a dirty or slow connection you could try increasing this time for increased reliability.
+  		.</para>
+  		</sect3>
+  
+  </sect2>
+  
+  
+ </sect1>
+
+
+ 
+
+ <!-- Here you should add, if necessary, several more sect1's,
+ describing other windows (besides the main one), file formats,
+ preferences dialogs,  etc. as appropriate. Try not to make any of
+ these sections too long. -->
+
+
+ <!--BUGS-->
+ <!-- This section should describe known bugs and limitations of
+      the program if there are any - please be frank and list all
+      problems you know of. -->
+ <sect1 id="bugs">
+  <title>Known Bugs and Limitations</title>
+  <para>
+   Most Bugs associated with &app; come from building (or attempting to build) on old or broken libraries.
+  Please check <xref linkend="install"> and the source documentation for help in that area.
+  </para>
+  <para>
+  Some Bugs are actually unfinished or unsupported features please see the Website and/or
+   Source documents for TODO's and Features. (your suggestions and contributions are also welcome)
+   </para>
+   <para>
+   The following are known BUG issues current for &app;&version;   
+  </para>
+  <itemizedlist>
+  <listitem>
+  <para>
+  Compilation errors  --upgrade lib gnomeprint
+  </para>
+  </listitem>
+ <listitem>
+  <para>
+  No support for Address Books -- TODO ??
+  </para>
+  </listitem>
+  <listitem>
+  <para>
+  User Configured Mailboxes move to different subdirectories on save (but don't disappear)
+  </para>
+  </listitem>
+ <listitem>
+  <para>
+  No support for attachments ? -- Next Version Has This
+  </para>
+  </listitem>
+  <listitem>
+  <para>
+  The Search Button is not Functional --(yet)
+  </para>
+  </listitem>
+   </itemizedlist>
+ </sect1>
+
+
+<!--Authors-->
+ <sect1 id="authors">
+  <title>Authors</title>
+  <para>
+   <application>&app;</application> was written by Pablo Fernández Navarro
+   <email>&pablo;</email>. 
+   </para>
+   <para>To find more information about
+   <application>&app;</application>, please visit the
+    <ulink  url="&website;" type="http">&app; Web site</ulink> &website; .
+    </para>
+   
+<sect2 id="Contributions">
+<title>Contributors</title>
+<para><ulink type="http" url="&pete;">Peter Gossner</ulink>
+  </para>
+  <itemizedlist>
+  <listitem>
+<para>
+<quote>Rouseabout</quote>
+</para>
+  </listitem>
+   </itemizedlist>
+<para> <ulink type="http" url="&Yves;">Yves Mettier</ulink>
+</para>
+  <itemizedlist>
+  <listitem>
+  <para>
+ Autoconf and automake
+  </para>
+  </listitem>
+  <listitem>
+  <para>
+ French translation
+  </para>
+  </listitem>
+  <listitem>
+  <para>
+ Initial integration of this document inside the cronos package
+  </para>
+  </listitem>
+   </itemizedlist>
+<!--UPDATE THIS-->
+<para>Any comments, suggestions, ideas or assistance contact
+ <email>"&pablo;"</email>.
+</para>
+<para>Bugs may be reported via the Bug  Report tool or mailing lists via  the &app; <ulink url="&website" type="http">website</ulink> &website;
+Or:  the <ulink url="http://bugs.gnome.org" type="http">GNOME
+   bug tracking database</ulink>. 
+    (Instructions for submitting bug   reports can be found
+     <ulink url="http://bugs.gnome.org/Reporting.html" type="http">
+   on-line</ulink>.)  You can also use <application>Bug Report
+   Tool</application> (<application>bug-buddy</application>), available in the GNOME 
+   <guisubmenu>Utilities</guisubmenu> sub-menu of <guimenu>Main
+   Menu</guimenu>, for submitting bug reports.
+  </para>
+</sect2>
+</sect1>
+<sect1 id="Manual-Authors">
+<title>About this Manual</title>
+<!--Add usefull stuff here-->
+  <para>
+   This manual was written by PeteGozz <email>&pete;</email>
+    from the original manual written by Pablo Fernández Navarro <email>&pablo;.</email></para>
+   
+   <para>
+   The <application>Docbook  </application>source document should be available
+    from the &app; <ulink type=http url="&website;" > website.</ulink>
+    </para>
+    <para>
+   The DTD for this doc is:<programlisting> !DOCTYPE article
+    PUBLIC -//GNOME//DTD DocBook PNG Variant V1.1//EN</programlisting>
+   </para>
+   
+   <caution>
+   <para>The source markup would be a great example of how NOT to write docbook.</para>
+   </caution>
+   <para> Please send all comments and
+   suggestions regarding this manual to any or all of the following:</para>
+   <itemizedlist>
+   <listitem>
+   <para>The manual &manver; Author: <email>&pete;</email>
+   </para>
+   </listitem>
+   <listitem>
+   <para>The Project Leader: <email>&pablo</email></para>
+   </listitem>
+   <listitem><para>The French Connection: <email>&Yves; </email>
+   </para>
+   </listitem>
+   <listitem>
+   <para>
+    the <ulink type="http"
+   url="http://developer.gnome.org/projects/gdp">GNOME Documentation
+   Project</ulink> by sending an  E-mail to   <email>docs@gnome.org</email>.
+   </para>
+   </listitem>
+   <listitem>
+   <para> You can also add your comments  online by using the <ulink type="http"
+   url="http://developer.gnome.org/projects/gdp/doctable/">GNOME Documentation Status Table</ulink>.
+  </para>
+  </listitem>
+  </itemizedlist>
+<!--Elevate any body crazy enough to attempt a translation to sect1 level-->
+  <!-- For translations: uncomment this:
+
+  <para>
+   Latin translation was done by ME
+   (<email>MYNAME@MYADDRESS</email>). Please send all  comments  and
+   suggestions regarding this translation to SOMEWHERE.
+  </para>
+
+  -->
+<sect2 id="conventions">
+<title>Terms and Conventions</title>
+<para>
+This manual, like &app; itself is written for all  users, however the new LINUX user has (I Hope) been kept in mind.
+. . . The advanced user may find little need of a manual for this application and should find  greater benefit in reading the 
+source code and notes in the &app;&version; tar ball.
+</para>
+</sect2>
+
+<sect2>
+<title>Graphics and Icons</title>
+<para>
+In the interests of package size screen shots have been kept to a minimum.
+ </para>
+<para>
+Open a working version of &app;  so that you may interact  with the application while you learn how to use it.
+</para>
+<tip><para>Install instructions are given in <xref linkend="install">.</para></tip>
+
+<para>
+As the source document for this manual is written in 
+<application>Docbook</application> the following conventions apply:
+ </para>
+ <para>
+ Information that clearly needs marking: 
+ <programlisting>as code or that has to be entered / selected is like this. (usually)</programlisting>
+ </para>
+
+<tip><para>This is a Tip</para></tip>
+<warning><para> This is a warning</para></warning>
+<note><para>Note a note</para></note>
+<caution><para>Use Caution here</para></caution>
+<important><para>Important Stuff is tagged like this</para></important>
+<para>
+(The<quote> tag </quote>graphics when shown  are by default gifs.  )
+</para>
+</sect2>
+
+ </sect1>
+ 
+ 
+ <!--  KEYBOARD SHORTCUTS -->
+ <!--Move this to an appendix-->
+<sect1 id="keyboard-shortcuts">
+<title>Keyboard Shortcuts</title>
+<subtitle>Build a better Mousetrap</subtitle>
+<para>While a mouse or other <quote>pointing device</quote> is a wonderfull thing the simple fact is that many operations 
+on most Graphical User Interfaces can be undertaken much more efffectively using  Accelerators  
+or Keyboard Shortcuts. While they are not as intuitive for most of us once learn't you wonder how you lived without them.</para>
+<para>&app; is no exception to this &lt;pun&gt; rule_ of _thumb &lt;/pun&gt;. </para>
+<para>We hope you find the Default Short-Cuts simple to use and remember but by all means take advantage of  <application>GTK</application>
+and <link linkend="gtk-tips">Roll Your Own</link>.</para>
+<para>Following is a Table of all of the Shortcuts by Command on &app;&version;</para>
+<note><para>As soon as I work out how to do a table ;)</para></note>
+</sect1>
+
+<!--GTK notes-->
+<sect1 id="gtk-tips">
+<title>GTK -Some Tips</title>
+<para>New to Unix, Gnome, or coming from another widget set ?</para>
+<para>The Following may help.....sorry not finished</para>
+</sect1>
+
+ <!-- Application License  -->
+
+ <sect1 id="license">
+  <title>License</title>
+  <para>
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the  <ulink type="help" url="gnome-help:gpl">
+    <citetitle>GNU General Public License</citetitle></ulink> as
+   published by the Free Software Foundation; 
+   either version 2 of the License, or (at your option) any later
+   version.
+  </para>
+  <para>
+   This program is distributed in the hope that it will be useful, but
+   WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   <citetitle>GNU General Public License</citetitle> for more details.
+  </para>
+  <para>
+   A copy of the <citetitle>GNU General Public License</citetitle> is
+   included as an appendix to the <citetitle>GNOME Users
+   Guide</citetitle>.  You may also obtain a copy of the
+   <citetitle>GNU General Public License</citetitle> from the Free
+   Software Foundation by visiting <ulink type="http"
+   url="http://www.fsf.org">their Web site</ulink> or by writing to
+   <address>
+    Free Software Foundation, Inc.
+    <street>59 Temple Place</street> - Suite 330
+    <city>Boston</city>, <state>MA</state> <postcode>02111-1307</postcode>
+    <country>USA</country>
+   </address>
+  </para>
+ </sect1>
+ <!--END OF MANUAL.-->
+</article>
