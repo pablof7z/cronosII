@@ -1,0 +1,22 @@
+This simple plugin is to let Cronos II users to
+sign messages with a random signature using the
+output of any program.
+
+To compile this program you need Cronos II 0.2.0
+at least, which can be downloaded from
+http://cronosII.sourceforge.net/
+
+##Please see README in plugins directory ## --pete
+
+The installation process is as follows:
+1. Unpack the sources of cronosII-fortune.
+2. Change to the directory where the unpacked files were written.
+3. Run 'make'
+4. Run 'make install' as root.
+
+To use this plugin you should run Cronos II and open
+the Preferences dialog, go to the Plug-Ins option,
+press the "Load" button and select the file fortune.so
+
+After that you can configure the plugin with the
+"Configuration" button.

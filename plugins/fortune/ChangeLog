@@ -1,0 +1,19 @@
+Thur 1 Apr 2002 Angel Ramos <seamus@debian.org>
+	* Modified fortune.c source in order to compile and compile alone.
+	* Included all the headers that fortune.c need to compile. I have
+	  modified the headers for alone compilation success.
+	* Added '-fPIC' to the Makefile in order to compile on hppa
+          architecture.
+	* Tested on Debian GNU/Linux.
+
+Thurs 13 Dec 2001 Pete <petergozz@users.sourceforge.net>
+	* Did it all again
+
+Sat 01 Dec 2001 Peter Gossner <petegozz@users.sourceforge.net>
+	* Fixed header file problems and typos.
+	* Added built plugins (including this) to MR2 package.
+	* Updated ../Makefile.am to include all current plugins
+	on make of extended distribution.
+
+o Wed 07 mar 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net>
+- Created the project.
