@@ -864,7 +864,7 @@ c2_file_exists (const char *file) {
 char *fd_get_word (FILE *fd) {
   GString *str;
   gboolean inside_quotes = FALSE;
-  char buf;
+  int buf;
   char *rtn;
 
   /* Move to a valid char */
@@ -914,7 +914,7 @@ char *fd_get_line (FILE *fd) {
   long pos=ftell (fd);
   int len=1;
   int i;
-  char buf;
+  int buf;
   char *str;
   char *ptr;
   
@@ -988,8 +988,8 @@ gboolean fd_is_dir (char *path) {
 }
 
 gboolean
-fd_move_to (FILE *fp, char c, guint8 cant, gboolean forward, gboolean next) {
-  char s=' ';
+fd_move_to (FILE *fp, int c, guint8 cant, gboolean forward, gboolean next) {
+  int s=' ';
   int ia;
   guint8 go;
 

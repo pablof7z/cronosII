@@ -97,7 +97,7 @@ int
 c2_mailbox_length (const Mailbox *mbox) {
   char *path;
 //  char *line;
-  char character;
+  int character;
   FILE *fd;
   int mails = 0;
   

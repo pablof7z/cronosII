@@ -163,7 +163,7 @@ void
 update_clist (char *mbox, gboolean updating, gboolean in_gdk_thread) {
   char *buffer;
   char *title[8];
-  char character;
+  int character;
   int showing_row = 0;
   int selected_row = 0;
   int row;

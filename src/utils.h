@@ -149,18 +149,17 @@ fd_get_line						(FILE *fd);
 
 /* Returns true if path is a directory */
 gboolean
-fd_is_dir						(char *path);
+fd_is_dir		(char *path);
 
 /* 
  * Moves backward (!"forward") or "forward" ("forward") in the fd pointer "fp" searching for the character "c"
  * "cant" times and leaving the pointer before (!"next") or after ("next") "c"
  */
 gboolean
-fd_move_to						(FILE *fp, char c, guint8 cant,
-    								 gboolean forward, gboolean next);
+fd_move_to	(FILE *fp, int c, guint8 cant,  gboolean forward, gboolean next);
 
 const char *
-pixmap_get_icon_by_mime_type				(const char *mime_type);
+pixmap_get_icon_by_mime_type	(const char *mime_type);
 
 /* Returns the path to a tmp file */
 char *
