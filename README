@@ -1,4 +1,4 @@
-				Cronos II 0.2.2
+				Cronos II 0.2.2-MR2
 
 ===============
 = What is it? =
@@ -15,8 +15,8 @@ Check out http://cronosII.sourceforge.net/ for the latest version.
 ================
 o Gnome-libs (http://www.gnome.org)
 o LinuxThreads (Pthreads)
-
 o Gnome-Print (Optional)
+
 
 ================
 = Installation =
@@ -28,9 +28,32 @@ make install
 
 You might want to check out the INSTALL file for further information.
 
+!!- Plugins - !!
+
+See the read-me file(s) for instructions on installing Plugins.
+
+
 ======================
 = About this version =
 ======================
 This version introduces the Cronos II Address Book with an API created by Bosko Blagojevic
 and Pablo Fernández Navarro and with a UI by Pablo Fernández Navarro.
 Other great news about this version is the Queue mailbox by André Casteliano.
+##############################################################################
+Addendum: Dec 01 2001:
+
+# This is probably the last version of CronosII in this format.#
+
+The new version is very promising and nearing release at this time (Dec 01 2001).
+ I am sure you will find that it has been worth the wait. 
+In the interests of our current users and stability I will endeavour to maintain the Maintenance Versions until the new Scratch version goes stable.
+#At that time support for this version of CronosII will be discontinued.#
+Please Note: The real coders are working on the new version not this one. :)
+
+	i.e. I do my best but "hacker" is NOT one of the words used to describe me.
+	--pete	<petergozz@users.sourceforge.net>
+
+
+
+
+

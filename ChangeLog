@@ -1,3 +1,10 @@
+Sat Dec 1 2001 (later) Peter Gossner <petergozz@users.sourceforge.net>
+	* applied and traced all patches needed to build plugins to version 0.2.1
+	* still unable to get a build with 0.2.2  However.:::
+	* added prebuilt plugins and source files to the plugins directory.
+	* added and updated READMEs and ChangeLogs to reflect this
+	* (the binaries are compressed with the source files under plugins)
+	
 Sat Dec 1 2001  Peter Gossner  <petergozz@users.sourceforge.net>
 	Fixed the clumbsy error I made to cronosII-config
 
