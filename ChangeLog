@@ -1,3 +1,22 @@
+Mon 20 Feb 2002 pete <petergozz@users.sf.net>
+	* major install change in doc/C.. just sick of pissing about with
+	* gnome doc stuff. I will move this back to standard, when gnome 2
+	* comes out.
+	* dtd moved up to 4.1 and parses fine.
+	* simplified the spec file for rpm builds. (give me debs any day)
+
+
+Mon 18 Feb 2002  pete <petergozz@users.sf.net>
+	* src /gui-export.c:    g_warning (_("The mailbox %s couldn't be found."), mailbox);
+	* Change to g_warning (_("Could not find the mailbox  %s ."), mailbox);
+	*src /gui-window_main_callbacks.c:   
+	gnome_appbar_push (GNOME_APPBAR (WMain->appbar), _("The message couldn't be found"));
+	* Changed to: gnome_appbar_push (GNOME_APPBAR (WMain->appbar), _("Message not found"));
+	* gui-preferences.c Yet more edits to the quick help dialog. Tooltips added and edited to general preferences.
+	* mailbox.c  "Couldn't found the mailbox in the Mailbox's List"
+	* Changed : "Could not find the mailbox in the Mailbox List   : all occurances.( x3)
+	* Think thar's all public uses of couldn't. (gnome docs style)
+	
 Sun 17  Feb 2002  pete <petergozz@users.sf.net>
 	* Proofreading continues on manual. Groan>
 	* Developers Changelog has note about the final compiler error.
