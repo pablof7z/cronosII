@@ -23,7 +23,7 @@ MODULE_VERSION=@PACKAGE@-@VERSION@
 module_dirs="$libdir"
 #and because this might come in handy for debugging
 
-devversion='-cvs-MR2'
+devversion='-MR2'
 
 
 # stolen from gnome-libs who stoled it from autoconf

@@ -40,7 +40,7 @@ a/ download the source tar ball for CronosII 0.2.1
 b/. Important:  back up your current ~/.CronosII directory (or just move it)
 
 c/ install the 0.2.1 package.
-	(if you still have a .cronosII directory from vers2.2.0 or up the app will seg fault on launch -- don't worry you wont be using it )
+	(if you still have a .CronosII directory from vers2.2.0 or up the app will seg fault on launch -- don't worry you wont be using it )
 d/ build the plugins from this directory (cp them to the 0.2.1 src/plugins directory if you like)
 
 e/ make install (as root if you need to)
@@ -106,5 +106,4 @@ Post Script.
 The new CronosII is due to be released very soon (?). 
 (well when its ready).
 Most reported bugs have been fixed in the new version.
-
 
