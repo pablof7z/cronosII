@@ -1,16 +1,21 @@
+Tue Apr 16 2002 dan <madprof@madprof.net>
+	* Updated Changelog. VIM color codes it now.
+	* Thinks its cool with people on other sides of the world updating
+	  files and getting dates before other peoples previous entrys ;)
+	* Updated plugins.sgml re nohtml.
 
 Wed Apr 17 2002 pete <petergozz@users.sf.net>
 	* Updates checked into gui-about.* 
 	* Update to splash image (lost the orig xcf)
 	* Deadline of 20th set for release.
 	* Commenced updating docs nb. nohtml is in plugins.sgml
-	
+
 Mon Apr 15 2002  pete <petergozz@users.sf.net>
 	* Updates and fixmes to src/guiabout.c splash dialog 
 	* Hmm must update the xpm and track down the final font rendering issues ..
 	* Tracked ! The main problem was with my XFS configuration and version.
 	* GDK should bitch about this ?? 
-	
+
 Sun Apr 14 2002 pete <petergozz@users.sf.net>
 	* Version now at 0.2.2.23 standby for a release
 	* Plugins all repacked to Angel Ramos specs (with some minor mods)
@@ -18,8 +23,8 @@ Sun Apr 14 2002 pete <petergozz@users.sf.net>
 	* Fixed stupid typo in CronosII-config (doh!) a while back.
 	* Having some major grief with i18n again (my debian install at fault)
 	* However ./configure --disable-nls will help if you have this problem.
-	
-Thurs 21 Feb  2002 pete <petergozz@users.sf.net>
+
+Thu 21 Feb  2002 pete <petergozz@users.sf.net>
 	* All packages uploaded to release site.
 	* Manual images fixups goes on. Should NOW be OK.
 	* Time for a breather.
@@ -42,7 +47,7 @@ Mon 18 Feb 2002  pete <petergozz@users.sf.net>
 	* mailbox.c  "Couldn't found the mailbox in the Mailbox's List"
 	* Changed : "Could not find the mailbox in the Mailbox List   : all occurances.( x3)
 	* Think thar's all public uses of couldn't. (gnome docs style)
-	
+
 Sun 17  Feb 2002  pete <petergozz@users.sf.net>
 	* Proofreading continues on manual. Groan>
 	* Developers Changelog has note about the final compiler error.
@@ -60,8 +65,8 @@ Fri 15 Feb 2002  pete <petergozz@users.sf.net>
 	* Created non-dist file README-developers.Changelog THE BOUNCE BUG report is there.
 	* Prep and edit top level docs (README etc) for release -22
 	* Cleaned up ambiguities in gui-preferences.c #define QUICK_HELP_NEW_ACCOUNT
-	
-Thur 14 Feb 2002 pete <petergozz@users.sf.net>
+
+Thu 14 Feb 2002 pete <petergozz@users.sf.net>
 	* Lots of minor spelling fixups as I tried out various options with
 	* smtp. No code alters since the last patch.
 	* Queue still a little fragile. Have to rewrite the spool section of
@@ -74,25 +79,29 @@ Tue 12 Feb 2002 pete <petergozz@users.sf.net>
 	* upload to cvs.
 	* update manual pages. doc/C/cronosII.sgml
 	* applied patches from the DEBIAN Maintainers build I will credit these soon.:
-	 Aaron Schrab <aaron@schrab.com> fixed Debian bug 126228 .
-	root <jlquinn@optonline.net>  provided the way and a partial fix.  Thanks guys. I have hand applied the resulting patch to the MR2 source tree.
+	* Aaron Schrab <aaron@schrab.com> fixed Debian bug 126228 .
+	  root <jlquinn@optonline.net>  provided the way and a partial fix.  Thanks guys.
+	  I have hand applied the resulting patch to the MR2 source tree.
+
 Mon 11 Feb 2002 pete <petergozz@users.sf.net>
 	* Changed about dialog and cronosII-config to show MR2 RPM edition
 	* Left gui-about.c with gtk stuff commented out.
 	* Commenced "merge" of alters to the MR2 branch.
 	* Note debug now set on (peter !)
+
 Thur 7 Feb 2002 pete <petergozz@users.sf.net>
 	* Updated cronosII-config to show plugins directory and  source version
 	* Set debug to off by default (configure.in) for package builds.
 	* Removed DESTDIR= from toplevel Makefile.am
 	* Added cronosII-config.1 to man directory.
 	* Commented out the gtk specific stuff in gui-about.c 
-	* Why: redundant given deps and The deb version will not open the about dialog.
-	*  	while a source build from the same source will <gasp !!>
-	
+	Why: redundant given deps and The deb version will not open the about 
+	dialog.while a source build from the same source will <gasp !!>
+
 Wed 6 Feb 2002 pete <petergozz@users.sf.net>
 	* Added Debian / GNU edition to splash page.
 	* Added unix man page for c2addrbook. and updates man/makefile.am accordingly.
+
 Tue 5 Feb 2002 Pete<petergozz@users.sf.net>
 	* Built new deb. Started on RPM (*&^&%$#@!)
 	* New version of unix man page for cronos as manual.sgml under debian.
@@ -100,27 +109,31 @@ Tue 5 Feb 2002 Pete<petergozz@users.sf.net>
 	* backup original man page.
 	* Added NEWS_OTHER 
 	* Added DESTDIR =    to top level Makefile.am (for Debian builds)
-	* Modified src/utils.c to "fix" an irregular/ accasional compile error. (Removed some underscores from some error messages.) GCC 2.95.
-	* Copied the three plugin.so files to top level so I could get the makefiles to install them without having them try to build them.... Why did it take me sooooo looong to do that ! DOH (again)
+	* Modified src/utils.c to "fix" an irregular/ accasional compile error. 
+	  (Removed some underscores from some error messages.) GCC 2.95.
+	* Copied the three plugin.so files to top level so I could get the makefiles
+	  to install them without having them try to build them.... Why did it take 
+	  me sooooo looong to do that ! DOH (again)
+
 Mon 4 Feb 2002 Pete <petergozz@users.sourceforge.net>
 	* built and broke deb package. ;o (doh!)
 	* Some tidy up work in Fortune plugin. (CVS cleanup)
+
 Wed 19 Dec 2001 Pete <petergozz@users.sourceforge.net>
 	* applied patch1 to Filters
 	* rerelease Filters (Omega final)
 	* put the duller blue folder icon in place
 	* update /plugins/Makefile.am
 	* build cvs free source package
-	
-Tues Dec 18 2001 Pete <petergozz@users.sourceforge.net>
+
+Tue Dec 18 2001 Pete <petergozz@users.sourceforge.net>
 	* Updates for release version
 		* Manual updated
 		* Plugins Docs updated
 		* Filters -0.4.5 version ready
-		
+
 Sat Dec 15 2001 Pete <petergozz@users.sourceforge.net>
 	* Hopefully the final updates to plugins.
-	
 
 Fri Dec 14 2001 Pete <petergozz@users.sourceforge.net>
 	* Applied Daniel Fairheads patches to 
@@ -132,13 +145,11 @@ Fri Dec 14 2001 Pete <petergozz@users.sourceforge.net>
 	I will leave it as default.. Other versions are available from the website.
 	(currently http://cronosii.sourceforge.net/Active_Site/emoticons.php)
 	*Having problems with the filters plugin .... sigh .. Why did I go there ..
-	
-	
-Thur Dec 13 2001 Pete <petergozz@users.sourceforge.net>
+
+Thu Dec 13 2001 Pete <petergozz@users.sourceforge.net>
 	* Brought filters to 0.4.0
 	* Updated source docs to reflect this
 	* Added one Daniel to the splash page (and fixed a typo)
-
 
 Wed Dec 12 2001 Pete Gossner <petergozz@users.sourceforge.net>
 	* Caught a potential install problem in plugins
@@ -154,116 +165,114 @@ Sat Dec 1 2001 (later) Peter Gossner <petergozz@users.sourceforge.net>
 	* (the binaries are compressed with the source files under plugins)
 	
 Sat Dec 1 2001  Peter Gossner  <petergozz@users.sourceforge.net>
-	Fixed the clumbsy error I made to cronosII-config
+	* Fixed the clumbsy error I made to cronosII-config
 
 Fri Nov 30 Peter Gossner <petergozz@users.sourceforge.net>
-	Added  versions.h to src/Makefile.am
-	Revised icons. src/xpm [GIMP rules all]
-	Edited some status messages on the main window.
-	Noted that those on the message mouse button3 menu 
-	not functional.
-	The Mad Prof patch stable. :)
-	Having great fun with my local cvs ...
-	Plugins still not making ... mm by mm I am tracking those ....
-		
+	* Added  versions.h to src/Makefile.am
+	* Revised icons. src/xpm [GIMP rules all]
+	* Edited some status messages on the main window.
+	* Noted that those on the message mouse button3 menu 
+	  not functional.
+	* The Mad Prof patch stable. :)
+	* Having great fun with my local cvs ...
+	* Plugins still not making ... mm by mm I am tracking those ....
 
 Fri Nov 30 2001 Peter Gossner <petergozz@users.sourceforge.net>
-	changed  some of the icons for a fresher look.
-	have tried to get plugins to work but not yet.
-
+	* changed  some of the icons for a fresher look.
+	* have tried to get plugins to work but not yet.
 
 Thu Nov 29 07:48:41 CST 2001 Peter Gossner <petergozz@users.sourceforge.net>
-	applied the MadProfs (aka  Daniel Fairhead ) patches to net.c
-	and  gui-composer.c
+	* applied the MadProfs (aka  Daniel Fairhead ) patches to net.c
+	  and  gui-composer.c
 
-Wed Nov 28	Peter Gossner <petergozz@users.sourceforge.net>
-	Some minor graphics updates.
-	Fixed the lack of splash image .
+Wed Nov 28 2001	Peter Gossner <petergozz@users.sourceforge.net>
+	* Some minor graphics updates.
+	* Fixed the lack of splash image .
 	
 
 Mon Nov 12 16:41:09 CST 2001  Peter Gossner <petergozz@users.sourceforge.net>
-	Not much new just some tidy ups and updates to config.in.
-	updated configure messages in prep for some more work.
-	
+	* Not much new just some tidy ups and updates to config.in.
+	* updated configure messages in prep for some more work.
 
 Sun Aug 26 10:28:07 CST 2001 Peter Gossner <petergozz@users.sourceforge.net>
-        Minor spelling updates: Across the whole application and source notes.
-	Trying to understand the Queue process.
-	Mostly work about the Addressbook.
-	Some prepwork for a possible MR2 release.
-	
+        * Minor spelling updates: Across the whole application and source notes.
+	* Trying to understand the Queue process.
+	* Mostly work about the Addressbook.
+	* Some prepwork for a possible MR2 release.
+
 Mon Jul  9 18:16:49 CST 2001 Peter Gossner <petergozz@users.sourceforge.net>
-	initiated Change Log format above. (emacs auto detects this)
-	Many small changes. Some final spell checking (because I couldn't stand it any more)
-	Hopefully have intergrated the manual into the build process in a very simple way. (after some 4 different variations) . This should pay off with scrollkeeper looming.
-	config.in altered to reflect this maintenance release.
-	edits to gui-preferences.c
-	edited cronosII.png to clearly show this release.
-	
+	* initiated Change Log format above. (emacs auto detects this)
+	* Many small changes. Some final spell checking (because I couldn't stand it any more)
+	* Hopefully have intergrated the manual into the build process in a very simple way.
+	  (after some 4 different variations) . This should pay off with scrollkeeper looming.
+	* config.in altered to reflect this maintenance release.
+	* edits to gui-preferences.c
+	* edited cronosII.png to clearly show this release.
+
 º Sun Apr 15 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
-- Spanish translation.
-- Fixed bug #416303.
+	- Spanish translation.
+	- Fixed bug #416303.
 
 º Sat Apr 14 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
-- Cronos II Development manual.
-- Updated Cronos II Plugin Development manual.
-- Fixed bug in the pop module (for the filters plugin).
-- Spanish translation.
-
+	- Cronos II Development manual.
+	- Updated Cronos II Plugin Development manual.
+	- Fixed bug in the pop module (for the filters plugin).
+	- Spanish translation.
+	
 º Fri Apr 13 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
-- Cronos II Development manual.
+	- Cronos II Development manual.
 
 º Tue Apr 12 2001 Pier Carteri <m3tr0@dei.unipd.it> º
-- Updated italian translation.
+	- Updated italian translation.
 
 º Tue Apr 12 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
-- Autocompletition based on the email address.
-- UI-Address Book. When adding an entry to the group list the entry will get
-  empty.
-- Added some help text in the New/Edit vCard in the address book.
-- Work along the new es.po translation.
+	- Autocompletition based on the email address.
+	- UI-Address Book. When adding an entry to the group list the entry will get
+	  empty.
+	- Added some help text in the New/Edit vCard in the address book.
+	- Work along the new es.po translation.
 
 º Tue Apr 12 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
-- Compilation warning fixes.
+	- Compilation warning fixes.
 
 º Sun Apr 08 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
-- Part of Spanish translation.
-- The address book can now be accessed from the foot menu and from the gmc menu.
-- The address book is now a separated program from c2.
-- Patch in order to facilitate Bosko the writing of a plugin for the pop module.
-- Changes in order to the c2addrbook program, once its closed, doesn't goes to the
-  background and keep bothering there.
+	- Part of Spanish translation.
+	- The address book can now be accessed from the foot menu and from the gmc menu.
+	- The address book is now a separated program from c2.
+	- Patch in order to facilitate Bosko the writing of a plugin for the pop module.
+	- Changes in order to the c2addrbook program, once its closed, doesn't goes to the
+	  background and keep bothering there.
 
 º Sun Apr 08 2001 Yves Mettier <ymettier@libertysurf.fr> º
-- Patch in order to include some required headers.
-- French translation.
+	- Patch in order to include some required headers.
+	- French translation.
 
 º Sat Apr 07 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
-- Fixed bug that wouldn't detect previous versions when the other version is stable.
+	- Fixed bug that wouldn't detect previous versions when the other version is stable.
 
 º Thu Apr 05 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
-- Fixed the crash when a mail with no content is selected.
-- Updated the POTFILES.in file.
+	- Fixed the crash when a mail with no content is selected.
+	- Updated the POTFILES.in file.
 
 º Thu Apr 05 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
-- Changes in order to create the Queue mailbox when the user is upgrading from
-  an old Cronos II version.
-- Changes in order to be able to add a card when someone sends a vCard as attachment.
+	- Changes in order to create the Queue mailbox when the user is upgrading from
+	  an old Cronos II version.
+	- Changes in order to be able to add a card when someone sends a vCard as attachment.
 
 º Wed Apr 04 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
-- Fixed the crash when clicking in the previous or next btn with no mail selected.
+	- Fixed the crash when clicking in the previous or next btn with no mail selected.
 
 º Tue Apr 03 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
-- Fixed two bug in the patch sent by André (wm_sendqueue_clicked_thread).
+	- Fixed two bug in the patch sent by André (wm_sendqueue_clicked_thread).
 
 º Mon Apr 02 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
-- Fixed annoyance in the Address Book::Personal Information, when writing a
-  first name and a last name without a middle name, the show name wouldn't
-  have the " " separating the two names.
-- Fixed crash due to the previous change.
-- Changes in the UI of the Composer.
-- The selecting of a destination from a list in the Composer window is working
-  (single contacts and group contacts too!).
+	- Fixed annoyance in the Address Book::Personal Information, when writing a
+	  first name and a last name without a middle name, the show name wouldn't
+	  have the " " separating the two names.
+	- Fixed crash due to the previous change.
+	- Changes in the UI of the Composer.
+	- The selecting of a destination from a list in the Composer window is working
+	  (single contacts and group contacts too!).
 
 º Sat Mar 31 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
 - Fixed a crash when editing a card that doesn't have a birthday written.
