@@ -47,7 +47,10 @@ sock_printf (int sock, const char *fmt, ...) {
   str = g_strdup_vprintf (fmt, args);
   va_end (args);
 
+#ifdef USE_DEBUG
   printf ("C: %s\n", str);
+#endif
+  
   rt = send (sock, str, strlen (str), 0);
   c2_free (str);
   return rt;
@@ -83,8 +86,11 @@ sock_read (int sock, int *timedout) {
 		}
   }
   str[1023] = '\0';
-
+  
+#ifdef USE_DEBUG
   printf ("S: %s\n", str);
+#endif
+  
   return g_strdup (str);
 }
 

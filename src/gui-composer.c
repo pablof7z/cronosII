@@ -310,9 +310,17 @@ c2_composer_new (Message *message, C2ComposerType type) {
     gtk_widget_show (widget->header_titles[HEADER_TITLES_TO][1]);
     gtk_widget_show_all (widget->header_titles[HEADER_TITLES_TO][2]);
   }
+  
   if (message) {
     if (type == C2_COMPOSER_REPLY || type == C2_COMPOSER_REPLY_ALL) {
       buf = message_get_header_field (message, NULL, "\nReply-To:");
+      
+      /** Mailing-list stuff. **/
+      /** Patch by Daniel Fairhead **/
+      if (!buf) buf = message_get_header_field (message, NULL, "\nMail-Followup-To:");
+      if (!buf) buf = message_get_header_field (message, NULL, "\nX-Loop:"); 
+      if (!buf) buf = message_get_header_field (message, NULL, "\nList-Post:"); 
+
       if (!buf) buf = message_get_header_field (message, NULL, "\nFrom:");
       if (buf) {
 	gtk_entry_set_text (GTK_ENTRY (widget->header_titles[HEADER_TITLES_TO][1]), buf);
