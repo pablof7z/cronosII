@@ -1,10 +1,10 @@
 #include <cronosII.h>
 #include <gnome.h>
 #include <stdio.h>
-
+/*Nb LINE 190 (WMain->status) commented out --pete */
 /* Check if the local compilation supports plugins */
 #ifndef USE_PLUGINS
-#error "You can't compile a plugin for Cronos II since it was compiled without plugins support. You should recompile the Cronos II source if you want to use this plugin."
+#error "You can't compile a plugin for Cronos II since it was compiled without plugins support. Recompile with ./configure --enable-plugins (and whatever else you want) ."
 #endif
 
 /* Required version */
@@ -187,7 +187,7 @@ plugin_on_check_new_account (Account *account) {
   
   message = g_strdup_printf ("Checking account %s", account->acc_name);
   gdk_threads_enter ();
-  gnome_appbar_set_status (GNOME_APPBAR (WMain->status), message);
+  /*  gnome_appbar_set_status (GNOME_APPBAR (WMain->status), message);*/
   gdk_threads_leave ();
 }
 
