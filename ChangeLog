@@ -1,7 +1,8 @@
 Tue 12 Feb 2002 pete <petergozz@users.sf.net>
 	* Edits to cronosII-config.in (devversion) , src/gui-about.c, man/makefile.am
-	configure.in (versioning) other minor stuff I can't remeber but they will be commented.
+	configure.in (versioning) other minor stuff I can't remember but they will be commented.
 	* upload to cvs.
+	* update manual pages. doc/C/cronosII.sgml
 Mon 11 Feb 2002 pete <petergozz@users.sf.net>
 	* Changed about dialog and cronosII-config to show MR2 RPM edition
 	* Left gui-about.c with gtk stuff commented out.
