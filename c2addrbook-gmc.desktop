@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Contact
+Name[es]=Contacto
+Comment=A book to manage your contacts
+Comment[es]=Una libreta para manajer sus contactos
+Exec=c2addrbook
+Icon=c2addrbook.png
+Terminal=0
+Type=Application
