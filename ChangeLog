@@ -1,3 +1,11 @@
+Sun Apr 14 2002 pete <petergozz@users.sf.net>
+	* Version now at 0.2.2.23 standby for a release
+	* Plugins all repacked to Angel Ramos specs (with some minor mods)
+	* Nohtml by Daniel added (offically) to the package.
+	* Fixed stupid typo in CronosII-config (doh!) a while back.
+	* Having some major grief with i18n again (my debian install at fault)
+	* However ./configure --disable-nls will help if you have this problem.
+	
 Thurs 21 Feb  2002 pete <petergozz@users.sf.net>
 	* All packages uploaded to release site.
 	* Manual images fixups goes on. Should NOW be OK.
