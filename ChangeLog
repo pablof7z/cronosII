@@ -1,4 +1,7 @@
-
+Thur May 2 2002  pete <petergozz@users.sf.net>
+	* Minor stuff commits mostly to confirm sites mirrors my source and via versa. 
+	* Stange null failure from account.c on make. removed a couple of tabs and all built fine. I am beginning to suspect gnomeui libs. (just intuition)
+	
 Wed Apr 24 2002 pete <petergozz@users.sf.net>
 	* updated nohtml binary 
 	* incremented version number this version now 0.2.2.24

@@ -86,10 +86,10 @@ void load_account (Account **head, char *info) {
    }
 
   if (new->type == C2_ACCOUNT_POP) {
-    new->protocol.pop.usr_name		= str_get_word (9, info, '\r');
-    new->protocol.pop.pass		= str_get_word (10, info, '\r');
-    new->protocol.pop.host		= str_get_word (11, info, '\r');
-    new->protocol.pop.host_port		= (int) atoi (str_get_word (12, info, '\r'));
+    new->protocol.pop.usr_name	= str_get_word (9, info, '\r');
+    new->protocol.pop.pass  = str_get_word (10, info, '\r');
+    new->protocol.pop.host	= str_get_word (11, info, '\r');
+    new->protocol.pop.host_port 	= (int) atoi (str_get_word (12, info, '\r'));
     new->always_append_signature	= (int) atoi (str_get_word (13, info, '\r'));
     new->signature			= str_get_word (14, info, '\r');
   } else if (new->type == C2_ACCOUNT_SPOOL) {
