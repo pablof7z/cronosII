@@ -1,0 +1,278 @@
+<!-- accounts.sgml -->
+<!--parent cronosII.sgml -->
+<!--<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V4.1//EN"[]>-->
+
+<sect1 id="accounts">
+<title>Setting up your accounts</title>
+<para>One of &app;'s major features is its  simple, flexible account support and configuration. Multiple POP and SMTP accounts are supported. These accounts may be almost anywhere ( your local computer included). &app; treats all mail accounts equally. You can for example route all your out going mail through your local MTA (Mail Transport Agent) and use other powerful mail filtering and queueing tools in combination with &app;</para>
+
+<para>Initially we will step through activating  POP accounts. </para>
+<note><para>Please open a current working version of &app; to use as you work through this.</para></note>
+	<sect2 id="configuration-pop-accounts">
+  	<title>POP Accounts</title>
+    	<para>&app; enables you to have many different POP (Post Office Protocol) accounts.</para>
+  	<para>Here's how to set up your first POP account:</para>
+  	<orderedlist>
+  	<listitem>
+  		<para>Open the <interface>Account Configuration Dialog</interface>
+  		 from the <link linkend="mainwindow">Main Window.</link>
+  		<programlisting>Settings -> Preferences -> Mail / Accounts</programlisting>
+  		</para>
+  	</listitem>
+  	<listitem>
+  		<para>The dialog that opens has a large open window with re-sizable column headers, some task buttons to the right, and some completion functions at the bottom. (It's not as bad as it sounds).
+  		 </para>
+  		 <para><programlisting> Select New (on the right)</programlisting>
+  		 A Dialog not unlike a Druid or Wizard opens to steer you onward.
+  		 You need to decide which type of Email account you wish to set up.
+  		 </para> 
+  		 <para>Currently you are given the choice of "Spool" (a UNIX style mail-spool ) or a POP account.
+  		 </para>
+  		 <para> Click on either of them to get more information.</para>
+  	</listitem>
+  	<listitem>
+  	 <para>This time select<programlisting>POP -> NEXT</programlisting>
+  	 </para>
+  	 <para>For Spool Accounts see <xref linkend="configuration-spool-accounts"/> below.</para>
+  	 <para>The <interface>New Account Dialog</interface> should open.</para>
+  	 <para>This dialog has 4 tabbed pages where you enter information to configure a functioning account.</para>
+  	 		<orderedlist>
+  	 		<listitem><para>Account Name</para>
+  	 		<para>Give this account a name. Something to clearly identify it. </para>
+	                                <para>For example you might call this &quot; POPatISP &quot; or something. Don't worry you can do it all again later if you need to.</para>
+  	 		</listitem>
+  	 		<listitem>
+  	 		<para>Name</para>
+  	 		<para>Your local user name will do here.</para>
+  	 		<para>This name will be quoted when you reply to and send mail</para>
+	                                <para>For example: J R Ahacker.</para>
+	    <para>This is who your mail will be FROM </para>
+  	 		</listitem>
+  	 		<listitem>
+  	 		<para> E-mail</para>
+  	 		<para>Your E-mail address at that account</para>
+	                                <para>This needs to be a correct and real email address with  a recognised ( DNS ) Internet node. (your ISP for example or another place you can connect to where you have a POP account)</para><para>If your part of a sub-net or large network you should have been given an email address, for now use that.</para>
+  	 		</listitem>
+  	 		</orderedlist>
+  	</listitem>
+  	<listitem>
+  	<para>Once you have finished entering that..<programlisting>Select the <interface> Protocol </interface>
+  	</programlisting>
+  	</para>
+  	<para>Here we have to get a little more exact ! </para>
+  	<para> Enter the following
+  	 as provided  by your Internet Service Provider or System Administrator.</para>
+  	 		<orderedlist>
+  	 		<listitem>
+  	 		<para>User Name</para>
+  	 		<para>Enter your user name at your MAIL SERVER  [e-x-a-c-t-l-y] </para>
+	    <para>This is  not the same as your local user name, but it can be and may well be on large networks.</para>
+  	 		</listitem>
+  	 		
+  	 		<listitem>
+  	 		<para>Password</para>
+  	 		<para>Enter the password you were issued (or have set up) </para>
+  	 		</listitem>
+  	 		
+  	 		<listitem>
+  	 		<para>
+  	 		POP Server:
+  	 		</para>
+  	 		<para>
+  	 		Enter the name of the pop server (your incoming mailbox <emphasis>at the server</emphasis>)
+  	 		</para>
+  	 		<para>
+  	 		 This is often in the format of <programlisting>pop.yourisp.domain.region</programlisting>
+  	 		</para>
+  	 		</listitem>
+  	 		
+  	 		<listitem>
+  	 		<para>
+  	 		SMTP (Simple Mail Transfer Protocol)
+  	 		 </para>
+  	 		<para>
+  	 		Enter the name of the out going mail server. 
+  	 		</para>
+  	 		<para>
+  	 		This often looks like
+  	 		<programlisting>mail.yourisp.domain.region</programlisting>
+  	 		</para>
+  	 		<para>
+  	 		<emphasis>Check all of this.</emphasis>
+  	 		</para>
+  	 		</listitem>
+  	 		
+  	 		<listitem>
+  	 		<para>Ports</para>
+  	 		<para>The default ports set for the POP and SMTP servers should be fine for most people.
+  	 		</para>
+  	 		<para>
+  	 		Your ISP or System Administrator should let you know if others are needed. 
+  	 		(firewalls, intranets, mail monitoring,  or other server level issues may be cause for other ports to be used.)
+  	 		</para>
+  	 		</listitem>
+  	 		</orderedlist>
+   </listitem>
+   	<listitem>
+   	<para>Mailbox</para>
+   	<para>Next choose the Mailbox Tab</para>
+   	<para>Here you can associate <guisubmenu>This Account</guisubmenu>
+   	 with a<guisubmenu> Particular Mailbox. </guisubmenu>
+   	If you haven't personalised your mailboxes yet just choose the <interface>IN-BOX. </interface> You may change this at any time later.
+   	</para>
+   	</listitem>
+   	<listitem>
+   	<para>
+   	Signature
+   	</para>
+   	<para>
+   	Enter a signature to sign email for this account. Many people have very clever ASCII
+   	Art Creations here but your name and email address will be more than sufficient for now.
+   	
+   	</para>
+   	<para>
+   	By checking the toggle button at the bottom of the dialog &app; will Automatically sign each Email
+   	for this account.
+   	</para>
+   	<para>There is at least one<link linkend="plugins"> plug-in</link> for &app; which enables a very high level of customisation for signatures (.sigs) including automatically adding the output of  <application>Fortune</application>to the end of your message.</para>
+   	<para> You might also consider adding your digital signature or a time stamp when your message may need authentication.</para>
+   	</listitem>
+   	<listitem>
+   	<para>Advanced Tab</para>
+   	<para>Here are two simple check boxes.</para>
+   	
+   	<para>Keeping the messages on the server is a great way of <emphasis>Temporarily</emphasis> Storing your mail (off-site).
+   	However some ISP providers may get cross if you build up huge amounts of storage at the server. (and may charge you accordingly)
+   	This function may also be useful for people who work with shared mail, or if you are accessing the account from your laptop or somewhere other than your "home machine".
+   	</para>
+   	<para>By default the new account will be activated (when first you use it)
+   	 to Deactivate the account dselect the second box.
+   	 </para>
+   	 
+   	</listitem>
+   	<listitem>
+   	<para>OK</para>
+   	<para>All finished ? </para>
+   	<para> Your new POP account should be ready to use.
+   	 You just repeat the above steps for as many POP accounts as you have, or add later.</para>
+   	</listitem>
+   	</orderedlist>
+</sect2>
+<sect2 id="configuration-spool-accounts">
+   	<title> Spool Accounts</title>
+   	<para>
+   	The process involved in configuring a spool account is much the same as that used  to set 
+   	up a  POP account: See <xref linkend="accounts">
+   	</para>
+   	<para>Navigate to the accounts setup dialog:</para>
+   	<para><programlisting>Setting ->  Preferences ->  Accounts  -> New</programlisting></para>
+   	<para>The Account Type Dialog opens:  Select <interface>Spool</interface> then<interface> Next.</interface></para>
+   	<para> The <guimenu>New Accounts</guimenu> Dialog Opens:  This is just the same as 
+   	that used in <xref linkend="configuration-pop-accounts"></para>
+   	<para> The difference here is that you are asking cronos to <emphasis>download mail</emphasis> from your local network spool account.
+   	Many (most ?)<trademark> UNIX </trademark> environments build you a mailbox somewhere under the
+   	<programlisting> /var/spool/mail/user-name </programlisting>
+   	or similar directory when a new User Account is created. .
+   	 </para>
+	<para>The most common Mail server on these systems is<application> Sendmail </application>
+	</para>
+
+
+	<para>
+	 Now, given that your system is like this,  the following entries need to be made 
+	on the <interface>Protocol</interface> page of the <guimenu>New Account Dialog</guimenu>:
+	</para>
+	<itemizedlist>
+		<listitem><para>File:</para>
+		<para>Navigate to your mail box under the /var directory...(use the button to the right)
+		</para>
+		<para>Select Your-mail-box.</para>
+		</listitem>
+		<listitem>
+		<para>SMTP</para>
+		<para>Enter your local mail server application name. (try<application> sendmail </application>as a default)
+		</para>
+<para>If you have a Mail Transport Agent configured for off-site deliveries enter the name of your server. This is almost always the same as your system hostname. Type "hostname" at a terminal prompt to find this out. As a default you might try "localhost" (in fact &app; tries this for you) .</para>
+	<tip>
+	 <para>See <xref linkend="MTA"/> for more information about<emphasis> Local Mail Servers.</emphasis></para>
+	</tip>
+		</listitem>
+		<listitem>
+		<para>Port</para>
+		<para>The default setting of 25 will work fine for most people with the command<application> sendmail </application>
+	Your<application> sendmail </application>port may have been
+		 moved by your distribution or system administrator. Either way 
+		this should be documented somewhere. Resist the temptation to 
+		play with the<application> sendmail </application>configuration scripts. (for now)
+		</para>
+		</listitem>
+</itemizedlist>
+		
+		<para>
+		 On the remaining  two pages associate a mailbox with this account and choose
+		optionally to keep the mail on the server  and to activate the account (or it won't work).
+		</para>
+		<para>
+		Select OK and then Apply from the remaining <guisubmenu>Preferences</guisubmenu>
+		dialog.
+		</para>
+		<para>Close the <guisubmenu>Preferences</guisubmenu> dialog and your new spool account should be ready to go. </para>
+<para>If you haven't configured the rest of &app; ( e.g. mailboxes, fonts etc ) you really should go and get<link linkend="mid-config"> familiar with the rest of &app;.</link> You can always come back to this section.</para><para> If your new at all of this email stuff you definitely should get some experience with the above basic set up before you tackle MTA's and such.
+		</para>
+</sect2>
+<sect2 id="localmail-servers">
+    <title>Some More Spool Options</title>
+<para>Here we enter a slightly more advanced area. Make sure you have everything else working before you try some of the following features.</para>
+	
+<sect3 id="MTA">
+<title>Using a local Mail Transport Agent</title>
+      <para><application> A Mail Transport Agent</application> (MTA) is the application that <emphasis> sends your mail</emphasis> to an email address on your network or the Internet. (It's just a big network after all) . &app; is a <application>Mail User Agent</application>, a client that fetches your mail from the mailbox the MTA delivered it to.</para>
+      <para>Your system may have one of  
+<application>Exim</application>  <application>Postfix</application> or <application>Sendmail</application>Installed.  I have tested all of these and they all work well. You will need to give the MTA the domain name of a "Smart Host". This can be the name you gave for the SMTP section of your POP account. (Often:  mail.yourisp.com.region ) </para>
+<tip><para>There is extensive documentation available for these MTA's . Start with the man pages for the App installed on your system and do a search for the latest versions and info.</para></tip>
+<para>The<application> procmail</application> - autonomous mail processor, is  often installed and can perform some of the functions of a MTA and do a lot of other useful stuff.  For lots of good security reason these applications are usually available only to the administrator or other trusted users. However normal users can access the services they provide. If you have the binary sendmail (look under /usr/sbin) then you probably have an MTA of some sort installed on your system.</para>
+      <warning>
+
+    <para>The installation and configuration of these is best left to the more experienced. <application>Exim</application>  installs and configures readily onto Debian systems (at least) and has the advantage of being fully Open Source. (GPL licence).</para>
+<para>The actual command,  "sendmail" may not be available to you (for security reasons). Don't worry it will still work. See the following section.</para> </warning>
+<note>
+      <para>The above <emphasis>default</emphasis> description of <link linkend="configuration-spool-accounts">SPOOL account configuration</link> should work on most <application>LINUX or BSD</application>systems.</para>
+<para> However if your local MTA is set up for moving mail off site, well then why not use it?</para>
+<para>Here's how:</para></note>
+<sect3 id="smtp-spool">
+<title>Your Localhost</title>
+      <orderedlist>
+	<listitem><para>Set up an account (best with it's own mail box) as described in the <link linkend="configuration-spool-accounts">spool section above.</link> </para>
+	</listitem>
+	<listitem>
+	  <para>Make sure you enter a legitimate (and known)  email address into the email field.</para>
+	  </listitem>
+	<listitem>
+	<para>For now, choose your default mail spool (e.g. /var/mail/user). Note though, that any other "Mail" style file may be used as the source. e.g. ~/mbox </para>
+	</listitem>
+	<listitem><para>From this account, you should  be able to send mail to other users on your local network (or stand-alone machine) <emphasis>and send mail out, i.e. off-system </emphasis>via the Internet.(or whatever). The MTA will usually hold on to the message for you until you have a working network connection. (This includes but is not limited to TCP/IP (Internet))</para>
+	  </listitem>
+      </orderedlist>
+<para>This approach offers you all the benefits of using a dedicated MUA (&app:) and all the functions that your MTA ( e.g. Sendmail ) offers. These include the ability to send mail while not connected, powerfull filtering, address aliasing, batching mail and even running mailing lists. Locally it means you can use the same interface to do all your mailing.</para>
+</sect3>
+<sect3 id="mta-tips">
+<title>Some Random Tips</title>      
+<tip><para>Set up seperate mailboxes for each account and identity.</para>
+<para>Use the Filters plugin for simple mail sorting and or to further refine any sorting done by procmail
+or your MTA.</para>
+	<para>Order your accounts so that the one you use most is first. (account 1)</para>
+	<para>If you have a working MTA use it by default (account 1)</para>
+	<para>Your &app; mailboxes and major configuration files are found under  $<command>cd  ~/.CronosII/</command></para>
+	<para>Most configuration commands (including the Address Book) require you to set the change and then save it. Broadly this is like " try " and " ok " under Gnome.</para>
+	<para>If you use a command line mailer  "mutt" "pine" "mail" etc. You can link the mboxes to &app; (via a local smtp / spool account). This is for reading only. &app; does not save mails in the "mail" style. </para>
+	<para>You can also do this with the Netscape mailer, though the results are not elegant.</para>
+	<para>Archive your mail regularly. Perhaps "cron" can do this for you.</para>
+	<para>The lines of "?????????????" in mail files are &app;'s way of deleting stuff. Always copy or move to a &app; mailbox. Don't let &app; manage another mail apps files.. (generally speaking) </para>
+      </tip>	
+
+	
+
+</sect3>
+</sect2>
+</sect1>
+   	
