@@ -1,3 +1,9 @@
+Wed Dec 12 2001 Pete Gossner <gossner@arcom.com.au>
+	* Caught a potential install problem in plugins
+	* Added the binaries etal for the sample plugin
+	* Updated the relevant READMEs in the plugin directories.
+	
+
 Sat Dec 1 2001 (later) Peter Gossner <petergozz@users.sourceforge.net>
 	* applied and traced all patches needed to build plugins to version 0.2.1
 	* still unable to get a build with 0.2.2  However.:::
