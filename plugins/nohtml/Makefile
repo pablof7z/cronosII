@@ -10,10 +10,10 @@ $(BIN) : $(OBJECTS)
 	$(CC) $(LDFLAGS) $(CFLAGS) -I../../ -DSKIPCONFIG -shared -Wl,-soname,nohtml.so -o $@ $(OBJECTS) -lc
 
 nohtml.o : nohtml.c
-	$(CC) `gnome-config --cflags gnome gnomeui` nohtml.c -c
+	$(CC) -fPIC `gnome-config --cflags gnome gnomeui` nohtml.c -c
 
 configure.o : configure.c
-	$(CC) `gnome-config --cflags gnome gnomeui` configure.c -c
+	$(CC) -fPIC `gnome-config --cflags gnome gnomeui` configure.c -c
 
 clean :
 	rm -f core $(OBJECTS) $(BIN)

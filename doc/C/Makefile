@@ -1,5 +1,5 @@
 # Generated automatically from Makefile.in by configure.
-# Makefile.in generated automatically by automake 1.4 from Makefile.am
+# Makefile.in generated automatically by automake 1.4-p4 from Makefile.am
 
 # Copyright (C) 1994, 1995-8, 1999 Free Software Foundation, Inc.
 # This Makefile.in is free software; the Free Software Foundation
@@ -19,7 +19,7 @@ SHELL = /bin/sh
 
 srcdir = .
 top_srcdir = ../..
-prefix = /usr/local
+prefix = /usr
 exec_prefix = ${prefix}
 
 bindir = ${exec_prefix}/bin
@@ -64,8 +64,8 @@ host_alias = i686-pc-linux-gnu
 host_triplet = i686-pc-linux-gnu
 AS = @AS@
 AWK = mawk
-CATALOGS = 
-CATOBJEXT = 
+CATALOGS =  br.gmo de.gmo es.gmo fr.gmo it.gmo
+CATOBJEXT = .gmo
 CC = gcc
 CFLAGS = -Wall -I/usr/include/glib-1.2 -I/usr/lib/glib/include -D_REENTRANT -DUSE_GNOME -g  -I/usr/include/gnome-1.0 -DNEED_GNOMESUPPORT_H -I/usr/lib/gnome-libs/include -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include
 DATADIRNAME = share
@@ -73,7 +73,7 @@ DLLTOOL = @DLLTOOL@
 FEATURES = " 'Debugging Enabled' 'plugins' 'cache' 'address book'"
 GENCAT = 
 GMOFILES =  br.gmo de.gmo es.gmo fr.gmo it.gmo
-GMSGFMT = 
+GMSGFMT = /usr/bin/msgfmt
 GNOME_CONFIG = /usr/bin/gnome-config
 GNOME_PRINT_CFLAGS = -I/usr/include/gnome-1.0 -I/usr/include/freetype2 -DNEED_GNOMESUPPORT_H -I/usr/lib/gnome-libs/include -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include -I/usr/include/gdk-pixbuf-1.0 -I/usr/include/gnome-xml
 GNOME_PRINT_LIBS = -rdynamic -L/usr/lib -L/usr/X11R6/lib -lgnomeprint -lgnomeui -lgdk_imlib -lSM -lICE -lgnome -lgnomesupport -lesd -laudiofile -ldb-3 -lgdk_pixbuf -lgtk -lgdk -lgmodule -lglib -ldl -lXi -lXext -lX11 -lart_lgpl -lm -lxml -lz -lfreetype
@@ -83,7 +83,7 @@ GTK_LIBS = @GTK_LIBS@
 GT_NO = 
 GT_YES = #YES#
 INCLUDE_LOCALE_H = #include <locale.h>
-INSTOBJEXT = 
+INSTOBJEXT = .mo
 INTLDEPS = 
 INTLLIBS = 
 INTLOBJS = 
@@ -93,17 +93,17 @@ LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LN_S = ln -s
 MAKEINFO = makeinfo
 MKINSTALLDIRS = ./mkinstalldirs
-MSGFMT = 
+MSGFMT = /usr/bin/msgfmt
 NM = /usr/bin/nm -B
 OBJDUMP = @OBJDUMP@
 PACKAGE = cronosII
 POFILES =  br.po de.po es.po fr.po it.po
-POSUB = 
+POSUB = po
 RANLIB = ranlib
 USE_INCLUDED_LIBINTL = no
-USE_NLS = no
+USE_NLS = yes
 VERSION = 0.2.2.23
-cronosIIpath = /usr/local/bin/cronosII-config
+cronosIIpath = /usr/bin/cronosII-config
 glibpath = /usr/bin/glib-config
 gnomepath = /usr/bin/gnome-config
 l = 

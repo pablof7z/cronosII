@@ -1,3 +1,14 @@
+Tue Apr 23 2002 pete <petergozz@users.sf.net>
+	- patched Makefile with Angel Ramos's patch for porting.
+	- rebuilt binaries.
+	- here's the raw diff.
+	
+	- - $(CC) `gnome-config --cflags gnome gnomeui` nohtml.c -c
+        - + $(CC) -fPIC `gnome-config --cflags gnome gnomeui` nohtml.c -c
+	- - $(CC) `gnome-config --cflags gnome gnomeui` configure.c -c
+	- + $(CC) -fPIC `gnome-config --cflags gnome gnomeui` configure.c -c
+
+
 Sun Apr 14 2002 Dan <madprof@madprof.net>
 	- Made BR tag case insensitive.
 	- My first CVS commit! :)

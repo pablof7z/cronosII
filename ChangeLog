@@ -1,5 +1,12 @@
+Tue Apr 23 2002  pete <petergozz@users.sf.net>
+	* patched nohtml Makefile to include a crossplatform thing Angel Needed
+	* NOTE to Plugin developers please use an Existing Makefile as a Template. The compiler switches are needed for porting.
 Mon Apr 22 2002 pete <petergozz@users.sf.net>
 	* updates to cronosII.spec.in for 0.2.2.23-0
+	* lots of "files" added in doc/C/cronosII/*html
+	* listed all the images in doc/C/cronosII/stylesheets*/*.gif
+	(as installed)
+	
 Sun Apr 21 2002 pete <petergozz@users.sf.net>
 	* updates to .spec for rpm
 
