@@ -1,0 +1,8 @@
+Mon Apr  8 15:33:48 CST 2002	Pete <petergozz@users.sf.net>
+
+The idea here is to use a common set of headers for all the plugins.
+This is not to exclude specific headers for a particular plugin.
+You will still need to link in any thing system wide, gnome.h etc.
+
+Don't forget to add any new headers (and all your source files) to the makefile.am in the plugins directory..
+
