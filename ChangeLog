@@ -1,3 +1,8 @@
+Fri Nov 30 2001 Peter Gossner <gossner@arcom.com.au>
+	changed  some of the icons for a fresher look.
+	have tried to get plugins to work but not yet.
+
+
 Thu Nov 29 07:48:41 CST 2001 Peter Gossner <petergozz@users.sourceforge.net>
 	applied the MadProfs (aka  Daniel Fairhead ) patches to net.c
 	and  gui-composer.c
