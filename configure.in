@@ -4,7 +4,7 @@ AM_CONFIG_HEADER(config.h)
 C2_PLUGIN_MAJOR_VERSION=0
 C2_PLUGIN_MINOR_VERSION=2
 C2_PLUGIN_MICRO_VERSION=2
-AM_INIT_AUTOMAKE(cronosII, 0.2.2-22)
+AM_INIT_AUTOMAKE(cronosII, 0.2.2.22)
 
 AC_PROG_CC
 AC_ISC_POSIX
@@ -21,7 +21,6 @@ ALL_LINGUAS="br de es fr it"
 AM_GNU_GETTEXT
 
 CFLAGS="-Wall"
-
 
 dnl *************************************************************************
 dnl ** configure switches ***************************************************
@@ -115,8 +114,9 @@ else
       AC_MSG_RESULT($prefix)
     fi
   fi
-  AC_DEFINE_UNQUOTED(PREFIX, "$prefix")
+   AC_DEFINE_UNQUOTED(PREFIX, "$prefix")
 fi
+
 
 dnl ************************************************************************
 dnl ** GNOME ***************************************************************
@@ -245,6 +245,9 @@ pixmaps/Makefile
 man/Makefile
 cronosII.spec
 ])
+dnl ***************************************************
+dnl	set a variable or two here 
+dnl **************************************************
 
 echo
 echo \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
@@ -252,7 +255,8 @@ echo \* Cronos II $VERSION   \*
 echo \* This is a CVS version of the original CronosII  \*	
 echo \*  Maintenance Release Two   \*	
 echo \*\*\*\*\*\*\*\  Package building version *\*\*\*\*\*\*\*\*\*\*\*
-echo 
+
+
 
 if test "$gnome" = "yes"; then
   echo Building with Gnome.............. : Version $GNOME_VER

@@ -756,7 +756,7 @@ on_delete_clicked_thread (void) {
       read_mid = str_get_word (7, line, '\r');
       if (streq (read_mid, CHAR (s->data))) {
 	if (garbage_path) {
-	  char *buf[7];
+	  char *buf[7]; /*hmm*/
 	  mid_t new_mid;
 	  
 	  buf[0] = str_get_word (0, line, '\r');
@@ -767,10 +767,10 @@ on_delete_clicked_thread (void) {
 	  buf[5] = str_get_word (5, line, '\r');
 	  buf[6] = str_get_word (6, line, '\r');
 	  new_mid = c2_mailbox_get_next_mid (garbage);
-	  
+	   /*FIX ME there is a complier warning here about cast to different pointer types */
 	  fprintf (fd_garbage, "%s\r%s\r%s\r%s\r%s\r%s\r%s\r%d\n",
-	      buf[0], buf[1], buf[2], buf[3], buf[4], buf[5], buf[6], new_mid);
-	  mids_to_add = g_list_append (mids_to_add, (gpointer) new_mid);
+	   buf[0], buf[1], buf[2], buf[3], buf[4], buf[5], buf[6], new_mid);
+	  mids_to_add = g_list_append (mids_to_add, (gpointer) new_mid); 
 	  c2_free (buf[0]);
 	  c2_free (buf[1]);
 	  c2_free (buf[2]);
@@ -780,7 +780,7 @@ on_delete_clicked_thread (void) {
 	  c2_free (buf[6]);
 	}
 
-	/* Check if this mail is unreaded */
+	/* Check if this mail is unread */
 	mark = str_get_word (0, line, '\r');
 	if (*mark == 'N') new_messages--;
 	c2_free (read_mid);
@@ -1227,8 +1227,8 @@ on_move_mail_clicked_thread (char *str_mailbox) {
 	buf[6] = str_get_word (6, line, '\r');
 	new_mid = c2_mailbox_get_next_mid (mailbox);
 	
-	fprintf (fd_mailbox, "%s\r%s\r%s\r%s\r%s\r%s\r%s\r%d\n",
-	    buf[0], buf[1], buf[2], buf[3], buf[4], buf[5], buf[6], new_mid);
+	fprintf (fd_mailbox, "%s\r%s\r%s\r%s\r%s\r%s\r%s\r%d\n", /*FIX ME*/
+                buf[0], buf[1], buf[2], buf[3], buf[4], buf[5], buf[6], new_mid);/*Compiler warning: Cast to integer of different size */
 	mids_to_add = g_list_append (mids_to_add, (gpointer) new_mid);
 	c2_free (buf[0]);
 	c2_free (buf[1]);
@@ -1238,7 +1238,7 @@ on_move_mail_clicked_thread (char *str_mailbox) {
 	c2_free (buf[5]);
 	c2_free (buf[6]);
 	
-	/* Check if this mail is unreaded */
+	/* Check if this mail is not read */
 	mark = str_get_word (0, line, '\r');
 	if (*mark == 'N') new_messages--;
 	c2_free (read_mid);

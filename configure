@@ -733,7 +733,7 @@ fi
 
 PACKAGE=cronosII
 
-VERSION=0.2.2-22
+VERSION=0.2.2.22
 
 if test "`cd $srcdir && pwd`" != "`pwd`" && test -f $srcdir/config.status; then
   { echo "configure: error: source directory already configured; run "make distclean" there first" 1>&2; exit 1; }
@@ -3853,7 +3853,6 @@ fi
 
 CFLAGS="-Wall"
 
-
 gnome=yes
 # Check whether --enable-sysinfo or --disable-sysinfo was given.
 if test "${enable_sysinfo+set}" = set; then
@@ -3912,7 +3911,7 @@ fi
 # Extract the first word of "sed", so it can be a program name with args.
 set dummy sed; ac_word=$2
 echo $ac_n "checking for $ac_word""... $ac_c" 1>&6
-echo "configure:3916: checking for $ac_word" >&5
+echo "configure:3915: checking for $ac_word" >&5
 if eval "test \"`echo '$''{'ac_cv_path_sedpath'+set}'`\" = set"; then
   echo $ac_n "(cached) $ac_c" 1>&6
 else
@@ -3946,7 +3945,7 @@ fi
 
 
 echo $ac_n "checking spool mail directory""... $ac_c" 1>&6
-echo "configure:3950: checking spool mail directory" >&5
+echo "configure:3949: checking spool mail directory" >&5
 if test -d /var/mail; then
   spoolmaildir=/var/mail
 else
@@ -3966,7 +3965,7 @@ XMAILER="CronosII $VERSION"
 # Extract the first word of "uname", so it can be a program name with args.
 set dummy uname; ac_word=$2
 echo $ac_n "checking for $ac_word""... $ac_c" 1>&6
-echo "configure:3970: checking for $ac_word" >&5
+echo "configure:3969: checking for $ac_word" >&5
 if eval "test \"`echo '$''{'ac_cv_path_unamepath'+set}'`\" = set"; then
   echo $ac_n "(cached) $ac_c" 1>&6
 else
@@ -4003,7 +4002,7 @@ if test "_$unamepath" = _; then
   system="unknown"
 else
   echo $ac_n "checking system type""... $ac_c" 1>&6
-echo "configure:4007: checking system type" >&5
+echo "configure:4006: checking system type" >&5
   system=`$unamepath -s`
   echo "$ac_t""$system" 1>&6
   if test "$system" = "Linux"; then
@@ -4013,11 +4012,11 @@ EOF
 
   fi
   echo $ac_n "checking system version""... $ac_c" 1>&6
-echo "configure:4017: checking system version" >&5
+echo "configure:4016: checking system version" >&5
   sysver=`$unamepath -r`
   echo "$ac_t""$sysver" 1>&6
   echo $ac_n "checking machine type""... $ac_c" 1>&6
-echo "configure:4021: checking machine type" >&5
+echo "configure:4020: checking machine type" >&5
   machtype=`$unamepath -m`
   echo "$ac_t""$machtype" 1>&6
 fi
@@ -4025,7 +4024,7 @@ fi
 # Extract the first word of "glib-config", so it can be a program name with args.
 set dummy glib-config; ac_word=$2
 echo $ac_n "checking for $ac_word""... $ac_c" 1>&6
-echo "configure:4029: checking for $ac_word" >&5
+echo "configure:4028: checking for $ac_word" >&5
 if eval "test \"`echo '$''{'ac_cv_path_glibpath'+set}'`\" = set"; then
   echo $ac_n "(cached) $ac_c" 1>&6
 else
@@ -4061,7 +4060,7 @@ if test "_$glibpath" = _ ; then
   { echo "configure: error: Cannot find GLIB: Needed to compile. Download it at ftp://ftp.gtk.org/pub" 1>&2; exit 1; }
 else
   echo $ac_n "checking for GLIB compile flags""... $ac_c" 1>&6
-echo "configure:4065: checking for GLIB compile flags" >&5
+echo "configure:4064: checking for GLIB compile flags" >&5
   GLIB_CFLAGS=`$glibpath --cflags gthread`
   GLIB_LIBS=`$glibpath --libs gthread`
   CFLAGS="$CFLAGS $GLIB_CFLAGS"
@@ -4071,7 +4070,7 @@ echo "configure:4065: checking for GLIB compile flags" >&5
     # Extract the first word of "cronosII-config", so it can be a program name with args.
 set dummy cronosII-config; ac_word=$2
 echo $ac_n "checking for $ac_word""... $ac_c" 1>&6
-echo "configure:4075: checking for $ac_word" >&5
+echo "configure:4074: checking for $ac_word" >&5
 if eval "test \"`echo '$''{'ac_cv_path_cronosIIpath'+set}'`\" = set"; then
   echo $ac_n "(cached) $ac_c" 1>&6
 else
@@ -4104,11 +4103,11 @@ else
 fi
 
     echo $ac_n "checking cronosII-config for a prior installation""... $ac_c" 1>&6
-echo "configure:4108: checking cronosII-config for a prior installation" >&5
+echo "configure:4107: checking cronosII-config for a prior installation" >&5
     if test "_$cronosIIpath" = _; then
       echo "$ac_t""no prior installation found" 1>&6
       echo $ac_n "checking glib-config for a prefix""... $ac_c" 1>&6
-echo "configure:4112: checking glib-config for a prefix" >&5
+echo "configure:4111: checking glib-config for a prefix" >&5
       prefix=`glib-config --prefix`
       echo "$ac_t""$prefix" 1>&6
     else
@@ -4116,11 +4115,12 @@ echo "configure:4112: checking glib-config for a prefix" >&5
       echo "$ac_t""$prefix" 1>&6
     fi
   fi
-  cat >> confdefs.h <<EOF
+   cat >> confdefs.h <<EOF
 #define PREFIX "$prefix"
 EOF
 
 fi
+
 
 if test "$gnome" = yes; then
   # Extract the first word of "gnome-config", so it can be a program name with args.
@@ -5024,7 +5024,8 @@ echo \* Cronos II $VERSION   \*
 echo \* This is a CVS version of the original CronosII  \*	
 echo \*  Maintenance Release Two   \*	
 echo \*\*\*\*\*\*\*\  Package building version *\*\*\*\*\*\*\*\*\*\*\*
-echo 
+
+
 
 if test "$gnome" = "yes"; then
   echo Building with Gnome.............. : Version $GNOME_VER

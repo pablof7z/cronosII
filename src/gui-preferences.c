@@ -1843,7 +1843,7 @@ static void on_mailboxes_delete_btn_clicked (void) {
       !strcmp (mailbox_selected_mbox, MAILBOX_OUTBOX) ||
       !strcmp (mailbox_selected_mbox, MAILBOX_QUEUE) ||
       !strcmp (mailbox_selected_mbox, MAILBOX_GARBAGE)) {
-    g_warning (_("You can't delete the mailbox %s It is required for normal operation\n"), mailbox_selected_mbox);
+    g_warning (_("You can not delete that mailbox %s It is required for normal operation\n"), mailbox_selected_mbox);
     return;
   }
 

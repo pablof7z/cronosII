@@ -25,12 +25,7 @@ MODULE_VERSION=@PACKAGE@-@VERSION@
 module_dirs="$libdir"
 #and because these might come in handy for debugging and sanity
 
-devversion='-MR2-22' 
-# output from date -R 
-conf_time='Tue, 15 Feb 2002 +10:30'
-
-
-
+devversion='-MR2-22
 # stolen from gnome-libs who stoled it from autoconf
 if (echo "testing\c"; echo 1,2,3) | grep c >/dev/null; then
   if (echo -n testing; echo 1,2,3) | sed s/-n/xn/ | grep xn >/dev/null; then
@@ -78,7 +73,7 @@ while test $# -gt 0; do
 	exit 0
 	;;
    --dev)
-	echo @PACKAGE@ @VERSION@ $devversion $conf_time
+	echo @PACKAGE@ @VERSION@  
 	exit 0
 	;;
     --features)

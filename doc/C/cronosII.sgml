@@ -43,10 +43,10 @@ Hope this is of some help.
      </dedication>
      <preface id="manual-preface"><title>Preface</title>
      
-    <para>This is the Users Manual  for CronosII an email application originally  born of the frustrations of  existing email applications and the coding aspirations of a small team of coders scattered rarely across the face of this big blue marble we all call home.
+    <para>This is the Users Manual  for CronosII an email application.
 </para>
-<para>Cronos aspires to simplicity, efficacy, stability and most importantly;<emphasis> whatever else it's users want it to be.</emphasis></para>
-<para>The Book  supplied with the tar ball does not contain developers info. Check out the sources for the guidelines and code. Visit the web-site for more information. Or drop us a line and let us know what you think.</para>
+<para>Cronos II aspires to simplicity, efficacy, stability and most importantly;<emphasis> whatever else it's users want it to be.</emphasis></para>
+<para>This Book  does not contain developers info. Check out the sources for the guidelines and code. Visit the web-site for more information. Or drop us a line and let us know what you think.</para>
     <blockquote><attribution>anon. 2001</attribution><para>Old father time.... he owes me much sleep.</para></blockquote>
      </preface>
   

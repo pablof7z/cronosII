@@ -63,7 +63,21 @@ Changelog
 	* END
 
 	eof
+Sun 17 feb 2002 pete <petergozz@users.sf.net>	
+	The last compiler warning for this version (0.2.2.22) :
+	* gcc version 2.95.4 20010604 (Debian prerelease)  
+	-I/usr/X11R6/include -c gui-window_main_callbacks.c
+	gui-window_main_callbacks.c: In function `on_delete_clicked_thread':
+	gui-window_main_callbacks.c:773: warning: cast to pointer from integer of different size
+	gui-window_main_callbacks.c: In function `on_move_mail_clicked_thread':
+	gui-window_main_callbacks.c:1232: warning: cast to pointer from integer of different size
+
+	check it out. c2_free()  is being stacked with bufs that are defined by the function as char ... (and they are ??)
+	e.g.	buf[6] = str_get_word (6, line, '\r');
+	the pointer(s) set earlier as char: e.g.	 char *buf[7];     (== an array [0--6] of mem "objects" type char ???)
+	Oh well back to the C book ...
 	
+
 	
 	
 

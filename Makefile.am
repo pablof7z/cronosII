@@ -17,12 +17,13 @@ EXTRA_DIST =			\
 	FEATURES		\
 	NEWS			\
 	NEWS_OTHER		\
-	README			\
+	README		\
 	TODO			\
 	ChangeLog		\
 	sample.so		\
 	filters.so			\
-	fortune.so
+	fortune.so		\
+	README-developers.Changelog
 
 Internetdir = $(datadir)/gnome/apps/Internet
 Internet_DATA = cronosII.desktop

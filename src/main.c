@@ -32,7 +32,7 @@
 #include "gui-addrbook.h"
 
 static void
-action_at_start							(void);
+action_at_start	(void);
 
 int main (int argc, char **argv) {
   pthread_t thread;

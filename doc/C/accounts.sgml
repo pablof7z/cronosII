@@ -39,13 +39,13 @@
   	 		<orderedlist>
   	 		<listitem><para>Account Name</para>
   	 		<para>Give this account a name. Something to clearly identify it. </para>
-	                                <para>For example you might call this &quot; POPatISP &quot; or something. Don't worry you can do it all again later if you need to.</para>
+	                                <para>For example you might call this &quot; POP-YourHandle &quot; or something. Don't worry you can do it all again later if you need to.</para>
   	 		</listitem>
   	 		<listitem>
   	 		<para>Name</para>
   	 		<para>Your local user name will do here.</para>
   	 		<para>This name will be quoted when you reply to and send mail</para>
-	                                <para>For example: J R Ahacker.</para>
+	                                <para>For example: J R Handle.</para>
 	    <para>This is who your mail will be FROM </para>
   	 		</listitem>
   	 		<listitem>
@@ -227,10 +227,10 @@
 <sect3 id="MTA">
 <title>Using a local Mail Transport Agent</title>
       <para><application> A Mail Transport Agent</application> (MTA) is the application that <emphasis> sends your mail</emphasis> to an email address on your network or the Internet. (It's just a big network after all) . &app; is a <application>Mail User Agent</application>, a client that fetches your mail from the mailbox the MTA delivered it to.</para>
-      <para>Your system may have one of  
-<application>Exim</application>  <application>Postfix</application> or <application>Sendmail</application>Installed.  I have tested all of these and they all work well. You will need to give the MTA the domain name of a "Smart Host". This can be the name you gave for the SMTP section of your POP account. (Often:  mail.yourisp.com.region ) </para>
+      <para>Your system could in all probability already have a MTA installed.  
+<application>Exim</application>  <application>Postfix</application> or <application>Sendmail</application> are examples of MTA's   that have tested successfully with &app;.  You will need to give the MTA the domain name of a "Smart Host". This can be the name you gave for the SMTP section of your POP account. (Often:  mail.yourisp.com.region ) </para>
 <tip><para>There is extensive documentation available for these MTA's . Start with the man pages for the App installed on your system and do a search for the latest versions and info.</para></tip>
-<para>The<application> procmail</application> - autonomous mail processor, is  often installed and can perform some of the functions of a MTA and do a lot of other useful stuff.  For lots of good security reason these applications are usually available only to the administrator or other trusted users. However normal users can access the services they provide. If you have the binary sendmail (look under /usr/sbin) then you probably have an MTA of some sort installed on your system.</para>
+<para>The<application> procmail</application> - autonomous mail processor, is also often installed and can perform some of the functions of a MTA and do a lot of other useful things.  For lots of good security reason these applications are usually available only to the administrator or other trusted users. However normal users can access the services they provide. If you have the binary sendmail (look under /usr/sbin) then you probably have an MTA of some sort installed on your system.</para>
       <warning>
 
     <para>The installation and configuration of these is best left to the more experienced. <application>Exim</application>  installs and configures readily onto Debian systems (at least) and has the advantage of being fully Open Source. (GPL licence).</para>
@@ -267,7 +267,8 @@ or your MTA.</para>
 	<para>If you use a command line mailer  "mutt" "pine" "mail" etc. You can link the mboxes to &app; (via a local smtp / spool account). This is for reading only. &app; does not save mails in the "mail" style. </para>
 	<para>You can also do this with the Netscape mailer, though the results are not elegant.</para>
 	<para>Archive your mail regularly. Perhaps "cron" can do this for you.</para>
-	<para>The lines of "?????????????" in mail files are &app;'s way of deleting stuff. Always copy or move to a &app; mailbox. Don't let &app; manage another mail apps files.. (generally speaking) </para>
+	<para>The lines of "?????????????" in .CronosII/*mbx/ index mail files are &app;'s way of deleting stuff. (check out Line 795 of gui-window_main_callbacks.c  if you have the source files.)  Always copy or move to a &app; mailbox. Don't let &app; manage another mail apps files.. (generally speaking) </para>
+	  <para>Don't forget about the import and export mailbox tool or the " save to file " utility.</para>
       </tip>	
 
 	

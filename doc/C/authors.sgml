@@ -118,6 +118,9 @@ Daniel has contributed quite a few patches to the MR2 source. These include fixe
 </para>
 </listitem>
 </itemizedlist>
+</sect2>
+<sect2 id="special-thanks">
+    <title>Thanks</title>
 <note><para>The char.bug</para>
 
 <para>A special thanks to the hackers on the<emphasis> Debian (debian.bugs.dist) development newsgroup</emphasis> who fixed some bugs they found running under the Power PC platform. These same patches also fixed some stubborn bugs involving parsing mail headers and config files. As near as I can tell these people where:
@@ -132,7 +135,7 @@ sense of purpose (fear) to the development work.
 <para>Any comments, suggestions, ideas or assistance contact the Development Team @
 <email>"&developers"</email>.
 </para>
-<para>Bugs may be reported via the Bug  Report tool or mailing lists at  the &app; <ulink type="http" url="&website;">web-site</ulink> &website;
+<para>Bugs may be reported via the Bug  Report  button under help or mailing lists at  the &app; <ulink type="http" url="&website;">web-site</ulink> &website;
 You can also use <application>Bug Report
 Tool</application> (<application>bug-buddy</application>), available in the GNOME 
 <guisubmenu>Utilities</guisubmenu> sub-menu of <guimenu>Main
