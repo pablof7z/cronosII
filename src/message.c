@@ -1,4 +1,4 @@
-/*  Cronos II
+/*  Cronos II messsage.c
  *  Copyright (C) 2000-2001 Pablo Fernández Navarro
  *
  *  This program is free software; you can redistribute it and/or modify
@@ -108,7 +108,7 @@ message_get_message_from_file (const char *filename) {
   message->mime = NULL;
 
   if ((fd = fopen (path, "r")) == NULL) {
-    cronos_error (errno, _("Opening the mail file for retrieving it"), ERROR_WARNING);
+    cronos_error (errno, _("Opening the mail file for retrieving "), ERROR_WARNING);
     return NULL;
   }
 

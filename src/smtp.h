@@ -1,4 +1,4 @@
-/*  Cronos II
+/*  Cronos II smtp.h
  *  Copyright (C) 2000-2001 Pablo Fernández Navarro
  *
  *  This program is free software; you can redistribute it and/or modify
@@ -35,23 +35,22 @@ extern "C" {
 int persistent_sock;
 
 void * 
-smtp_main							(void *helper);
+smtp_main    (void *helper);
 
 void
-smtp_persistent_connect						(Pthread3 *helper);
+smtp_persistent_connect	(Pthread3 *helper);
 
 int
-smtp_do_connect							(const char *addr, int port,
-    								 GtkWidget *appbar);
+smtp_do_connect	  (const char *addr, int port,  GtkWidget *appbar);
 
 void
-smtp_do_persistent_disconnect					(gboolean in_gui_thread);
+smtp_do_persistent_disconnect    (gboolean in_gui_thread);
 
 gboolean
-smtp_persistent_sock_is_connected				(void);
+smtp_persistent_sock_is_connected	(void);
 
 gboolean
-smtp_is_busy							(void);
+smtp_is_busy	(void);
 
 #ifdef __cplusplus
 }

@@ -1,4 +1,4 @@
-/*  Cronos II
+/*  Cronos II smtp.c
  *  Copyright (C) 2000-2001 Pablo Fernández Navarro
  *
  *  This program is free software; you can redistribute it and/or modify
@@ -118,7 +118,7 @@ smtp_main (void *data) {
     if (timedout) {
       gdk_threads_enter ();
       gnome_appbar_set_status (GNOME_APPBAR (appbar),
-	  _("Timeout while waiting for a response of the server"));
+	  _("Timeout while waiting for a response from the server"));
       gdk_threads_leave ();
       goto just_leave;
     }
@@ -133,7 +133,7 @@ smtp_main (void *data) {
       else if (strneq (buf, "451", 3)) {
 	gdk_threads_enter ();
 	gnome_appbar_set_status (GNOME_APPBAR (appbar),
-	    _("Error in the delivery of the message because it has ocurred an error "
+	    _("Error in the delivery of the message.An error occurred "
 	      "in the SMTP server."));
 	gdk_threads_leave ();
       }
@@ -147,7 +147,7 @@ smtp_main (void *data) {
       else if (strneq (buf, "500", 3) || strneq (buf, "501", 3)) {
 	gdk_threads_enter ();
 	gnome_appbar_set_status (GNOME_APPBAR (appbar),
-	    _("The SMTP server isn't RFC821 complaiment, please send me an E-Mail "
+	    _("The SMTP server isn't RFC821 compliant, please send me an E-Mail "
 	      "with the hostname address."));
 	gdk_threads_leave ();
       }
@@ -213,7 +213,7 @@ smtp_main (void *data) {
       if (timedout) {
 	gdk_threads_enter ();
 	gnome_appbar_set_status (GNOME_APPBAR (appbar),
-	    _("Timeout while waiting for a response of the server"));
+	    _("Timeout while waiting for a response from the server"));
 	gdk_threads_leave ();
 	goto just_leave;
       }
@@ -256,7 +256,7 @@ smtp_main (void *data) {
 	else if (strneq (buf, "451", 3)) {
 	  gdk_threads_enter ();
 	  gnome_appbar_set_status (GNOME_APPBAR (appbar),
-	      _("Error in the delivery of the message because it has ocurred an error "
+	      _("Error in the delivery of the message because it has occurred an error "
 		"in the SMTP server."));
 	  gdk_threads_leave ();
 	}
@@ -270,7 +270,7 @@ smtp_main (void *data) {
 	else if (strneq (buf, "500", 3) || strneq (buf, "501", 3) || strneq (buf, "503", 3)) {
 	  gdk_threads_enter ();
 	  gnome_appbar_set_status (GNOME_APPBAR (appbar),
-	      _("The SMTP server isn't RFC821 complaiment, please send me an E-Mail "
+	      _("The SMTP server isn't RFC821 compliant, please send me an E-Mail "
 		"with the hostname address."));
 	  gdk_threads_leave ();
 	}
@@ -335,7 +335,7 @@ smtp_main (void *data) {
       if (strneq (buf, "451", 3)) {
 	gdk_threads_enter ();
 	gnome_appbar_set_status (GNOME_APPBAR (appbar),
-	    _("Error in the delivery of the message because it has ocurred an error "
+	    _("Error in the delivery of the message. There has been an error "
 	      "in the SMTP server."));
 	gdk_threads_leave ();
       }
@@ -356,7 +356,7 @@ smtp_main (void *data) {
       else if (strneq (buf, "500", 3) || strneq (buf, "501", 3) || strneq (buf, "503", 3)) {
 	gdk_threads_enter ();
 	gnome_appbar_set_status (GNOME_APPBAR (appbar),
-	    _("The SMTP server isn't RFC821 complaiment, please send me an E-Mail "
+	    _("The SMTP server isn't RFC821 compliant, please send me an E-Mail "
 	      "with the hostname address."));
 	gdk_threads_leave ();
       }
@@ -465,7 +465,7 @@ skip_sending:
       else if (strneq (buf, "451", 3)) {
 	gdk_threads_enter ();
 	gnome_appbar_set_status (GNOME_APPBAR (appbar),
-	    _("Error in the delivery of the message because it has ocurred an error "
+	    _("Error in the delivery of the message because it has occurred an error "
 	      "in the SMTP server."));
 	gdk_threads_leave ();
       }
@@ -624,7 +624,7 @@ just_leave:
       }
     }
 
-    /* If there's no window asociated with this message we
+    /* If there's no window associated with this message we
      * should still look for some X-CronosII headers to mark
      * messages. */
     if (!widget) {
@@ -639,19 +639,19 @@ just_leave:
       buf2 = message_get_header_field (message, NULL, "\nX-CronosII-Message-Action:");
       printf ("%s\n%s\n%s\n", mbox, buf, buf2);
       if (mbox && buf && buf2) {
-L	mid = atoi (buf);
-L	c2_free (buf);
-L	action = (C2ComposerType) atoi (buf2);
+	mid = atoi (buf);
+	c2_free (buf);
+	action = (C2ComposerType) atoi (buf2);
 c2_free (buf2);
 printf ("%s %d\n", buf, action);
-L	if (action == C2_COMPOSER_REPLY || action == C2_COMPOSER_REPLY_ALL) {
-L	  index_mark_as (mbox, -1, mid, C2_MARK_REPLY, 0);
-L	}
+	if (action == C2_COMPOSER_REPLY || action == C2_COMPOSER_REPLY_ALL) {
+	  index_mark_as (mbox, -1, mid, C2_MARK_REPLY, 0);
+	}
 	else if (action == C2_COMPOSER_FORWARD) {
-L	  index_mark_as (mbox, -1, mid, C2_MARK_FORWARD, 0);
-L	}
-L      }
-L    }
+	  index_mark_as (mbox, -1, mid, C2_MARK_FORWARD, 0);
+	}
+      }
+    }
     /* </Check for a widget> */
      
     /* Marks a message (if corresponds) as replied || replied all || forwarded */
@@ -929,7 +929,7 @@ smtp_do_connect (const char *addr, int port, GtkWidget *appbar) {
 	if (appbar) {
 	  gdk_threads_enter ();
 	  gnome_appbar_set_status (GNOME_APPBAR (appbar),
-	      _("Timeout while waiting for a response of the server"));
+	      _("Timeout while waiting for a response from the server"));
 	  gdk_threads_leave ();
 	}
 	goto connect_just_leave;
@@ -939,7 +939,7 @@ smtp_do_connect (const char *addr, int port, GtkWidget *appbar) {
 	  if (appbar) {
 	    gdk_threads_enter ();
 	    gnome_appbar_set_status (GNOME_APPBAR (appbar),
-	        _("The SMTP server isn't RFC821 complaiment, please send me an E-Mail "
+	        _("The SMTP server isn't RFC821 compliant, please send me an E-Mail "
 		  "with the hostname address."));
 	    gdk_threads_leave ();
 	  }
@@ -976,7 +976,7 @@ smtp_do_connect (const char *addr, int port, GtkWidget *appbar) {
 connect_bye_bye_server:
 connect_just_leave:
   /* If we reach here, it means that the connection failed, the socket
-   * will be reasigned with a value of -1 and if it isn't equal to
+   * will be reassigned with a value of -1 and if it isn't equal to
    * -1 it will be closed
    */
   if (sock != -1) close (sock);

@@ -65,7 +65,7 @@ void load_account (Account **head, char *info) {
   else if (streq (buf, "SPOOL"))
     new->type = C2_ACCOUNT_SPOOL;
   else {
-    g_warning (_("An unknown protocol has been set, not suported by the current version of Cronos II: %s\n"),
+    g_warning (_("An unknown protocol has been set, not supported by the current version of Cronos II: %s\n"),
 	  	buf);
     return;
   }
@@ -80,7 +80,7 @@ void load_account (Account **head, char *info) {
   mbox_search = search_mailbox_id (config->mailbox_head, mailbox);
 
   if (mbox_search == NULL) {
-	g_warning (_("Couldn't find mailbox with ID %d, specified in your configuration file in the mailbox linked list.\nThis might cause serious bugs in the future.\n"), mailbox);
+	g_warning (_("Could not find mailbox with ID %d, specified in your configuration file in the mailbox linked list.\nThis might cause serious bugs in the future.\n"), mailbox);
   } else {
      new->mailbox = mbox_search;
    }

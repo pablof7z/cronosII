@@ -110,7 +110,7 @@ c2_resolve (const char *hostname, char **error) {
   node = C2_RESOLVE_NODE_NEW;
 
   if ((host = gethostbyname (hostname)) == NULL) {
-    *error = g_strdup (_("Couldn't resolve the server"));
+    *error = g_strdup (_("Could not resolve the server"));
     return NULL;
   }
 

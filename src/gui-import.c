@@ -62,7 +62,7 @@ static void on_ok_clicked (GtkWidget *widget, ImportWidgets *iw) {
   mailbox = iw->mbox;
 
   if ((mbox = search_mailbox_name (config->mailbox_head, mailbox)) == NULL) {
-    g_warning (_("The mailbox %s couldn't be found."), mailbox);
+    g_warning (_("The mailbox %s could not be found."), mailbox);
     goto out;
   }
 

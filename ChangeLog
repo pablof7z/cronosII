@@ -1,10 +1,18 @@
+Thur 14 Feb 2002 pete <petergozz@users.sf.net>
+	* Lots of minor spelling fixups as I tried out various options with
+	* smtp. No code alters since the last patch.
+	* Queue still a little fragile. Have to rewrite the spool section of
+	* the manual.
+
+
 Tue 12 Feb 2002 pete <petergozz@users.sf.net>
 	* Edits to cronosII-config.in (devversion) , src/gui-about.c, man/makefile.am
 	configure.in (versioning) other minor stuff I can't remember but they will be commented.
 	* upload to cvs.
 	* update manual pages. doc/C/cronosII.sgml
-	* applied patches from the DEBIAN Maintainers build I will credit these soon.
-	
+	* applied patches from the DEBIAN Maintainers build I will credit these soon.:
+	 Aaron Schrab <aaron@schrab.com> fixed Debian bug 126228 .
+	root <jlquinn@optonline.net>  provided the way and a partial fix.  Thanks guys. I have hand applied the resulting patch to the MR2 source tree.
 Mon 11 Feb 2002 pete <petergozz@users.sf.net>
 	* Changed about dialog and cronosII-config to show MR2 RPM edition
 	* Left gui-about.c with gtk stuff commented out.

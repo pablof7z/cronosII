@@ -60,7 +60,7 @@ void check_spool_main (Account *account) {
 
   if ((fd = fopen (account->protocol.spool.file, "r")) == NULL) {
     gdk_threads_enter ();
-    window_checking_report (C2_CHECK_ERR, account->acc_name, _("Couldn't open the specified file."));
+    window_checking_report (C2_CHECK_ERR, account->acc_name, _("Could not open the specified file."));
     gdk_threads_leave ();
     return;
   }
@@ -71,7 +71,7 @@ void check_spool_main (Account *account) {
   buf = c2_mailbox_index_path (account->mailbox->name);
   if ((index = fopen (buf, "a")) == NULL) {
     gdk_threads_enter ();
-    window_checking_report (C2_CHECK_ERR, account->acc_name, _("Couldn't open the main DB file for appending the new messages"));
+    window_checking_report (C2_CHECK_ERR, account->acc_name, _("Could not open the main DB file for appending the new messages"));
     gdk_threads_leave ();
     c2_free (buf);
     fclose (fd);
@@ -123,7 +123,7 @@ void check_spool_main (Account *account) {
     buf = c2_mailbox_mail_path (account->mailbox->name, mid);
     if ((mail = fopen (buf, "w")) == NULL) {
       gdk_threads_enter ();
-      window_checking_report (C2_CHECK_ERR, account->acc_name, _("Couldn't open the mail file for writing the new message"));
+      window_checking_report (C2_CHECK_ERR, account->acc_name, _("Could not open the mail file for writing the new message"));
       gdk_threads_leave ();
       c2_free (buf);
       fclose (fd);
