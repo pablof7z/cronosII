@@ -1,8 +1,10 @@
 Wed 19 Dec 2001 Pete <petergozz@users.sourceforge.net>
-	*applied patch1 to Filters
-	*rerelease Filters
-	*put the duller blue folder icon in place
-
+	* applied patch1 to Filters
+	* rerelease Filters (Omega final)
+	* put the duller blue folder icon in place
+	* update /plugins/Makefile.am
+	* build cvs free source package
+	
 Tues Dec 18 2001 Pete <petergozz@users.sourceforge.net>
 	* Updates for release version
 		* Manual updated
