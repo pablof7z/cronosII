@@ -60,12 +60,12 @@ extern "C" {
 #include <cronosII/version.h>
 
 #ifdef BUILD_ADDRESS_BOOK
-#  include <cronosII/addrbook.h>
-#  include <cronosII/gui-addrbook.h>
+#include <cronosII/addrbook.h>
+#include <cronosII/gui-addrbook.h>
 #endif
 
 #ifdef USE_PLUGINS
-#  include <cronosII/plugins.h>
+#include <cronosII/plugin.h>
 #endif
 
 #ifdef __cplusplus
