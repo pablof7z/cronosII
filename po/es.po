@@ -49,7 +49,7 @@ msgstr "Imposible abrir el archivo de GnomeCard.\n"
 
 #: src/addrbook.c:822
 msgid "Couldn't open the GnomeCard file"
-msgstr "Imposible abrir el archivo de GnomeCard.\n"
+msgstr "Imposible abrir el archivo de GnomeCard."
 
 #: src/autocompletition.c:502 src/gui-window_main.c:1355
 msgid "Contacts"

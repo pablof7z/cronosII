@@ -118,32 +118,40 @@ _index_mark_as (C2MarkMail *mark) {
       if (was_unread) new_messages--;
       gtk_clist_set_row_data (GTK_CLIST (WMain->clist), mark->row, (gpointer) " ");
       style = gtk_style_copy (gtk_clist_get_row_style (GTK_CLIST (WMain->clist), mark->row));
-      style->font = font_read;
-      gtk_clist_set_row_style (GTK_CLIST (WMain->clist), mark->row, style);
+		if (style) {
+		  style->font = font_read;
+		  gtk_clist_set_row_style (GTK_CLIST (WMain->clist), mark->row, style);
+		}
     }
     else if (mark->type == C2_MARK_NEW) {
       gtk_clist_set_pixmap (GTK_CLIST (WMain->clist), mark->row, 0, pixmap_unread, mask_unread);
       if (!was_unread) new_messages++;
       gtk_clist_set_row_data (GTK_CLIST (WMain->clist), mark->row, (gpointer) "N");
       style = gtk_style_copy (gtk_clist_get_row_style (GTK_CLIST (WMain->clist), mark->row));
-      style->font = font_unread;
-      gtk_clist_set_row_style (GTK_CLIST (WMain->clist), mark->row, style);
+		if (style) {
+		  style->font = font_unread;
+		  gtk_clist_set_row_style (GTK_CLIST (WMain->clist), mark->row, style);
+		}
     }
     else if (mark->type == C2_MARK_REPLY) {
       gtk_clist_set_pixmap (GTK_CLIST (WMain->clist), mark->row, 0, pixmap_reply, mask_reply);
       if (was_unread) new_messages--;
       gtk_clist_set_row_data (GTK_CLIST (WMain->clist), mark->row, (gpointer) "R");
       style = gtk_style_copy (gtk_clist_get_row_style (GTK_CLIST (WMain->clist), mark->row));
-      style->font = font_read;
-      gtk_clist_set_row_style (GTK_CLIST (WMain->clist), mark->row, style);
+		if (style) {
+		  style->font = font_read;
+		  gtk_clist_set_row_style (GTK_CLIST (WMain->clist), mark->row, style);
+		}
     }
     else if (mark->type == C2_MARK_FORWARD) {
       gtk_clist_set_pixmap (GTK_CLIST (WMain->clist), mark->row, 0, pixmap_forward, mask_forward);
       if (was_unread) new_messages--;
       gtk_clist_set_row_data (GTK_CLIST (WMain->clist), mark->row, (gpointer) "F");
       style = gtk_style_copy (gtk_clist_get_row_style (GTK_CLIST (WMain->clist), mark->row));
-      style->font = font_read;
-      gtk_clist_set_row_style (GTK_CLIST (WMain->clist), mark->row, style);
+		if (style) {
+		  style->font = font_read;
+		  gtk_clist_set_row_style (GTK_CLIST (WMain->clist), mark->row, style);
+		}
     }
   } else update_clist (mark->mbox, TRUE, FALSE);
   
