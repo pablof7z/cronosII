@@ -1,3 +1,8 @@
+Sun Apr 21 2002 pete <petergozz@users.sf.net>
+	* Updates to splash.png. plugins/readme and changelogs
+	* Updates to all plugin.so
+	* decide to start release process.
+	
 Fri Apr 19 2002 pete <petergozz@users.sf.net>
 	* Work and updates to: authors.sgml bugs.sgml cronosII.sgml latest.sgml plugins.sgml ==> cronosII-htmldocs.tar.gz
 	* Thinks lucky we don't have anybody from NZ or Fiji working on this...
