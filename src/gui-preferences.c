@@ -73,30 +73,29 @@
 
 #define QUICK_HELP(txt, cnst) gtk_text_insert (GTK_TEXT (txt), NULL, NULL, NULL, cnst, -1)
 #define QUICK_HELP_NEW_ACCOUNT	_("Cronos II has support for\n" \
-				"many protocols. This is the\n" \
-				"moment for you to decide\n" \
-				"which type of account you're\n" \
-				"going to use with Cronos II.\n" \
+				"many protocols. This is where\n" \
+				"you choose the protocal for this\n" \
+				"account under Cronos II.\n" \
 				"No matter what account you\n" \
 				"choose to use right now, you\n" \
 				"will be able to configure\n" \
 				"other accounts of different\n" \
-				"type later.\n" \
-				"Clicking in the items of the\n" \
-				"list will show you some help\n" \
-				"on each protocol.\nEnjoy.")
+				"types later.\n" \
+				"Clicking on  the items of the\n" \
+				"list will show some help\n" \
+				"for each protocol.\nEnjoy.")
 #define QUICK_HELP_SPOOL	_("Spool is the most common\n" \
-				"account type in UNIX boxes.\n" \
-				"It format resides in a file\n" \
-				"commonly located under the\n" \
+				"account type on UNIX boxes.\n" \
+				"It's commonly found in a file\n" \
+				"located under the\n" \
 				"/var directory.\n" \
 				"Cronos II has full support\n" \
 				"for this protocol.")
 #define QUICK_HELP_POP		_("POP is the most common\n" \
-				"account type in the Internet.\n" \
-				"It format resides in the\n" \
-				"authentication on a server.\n" \
-				"Cronos II has full suport\n" \
+				"account type on the Internet.\n" \
+				"This prococol relies on \n" \
+				"authentication by a server.\n" \
+				"Cronos II has full support\n" \
 				"for this protocol.")
 
 static void on_prefs_sections_clist_select_row (GtkWidget *widget, gint row);
@@ -396,7 +395,7 @@ static void on_prefs_ok_btn_clicked (GtkWidget *widget, gpointer accepting) {
   config->prepend_char_on_re = g_strdup (gtk_entry_get_text (GTK_ENTRY (options_prepend_character_entry)));
   if (!config->prepend_char_on_re) config->prepend_char_on_re = g_strdup ("> ");
   fprintf (fd,	"\n"
-		"* Prepend this character to each line when Replying or Forward a message\n"
+		"* Prepend this character to each line when Replying or Forwarding a message\n"
 		"prepend_char_on_re \"%s\"\n", config->prepend_char_on_re);
 
   /*********************************
@@ -442,11 +441,11 @@ static void on_prefs_ok_btn_clicked (GtkWidget *widget, gpointer accepting) {
 #endif
 
   /***************************************
-   * Do not download message bigger than *
+   * Do not Download message bigger than *
    ***************************************/
   config->message_bigger = gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (options_message_bigger));
   fprintf (fd,	"\n"
-		"* Do not download messages bigger than\n"
+		"* Do not Download messages larger than\n"
 		"message_bigger %d\n",
 		config->message_bigger);
 
@@ -571,7 +570,7 @@ static void on_prefs_ok_btn_clicked_write_accounts (Account *head, FILE *fd) {
   }
 }
 
-/* Functions to browse through the differents menues */
+/* Functions to browse through the different menus */
 static void on_prefs_sections_clist_select_row (GtkWidget *widget, gint row) {
   int page;
   
@@ -706,7 +705,7 @@ static void on_account_new_ok_clicked (GtkWidget *widget, gpointer data) {
   _account = (PreferencesAccount *) data;
   if (_account == NULL) return;
   if (!mbox_name) {
-    g_warning (_("You must select a mailbox where to store messages downloaded from this account."));
+    g_warning (_("You must select a mailbox  to store messages Download from this account."));
     return;
   }
   account = (Account *) g_malloc0 (sizeof (Account));
@@ -1841,14 +1840,14 @@ static void on_mailboxes_delete_btn_clicked (void) {
       !strcmp (mailbox_selected_mbox, MAILBOX_OUTBOX) ||
       !strcmp (mailbox_selected_mbox, MAILBOX_QUEUE) ||
       !strcmp (mailbox_selected_mbox, MAILBOX_GARBAGE)) {
-    g_warning (_("You can't delete the mailbox %s because it's a special mailbox\n"), mailbox_selected_mbox);
+    g_warning (_("You can't delete the mailbox %s It is required for normal operation\n"), mailbox_selected_mbox);
     return;
   }
 
   /* Search for the selected mailbox in the linked list */
   search_mbox = search_mailbox_name (mailboxes_list, mailbox_selected_mbox);
   if (!search_mbox) {
-    g_warning (_("Couldn't found %s in the list\n"), mailbox_selected_mbox);
+    g_warning (_("Couldn't find %s in the list\n"), mailbox_selected_mbox);
     return;
   }
 
@@ -2009,7 +2008,7 @@ static void prefs_add_page_options (void) {
   /***********
    ** Frame **
    ***********/
-  frame = gtk_frame_new (_("Seconds before marking a mail as readed"));
+  frame = gtk_frame_new (_("Seconds before marking a mail as Read"));
   gtk_box_pack_start (GTK_BOX (vbox), frame, FALSE, TRUE, 0);
   gtk_widget_show (frame);
 
@@ -2025,7 +2024,7 @@ static void prefs_add_page_options (void) {
   /***********
    ** Frame **
    ***********/
-  frame = gtk_frame_new (_("Repling and forwarding"));
+  frame = gtk_frame_new (_("Replying and Forwarding"));
   gtk_box_pack_start (GTK_BOX (vbox), frame, FALSE, TRUE, 0);
   gtk_widget_show (frame);
 
@@ -2061,12 +2060,12 @@ static void prefs_add_page_options (void) {
   /***********
    ** label **
    ***********/
-  label = gtk_label_new (_("Ask before downloading messages bigger than "));
+  label = gtk_label_new (_("Ask before downloading messages Larger than "));
   gtk_box_pack_start (GTK_BOX (hbox), label, FALSE, FALSE, 0);
   gtk_widget_show (label);
   
   /******************************************
-   ** Do not download messages bigger than **
+   ** Do not Download messages bigger than **
    ******************************************/
   adj = (GtkAdjustment *) gtk_adjustment_new (config->message_bigger, 0, 10000, 1, 100, 0);
   options_message_bigger = gtk_spin_button_new (adj, 1, 0);
@@ -2166,7 +2165,7 @@ static void on_appareance_font_btn_clicked (GtkWidget *button, gpointer data) {
   gtk_box_pack_start (GTK_BOX (vbox), widgets->font_sel, TRUE, TRUE, 0);
   gtk_font_selection_set_font_name (GTK_FONT_SELECTION (widgets->font_sel),
 		  gtk_entry_get_text (GTK_ENTRY (widgets->entry)));
-  gtk_font_selection_set_preview_text (GTK_FONT_SELECTION (widgets->font_sel), _("Peter was in the field"));
+  gtk_font_selection_set_preview_text (GTK_FONT_SELECTION (widgets->font_sel), _("Pablo was in Paris"));
   gtk_widget_show (widgets->font_sel);
 
   hsep = gtk_hseparator_new ();
@@ -2601,8 +2600,7 @@ static void prefs_add_page_advanced (void) {
   if (config->use_persistent_smtp_connection)
     gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (advanced_use_persistent_smtp_connection), TRUE);
   gtk_tooltips_set_tip (tooltips, advanced_use_persistent_smtp_connection,
-      			_("Keep connected to the SMTP host to use again that connection to send "
-			  "outgoing messages"), NULL);
+      			_("Keep connection to the SMTP host open. Enables Outgoing messages at any time "), NULL);
 
   /** Persistent SMTP address **/
   advanced_persistent_smtp_address = gtk_entry_new ();
@@ -2613,7 +2611,7 @@ static void prefs_add_page_advanced (void) {
   if (!config->use_persistent_smtp_connection)
     gtk_widget_set_sensitive (advanced_persistent_smtp_address, FALSE);
   gtk_tooltips_set_tip (tooltips, advanced_persistent_smtp_address,
-      			_("Persistant connection to the SMTP host"), NULL);
+      			_("Persistent connection to the SMTP host"), NULL);
 
   /** Port **/
   label = gtk_label_new (_("Port: "));
@@ -2628,7 +2626,7 @@ static void prefs_add_page_advanced (void) {
   if (!config->use_persistent_smtp_connection)
     gtk_widget_set_sensitive (advanced_persistent_smtp_port, FALSE);
   gtk_tooltips_set_tip (tooltips, advanced_persistent_smtp_port,
-      			_("Persistant connection to the SMTP host"), NULL);
+      			_("Persistent connection to the SMTP host"), NULL);
 
   gtk_signal_connect (GTK_OBJECT (advanced_use_persistent_smtp_connection), "toggled",
       				GTK_SIGNAL_FUNC (on_advanced_use_persistent_smtp_connection_toggled), NULL);
