@@ -1,4 +1,15 @@
-
+Fri Dec 14 2001 Pete <gossner@arcom.com.au>
+	* Applied Daniel Fairheads patches to 
+	gui-composer.c   gui-preferences.c .
+	These should fix the annoying Mailto: bug and an old potential problem
+	in the mailbox set up section with / in the name.
+	
+	* included Daniels new clearer icon for drafts.
+	I will leave it as default.. Other versions are available from the website.
+	(currently http://cronosii.sourceforge.net/Active_Site/emoticons.php)
+	*Having problems with the filters plugin .... sigh .. Why did I go there ..
+	
+	
 Thur Dec 13 2001 Pete <gossner@arcom.com.au>
 	* Brought filters to 0.4.0
 	* Updated source docs to reflect this

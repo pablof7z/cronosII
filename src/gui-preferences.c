@@ -81,12 +81,12 @@
 				"will be able to configure\n" \
 				"other accounts of different\n" \
 				"types later.\n" \
-				"Clicking on  the items of the\n" \
-				"list will show some help\n" \
+				"Clicking on  the items in the\n" \
+				"list will display some help\n" \
 				"for each protocol.\nEnjoy.")
 #define QUICK_HELP_SPOOL	_("Spool is the most common\n" \
 				"account type on UNIX boxes.\n" \
-				"It's commonly found in a file\n" \
+				"It's commonly found in files\n" \
 				"located under the\n" \
 				"/var directory.\n" \
 				"Cronos II has full support\n" \
@@ -395,7 +395,7 @@ static void on_prefs_ok_btn_clicked (GtkWidget *widget, gpointer accepting) {
   config->prepend_char_on_re = g_strdup (gtk_entry_get_text (GTK_ENTRY (options_prepend_character_entry)));
   if (!config->prepend_char_on_re) config->prepend_char_on_re = g_strdup ("> ");
   fprintf (fd,	"\n"
-		"* Prepend this character to each line when Replying or Forwarding a message\n"
+		"* Prepend this character to each line when Replying to or Forwarding a message\n"
 		"prepend_char_on_re \"%s\"\n", config->prepend_char_on_re);
 
   /*********************************
@@ -705,7 +705,7 @@ static void on_account_new_ok_clicked (GtkWidget *widget, gpointer data) {
   _account = (PreferencesAccount *) data;
   if (_account == NULL) return;
   if (!mbox_name) {
-    g_warning (_("You must select a mailbox  to store messages Download from this account."));
+    g_warning (_("Please select a mailbox  to store messages Downloaded from this account."));
     return;
   }
   account = (Account *) g_malloc0 (sizeof (Account));
@@ -1781,11 +1781,14 @@ static void on_mailboxes_new_btn_clicked (void) {
     return;
   }
 
+  /* Remove '/' marks in a mailbox name. */
+  new_mbox_name = str_strip (new_mbox_name, '/');
+  
   if (mailbox_selected_mbox) {
     /* Search for the selected mailbox in the linked list */
     parent = search_mailbox_name (mailboxes_list, mailbox_selected_mbox);
     if (!parent) {
-      g_warning (_("Couldn't found %s in the list\n"), mailbox_selected_mbox);
+      g_warning (_("Couldn't find %s in the list\n"), mailbox_selected_mbox);
       return;
     }
   }
@@ -2649,7 +2652,7 @@ static void prefs_add_page_advanced (void) {
   if (config->use_persistent_smtp_connection)
     gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (advanced_use_persistent_smtp_connection), TRUE);
   gtk_tooltips_set_tip (tooltips, advanced_use_persistent_smtp_connection,
-      			_("Keep connected to the SMTP host to use again that connection to send "
+      			_("Keep the SMTP host connected to continue use that connection to send "
 			  "outgoing messages"), NULL);
   menu = gtk_menu_new ();
   menuitem = gtk_menu_item_new_with_label (_("at start."));
@@ -3015,3 +3018,5 @@ static void prefs_add_page_plugins (void) {
   gtk_widget_show (vbox);
 }
 #endif
+
+

@@ -323,6 +323,7 @@ c2_composer_new (Message *message, C2ComposerType type) {
 
       if (!buf) buf = message_get_header_field (message, NULL, "\nFrom:");
       if (buf) {
+	buf = str_replace(buf,"<mailto:","<");
 	gtk_entry_set_text (GTK_ENTRY (widget->header_titles[HEADER_TITLES_TO][1]), buf);
       }
     }
