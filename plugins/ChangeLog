@@ -1,3 +1,8 @@
+Sun Apr 14 2002 Pete <petergozz@users.sf.net>
+	* Updated nohtml to Daniels latest version.
+	* Tested this plugin on various sources and with various configuration options and all went well. 
+	* Rebuilt all plugin tarballs to include headers and cvs...
+
 Mon 08 Apr 2002 Pete <petergozz@users.sf.net>
 	* Merged Angel Ramos's new headers into source tree all headers moved to /headers. The only complication this should add is when distributing standalone packages of the plugins. These will need packaging with the headers directory included.
 	* Failed to get the things to build with the source however they will build as separate binaries. Hopefully this will simplify building for non i386 platforms much easier.

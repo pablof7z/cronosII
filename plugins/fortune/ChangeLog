@@ -1,3 +1,6 @@
+Sun Apr 14 2002 Pete <petergozz@users.sourceforge.net>
+	* new ../headers directory is now added.
+	
 Thur 1 Apr 2002 Angel Ramos <seamus@debian.org>
 	* Modified fortune.c source in order to compile and compile alone.
 	* Included all the headers that fortune.c need to compile. I have

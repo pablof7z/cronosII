@@ -56,7 +56,7 @@ modename="$progname"
 PROGRAM=ltmain.sh
 PACKAGE=libtool
 VERSION=1.4.2a
-TIMESTAMP=" (1.922.2.70 2001/10/28 12:01:43)"
+TIMESTAMP=" (1.922.2.79 2001/11/28 21:50:31)"
 
 default_mode=
 help="Try \`$progname --help' for more information."
@@ -176,6 +176,8 @@ do
 
   --mode) prevopt="--mode" prev=mode ;;
   --mode=*) mode="$optarg" ;;
+
+  --preserve-dup-deps) duplicate_deps="yes" ;;
 
   --quiet | --silent)
     show=:
@@ -1043,14 +1045,14 @@ compiler."
 	    # These systems don't actually have a C library (as such)
 	    test "X$arg" = "X-lc" && continue
 	    ;;
-	  *-*-openbsd*)
+	  *-*-openbsd* | *-*-freebsd*)
 	    # Do not include libc due to us having libc/libc_r.
 	    test "X$arg" = "X-lc" && continue
 	    ;;
 	  esac
 	 elif test "X$arg" = "X-lc_r"; then
 	  case $host in
-	  *-*-openbsd*)
+	 *-*-openbsd* | *-*-freebsd*)
 	    # Do not include libc_r directly, use -pthread flag.
 	    continue
 	    ;;
@@ -1330,9 +1332,11 @@ compiler."
     # Find all interdependent deplibs by searching for libraries
     # that are linked more than once (e.g. -la -lb -la)
     for deplib in $deplibs; do
-      case "$libs " in
-      *" $deplib "*) specialdeplibs="$specialdeplibs $deplib" ;;
-      esac
+      if test "X$duplicate_deps" = "Xyes" ; then
+	case "$libs " in
+	*" $deplib "*) specialdeplibs="$specialdeplibs $deplib" ;;
+	esac
+      fi
       libs="$libs $deplib"
     done
     deplibs=
@@ -1461,10 +1465,12 @@ compiler."
 	  lib)
 	    if test "$deplibs_check_method" != pass_all; then
 	      echo
-	      echo "*** Warning: This library needs some functionality provided by $deplib."
+	      echo "*** Warning: Trying to link with static lib archive $deplib."
 	      echo "*** I have the capability to make that library automatically link in when"
 	      echo "*** you link to this library.  But I can only do this if you have a"
-	      echo "*** shared version of the library, which you do not appear to have."
+	      echo "*** shared version of the library, which you do not appear to have"
+	      echo "*** because the file extensions .$libext of this argument makes me believe"
+	      echo "*** that it is just a static archive that I should not used here."
 	    else
 	      echo
 	      echo "*** Warning: Linking the shared library $output against the"
@@ -1555,9 +1561,11 @@ compiler."
 	    tmp_libs=
 	    for deplib in $dependency_libs; do
 	      deplibs="$deplib $deplibs"
-	      case "$tmp_libs " in
-	      *" $deplib "*) specialdeplibs="$specialdeplibs $deplib" ;;
-	      esac
+              if test "X$duplicate_deps" = "Xyes" ; then
+	        case "$tmp_libs " in
+	        *" $deplib "*) specialdeplibs="$specialdeplibs $deplib" ;;
+	        esac
+              fi
 	      tmp_libs="$tmp_libs $deplib"
 	    done
 	  elif test $linkmode != prog && test $linkmode != lib; then
@@ -1680,9 +1688,11 @@ compiler."
 	      # or/and link against static libraries
 	      newdependency_libs="$deplib $newdependency_libs"
 	    fi
-	    case "$tmp_libs " in
-	    *" $deplib "*) specialdeplibs="$specialdeplibs $deplib" ;;
-	    esac
+	    if test "X$duplicate_deps" = "Xyes" ; then
+	      case "$tmp_libs " in
+	      *" $deplib "*) specialdeplibs="$specialdeplibs $deplib" ;;
+	      esac
+	    fi
 	    tmp_libs="$tmp_libs $deplib"
 	  done # for deplib
 	  continue
@@ -1926,13 +1936,14 @@ compiler."
 	    # Just print a warning and add the library to dependency_libs so
 	    # that the program can be linked against the static library.
 	    echo
-	    echo "*** Warning: This library needs some functionality provided by $lib."
+	    echo "*** Warning: This system can not link to static lib archive $lib."
 	    echo "*** I have the capability to make that library automatically link in when"
 	    echo "*** you link to this library.  But I can only do this if you have a"
 	    echo "*** shared version of the library, which you do not appear to have."
 	    if test "$module" = yes; then
-	      echo "*** Therefore, libtool will create a static module, that should work "
-	      echo "*** as long as the dlopening application is linked with the -dlopen flag."
+	      echo "*** But as you try to build a module library, libtool will still create "
+	      echo "*** a static module, that should work as long as the dlopening application"
+	      echo "*** is linked with the -dlopen flag to resolve symbols at runtime."
 	      if test -z "$global_symbol_pipe"; then
 		echo
 		echo "*** However, this would only work if libtool was able to extract symbol"
@@ -1981,9 +1992,11 @@ compiler."
 	  tmp_libs=
 	  for deplib in $dependency_libs; do
 	    newdependency_libs="$deplib $newdependency_libs"
-	    case "$tmp_libs " in
-	    *" $deplib "*) specialdeplibs="$specialdeplibs $deplib" ;;
-	    esac
+	    if test "X$duplicate_deps" = "Xyes" ; then
+	      case "$tmp_libs " in
+	      *" $deplib "*) specialdeplibs="$specialdeplibs $deplib" ;;
+	      esac
+	    fi
 	    tmp_libs="$tmp_libs $deplib"
 	  done
 
@@ -2446,7 +2459,7 @@ compiler."
 	  *-*-netbsd*)
 	    # Don't link with libc until the a.out ld.so is fixed.
 	    ;;
-	  *-*-openbsd*)
+	  *-*-openbsd* | *-*-freebsd*)
 	    # Do not include libc due to us having libc/libc_r.
 	    ;;
 	  *)
@@ -2507,18 +2520,20 @@ EOF
 		else
 		  droppeddeps=yes
 		  echo
-		  echo "*** Warning: This library needs some functionality provided by $i."
+		  echo "*** Warning: dynamic linker does not accept needed library $i."
 		  echo "*** I have the capability to make that library automatically link in when"
 		  echo "*** you link to this library.  But I can only do this if you have a"
-		  echo "*** shared version of the library, which you do not appear to have."
+		  echo "*** shared version of the library, which I believe you do not have"
+		  echo "*** because a test_compile did reveal that the linker did not use it for"
+		  echo "*** its dynamic dependency list that programs get resolved with at runtime."
 		fi
 	      else
 		newdeplibs="$newdeplibs $i"
 	      fi
 	    done
 	  else
-	    # Error occured in the first compile.  Let's try to salvage the situation:
-	    # Compile a seperate program for each library.
+	    # Error occured in the first compile.  Let's try to salvage
+	    # the situation: Compile a separate program for each library.
 	    for i in $deplibs; do
 	      name="`expr $i : '-l\(.*\)'`"
 	     # If $name is empty we are operating on a -L argument.
@@ -2537,10 +2552,12 @@ EOF
 		  else
 		    droppeddeps=yes
 		    echo
-		    echo "*** Warning: This library needs some functionality provided by $i."
+		    echo "*** Warning: dynamic linker does not accept needed library $i."
 		    echo "*** I have the capability to make that library automatically link in when"
 		    echo "*** you link to this library.  But I can only do this if you have a"
-		    echo "*** shared version of the library, which you do not appear to have."
+		    echo "*** shared version of the library, which you do not appear to have"
+		    echo "*** because a test_compile did reveal that the linker did not use this one"
+		    echo "*** as a dynamic dependency that programs can get resolved with at runtime."
 		  fi
 		else
 		  droppeddeps=yes
@@ -2597,10 +2614,17 @@ EOF
 	      if test -n "$a_deplib" ; then
 		droppeddeps=yes
 		echo
-		echo "*** Warning: This library needs some functionality provided by $a_deplib."
+		echo "*** Warning: linker path does not have real file for library $a_deplib."
 		echo "*** I have the capability to make that library automatically link in when"
 		echo "*** you link to this library.  But I can only do this if you have a"
-		echo "*** shared version of the library, which you do not appear to have."
+		echo "*** shared version of the library, which you do not appear to have"
+		echo "*** because I did check the linker path looking for a file starting"
+		if test -z "$potlib" ; then
+		  echo "*** with $libname but no candidates were found. (...for file magic test)"
+		else
+		  echo "*** with $libname and none of the candidates passed a file format test"
+		  echo "*** using a file magic. Last file checked: $potlib"
+		fi
 	      fi
 	    else
 	      # Add a -L argument.
@@ -2619,6 +2643,7 @@ EOF
 	      for i in $lib_search_path $sys_lib_search_path $shlib_search_path; do
 		potential_libs=`ls $i/$libname[.-]* 2>/dev/null`
 		for potent_lib in $potential_libs; do
+		  potlib="$potent_lib" # see symlink-check below in file_magic test
 		  if eval echo \"$potent_lib\" 2>/dev/null \
 		      | sed 10q \
 		      | egrep "$match_pattern_regex" > /dev/null; then
@@ -2631,10 +2656,17 @@ EOF
 	      if test -n "$a_deplib" ; then
 		droppeddeps=yes
 		echo
-		echo "*** Warning: This library needs some functionality provided by $a_deplib."
+		echo "*** Warning: linker path does not have real file for library $a_deplib."
 		echo "*** I have the capability to make that library automatically link in when"
 		echo "*** you link to this library.  But I can only do this if you have a"
-		echo "*** shared version of the library, which you do not appear to have."
+		echo "*** shared version of the library, which you do not appear to have"
+		echo "*** because I did check the linker path looking for a file starting"
+		if test -z "$potlib" ; then
+		  echo "*** with $libname but no candidates were found. (...for regex pattern test)"
+		else
+		  echo "*** with $libname and none of the candidates passed a file format test"
+		  echo "*** using a regex pattern. Last file checked: $potlib"
+		fi
 	      fi
 	    else
 	      # Add a -L argument.

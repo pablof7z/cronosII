@@ -225,7 +225,7 @@ AC_DEFINE_UNQUOTED(C2_PLUGIN_MAJOR_VERSION, $C2_PLUGIN_MAJOR_VERSION)
 AC_DEFINE_UNQUOTED(C2_PLUGIN_MINOR_VERSION, $C2_PLUGIN_MINOR_VERSION)
 AC_DEFINE_UNQUOTED(C2_PLUGIN_MICRO_VERSION, $C2_PLUGIN_MICRO_VERSION)
 CFLAGS="$CFLAGS $GUI_CFLAGS"
-LIBS="$LIBS $GUI_LIBS $GNOMEPRINT$GDK_PIXBUF$XML"
+LIBS="$LIBS $GUI_LIBS $GNOMEPRINT $GDK_PIXBUF $XML"
 
 AC_SUBST(LIBS)
 AC_SUBST(CFLAGS)
@@ -253,7 +253,7 @@ echo
 echo \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
 echo \* Cronos II $VERSION   \*
 echo \* This is a CVS version of the original CronosII  \*	
-echo \*  Maintenance Release Two dot Three   \*	
+echo \*  Maintenance Release Two Three   \*	
 echo \*\*\*\*\*\*\*\  Package building version *\*\*\*\*\*\*\*\*\*\*\*
 
 

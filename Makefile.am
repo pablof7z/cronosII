@@ -22,6 +22,7 @@ EXTRA_DIST =			\
 	sample.so		\
 	filters.so		\
 	fortune.so		\
+	nohtml.so		\
 	README-developers.Changelog
 
 Internetdir = $(datadir)/gnome/apps/Internet

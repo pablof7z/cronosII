@@ -4521,7 +4521,7 @@ cat >> confdefs.h <<EOF
 EOF
 
 CFLAGS="$CFLAGS $GUI_CFLAGS"
-LIBS="$LIBS $GUI_LIBS $GNOMEPRINT$GDK_PIXBUF$XML"
+LIBS="$LIBS $GUI_LIBS $GNOMEPRINT $GDK_PIXBUF $XML"
 
 
 
@@ -5022,7 +5022,7 @@ echo
 echo \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
 echo \* Cronos II $VERSION   \*
 echo \* This is a CVS version of the original CronosII  \*	
-echo \*  Maintenance Release Two dot Three   \*	
+echo \*  Maintenance Release Two Three   \*	
 echo \*\*\*\*\*\*\*\  Package building version *\*\*\*\*\*\*\*\*\*\*\*
 
 

@@ -43,7 +43,7 @@ mime_message_make_hash (const char *body, const char *boundary, const char *pare
 
 /**
  * message_get_message
- * @mbox: A pointer to the name of the mailbox where the decired mail is stored.
+ * @mbox: A pointer to the name of the mailbox where the desired mail is stored.
  * @mid: The Message ID of the decired mail.
  *
  * Loads a message into memory in a Message structure and initializates other values.
