@@ -130,7 +130,7 @@ void on_wm_clist_select_row (GtkWidget *widget, gint row, gint column,
   GList *s;
   char *buf, *buf2, *path;
   char *content_type;
-  char *parameter;
+  char *parameter = NULL;
   char *from, *to, *cc, *bcc, *subject, *account, *date, *priority;
   GdkImlibImage *img;
 
