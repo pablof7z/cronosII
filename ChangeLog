@@ -1,3 +1,8 @@
+Mon Nov 12 16:41:09 CST 2001  Peter Gossner <petergozz@users.sourceforge.net>
+	Not much new just some tidy ups and updates to config.in.
+	updated configure messages in prep for some more work.
+	
+
 Sun Aug 26 10:28:07 CST 2001 Peter Gossner <petergozz@users.sourceforge.net>
         Minor spelling updates: Across the whole application and source notes.
 	Trying to understand the Queue process.

@@ -15,7 +15,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Cronos II 0.2.2\n"
-"POT-Creation-Date: 2001-04-14 16:05-0300\n"
+"POT-Creation-Date: 2001-04-15 22:57-0300\n"
 "PO-Revision-Date: 2001-04-13 19:12-0300\n"
 "Last-Translator: Pablo Fernández Navarro <cronosII@users.sourceforge.net>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -2111,7 +2111,9 @@ msgstr "Este mensaje dice ser multipart pero parece estar roto.\n"
 
 #: src/message.c:896
 msgid "Opening the main DB file for reading the number of messages in it"
-msgstr "Abriendo el archivo principal de la DB para extraer el número de mensajes en él"
+msgstr ""
+"Abriendo el archivo principal de la DB para extraer el número de mensajes en "
+"él"
 
 #: src/net.c:107
 msgid "Couldn't resolve the server"
@@ -2145,8 +2147,7 @@ msgstr ""
 msgid ""
 "There's no callback function attached to the signam %d in the dynamic module "
 "%s.\n"
-msgstr ""
-"No hay una función conectada a la señal %d en el módulo dinámico %s.\n"
+msgstr "No hay una función conectada a la señal %d en el módulo dinámico %s.\n"
 
 #: src/pop.c:119 src/smtp.c:835
 msgid "Failed to create socket"
@@ -2204,7 +2205,8 @@ msgstr "Error al abrir el archivo donde guardar el correo obtenido"
 
 #: src/pop.c:485
 msgid "Error opening the main DB file to store the new mail"
-msgstr "Error al abrir el archivo principal de la DB para guardar el correo obtenido"
+msgstr ""
+"Error al abrir el archivo principal de la DB para guardar el correo obtenido"
 
 #: src/pop.c:486
 msgid "Opening the main DB file"
@@ -2284,29 +2286,32 @@ msgid ""
 "The SMTP server aborted the delivery of the message because the storage "
 "location has been exceed."
 msgstr ""
-"El servidor SMTP abortó el envio del mensaje ya que el espacio de guardado ha sido excedido en el servidor."
+"El servidor SMTP abortó el envio del mensaje ya que el espacio de guardado "
+"ha sido excedido en el servidor."
 
 #: src/smtp.c:136 src/smtp.c:259 src/smtp.c:338 src/smtp.c:468
 msgid ""
 "Error in the delivery of the message because it has ocurred an error in the "
 "SMTP server."
 msgstr ""
-"Error en el envio del mensaje ya que ha ocurrido un error en el servidor SMTP."
+"Error en el envio del mensaje ya que ha ocurrido un error en el servidor "
+"SMTP."
 
 #: src/smtp.c:143 src/smtp.c:266 src/smtp.c:352 src/smtp.c:475
 msgid ""
 "The SMTP server aborted the delivery of the message because there's not "
 "enough system storage."
 msgstr ""
-"El servidor SMTP abortó el envio del mensaje ya que no hay suficiente sistema de guardado en el servidor."
+"El servidor SMTP abortó el envio del mensaje ya que no hay suficiente "
+"sistema de guardado en el servidor."
 
 #: src/smtp.c:150 src/smtp.c:273 src/smtp.c:359 src/smtp.c:942
 msgid ""
 "The SMTP server isn't RFC821 complaiment, please send me an E-Mail with the "
 "hostname address."
 msgstr ""
-"El servidor SMTP no es compatible con el RFC821, por favor, envieme un correo-e con la "
-"dirección del servidor."
+"El servidor SMTP no es compatible con el RFC821, por favor, envieme un "
+"correo-e con la dirección del servidor."
 
 #: src/smtp.c:157 src/smtp.c:280 src/smtp.c:366 src/smtp.c:885 src/smtp.c:951
 msgid "The SMTP server is not available."
@@ -2317,7 +2322,8 @@ msgid ""
 "The SMTP server aborted the delivery of the message because the mailbox is "
 "unavailable."
 msgstr ""
-"El servidor SMTP abortó el envio del mensaje ya que el buzón no esta disponible."
+"El servidor SMTP abortó el envio del mensaje ya que el buzón no esta "
+"disponible."
 
 #: src/smtp.c:231
 msgid ""
@@ -2331,7 +2337,8 @@ msgid ""
 "The SMTP server aborted the delivery of the message because the mailbox name "
 "is not allowed."
 msgstr ""
-"El servidror SMTP abortó el envio del mensaje ya que el nombre de buzón no esta permitido."
+"El servidror SMTP abortó el envio del mensaje ya que el nombre de buzón no "
+"esta permitido."
 
 #: src/smtp.c:461
 msgid ""
@@ -2358,7 +2365,9 @@ msgstr "Imposible abrir el archivo especificado."
 
 #: src/spool.c:74
 msgid "Couldn't open the main DB file for appending the new messages"
-msgstr "Imposible abrir el archivo principal de la DB para escribir los nuevos correos-e"
+msgstr ""
+"Imposible abrir el archivo principal de la DB para escribir los nuevos "
+"correos-e"
 
 #: src/spool.c:126
 msgid "Couldn't open the mail file for writing the new message"

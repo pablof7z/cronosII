@@ -10,7 +10,7 @@ It may also create one or more `.h' files containing system-dependent
 definitions.  Finally, it creates a shell script `config.status' that
 you can run in the future to recreate the current configuration, a file
 `config.cache' that saves the results of its tests to speed up
-reconfiguring, and a file `config.log' containing compiler output
+re-configuring, and a file `config.log' containing compiler output
 (useful mainly for debugging `configure').
 
    If you need to do unusual things to compile the package, please try

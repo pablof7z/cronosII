@@ -149,6 +149,7 @@ if test "$gnome" = no; then
   echo "# found. You need, at least, Gnome 1.0.0 to #"
   echo "# build Cronos II. You might want to        #"
   echo "# download it from http://www.gnome.org.    #"
+  echo "# Alternatively you may just need to install gnome development libraries. #"
   echo "#############################################"
   exit 1
 fi
@@ -243,8 +244,9 @@ cronosII.spec
 
 echo
 echo \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
-echo \* Cronos II $VERSION  			 \*
-echo \* Maintenance Release Two		  \*	
+echo \* Cronos II $VERSION   \*
+echo \* This is a CVS version of the original CronosII  \*	
+echo \* Pre Maintenance Release Two  \*	
 echo \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
 echo 
 
@@ -265,6 +267,6 @@ else
 fi
 
 echo Building to install under ......... .: $prefix
-echo CronosII  \*\* Maintenance Release 2  \*\*
+echo CronosII  \*\*CVS version Pre Maintenance Release 2  \*\*
 echo configure complete, type \'make\' to start compiling
 echo

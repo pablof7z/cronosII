@@ -32,25 +32,25 @@ char *information[] = {
 
 /* Function definitions */
 static void
-plugin_on_message_download_pop					(Message *message);
+plugin_on_message_download_pop (Message *message);
 
 static void
-plugin_on_message_download_spool				(Message *message);
+plugin_on_message_download_spool (Message *message);
 
 static void
-plugin_on_check_new_session					(int length);
+plugin_on_check_new_session (int length);
 
 static void
-plugin_on_check_new_account					(Account *account);
+plugin_on_check_new_account (Account *account);
 
 static void
-plugin_load_configuration					(const char *config);
+plugin_load_configuration (const char *config);
 
 static void
-plugin_save_configuration					(const char *config);
+plugin_save_configuration (const char *config);
 
 GtkWidget *
-plugin_sample_configure						(C2DynamicModule *module);
+plugin_sample_configure	(C2DynamicModule *module);
 
 /* Global variables */
 static char *watch_address = NULL;
@@ -251,7 +251,7 @@ plugin_sample_configure (C2DynamicModule *module) {
   vbox = GNOME_DIALOG (window)->vbox;
 
   label = gtk_label_new ("This module makes an alert when a mail from an specified address.\n"
-      			 "Here you can choose which mail address to use.\n");
+      			 "Here you choose which mail address to use.\n");
   gtk_box_pack_start (GTK_BOX (vbox), label, TRUE, TRUE, 0);
   gtk_widget_show (label);
  

@@ -11,7 +11,7 @@ Cronos II is a powerful GNOME mail client very fast, light and friendly.
 Check out http://cronosII.sourceforge.net/ for the latest version.
 
 ================
-= Requeriments =
+= Requirements =
 ================
 o Gnome-libs (http://www.gnome.org)
 o LinuxThreads (Pthreads)
