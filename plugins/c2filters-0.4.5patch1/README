@@ -1,4 +1,4 @@
-ConosII Message Filters 0.4.5-patch1
+CronosII Message Filters 0.4.5-patch1
 CronosII Filters
 A CronosII Plugin
 
@@ -15,27 +15,12 @@ complete re-write of CronosII that we are currently involved in. Enjoy and
 keep checking our website for updates on the CronosII rewrite progress
 (cronosII-scratch).
 
+To build simple type: make.
+**************************
+To install : make install (with admin. permissions)
 
-
-To build simply type: make
-
-If you have trouble building (i.e. missing working cronosII 0.2.1 headers),
-take the following steps:
-
-1) Download CronosII 0.2.1 from http://www.cronosii.net/
-2) Extract the CronosII 0.2.1 source
-3) su to root
-4) rm -rf /usr/local/include/cronosII; rm /usr/local/include/cronosII.h
-5) cd cronosII-0.2.1/src
-6) ./configure
-7) mkdir /usr/local/include/cronosII
-8) cp *.h /usr/local/include/cronosII/
-9) cp ../*.h /usr/local/include/cronosII/
-10) cp cronosII.h /usr/local/include/
-
-NOTE: Only try this if you cannot build filters normally! Think about the
-commands you are giving before you hit enter!
-
+OR : cp *.so to top-level directory (cronosii/) and : make install from there.
+*****************************************************************
 TODO:
 * import/export config files
 * document functions (CronosII style)
@@ -46,3 +31,5 @@ TODO:
      - Expunge?
      - Play a sound?
      - more?
+
+The headers are now included in the tarball as a common set of headers for all plugins.

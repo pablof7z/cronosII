@@ -235,7 +235,7 @@ plugin_filters_save_config(const gchar *filename)
 	fclose(file);
 }
 
-/* plguin_filters_upgrade_config
+/* pluguin_filters_upgrade_config
  * 
  * @filename: the filename of the config file to upgrade
  * 
@@ -375,7 +375,7 @@ module_cleanup (C2DynamicModule *module)
 	c2_dynamic_module_signal_disconnect (module->name, C2_DYNAMIC_MODULE_MESSAGE_DOWNLOAD_POP);
 }
 
-/* go trough each of the filtering rules, and if it finds a match,
+/* go through each of the filtering rules, and if it finds a match,
  * apply the actions for that rule, and stop searching through the rules. */
 static void 
 plugin_on_download_message(Message *message, gchar **mailbox)

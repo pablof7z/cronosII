@@ -1,3 +1,10 @@
+Sun 21 Apr 2002 Pete <petegozz@users.sourceforge.net>
+	* Updated top directory binary
+	* Included the Xloop addition by MadProf.
+	* Rebuilt tarball 
+	* Uploaded all to CVS and release update.
+	* Release as patch2 which includes MadProfs and Angel Ramos' changes.
+	
 Thur 1 Apr 2002 Angel Ramos <seamus@debian.org>
 	* Modified filters.c source in order to compile and compile alone.
 	* Included all the headers that filters.c need to compile. I have
