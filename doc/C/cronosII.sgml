@@ -1,29 +1,29 @@
 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V3.1//EN"[
-<!ENTITY version "-0.2.2-MR2"> 
-<!entity manver "Version: 2.2.2-mr2">
-<!entity pablo "cronosii@users.sourceforge.net">
-<!entity pete "petergozz@users.sourceforge.net">
-<!entity Yves "ymettier@libertysurf.fr">
-<!entity website "http://cronosii.sourceforge.net/">
-<!entity app "CronosII">
-<!entity key "The Default Keyboard Shortcut is:">
-<!entity developers "cronosii-hackers@lists.sourceforge.net">
-<!entity bosko "falling@users.sourceforge.net">
-<!entity arne "arnem@informatik.uni-bremen.de">
-<!entity andre "digitalcoder@users.sourceforge.net">
-<!entity pier "m3tr0@dei.unipd.it">
-<!entity jeremy "witti@onramp.net">
-<!entity spaghetty "spaghetty@libero.it">
-<!entity marc "mustangg@users.sourceforge.net">
-<!entity dan "ralptheracoon@uk2.net">
+<!ENTITY version "-0.2.2-22"> 
+<!ENTITY manver "Version: 2.2.2-mr2">
+<!ENTITY pablo "cronosii@users.sourceforge.net">
+<!ENTITY pete "petergozz@users.sourceforge.net">
+<!ENTITY Yves "ymettier@libertysurf.fr">
+<!ENTITY website "http://cronosii.sourceforge.net/">
+<!ENTITY app "CronosII">
+<!ENTITY key "The Default Keyboard Shortcut is:">
+<!ENTITY developers "cronosii-hackers@lists.sourceforge.net">
+<!ENTITY bosko "falling@users.sourceforge.net">
+<!ENTITY arne "arnem@informatik.uni-bremen.de">
+<!ENTITY andre "digitalcoder@users.sourceforge.net">
+<!ENTITY pier "m3tr0@dei.unipd.it">
+<!ENTITY jeremy "witti@onramp.net">
+<!ENTITY spaghetty "spaghetty@libero.it">
+<!ENTITY marc "mustangg@users.sourceforge.net">
+<!ENTITY dan "ralptheracoon@uk2.net">
 <!ENTITY FDL SYSTEM "fdl.sgml"> 
-<!entity shortcuts SYSTEM "shortcuts_table.sgml">
-<!entity gtk-brief SYSTEM "gtk-brief.sgml">
-<!entity authors SYSTEM "authors.sgml">
-<!entity addressbook SYSTEM "addressbook.sgml">
-<!entity plugins SYSTEM "plugins.sgml">
-<!entity latest SYSTEM "latest.sgml">
-<!entity bugs SYSTEM "bugs.sgml">
+<!ENTITY shortcuts SYSTEM "shortcuts_table.sgml">
+<!ENTITY gtk-brief SYSTEM "gtk-brief.sgml">
+<!ENTITY authors SYSTEM "authors.sgml">
+<!ENTITY addressbook SYSTEM "addressbook.sgml">
+<!ENTITY plugins SYSTEM "plugins.sgml">
+<!ENTITY latest SYSTEM "latest.sgml">
+<!ENTITY bugs SYSTEM "bugs.sgml">
 ]>
 <!-- =============Document Header ============================= -->
 <book>
@@ -43,32 +43,20 @@ Hope this is of some help.
      </para>
      </dedication>
      <preface><title>Foreword</title>
-     <para>
-    This is the Book of Cronos II.
-     </para>
-    <para>This is the Users Manual (Compiled Version) for CronosII an email application born of the frustrations of  existing email applications and the coding aspirations of a small team of coders scattered rarely across the face of this big blue marble we all call home.
+     
+    <para>This is the Users Manual (Compiled Version) for CronosII an email application originally  born of the frustrations of  existing email applications and the coding aspirations of a small team of coders scattered rarely across the face of this big blue marble we all call home.
 </para>
 <para>Cronos aspires to simplicity, efficacy, stability and most importantly;<emphasis> whatever else it's users want it to be.</emphasis></para>
 <para>The Book  supplied with the tar ball does not contain developers info. Check out the sources for the guidelines and code. Visit the web-site for more information. Or drop us a line and let us know what you think.</para>
     <blockquote><attribution>anon. 2001</attribution><para>Old father time.... he owes me much sleep.</para></blockquote>
      </preface>
-   <!-- <chapter><title>Required Chapter</title>
-     <para>
-     At least one chapter, reference, part, or article is required in a book.
-     </para>
-     </chapter>
-     <appendix><title>Optional Appendix</title>
-     <para>
-     Appendixes are optional.
-     </para>
-     </appendix>
-     </book>-->
+  
 <article id="index">
-<artheader id="header"> <!-- please do not change the id -->
+<artheader id="header"> <!-- please do not change this id -->
  
     <title>Help Manual Version &manver;  for  &app;&version;</title>
     <copyright>
-     <year>2000 2001</year>
+     <year>2000 2001 2002</year>
      <holder>Pablo Fernández Navarro &pablo;
      </holder>
       <holder> Peter Gossner &pete;
@@ -111,8 +99,8 @@ Gnome Main (Foot) Menu  ==> Internet  ==> CronosII
        This Help-Manual &manver; describes 
       <application>&app;</application> Version &version;
     </para>
-    <para>Refer to <xref linkend="install"> for Installation instructions.</para>
-     <para>Refer to <xref linkend="configuration"> for post install configuration.</para>
+    <para>Refer to <xref linkend="install"> for<emphasis> Installation instructions.</emphasis></para>
+      <para>Refer to <xref linkend="configuration"> for post install <emphasis>configuration</emphasis>.</para>
      <para> Following is a table of shortcuts with some quick links to commands under
      the Reference Column.</para>
      &shortcuts;
@@ -135,16 +123,17 @@ Gnome Main (Foot) Menu  ==> Internet  ==> CronosII
       In short &app should be able to be installed anywhere the GIMP Tool Kit is available including 
       ports of GTK to the <trademark> Windows </trademark>  Operating System.
       </para>
-      <important>
+      
       <para>
       To build and run &app;&version; you need to have the following libraries installed:
-      </para>
+      If you are using a binary package eg. RPM or DEB please ignore this list. It should have been taken care of for you.</para>
       <para>
       (my apologies to <trademark>Windows</trademark> Users  I'm not sure what they need beyond GTK)
       </para>
       <para>Please let me know so that I can update this manual. <email>&pete;</email> 
       or see <xref linkend="authors">
       </para>
+
       <itemizedlist>
       <listitem>
       <para>
@@ -175,9 +164,7 @@ Gnome Main (Foot) Menu  ==> Internet  ==> CronosII
       <programlisting>ls /usr/lib/libgnomeprint.*</programlisting> or
       <programlisting>ls /usr/local/lib/libgnomeprint.*</programlisting>
       </para>
-      <para>
-      (gnome-print-0.25 works fine)
-      </para>
+    <para>libgnomeprint has been upgraded several times since this was originally written. I have found that as long as your gnome development libraries are as new as libgnome print - all is well.
       </listitem>
       <listitem>
       <para>
@@ -188,9 +175,7 @@ Gnome Main (Foot) Menu  ==> Internet  ==> CronosII
       </para>
       </listitem>
       </itemizedlist>
-      </important>
-
-		 
+     		 
        <sect2 id="installing">
        <title>Installation</title>
       <para>
@@ -216,9 +201,15 @@ Gnome Main (Foot) Menu  ==> Internet  ==> CronosII
       </para>
       </listitem>
       <listitem>
+	    <para>&app; is also available as a<application>Debian binary package</application> ( Since most of the development team use Debian GNU/Linux )</para>
+	    <programlisting>&app;&version;_i386.deb</programlisting>
+	    <para>There official and unofficial (wild) packages. Instructions for these are at  <link linkend="debs">Debian Packages</link></para>
+     </listitem>
+	   
+      <listitem>
       <para>Finally &app;<emphasis> may be available</emphasis> as a <application>Redhat Package Manager - Package.</application></para>
       <para>These RPM's should look like this:</para>
-      <programlisting>&app;&version;.ixxx.rpm</programlisting>
+      <programlisting>&app;.&version;.ixxx.rpm</programlisting>
       <para> Instructions for these are at<link linkend="rpms"> Red Hat Packages</link></para>
       </listitem>
       </orderedlist>
@@ -377,20 +368,15 @@ compression method. </para>
   		 <para> This should (all going well) build a package ready for you to install as a standard
   		 <application>RPM</application> as shown<link linkend="rpms"> above.</link></para></tip>   
        </sect3>
-<sect3>
-	<title>Debian packages
-	</title>
+<sect3 id="debs">
+	<title>Debian packages</title>
 <para> &app; version 0.2.2 and hopefully later versions are now
 	  available from the unstable branch at your local ftp mirror.
 
 </para>
-	<para><programlisting> apt-get install
-	  cronosII</programlisting> (or use dselect) should find you the latest Debian
-	  build.</para>
-<para>I am currently investigating free standing debs for inclusion at
-	  the &app; download site. However I'm sure Debian users would
-	  agree that stable builds from their fantastic package
-	  management system are the best way of handling installs.</para>
+	<para><programlisting> apt-get install  cronosII</programlisting>  should find you the latest Debian build.</para>
+<para>There are also unofficial debs available from  the &app; download site.</para>
+	  <para> To install Official Debian packages use <programlisting>apt-get install cronosii</programlisting> To install a downloaded Unofficial deb use: <programlisting>dpkg -i &app;&version;_i386.deb</programlisting> or similar.</para>
        </sect3>
        </sect2>
        </sect1>
