@@ -118,20 +118,38 @@ Daniel has contributed quite a few patches to the MR2 source. These include fixe
 </para>
 </listitem>
 </itemizedlist>
-</sect2>
-<sect2 id="special-thanks">
-    <title>Thanks</title>
-<note><para>The char.bug</para>
-
-<para>A special thanks to the hackers on the<emphasis> Debian (debian.bugs.dist) development newsgroup</emphasis> who fixed some bugs they found running under the Power PC platform. These same patches also fixed some stubborn bugs involving parsing mail headers and config files. As near as I can tell these people where:
- Aaron Schrab (aaron ATAT schrab.com) ,ROOT (?) jlquin ATAT optonline.net and Seamus. They know who they are :) While I was trying to fix similar problems I may never have seen that solution. Which is why I do the docs :)</para>
-</note>
-
 <para>
-Thank-you to all the people from around this  planet (at least)  who use Cronos II and by doing so
-give support to Open Source Software, GNU, GTK, GNOME, feedback to us, and a clear
+Thank-You to all the people from about this  planet (at least)  who use Cronos II and by doing so give support to Open Source Software, GNU, GTK, GNOME, feedback to us, and a clear
 sense of purpose (fear) to the development work.
 </para>
+</sect2>
+<!-- 
+<sect2 id="contributions-other">
+<title>Other Contributions </title>
+
+<para>Thanks also to the following people <para>
+<sect3 id="vers-0.2.2.22">
+<title></title>
+<para></para>
+</sect3>
+<sect3 id="vers-0.x.x">
+<title>Template</title>
+<para></para>
+</sect3>
+-->
+
+<sect2 id="version-thanks">
+<!-- migate to section contribitions-other above per version -->
+    <title>Version &version; Thanks</title>
+<note><para>The char  bug</para>
+
+<para>A special thanks to the hackers on the<emphasis> Debian (debian.bugs.dist) development newsgroup</emphasis> who fixed some bugs they found running under the Power PC platform. These same patches also fixed some stubborn bugs involving parsing mail headers and config files. </para><para>As near as I can tell these people where:
+ Aaron Schrab (email withheld) , ROOT (?) jlquin (email withheld) and "Seamus" <email>seamus@debian.org</email>. (They know where they are :) While I was trying to fix similar problems I may never have seen that solution. Which is why I do the docs :)</para>
+<para>Finally I would like to thank Angel Ramos <email>seamus@debian.org</email> who is now the Debian Maintainer for the CronosII package. He saved me a lot of time at an important stage in this release. </para>
+<para>Viva Open Source !!!</para>
+</note>
+
+
 <para>Any comments, suggestions, ideas or assistance contact the Development Team @
 <email>"&developers"</email>.
 </para>

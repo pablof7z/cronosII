@@ -173,7 +173,7 @@ This section contains Instructions for the initial installation of &app; &versio
       <programlisting>ls /usr/lib/libgnomeprint.*</programlisting> or
       <programlisting>ls /usr/local/lib/libgnomeprint.*</programlisting>
       </para>
-    <para>libgnomeprint has been upgraded several times since this was originally written. I have found that as long as your gnome development libraries are as new as libgnome print - all is well.
+    <para>libgnomeprint has been upgraded several times since this was originally written. I have found that as long as your gnome development libraries are as new as libgnome print - all is well.</para>
       </listitem>
       <listitem>
       <para>
@@ -385,7 +385,7 @@ compression method. </para>
 
 </para>
 	<para><programlisting> apt-get install  cronosII</programlisting>  should find you the latest Debian build.</para>
-<para>There are  unofficial debs available from  the &app; download site.</para>
+<para>There  may also be unofficial (wild) debs available from  the &app; download site. </para>
 	  <para> To install Official Debian packages use <programlisting>apt-get install cronosii</programlisting> To install a downloaded Unofficial deb use: <programlisting>dpkg -i &app;&version;_i386.deb</programlisting> or similar.</para>
 <para>Please note that the unofficial and official packages may use slightly different package names. You may need to do an uninstall before moving to the other version.</para>
        
@@ -462,7 +462,7 @@ Everything else should work fine in default configuration.
 	  <itemizedlist>
   		<listitem><para><link linkend="configuration-advanced-net-timeout">Net Timeout</link>
 	      </para></listitem>
-	    <listitem><para><link linkend="configuration-advanced-persistant-SMTP">Persistent SMTP</link></listitem>
+	    <listitem><para><link linkend="configuration-advanced-persistant-SMTP">Persistent SMTP</link></para></listitem>
 	    <listitem><para><link linkend="configuration-advanced-addressbook">Initialise Address Book</link></para></listitem>
   		
 </itemizedlist>
@@ -1557,6 +1557,7 @@ the mail  as a text file.
 <para>Shortcut: 	Right -Click mail header and select move.</para>
 <para>The Select a Mailbox  Dialog opens where you choose the Target Mailbox.
 </para>
+</sect3>
 </sect2>
 
 <sect2 id="text-delete">
@@ -1766,10 +1767,10 @@ of Accounts, Signature files and such.</para>
    though work continues. If something is plain wrong or unclear<emphasis> please</emphasis> let us know.
     </para>
     <para>
-   The DTD for this doc is:<programlisting>DOCTYPE article PUBLIC "-//OASIS//DTD DocBook V3.1//EN" </programlisting>
+   The DTD for this doc is:<programlisting>DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V4.1//EN" </programlisting>
    </para>
- <note><para> This DTD was chosen for it's ubiquity.
-  
+ <note><para> This DTD was chosen for it's ubiquity. It should work for most people. If not try
+  changing the "4.1" to "3.1". If you have gnome installed this dtd may be preferable <programlisting>DOCTYPE book PUBLIC "-//GNOME//DTD DocBook PNG Variant V1.1//EN"[ </programlisting>
    </para>
    </note>
    
@@ -1906,7 +1907,7 @@ As the source document for this manual is written in
       <para> Macintosh and Apple are  trademarks of Apple Computer, Inc.</para>
       <para> All other trademarks are property of their respective owners</para>
   
-   <para>
+   <para> 
     Many of the names used by companies to distinguish their products and
     services are claimed as trademarks. Where those names appear in any
     GNOME documentation, and those trademarks are made aware to the members
@@ -1915,6 +1916,7 @@ As the source document for this manual is written in
    </para>
    </sect2>
 </sect1>
+</chapter>
  
 
 <!--  KEYBOARD SHORTCUTS -->
