@@ -9,6 +9,11 @@ Bosko Blagojevic <falling@users.sourceforge.net>
 - FreeBSD porting.
 - Address Book core development.
 
+Daniel Fairhead <ralphtheracoon@uk2.net>
+- patches to fix reply problems
+- other patches to tidy up the original Cronos II.
+- More to come.
+
 André Casteliano <digitalcoder@users.sourceforge.net>
 - Queue Mailbox (send later ability).
 
