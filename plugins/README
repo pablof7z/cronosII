@@ -11,7 +11,7 @@ $tar -zxvf Fortune-Plugin.tar.gz
 $cd fortune/
 $su
 $password
-(carefull now)
+(careful now)
 $cp fortune.so /usr/share/cronosII/plugins/fortune.so
 $exit
 $cronos &
@@ -26,7 +26,7 @@ With CronosII-0.2.2 installed.
 (thats a totally uneducated guess really )
 A solution to a  non-asked question :
 
-You may have a problem with the INSTALL step if you have more than one version of cronosII-config on your system. eg. You have installed to different prefixes and or you have been using the new scratch version. Do a ]make uninstall then make install for  a quick fix. Otherwise you will have to locate the offending versions and uninstall by hand. (which and type are handy here).
+You may have a problem with the INSTALL step if you have more than one version of cronosII-config on your system. e.g.. You have installed to different prefixes and or you have been using the new scratch version. Do a ]make uninstall then make install for  a quick fix. Otherwise you will have to locate the offending versions and uninstall by hand. (which and type are handy here).
 
 
 ELSE IF
@@ -55,7 +55,7 @@ all should be well.
 ELSE
 ####################################################################
 3: This taken from Bosco's README in the c2filters-0.4.5pre1 (which is included in the MR2 source package).
-It works fine just be a carefull while you have root permissions !
+It works fine just be a careful while you have root permissions !
 <quote>
 
 If you have trouble building (i.e. missing working cronosII 0.2.1 headers),
