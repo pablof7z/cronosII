@@ -20,7 +20,7 @@ EXTRA_DIST =			\
 	TODO			\
 	ChangeLog		\
 	sample.so		\
-	filters.so			\
+	filters.so		\
 	fortune.so		\
 	README-developers.Changelog
 
@@ -35,4 +35,5 @@ plugindir = $(pkgdatadir)/plugins
 plugin_DATA = 	\
 	 filters.so	\
 	fortune.so  \
-	sample.so
+	sample.so	\
+	nohtml.so

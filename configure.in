@@ -4,7 +4,7 @@ AM_CONFIG_HEADER(config.h)
 C2_PLUGIN_MAJOR_VERSION=0
 C2_PLUGIN_MINOR_VERSION=2
 C2_PLUGIN_MICRO_VERSION=2
-AM_INIT_AUTOMAKE(cronosII, 0.2.2.22)
+AM_INIT_AUTOMAKE(cronosII, 0.2.2.23)
 
 AC_PROG_CC
 AC_ISC_POSIX
@@ -253,7 +253,7 @@ echo
 echo \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
 echo \* Cronos II $VERSION   \*
 echo \* This is a CVS version of the original CronosII  \*	
-echo \*  Maintenance Release Two   \*	
+echo \*  Maintenance Release Two dot Three   \*	
 echo \*\*\*\*\*\*\*\  Package building version *\*\*\*\*\*\*\*\*\*\*\*
 
 

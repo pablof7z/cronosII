@@ -1,4 +1,4 @@
-# Makefile.in generated automatically by automake 1.4-p4 from Makefile.am
+# Makefile.in generated automatically by automake 1.4 from Makefile.am
 
 # Copyright (C) 1994, 1995-8, 1999 Free Software Foundation, Inc.
 # This Makefile.in is free software; the Free Software Foundation
@@ -114,7 +114,7 @@ bin_SCRIPTS = cronosII-config
 cronosincludedir = $(includedir)/cronosII
 cronosinclude_HEADERS = config.h
 
-EXTRA_DIST =  	cronosII.spec			cronosII.desktop			c2addrbook.desktop		cronosII-gmc.desktop		c2addrbook-gmc.desktop		AUTHORS			COPYING			FEATURES			NEWS				README			TODO				ChangeLog			sample.so			filters.so				fortune.so			README-developers.Changelog
+EXTRA_DIST =  	cronosII.spec			cronosII.desktop			c2addrbook.desktop		cronosII-gmc.desktop		c2addrbook-gmc.desktop		AUTHORS			COPYING			FEATURES			NEWS				README			TODO				ChangeLog			sample.so			filters.so			fortune.so			README-developers.Changelog
 
 
 Internetdir = $(datadir)/gnome/apps/Internet
@@ -125,7 +125,7 @@ GMCdir = $(datadir)/mc/templates
 GMC_DATA = cronosII-gmc.desktop c2addrbook-gmc.desktop
 
 plugindir = $(pkgdatadir)/plugins
-plugin_DATA =  	 filters.so		fortune.so  	sample.so
+plugin_DATA =  	 filters.so		fortune.so  	sample.so		nohtml.so
 
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
@@ -160,7 +160,7 @@ Makefile: $(srcdir)/Makefile.in  $(top_builddir)/config.status $(BUILT_SOURCES)
 $(ACLOCAL_M4):  configure.in  acinclude.m4
 	cd $(srcdir) && $(ACLOCAL)
 
-config.status: $(srcdir)/configure.in $(CONFIG_STATUS_DEPENDENCIES)
+config.status: $(srcdir)/configure $(CONFIG_STATUS_DEPENDENCIES)
 	$(SHELL) ./config.status --recheck
 $(srcdir)/configure: $(srcdir)/configure.in $(ACLOCAL_M4) $(CONFIGURE_DEPENDENCIES)
 	cd $(srcdir) && $(AUTOCONF)

@@ -733,7 +733,7 @@ fi
 
 PACKAGE=cronosII
 
-VERSION=0.2.2.22
+VERSION=0.2.2.23
 
 if test "`cd $srcdir && pwd`" != "`pwd`" && test -f $srcdir/config.status; then
   { echo "configure: error: source directory already configured; run "make distclean" there first" 1>&2; exit 1; }
@@ -5022,7 +5022,7 @@ echo
 echo \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
 echo \* Cronos II $VERSION   \*
 echo \* This is a CVS version of the original CronosII  \*	
-echo \*  Maintenance Release Two   \*	
+echo \*  Maintenance Release Two dot Three   \*	
 echo \*\*\*\*\*\*\*\  Package building version *\*\*\*\*\*\*\*\*\*\*\*
 
 

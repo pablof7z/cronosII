@@ -41,6 +41,7 @@ void gui_about_new (void) {
     "André Casteliano <digitalcoder@users.sourceforge.net>",
     "Yves Mettier <ymettier@libertysurf.fr>",
     "Peter Gossner <gossner@arcom.com.au>",
+	"Angel Ramos <seamus@debian.org>",
     NULL
   };
   GtkWidget *href;
@@ -48,12 +49,12 @@ void gui_about_new (void) {
   window = gnome_about_new ("CronosII", VERSION," Debian /GNU edition  
 		  		(C) GPL 2000-2002 Pablo Fernández Navarro",
 				authors,
-  				_("A powerful GNOME mail client."),
+  				("A fast, flexible GNOME mail client."),
 			DATADIR "/cronosII/pixmap/splash.png");
   gtk_window_set_modal (GTK_WINDOW (window), TRUE);
   gtk_window_set_transient_for (GTK_WINDOW (window), GTK_WINDOW (WMain->window));
 
-  href= gnome_href_new ("http://cronosII.sourceforge.net",
+  href= gnome_href_new ("http://www.cronosII.net",
       			_("Visit the Cronos II homepage"));
   gtk_box_pack_start (GTK_BOX (GNOME_DIALOG (window)->vbox), href, FALSE, TRUE, 0);
   gtk_widget_show (href);

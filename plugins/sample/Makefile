@@ -10,10 +10,10 @@ $(BIN) : $(OBJECTS)
 	$(CC) $(LDFLAGS) $(CFLAGS) -I../../ -DSKIPCONFIG -shared -Wl,-soname,sample.so -o $@ $(OBJECTS) -lc
 
 sample.o : sample.c
-	$(CC) `gnome-config --cflags gnome gnomeui` sample.c -c
+	$(CC) -fPIC `gnome-config --cflags gnome gnomeui` sample.c -c
 
 configure.o : configure.c
-	$(CC) `gnome-config --cflags gnome gnomeui` configure.c -c
+	$(CC) -fPIC `gnome-config --cflags gnome gnomeui` configure.c -c
 
 clean :
 	rm -f core $(OBJECTS) $(BIN)

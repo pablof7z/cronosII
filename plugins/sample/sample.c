@@ -1,11 +1,13 @@
-#include <cronosII.h>
+#include "../headers/message.h"
+#include "../headers/account.h"
+#include "../headers/plugin.h"
+#include "../headers/init.h"
+#include "../headers/utils.h"
 #include <gnome.h>
 #include <stdio.h>
+#include "../headers/main.h"
+
 /*Nb LINE 190 (WMain->status) commented out --pete */
-/* Check if the local compilation supports plugins */
-#ifndef USE_PLUGINS
-#error "You can't compile a plugin for Cronos II since it was compiled without plugins support. Recompile with ./configure --enable-plugins (and whatever else you want) ."
-#endif
 
 /* Required version */
 #define REQUIRE_MAJOR_VERSION 0 /* <0>.2.0 */
