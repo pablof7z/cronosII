@@ -1,3 +1,19 @@
+
+Wed Apr 24 2002 pete <petergozz@users.sf.net>
+	* updated nohtml binary 
+	* incremented version number this version now 0.2.2.24
+	* configure.in AM_INIT_AUTOMAKE(cronosII, 0.2.2.24)
+	* had a really quick look at nohtml.c with a view to fixing :
+	nohtml.c: In function `plugin_load_configuration':
+nohtml.c:227: warning: assignment makes pointer from integer without a cast
+nohtml.c:229: warning: assignment makes pointer from integer without a cast
+nohtml.c:230: warning: assignment makes pointer from integer without a cast
+	* well they seem cast to me (as char) maybe its the pointer bit.
+	* left nasty message in code :)
+	* Notes NZ is not talking to Au at the moment (Rugby World Cup stuff)
+	* Fiji might be. But frankly I would not be talking to AU if I was anyody in Oceania at the moment. 
+	* Also Notes that Emacs is way too big but that Vi does not support everything I need. But I Use it for fast stuff - for which is is very cool- and I wont  mention this again if you don't <no damit Scotty!  I will not launch Photon anythings..He said Vi not Klingons. Turn down the bagpipes you crazy Scott.. and stop sniffing the machine oil, we don't use it anyway etc etc  No NO Mr Sulo is right Tartan does not become you.. Oh shut UP Spock>
+
 Mon Apr 22 2002 dan <madprof@madprof.net>
 	* Emitting signal C2_DYNAMIC_MODULE_MESSAGE_DISPLAY.
 	* Made the nohtml plugin support the new signal. Much better.
