@@ -4,7 +4,7 @@
 %define RELEASE		1
 %define rel	%{?CUSTOM_RELEASE} %{!?$CUSTOM_RELEASE:%RELEASE}
 
-Summary: Cronos II is a well featured mail client for GNOME.
+Summary: Cronos II is a well featured, flexible mail client for GNOME.
 Name: @PACKAGE@
 Version: @VERSION@
 Release: %rel
@@ -46,52 +46,21 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
-%doc ABOUT-NLS AUTHORS COPYING ChangeLog Changelog-RPM FEATURES INSTALL NEWS NEWS_OTHER README doc/C/cronosII/* TODO
+%doc ABOUT-NLS AUTHORS COPYING ChangeLog FEATURES INSTALL NEWS  README doc/C/cronosII/* TODO
 %{_bindir}/cronos
 %{_bindir}/c2addrbook
 %{_bindir}/cronosII-config
 %{_datadir}/gnome/apps/Internet/cronosII.desktop
 %{_datadir}/gnome/apps/Applications/c2addrbook.desktop
-%{_datadir}/pixmaps/cronosII.png
-%{_datadir}/pixmaps/c2addrbook.png
+%{_datadir}/pixmaps/*
 %{_datadir}/cronosII/plugins/filters.so
 %{_datadir}/cronosII/plugins/fortune.so
 %{_datadir}/cronosII/plugins/sample.so
 %{_mandir}/man1/cronos.1.gz
 %{_mandir}/man1/c2addrbook.1.gz
 %{_mandir}/man1/cronosII-config.1.gz
-%{_datadir}/gnome/help/cronosII/C/warning.gif
-%{_datadir}/gnome/help/cronosII/C/using-cronosii.html
-%{_datadir}/gnome/help/cronosII/C/up.gif
-%{_datadir}/gnome/help/cronosII/C/topic.dat
-%{_datadir}/gnome/help/cronosII/C/toc-plus.gif
-%{_datadir}/gnome/help/cronosII/C/toc-minus.gif
-%{_datadir}/gnome/help/cronosII/C/toc-blank.gif
-%{_datadir}/gnome/help/cronosII/C/tip.gif
-%{_datadir}/gnome/help/cronosII/C/text-menubar.html
-%{_datadir}/gnome/help/cronosII/C/prev.gif
-%{_datadir}/gnome/help/cronosII/C/plugins.html
-%{_datadir}/gnome/help/cronosII/C/note.gif
-%{_datadir}/gnome/help/cronosII/C/next.gif
-%{_datadir}/gnome/help/cronosII/C/manual-authors.html
-%{_datadir}/gnome/help/cronosII/C/mainwindow-icons.html
-%{_datadir}/gnome/help/cronosII/C/license.html
-%{_datadir}/gnome/help/cronosII/C/keyboard-shortcuts.html
-%{_datadir}/gnome/help/cronosII/C/install.html
-%{_datadir}/gnome/help/cronosII/C/index.html
-%{_datadir}/gnome/help/cronosII/C/important.gif
-%{_datadir}/gnome/help/cronosII/C/images/
-%{_datadir}/gnome/help/cronosII/C/home.gif
-%{_datadir}/gnome/help/cronosII/C/gtk.html
-%{_datadir}/gnome/help/cronosII/C/f11.html
-%{_datadir}/gnome/help/cronosII/C/docbook.css
-%{_datadir}/gnome/help/cronosII/C/configuration.html
-%{_datadir}/gnome/help/cronosII/C/composer.html
-%{_datadir}/gnome/help/cronosII/C/caution.gif
-%{_datadir}/gnome/help/cronosII/C/bugs.html
-%{_datadir}/gnome/help/cronosII/C/book1.html
-%{_datadir}/gnome/help/cronosII/C/authors.html
-%{_datadir}/gnome/help/cronosII/C/addressbook-final.html
+%{_datadir}/gnome/help/cronosII/C/*.html
+%{_datadir}/gnome/help/cronosII/C/stylesheet-images/*
 %{_datadir}/locale/br/LC_MESSAGES/cronosII.mo
 %{_datadir}/locale/de/LC_MESSAGES/cronosII.mo
 %{_datadir}/locale/es/LC_MESSAGES/cronosII.mo
