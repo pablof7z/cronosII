@@ -44,7 +44,7 @@ void gui_about_new (void) {
   };
   GtkWidget *href;
 
-  window = gnome_about_new ("Cronos II", VERSION, 
+  window = gnome_about_new ("Cronos II", VERSION,
 		  		"(C) 2000-2001 Pablo Fernández Navarro",
 				authors,
   				_("A powerful GNOME mail client."),
