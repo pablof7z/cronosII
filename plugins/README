@@ -4,13 +4,15 @@ There are at least three ways of installing the plugins.
 1.  (the quick and nasty way)
 ######################################################################
 To install the built binaries :
+This assumes you have installed 0.2.2 or MRx. (same thing)
 <example>
 $tar -zxvf Fortune-Plugin.tar.gz
 
 $cd fortune/
 $su
 $password
-$make install.
+(carefull now)
+$cp fortune.so /usr/share/cronosII/plugins/fortune.so
 $exit
 $cronos &
 configure the plugins from the the Main Window

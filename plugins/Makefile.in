@@ -107,7 +107,7 @@ l = @l@
 sedpath = @sedpath@
 unamepath = @unamepath@
 
-EXTRA_DIST = plugin.html 	sample/Makefile 	sample/sample.c 	fortune/Makefile 	fortune/fortune.c 	fortune/ChangeLog 	fortune/README 	fortune/fortune.o 	fortune/fortune.so 	filters/Changelog 	filters/Makefile 	filters/README 	filters/filters.c 	filters/filters.o 	filters/filters.so
+EXTRA_DIST = plugin.html 	sample/Makefile 	sample/sample.c 	fortune/Makefile 	fortune/fortune.c 	fortune/ChangeLog 	fortune/README 	fortune/fortune.o 	fortune/fortune.so 	c2filters-0.4.5pre1/Changelog 	c2filters-0.4.5pre1/Makefile 	c2filters-0.4.5pre1/README 	c2filters-0.4.5pre1/filters.c 	c2filters-0.4.5pre1/filters.o 	c2filters-0.4.5pre1/filters.so
 
 mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
 CONFIG_HEADER = ../config.h
@@ -142,7 +142,8 @@ distdir: $(DISTFILES)
 	distdir=`cd $(distdir) && pwd`; \
 	cd $(top_srcdir) \
 	  && $(AUTOMAKE) --include-deps --build-dir=$$here --srcdir-name=$(top_srcdir) --output-dir=$$top_distdir --gnu plugins/Makefile
-	$(mkinstalldirs) $(distdir)/filters $(distdir)/fortune $(distdir)/sample
+	$(mkinstalldirs) $(distdir)/c2filters-0.4.5pre1 $(distdir)/fortune \
+	   $(distdir)/sample
 	@for file in $(DISTFILES); do \
 	  d=$(srcdir); \
 	  if test -d $$d/$$file; then \
