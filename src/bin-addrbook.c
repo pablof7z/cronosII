@@ -30,7 +30,7 @@ main (int argc, char **argv) {
   if (config->addrbook_init == INIT_ADDRESS_BOOK_INIT_START)
     c2_address_book_init ();
   gaddrbook = c2_address_book_new ("cronosII-address-book");
-  gtk_signal_connect (GTK_OBJECT (gaddrbook->window), "delete_event",
+  gtk_signal_connect (GTK_OBJECT (gaddrbook->window), "hide",
       				GTK_SIGNAL_FUNC (on_close), NULL);
   gtk_widget_show (gaddrbook->window);
   gtk_main ();

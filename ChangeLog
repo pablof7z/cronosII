@@ -3,6 +3,8 @@
 - The address book can now be accessed from the foot menu and from the gmc menu.
 - The address book is now a separated program from c2.
 - Patch in order to facilitate Bosko the writing of a plugin for the pop module.
+- Changes in order to the c2addrbook program, once its closed, doesn't goes to the
+  background and keep bothering there.
 
 º Sun Apr 08 2001 Yves Mettier <ymettier@libertysurf.fr> º
 - Patch in order to include some required headers.
