@@ -1,11 +1,11 @@
 <!-- plugins.sgml-->
-<!--A place holder for a future user manual on Plugins-->
 
 <sect1 id="plugins">
 <title>Plug Ins</title>
 <subtitle>Extensions to &app;</subtitle>
 <note>
-<para>This written for the final release of the original Cronos II. i.e. CronosII-0.2.2-mr2.</para>
+<para>This written for the final release of the original Cronos II. i.e. CronosII-0.2.2-mr2. <para>
+<para>Users of<emphasis> binary packages</emphasis> (DEBs and RPMs) should not need to do any of this as of version cronosii-0.2.2-22 </para>
 </note>
 <para>Included with the MR2 release of &app; are three Plugins. These are:
  <orderedlist>
@@ -16,6 +16,11 @@
 </para>
 <sect2 id=plugin-install>
 <title>Installing</title>
+<note>
+<para> a normal "./configure --prefix=/usr && make && make install" should now install the plugins. The binaries are, perhaps a little unusually, held as copies in the top source directory. This is a work around (that works) however they do need to be in that location to install correctly.</para>
+<para>Try<programlisting>cp -r plugins/*/*.so ./</programlisting>
+From the top level directory if they are not.</para>
+</note>
 <para>The source code and installation instructions for the Plugins are included in the MR2 tar ball.  Code for Fortune and Filters is also kept separately at the <ulink type="http" url="&website;">Cronos II home site.</ulink> </para>
 <para>The simplest way to install the Plugins is to copy the pre-built binaries to the //install-path/share/cronosII/plugins/directory on your system. Otherwise you will have to obtain the CronosII-0.2.1 version header files and build the binaries your self from source. (See the source code for the latest instructions).</para>
 
@@ -73,7 +78,7 @@ Support for wild-cards is enabled and this makes configuration reasonably simple
 <para>You are advised to use wild cards (*) to find the string within a mail header or body. The string must match<emphasis> exactly or be allowed to not match</emphasis> some parts of the section being looked through.</para> 
 </note></para>
 <para>Next select which part of the Email you want to filter with. e.g. From:. Then <emphasis>ADD</emphasis> it to the list. The rule will be written to the display area below.</para>
-<para>Now leaving the same string in place choose "TO" and addthat to the list as well.</para>
+<para>Now leaving the same string in place choose "TO" and add that to the list as well.</para>
 <para>Now just because this is an example select<programlisting> "Match Any Rules".</programlisting> This radio button essentially allows you to  filter by ALL these rules (and) or filter by ANY of these rules (or).</para>
 <para> Next select The "Action" tab. Here for example we could select to send the filtered Email to Drafts, Garbage, "MyMailbox" or any other mailboxes we have configured.</para><para>The filter will now find any mail with "your-email-address" in the TO: or FROM: fields of the mail header.</para>
 <para>Currently you may only move messages to those present on the pop-out list.  Any top level mailboxes you add will appear on this list</para>
@@ -87,7 +92,7 @@ Support for wild-cards is enabled and this makes configuration reasonably simple
 
 <sect2>
 <title>Availability</title>
-<para>If you would like to get the "Stand Alone" Plugins or find out how to write your own, visit the<ulink type="http" url="&website;"> Cronos Website</ulink> &lt; &website; &gt; and follow the links to manuals and plugins. A html howto is included in the Source Tarball, look under the plugins directory.
+<para>If you would like to get the "Stand Alone" Plugins or find out how to write your own, visit the<ulink type="http" url="&website;"> Cronos Website</ulink> &lt; &website; &gt; and follow the links to manuals and plugins. A html how-to is included in the Source Tarball, look under the plugins directory.
 </para>
 </sect2>
 </sect1>
