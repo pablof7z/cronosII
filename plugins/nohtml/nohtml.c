@@ -217,6 +217,7 @@ plugin_load_configuration (const char *config) {
   FILE *fd; 
 
   /*char *fd;*/
+  /*hmm maybe we need a protoype dec somewhere ? */
   
   g_return_if_fail (config);
 
