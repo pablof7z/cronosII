@@ -1,0 +1,32 @@
+                              nohtml 0.0.1
+			      
+                           A  CronosII Plugin
+                     (C) Copyright 2002 Daniel Fairhead
+
+About:
+
+	Basically, This plugin strips the html tags out of emails,
+	if the email contains <html> in it. Very simple and such.
+
+How to Install:
+	
+	$ make;
+	$ cronos
+	[Settings]
+	->[Preferences...]
+	[+] Plug-Ins
+	->[ > Load... ]
+	
+	(find the nohtml.so file)
+	
+	CronosII will now install the nohtml.so plugin
+	to ~/.CronosII/Plugins -- and it should now work
+	fine.
+
+Notes:
+
+	You may have to install the header (.h) files from
+	cronosII-0.2.1 in order to get this to compile,
+	instructions to do that can be found in the latest
+	cronosII distribution, in the /plugins directory
+	(I think).

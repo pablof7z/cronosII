@@ -1,0 +1,16 @@
+7 April  2002 Pete <petergozz@users.sf.net>
+	- modified nohtml.c includes to use the headers edited by Angel Ramos.
+	- moved all headers for all plug-ins to a common directory. (../headers)
+	- edited all current dot C files to use these. 
+		* To save space and make it simple to add new plug-ins.
+		* I will keep the originals as separate packages as well, with the same directory structure.
+		* Perhaps one day a better coder than I can work out how to build them with the rest of the source. ( I have tried but I just don't get it !)
+	- Note I have assumed that the warnings:
+	
+nohtml.c: In function `plugin_load_configuration':
+nohtml.c:158: warning: assignment makes pointer from integer without a cast
+nohtml.c:160: warning: assignment makes pointer from integer without a cast
+nohtml.c:161: warning: assignment makes pointer from integer without a cast
+	are just for a gnome error message and as I cannot see how a char gets itself defined again as an integer well... best left alone. 
+	- I have also assumed that Mr Racoon intended there be a "notify me if you get a message from this mail address" -- configuration dialog<breath> in place as a groovy feature. :)
+	
