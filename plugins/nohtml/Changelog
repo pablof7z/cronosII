@@ -1,3 +1,8 @@
+Mon Apr 22 2002 Dan <madprof@madprof.net>
+	- Converted to the new C2_DYNAMIC_MODULE_MESSAGE_DISPLAY signal.
+	  Which makes it a lot faster now on big messages, and copes better
+	  with MIME, and such.
+
 Tue Apr 23 2002 pete <petergozz@users.sf.net>
 	- patched Makefile with Angel Ramos's patch for porting.
 	- rebuilt binaries.
@@ -15,7 +20,6 @@ Sun Apr 14 2002 Dan <madprof@madprof.net>
 
 Sun Apr 14 2002 Pete <petergozz@users.sf.net>
 	- Moved all of Dans good work into the source tree.
-	
 
 12 April  2002 Dan <madprof@madprof.net>
 	- YES! Got all the configure stuff working totally, so that the options actually
@@ -40,9 +44,9 @@ Sun Apr 14 2002 Pete <petergozz@users.sf.net>
 	- modified nohtml.c includes to use the headers edited by Angel Ramos.
 	- moved all headers for all plug-ins to a common directory. (../headers)
 	- edited all current dot C files to use these. 
-		* To save space and make it simple to add new plug-ins.
-		* I will keep the originals as separate packages as well, with the same directory structure.
-		* Perhaps one day a better coder than I can work out how to build them with the rest of the 
+	* To save space and make it simple to add new plug-ins.
+	* I will keep the originals as separate packages as well, with the same directory structure.
+	* Perhaps one day a better coder than I can work out how to build them with the rest of the 
 		  source. ( I have tried but I just don't get it !)
 	- Note I have assumed that the warnings:
 	

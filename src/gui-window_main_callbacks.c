@@ -133,7 +133,8 @@ void on_wm_clist_select_row (GtkWidget *widget, gint row, gint column,
   char *parameter = NULL;
   char *from, *to, *cc, *bcc, *subject, *account, *date, *priority;
   GdkImlibImage *img;
-
+  GString *body=g_string_new(NULL);
+	
   if (column == 1) {
     handle_message_mark (row);
   }
@@ -149,7 +150,7 @@ void on_wm_clist_select_row (GtkWidget *widget, gint row, gint column,
   gtk_clist_get_text (GTK_CLIST (WMain->clist), row, 7, &_mid);
   if (_mid == NULL) return;
   mid = atoi (_mid);
-
+  selected_mid = mid;
   gdk_window_set_cursor (WMain->window->window, cursor_busy);
 
   message = message_get_message (selected_mbox, mid);
@@ -204,12 +205,18 @@ void on_wm_clist_select_row (GtkWidget *widget, gint row, gint column,
   len = gtk_text_get_length (GTK_TEXT (WMain->text));
   gtk_text_set_point (GTK_TEXT (WMain->text), 0);
   gtk_text_forward_delete (GTK_TEXT (WMain->text), len);
+  
   if (mime)
-    gtk_text_insert (GTK_TEXT (WMain->text), font_body, &config->color_misc_body, NULL, mime->part, -1);
+    g_string_assign(body,mime->part);
   else {
     message_get_message_body (message, NULL);
-    gtk_text_insert (GTK_TEXT (WMain->text), font_body, &config->color_misc_body, NULL, message->body, -1);
+    g_string_assign(body,message->body);
   }
+#if USE_PLUGINS
+  c2_dynamic_module_signal_emit (C2_DYNAMIC_MODULE_MESSAGE_DISPLAY, body->str, "preview", NULL, NULL, NULL);
+#endif 
+  gtk_text_insert (GTK_TEXT (WMain->text), font_body, &config->color_misc_body, NULL, body->str, -1);
+  
   gtk_text_thaw (GTK_TEXT (WMain->text));
 
   /* Get the header fields */
@@ -237,7 +244,7 @@ void on_wm_clist_select_row (GtkWidget *widget, gint row, gint column,
   c2_free (account);
   c2_free (date);
   c2_free (priority);
-  
+  g_string_free(body,TRUE);
   /* Load the file */ 
   cronos_gui_set_sensitive ();
 
@@ -276,7 +283,8 @@ void on_wm_clist_button_press_event (GtkWidget *clist, GdkEvent *event, gpointer
       GdkEventButton *e;
       Message *message;
 
-      message = (Message *) gtk_object_get_data (GTK_OBJECT (WMain->text), "message");
+      /*message = (Message *) gtk_object_get_data (GTK_OBJECT (WMain->text), "message");*/
+      message = message_get_message (selected_mbox, selected_mid);
       if (!message) return;
       message = message_copy (message);
       
@@ -376,6 +384,7 @@ on_wm_mime_view_clicked (void) {
   MimeHash *mime;
   GList *list;
   int len;
+  GString *body=g_string_new(NULL);
   
   if (!GNOME_ICON_LIST (WMain->icon_list)->selection) return;
   message = (Message *) gtk_object_get_data (GTK_OBJECT (WMain->text), "message");
@@ -392,7 +401,14 @@ on_wm_mime_view_clicked (void) {
   len = gtk_text_get_length (GTK_TEXT (WMain->text));
   gtk_text_set_point (GTK_TEXT (WMain->text), 0);
   gtk_text_forward_delete (GTK_TEXT (WMain->text), len);
-  gtk_text_insert (GTK_TEXT (WMain->text), font_body, &config->color_misc_body, NULL, mime->part, -1);
+  
+  g_string_assign(body,mime->part);
+#if USE_PLUGINS
+  c2_dynamic_module_signal_emit (C2_DYNAMIC_MODULE_MESSAGE_DISPLAY, body->str, "preview", NULL, NULL, NULL);
+#endif  
+  gtk_text_insert (GTK_TEXT (WMain->text), font_body, &config->color_misc_body, NULL, body->str, -1);
+  
+  //gtk_text_insert (GTK_TEXT (WMain->text), font_body, &config->color_misc_body, NULL, mime->part, -1);
   gtk_text_thaw (GTK_TEXT (WMain->text));
 }
 
@@ -493,8 +509,12 @@ tmpnam:
   path = buf;
   if (!strlen (program)) {
     command = path;
-    chmod (path, 0775);
+        chmod (path, 0775);
   } else command = str_replace (program, "%f", path);
+  if ((command[0] == '"')||(command[0] == '/')) return;
+  
+  //printf ("%c\n",command[0]);
+
   pthread_create (&thread, NULL, PTHREAD_FUNC (on_wm_mime_open_clicked_thread), command);
   pthread_detach (thread);
 }

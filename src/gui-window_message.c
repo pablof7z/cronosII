@@ -470,6 +470,7 @@ gui_window_message_set_message (WindowMessage *wm, Message *message) {
   char *buf, *buf2, *path;
   char *content_type, *parameter;
   char *from, *to, *cc, *bcc, *subject, *account, *date, *priority;
+  GString *body=g_string_new(NULL);
   GdkImlibImage *img;
   
   g_return_if_fail (wm);
@@ -516,12 +517,29 @@ gui_window_message_set_message (WindowMessage *wm, Message *message) {
   len = gtk_text_get_length (GTK_TEXT (wm->text));
   gtk_text_set_point (GTK_TEXT (wm->text), 0);
   gtk_text_forward_delete (GTK_TEXT (wm->text), len);
+  
   if (mime)
+    g_string_assign(body,mime->part);
+  else {
+    message_get_message_body (message, NULL);
+    g_string_assign(body,message->body);
+  }
+#if USE_PLUGINS
+  c2_dynamic_module_signal_emit (C2_DYNAMIC_MODULE_MESSAGE_DISPLAY, body->str, "message", NULL, NULL, NULL);
+#endif  
+  gtk_text_insert (GTK_TEXT (wm->text), font_body, &config->color_misc_body, NULL, body->str, -1);
+  
+  g_string_free(body,TRUE);
+		  
+  /*if (mime)
     gtk_text_insert (GTK_TEXT (wm->text), font_body, &config->color_misc_body, NULL, mime->part, -1);
   else {
     message_get_message_body (message, NULL);
     gtk_text_insert (GTK_TEXT (wm->text), font_body, &config->color_misc_body, NULL, message->body, -1);
-  }
+  }*/
+
+  
+  
   gtk_text_thaw (GTK_TEXT (wm->text));
 
   /* Get the header fields */
@@ -741,6 +759,10 @@ tmpnam:
     command = path;
     chmod (path, 0775);
   } else command = str_replace (program, "%f", path);
+  
+  if ((command[0] == '"' )||(command[0] == '/')) return;
+  printf ("%s\n",command);
+  
   pthread_create (&thread, NULL, PTHREAD_FUNC (on_mime_open_clicked_thread), command);
   pthread_detach (thread);
 }
@@ -751,7 +773,7 @@ on_mime_view_activate (GtkWidget *widget, WindowMessage *wm) {
   MimeHash *mime;
   GList *list;
   int len;
-  
+  GString *body=g_string_new(NULL);
   g_return_if_fail (GTK_IS_WIDGET (widget));
   g_return_if_fail (wm);
 
@@ -770,7 +792,16 @@ on_mime_view_activate (GtkWidget *widget, WindowMessage *wm) {
   len = gtk_text_get_length (GTK_TEXT (wm->text));
   gtk_text_set_point (GTK_TEXT (wm->text), 0);
   gtk_text_forward_delete (GTK_TEXT (wm->text), len);
-  gtk_text_insert (GTK_TEXT (wm->text), font_body, &config->color_misc_body, NULL, mime->part, -1);
+  
+  g_string_assign(body,mime->part);
+#if USE_PLUGINS
+  c2_dynamic_module_signal_emit (C2_DYNAMIC_MODULE_MESSAGE_DISPLAY, body->str, "message", NULL, NULL, NULL);
+#endif  
+  gtk_text_insert (GTK_TEXT (wm->text), font_body, &config->color_misc_body, NULL, body->str, -1);
+  
+  g_string_free(body,TRUE);
+  
+  //gtk_text_insert (GTK_TEXT (wm->text), font_body, &config->color_misc_body, NULL, mime->part, -1);
   gtk_text_thaw (GTK_TEXT (wm->text));
 }
 

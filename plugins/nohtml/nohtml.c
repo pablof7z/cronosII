@@ -1,6 +1,6 @@
-/* nohtml.c
+/* nohtml2.c
  *
- *  NoHtml 0.1.1 -- CronosII Plugin
+ *  NoHtml2 0.0.1 -- CronosII Plugin
  * 
  *  Copyright (C) 2002 Daniel Fairhead 
  *
@@ -28,13 +28,14 @@
 #include "../headers/plugin.h"
 #include "../headers/init.h"
 #include "../headers/message.h"
+
 #include <gnome.h>
 #include <stdio.h>
 /*#ifndef USE_PLUGINS
 #error "You can't compile a plugin for Cronos II since it was compiled"
 #error "without plugins support. Recompile with:"
 #error "   ./configure --enable-plugins (and whatever else you want) ."
-#endif*/
+#endif */
 
 /* Required version */
 #define REQUIRE_MAJOR_VERSION 0 /* <0>.2.0 */
@@ -51,15 +52,15 @@ enum {
 };
 
 char *information[] = {
-  "No HTML",
-  "0.1.0",
+  "No HTML - 2",
+  "0.0.1",
   "Daniel Fairhead <madprof@madprof.net>",
   "http://www.madprof.net",
-  "I hate HTML emails."
+  "I hate HTML emails. Now I can deal with them *properly*."
 };
 
 static void
-plugin_on_message_open (Message *message, const char *type);
+plugin_on_message_open (char *message, const char *type);
 
 static void
 plugin_load_configuration (const char *config);
@@ -110,7 +111,7 @@ module_init (int major_version, int minor_version, int patch_version, C2DynamicM
   plugin_load_configuration (module->configfile);
 
   /* Connect the signals */
-  c2_dynamic_module_signal_connect (information[PLUGIN_NAME], C2_DYNAMIC_MODULE_MESSAGE_OPEN,
+  c2_dynamic_module_signal_connect (information[PLUGIN_NAME], C2_DYNAMIC_MODULE_MESSAGE_DISPLAY,
   				C2_DYNAMIC_MODULE_SIGNAL_FUNC (plugin_on_message_open));
   return NULL;
 }
@@ -118,7 +119,7 @@ module_init (int major_version, int minor_version, int patch_version, C2DynamicM
 void
 module_cleanup (C2DynamicModule *module) {
   g_return_if_fail (module);
-  c2_dynamic_module_signal_disconnect (module->name, C2_DYNAMIC_MODULE_MESSAGE_OPEN);
+  c2_dynamic_module_signal_disconnect (module->name, C2_DYNAMIC_MODULE_MESSAGE_DISPLAY);
 }
 
 /*
@@ -132,17 +133,17 @@ module_cleanup (C2DynamicModule *module) {
 	please send me patches if you want more supported (or email me really nicely ;)).
 */
 static void
-plugin_on_message_open (Message *message, const char *type) {
+plugin_on_message_open (char *message, const char *type) {
 	//char *text, *chr;
 	//int i;
 	gboolean in_tag = FALSE;
 	gboolean in_sym = FALSE;
 	char *current_char;
 	char *dst;
-	char *str = message->message;
+	//char *str = message;
 	GString *tag=g_string_new (NULL);
-	gboolean parsing = FALSE;
 	int j=0;
+
 	
 	/* Check to see if I should not parse this message. */
 	
@@ -152,18 +153,9 @@ plugin_on_message_open (Message *message, const char *type) {
 	/* Check for <HTML>, or if it is not required */
 
 	/* if ((strstr(str,"<html>")!=NULL)||(strstr(html_require,"no"))){ */
-	if ((strcasestr(str,"<html>"))||(strstr(html_require,"no"))){
-		for (current_char = dst = str; *current_char; current_char++) {
+	if ((strcasestr(message,"<html>"))||(strstr(html_require,"no"))){
+		for (current_char = dst = message; *current_char; current_char++) {
 
-			if (parsing==FALSE){
-				if ((*current_char =='\n')&&(*(current_char+1) == '\n')){
-					parsing = TRUE;
-					*dst++ = *current_char;
-				}else{
-					*dst++ = *current_char;
-				}
-				continue;
-			}
 
 //#define FAKEPARSE = 0
 
@@ -214,6 +206,7 @@ plugin_on_message_open (Message *message, const char *type) {
 		} // for loop
 		*dst = '\0';
 	} // contains <html>
+	//printf (str);
 } // function
 
 static void

@@ -58,6 +58,9 @@ typedef enum {
   
   C2_DYNAMIC_MODULE_MESSAGE_OPEN,
 
+  C2_DYNAMIC_MODULE_MESSAGE_DISPLAY,
+
+  
   C2_DYNAMIC_MODULE_LAST
 } C2DynamicModuleSignal;
 

@@ -1,16 +1,17 @@
 LDFLAGS = -ggdb
 CFLAGS = -Wall
 CC = gcc
-OBJECTS = nohtml.o
-BIN = nohtml.so
+NAME = nohtml
+OBJECTS = $(NAME).o
+BIN = $(NAME).so
 PREFIX=`cronosII-config --prefix`
 DATADIR=`cronosII-config --datadir`
 
 $(BIN) : $(OBJECTS)
-	$(CC) $(LDFLAGS) $(CFLAGS) -I../../ -DSKIPCONFIG -shared -Wl,-soname,nohtml.so -o $@ $(OBJECTS) -lc
+	$(CC) $(LDFLAGS) $(CFLAGS) -I../../ -DSKIPCONFIG -shared -Wl,-soname,$(NAME).so -o $@ $(OBJECTS) -lc
 
-nohtml.o : nohtml.c
-	$(CC) -fPIC `gnome-config --cflags gnome gnomeui` nohtml.c -c
+$(NAME).o : $(NAME).c
+	$(CC) -fPIC `gnome-config --cflags gnome gnomeui` $(NAME).c -c
 
 configure.o : configure.c
 	$(CC) -fPIC `gnome-config --cflags gnome gnomeui` configure.c -c

@@ -133,6 +133,7 @@ typedef struct {
 
 WindowMain *WMain;
 char *selected_mbox;
+mid_t selected_mid;
 unsigned int selected_row;
 unsigned int new_messages;
 gboolean status_is_busy;
