@@ -1,3 +1,6 @@
+Sun Apr 21 2002 pete <petergozz@users.sf.net>
+	* updates to .spec for rpm
+
 Sun Apr 21 2002 dan <madprof@madprof.net>
 	* Fixed non NULL pointer bug. 
 
