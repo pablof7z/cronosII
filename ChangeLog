@@ -1,3 +1,11 @@
+Sun 17  Feb 2002  pete <petergozz@users.sf.net>
+	* Proofreading continues on manual. Groan>
+	* Developers Changelog has note about the final compiler error.
+	* Commented gui-window_*.c (closed emacs didn't I !! :<)
+	* Removed a lot of the --dev "tags" from config files.
+	* Version should now be 0.2.2.22  thats too Kuut, but there ya go.
+
+
 Fri 15 Feb 2002  pete <petergozz@users.sf.net>
 	* Major update to manual content and layout. for release -22
 	* Update /doc/C/Makefile.am to include prebuilt (sans gifs) html docs.
