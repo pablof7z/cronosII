@@ -1,0 +1,73 @@
+Changelog
+# README-developers	A place to leave messages out of the user stream ##  CVS only ?? ##
+# I guess this could have been called BUGS but I wanted something a little more generic.
+# The intention is to erase stuff as we finish with  it not keep it. (the .changelog forces emacs to give me a pretty format)
+	
+
+	
+15 Feb 2002  pete <petegozz@users.sf.net>
+	* The BOUNCE BUG.
+	* Description	
+	Recieving a return error 550 (unknown domain for email address) message from my ISP causes Cronos to
+	seg fault. However not immediately: 
+
+	To crash you have to have selected the message and / or
+		||- attempted to compose and then send a mail
+		||- double click the message in the message list (attempt to view properties)
+	* Observations  notes
+	The message shows three attachments :
+		1 the error message from the host server
+		2 the IMAP header sumary (guess)
+		3 (CLUE ?) a strange little attachment with unreadable (base 64 ?) characters as a name.
+	My local MTA (Exim is kool) does not cause any problems at all. So far it has behaved flawlessly and seems
+	a great enhancement to Cronos. In fact using my local server is work around for this bug.
+	
+	My version of Strace may be broken at the moment (??) but it hangs when running cronos locking up the terminal
+	and locking out the window manager.. Xserver can be killed from keyboard and mouse still moves..
+	GDB reports no other problems when running normally. I have not had the "good" fortune to have it running 
+	when I've had this bug. I am going to attempt to contrive a situation where this happens.
+	
+	There are still some "out of range" errors being produced by GTK .. These are NOT fatal,
+	just stuff to do with progress bars. 
+
+	Removing the offending file and index entry from the .CronosII/*.mbx && index solves problem.
+	
+	* Suspicions (dweeb warning)
+	It would appear to crash when trying to rewrite index and mailbox files, _perhaps_ rc files as well.
+	This MAY be related to the char bug reported at Debian developers ( Bug #126228).  In fact before I applied their patch 
+	Cronos II would crash on attempting to _open_ such a mail.
+
+	* Actions from here:
+	I will generate reports for anybody who wants to contribute but this really seems way too low
+	level for me.(at the moment). 
+
+	* Supporting Information:
+	 Bug #126228
+	Package: cronosii
+	Version: 0.2.2-3.1 at Debian Developers. They are noe on release 4 and I have applied the patch to the CronosII CVS,
+	So this is hopefully old news. And it checks out OK here. (see notes above)
+	######################################################################
+	* Here is the content of the strangely tagged file:
+	seems normal enough.
+	
+	The original message was received at Fri, 15 Feb 2002 04:48:43 +1030
+	from mail@c1-p17.arcom.com.au [210.80.136.18]
+
+	   ----- The following addresses had permanent fatal errors -----
+	<jill@petsbox>
+    	(reason: 550 Host unknown)
+
+   	----- Transcript of session follows -----
+	550 5.1.2 <jill@petsbox>... Host unknown (Name server: petsbox: host not found)
+<file ends>
+	* END
+
+	eof
+	
+	
+	
+
+	
+	
+
+

@@ -27,7 +27,7 @@ module_dirs="$libdir"
 
 devversion='-MR2-22' 
 # output from date -R 
-conf_time='Tue, 12 Feb 2002 02:04:11 +1030'
+conf_time='Tue, 15 Feb 2002 +10:30'
 
 
 

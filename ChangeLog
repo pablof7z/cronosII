@@ -1,3 +1,13 @@
+Fri 15 Feb 2002  pete <petergozz@users.sf.net>
+	* Major update to manual content and layout. for release -22
+	* Update /doc/C/Makefile.am to include prebuilt (sans gifs) html docs.
+		include specificaly all sgml files in make dist.release -22
+	* Bounce Bug to the TODO pages. This has me foxed !!
+	* Posted Bug report to developers list.
+	* Created non-dist file README-developers.Changelog THE BOUNCE BUG report is there.
+	* Prep and edit top level docs (README etc) for release -22
+	* Cleaned up ambiguities in gui-preferences.c #define QUICK_HELP_NEW_ACCOUNT
+	
 Thur 14 Feb 2002 pete <petergozz@users.sf.net>
 	* Lots of minor spelling fixups as I tried out various options with
 	* smtp. No code alters since the last patch.

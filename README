@@ -3,7 +3,7 @@
 ===============
 = What is it? =
 ===============
-Cronos II is a powerful GNOME mail client very fast, light and friendly.
+Cronos II is a powerful GNOME mail client very fast, flexible, light and friendly.
 
 ===================
 = Where to get it =
@@ -16,12 +16,20 @@ Check out http://cronosII.sourceforge.net/ for the latest version.
 o Gnome-libs (http://www.gnome.org)
 o LinuxThreads (Pthreads)
 o Gnome-Print (Optional)
+	for source builds.
 
 
 ================
 = Installation =
 ================
-The standard GNOME Installation method:
+The standard GNU / GNOME Installation method
+
+./configure --help (for options)
+e.g. --prefix=xxxx
+      --disable-xxxx
+      etc.
+
+Default build and install::
 ./configure
 make
 make install
@@ -29,8 +37,11 @@ make install
 You might want to check out the INSTALL file for further information.
 
 !!- Plugins - !!
+Those strange XXXXX.so files in the top level directory are the plugin binaries.
+By default they will auto install (from that position)
+Those files are copies of the originals in the plugins/* directory branch.
+See the read-me file(s) for instructions on installing / rebuilding Plugins the hard way. :)
 
-See the read-me file(s) for instructions on installing Plugins.
 
 
 ======================

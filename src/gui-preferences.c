@@ -1,4 +1,4 @@
-/*  Cronos II
+/*  Cronos II gui-preferences.c
  *  Copyright (C) 2000-2001 Pablo Fernández Navarro
  *
  *  This program is free software; you can redistribute it and/or modify
@@ -76,24 +76,24 @@
 				"many protocols. This is where\n" \
 				"you choose the protocol for this\n" \
 				"account under Cronos II.\n" \
-				"No matter what account you\n" \
-				"choose to use right now, you\n" \
-				"will be able to configure\n" \
+				"You will be able to configure\n" \
 				"other accounts of different\n" \
 				"types later.\n" \
-				"Clicking on  the items in the\n" \
-				"list will display some help\n" \
+				"Clicking the items in the\n" \
+				"list will display  information\n" \
 				"for each protocol.\nEnjoy.")
-#define QUICK_HELP_SPOOL	_("Spool is the most common\n" \
-				"account type on UNIX boxes.\n" \
-				"It's commonly found in files\n" \
-				"located under the\n" \
-				"/var directory.\n" \
-				"Cronos II has full support\n" \
-				"for this protocol.")
-#define QUICK_HELP_POP		_("POP is the most common\n" \
+
+#define QUICK_HELP_SPOOL	_("Spool is  most common\n" \
+				" on UNIX boxes.\n" \
+				"Spool Mail files are often found \n" \
+				" in the /var/mail directory.\n" \
+				"Cronos II  supports\n" \
+				"for this protocol and local\n" \
+"Mail Transport Agents.")
+
+#define QUICK_HELP_POP		_(" POP is a very common\n" \
 				"account type on the Internet.\n" \
-				"This protocol relies on \n" \
+				"This protocol requires \n" \
 				"authentication by a server.\n" \
 				"Cronos II has full support\n" \
 				"for this protocol.")
