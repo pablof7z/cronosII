@@ -8,4 +8,12 @@ The sample.so (binary) here was built originally under CronosII ver 0.2.1 and si
 
 If you wish to attempt a new build (good luck) backup the existing 'dot o' and 'dot so' files.
 (You have been warned)
+TO INSTALL: (default install path shown)
+su
+cp sample.so /usr/share/cronosII/plugins/
+exit
+
+cronos &
+settings => preferences => plugins => load
+
 

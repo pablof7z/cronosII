@@ -18,16 +18,14 @@
  <listitem> <para>
 	Compilation errors  --upgrade lib gnome-print </para>
     </listitem>
- <listitem> <para> User Configured Mailboxes move to
-	different subdirectories on save (but don't disappear) This
-	problem hasn't occurred for some time now and may soon be
-	removed from here. </para> </listitem>
+
  <listitem> <para>
 	Import and export of mail directory's renders mime headers
 	unreadable to other mail handlers.
  </para> </listitem>
     <listitem> <para> The Search Button is not Functional --(yet)
       </para> </listitem>
+
  </itemizedlist>
  </sect1>
 

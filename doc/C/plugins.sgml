@@ -1,19 +1,94 @@
 <!-- plugins.sgml-->
 <!--A place holder for a future user manual on Plugins-->
+
 <sect1 id="plugins">
 <title>Plug Ins</title>
 <subtitle>Extensions to &app;</subtitle>
-<para>This is NOT a real doc. Currently it is just a place holder for CVS development,
-please feel free to add to any of these documents!!</para>
-<para>For now I will refer you to the <ulink url="&website;" type="http"> CronosII web site</ulink></para>
-<para>However this is an area where Cronos promises much that is both fun and useful. Need a feature 
-for your mail app then write one and plug it into Cronos, if it works and is useful why not release it so everybody may enjoy it.
+<note>
+<para>This written for the final release of the original Cronos II. i.e. CronosII-0.2.2-mr2.</para>
+</note>
+<para>Included with the MR2 release of &app; are three Plugins. These are:
+ <orderedlist>
+      <listitem><para><link linkend="plugin-sample">Sample</link></para></listitem>
+      <listitem><para><link linkend="plugin-fortune">Fortune</link></para></listitem>
+      <listitem><para><link linkend="plugin-filters">Filters</link></para></listitem>
+</orderedlist>
 </para>
-<para>Join us at the <ulink type="http" url="&developers;"> Developers Mailing List</ulink> to discuss your ideas</para>
+<sect2 id=plugin-install>
+<title>Installing</title>
+<para>The source code and installation instructions for the Plugins are included in the MR2 tar ball.  Code for Fortune and Filters is also kept separately at the <ulink type="http" url="&website;">Cronos II home site.</ulink> </para>
+<para>The simplest way to install the Plugins is to copy the pre-built binaries to the //install-path/share/cronosII/plugins/directory on your system. Otherwise you will have to obtain the CronosII-0.2.1 version header files and build the binaries your self from source. (See the source code for the latest instructions).</para>
+
+</sect2>
+<sect2>
+<title>Loading and Configuration</title>
+<para>All Plugins are finally loaded and configured from the Preferences dialog.<programlisting>Settings ==> Preferences ==> Plugins ==> Load.</programlisting></para>
+<para>If the plugin binaries (the plugin-name.so files) are installed to the correct place. &app; will copy them to your &app; configuration and mailbox directory. You may then go ahead and configure them by selecting the loaded plugin and checking configure in the same dialog. Individual instructions are outlined below.</para>
+</sect2>
+
+<sect2 id=plugin-sample>
+<title>Sample</title>
+<para>The Sample Plugin is included unpacked in the &app; source.
+It provides an example for writers of plugins and enables an alert when you receive mail from a particular sender.  </para>
+<sect3 id=plugin-sample-configure>
+<title> Configuration</title>
+<para>Open Cronos II. <programlisting>cronos &</programlisting></para>
+<para>Open the Preferences Dialog and navigate to plugins<programlisting>Settings ==> Preferences ==> Plugins ==> Load</programlisting></para>
+<para>On selecting Load, a file navigation dialog opens to the default directory. Select "sample.so". </para><para>Once the selection dialog closes select sample from the configuration dialog.<programlisting>(select)Sample ==> Configure.</programlisting></para>
+<para>A dialog opens for you to enter an address into.<programlisting>(enter) A properly formed email address. click OK ==> (Next on configure dialog:) Apply ==> OK</programlisting></para>
+<para> That is it. Now you should get an alert when you recieve a mail from the sender you nominated.</para>
+
+</sect3>
+
+
+</sect2>
+<sect2 id=plugin-fortune>
+<title>Fortune</title>
+<para> The Fortune Plugin enables you to run a command (or two) when you send a mail. By default it is configured to append the results of the Fortune (game ?) to the end of your mail. Other commands or shell scripts may be used as well or instead.</para>
+<sect3 id="plugin-fortune-configure">
+<title>Configure Fortune</title>
+<para>Open the preferences dialog and Navigate to Load:
+<programlisting>Settings ==> Preferences ==> Load</programlisting></para>
+<para>Choose "fortune.so" from the list of installed plugins. Click OK and then Apply on the Configuration Dialog. Next select Fortune from the list, and then Configure:<programlisting>(select) Fortune ==> Configure </programlisting></para>
+<para> A smaller dialog opens with a default configuration and instructions. As a simple example,I am currently using this string: <programlisting>cat $HOME/sigs/MR2-1.sig.</programlisting> This appends a particular signature file I have written @ ~/sigs/MR2-1.sig. (Fortune can be fun but often too large or inapropriate.)</para><para> Select OK to close the dialog, Apply on the configuration dialog and it should work the next time you send mail with &app;.</para>
+</sect3>
+</sect2>
+<sect2 id=plugin-filters>
+<title>Filters</title>
+<para>This Plug in brings basic mailbox filtering to &app;. Currently it supports moving and copying mail to different top-level mail boxes. Sorting is achieved through the use of string matching in mail headers and/or body.
+Support for wild-cards is enabled and this makes configuration reasonably simple. All you need do is find some unique combination of characters for any mail source to have it sorted to your preferred mailbox.  </para>
+<sect3 id=plugin-filters-configuration>
+<title>Loading and Configuring Filters Support</title>
+<para>To load the Filters Plugin navigate to "load": <programlisting>Settings ==> Preferences ==> Plugins ==> Load. </programlisting> The dialog will open at the default install path. Select Filters.so and Click OK. </para>
+<para>Next select<programlisting> "Cronos II Message Filters" and click on "Configure".</programlisting> A dialog titled CronosII Message Filters opens. As this is our first filter rule<programlisting> select "New".</programlisting> A Tabbed Dialog opens titled: New Filter.</para>
+<para> The first page contains entry fields to build a rule. The second page, "Actions" tells Cronos II what to do with the mail once a match has been found. </para>
+<example><title>A simple example</title>
+<para> By way of explanation, lets set up a simple example filter:</para>
+<para>Select the "Match Rules" Tab.</para>
+<para>In the top field ("Filter Name") enter a name for the rule. e.g. Test1</para>
+<para>In the description field enter a description for this rule. e.g. Just a basic test. This finds my own mail to myself.</para>
+<para>Now, enter a string you want to filter with.<programlisting> e.g. *your-own-email-address*.</programlisting> </para>
+<para>
+<note>
+<para>You are advised to use wild cards (*) to find the string within a mail header or body. The string must match<emphasis> exactly or be allowed to not match</emphasis> some parts of the section being looked through.</para> 
+</note></para>
+<para>Next select which part of the Email you want to filter with. e.g. From:. Then <emphasis>ADD</emphasis> it to the list. The rule will be written to the display area below.</para>
+<para>Now leaving the same string in place choose "TO" and addthat to the list as well.</para>
+<para>Now just because this is an example select<programlisting> "Match Any Rules".</programlisting> This radio button essentially allows you to  filter by ALL these rules (and) or filter by ANY of these rules (or).</para>
+<para> Next select The "Action" tab. Here for example we could select to send the filtered Email to Drafts, Garbage, "MyMailbox" or any other mailboxes we have configured.</para><para>The filter will now find any mail with "your-email-address" in the TO: or FROM: fields of the mail header.</para>
+<para>Currently you may only move messages to those present on the pop-out list.  Any top level mailboxes you add will appear on this list</para>
+<para>Ok, so we have made a filtering rule and given the application some action to take when it finds a mail that matches the rule.<programlisting> Click OK to exit the "New Rule" dialog, then "Exit" "CronosII Message Filters"</programlisting> (this writes the rule to your &app; configure directory). Finally select<programlisting> "Apply" and "OK"</programlisting> and go ahead and test it.</para>
+<para>  To test it mail something to yourself and see if it ends up in the correct place. :) With just a little practice and thought you will be able to do all sorts of things with your mail. Don't forget, wild-cards make for a much simpler experience. </para>
+</example>
+
+
+</sect3>
+</sect2>
+
 <sect2>
 <title>Availability</title>
-<para>Download your plug-ins from the<ulink type="http" url="&website"> Cronos Website</ulink> &lt; &website; &gt;
+<para>If you would like to get the "Stand Alone" Plugins or find out how to write your own, visit the<ulink type="http" url="&website;"> Cronos Website</ulink> &lt; &website; &gt; and follow the links to manuals and plugins. A html howto is included in the Source Tarball, look under the plugins directory.
 </para>
 </sect2>
 </sect1>
-      
+</article>      

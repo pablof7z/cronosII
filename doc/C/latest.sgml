@@ -1,15 +1,24 @@
-<!--<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook V3.1//EN"[<!entity app "testingbuild">]>-->
-<!--Place holder for latest news and improvements-->
-<!--Parent Document = cronosII.sgml-->
-<!--latest.sgml-->
-<!--<article>-->
+<!-- latest -->
+<!-- parent = cronosii.sgml -->
+
 <sect1 id="latest">
 <title>Latest Developments</title>
-<para>This version of CronosII (&app;) brings the following changes:
-</para>
+<subtitle>Whats New </subtitle>
+<para> &app;&version; brings the following new stuff:</para>
+
+<orderedlist>
+<listitem><para>Lots of minor typo fixes</para></listitem>
+<listitem><para>Improved Mail Header Handling. </para></listitem>
+<listitem><para>Some bugfixes in mailbox creation</para></listitem>
+<listitem><para>Some new Icons for a fresher look </para></listitem>
+<listitem><para>Current Filters included (built) in tarball </para></listitem>
+<listitem><para>Manual and other documentation brought to this release. </para></listitem>
+</orderedlist>
+
+
   <para>Coming soon a new improved CronosII API and User interface.
  </para>
-<sect2>
+<sect2 id="CronosII-Scratch">
     <title>CronosII-Scratch</title>
     <subtitle> Cronos II 0.2.3   - Welcome to the real world. -</subtitle>
 <para>To paraphrase Pablo's original announcement :</para>
@@ -36,11 +45,13 @@ is to start being used, so we all code with the same things.</para></blockquote>
 
 <para>A browse of the new code however shows some major features under development ( some dramatic bug-fixes
 and interapp compatibility) Every reported bug to date is being addressed and support for HTML and HTTP is in early development. So stand by for the next round .</para>
-<para> The curious can check all of this out from CVS available from the &app; site. Please note however Version 0.2.3 aka Scratch will not work (yet) without major hacking. </para>
-<para>The other major developments in place are the new stable address book and of course the<emphasis> implementation of filtering</emphasis>. (though this only works with version 0.2.1 - I believe).</para>
+<para> The curious can check all of this out from CVS available from the &app; site. </para>
+<para>The new Cronos II is getting very close to release, in fact it is allready in daily use by some of the development team. Please note work on these Maintenance Releases will STOP when the New CronosII goes stable beta. </para>
+<para>The latest versions of both this stable version and the new "Scratch" Cronos II can be found at the Sourceforge CVS site. Please visit the<ulink type="http" url="&website"> Web site</ulink> first to catch any latest news.</para>
+
 </sect2>
 </sect1>
-<!--</article>-->
+
 
 
 

@@ -43,10 +43,11 @@
 <ulink type="http" url="&bosko;">Bosko Blagojevic</ulink>
 <email>&bosko;</email>
 </para>
-<para> Bosko is a self confessed <quote> high school UNIX geek</quote> working on 
+<para> Bosko was a self confessed <quote> high school UNIX geek</quote> working on 
  issues with Cronos II and Free-BSD. Bosko and Pablo have implemented a VCard (<quote>Group Ware</quote>) compliant
 address-book for Cronos.
 </para>
+<para>He has now finished High School. He is still a geek.</para>
 <para> Free-BSD porting.
 - Address Book core development.</para>
 </listitem>
@@ -74,6 +75,12 @@ Peters main aim in life is to make Pablo's life miserable
  by finding new ways of breaking his glib configuration, and totally misunderstanding the Gnome documentation system.
 </para>
 </listitem>
+<listitem>
+<para><ulink type="http" url="&dan;">Daniel Fairhead</ulink>
+<email>&dan;</email></para>
+<para><quote>
+Daniel has contributed quite a few patches to the MR2 source. These include fixes to the header parsing functions, mailbox creation issues and a new icon. (or two). Dan has also been involved with testing and debugging and is now primarily focused on the new Scratch Source.</quote>
+</para></listitem>
 <listitem>
 <para>
 <ulink type="http" url="&andre;">Andreé Casteliano</ulink>

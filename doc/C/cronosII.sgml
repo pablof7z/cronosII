@@ -1,13 +1,13 @@
 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V3.1//EN"[
-<!ENTITY version "-0.2.2"> 
-<!entity manver "Version: 2.2.2-mr1">
+<!ENTITY version "-0.2.2-MR2"> 
+<!entity manver "Version: 2.2.2-mr2">
 <!entity pablo "cronosii@users.sourceforge.net">
 <!entity pete "petergozz@users.sourceforge.net">
 <!entity Yves "ymettier@libertysurf.fr">
 <!entity website "http://cronosii.sourceforge.net/">
 <!entity app "CronosII">
 <!entity key "The Default Keyboard Shortcut is:">
-<!entity developers "cronosii-developer@lists.sourceforge.net">
+<!entity developers "cronosii-hackers@lists.sourceforge.net">
 <!entity bosko "falling@users.sourceforge.net">
 <!entity arne "arnem@informatik.uni-bremen.de">
 <!entity andre "digitalcoder@users.sourceforge.net">
@@ -43,9 +43,12 @@ Hope this is of some help.
      </para>
      </dedication>
      <preface><title>Foreword</title>
-   <para>This is the Users Manual (Compiled Version) for CronosII an email application born of the frustrations of  existing email applications and the coding aspirations of a small team of coders scattered rarely across the face of this big blue marble we all call home.
+     <para>
+    This is the Book of Cronos II.
+     </para>
+    <para>This is the Users Manual (Compiled Version) for CronosII an email application born of the frustrations of  existing email applications and the coding aspirations of a small team of coders scattered rarely across the face of this big blue marble we all call home.
 </para>
-<para>Cronos aspires to simplicity, efficacy,stability and most importantly; whatever else it's users want it to be.</para>
+<para>Cronos aspires to simplicity, efficacy, stability and most importantly;<emphasis> whatever else it's users want it to be.</emphasis></para>
 <para>The Book  supplied with the tar ball does not contain developers info. Check out the sources for the guidelines and code. Visit the web-site for more information. Or drop us a line and let us know what you think.</para>
     <blockquote><attribution>anon. 2001</attribution><para>Old father time.... he owes me much sleep.</para></blockquote>
      </preface>
@@ -892,6 +895,7 @@ giving you access to many functions.
 </para>
 <para>See <xref linkend="message-text-menubar">
 </para>
+<para>Double clicking a downloaded message opens the message in its own window. This window also allows you to view the entire email, including headers. (select properties) This is useful for checking out those attachments which won't render or tracing a path to an original sender.</para>
 </listitem>
 <listitem>
 <para>
@@ -2115,10 +2119,11 @@ and <link linkend="gtk-tips-features">Roll Your Own</link>.</para>
 
  </sect1>
 &addressbook;
-&plugins;
 &latest;
+&plugins;
+
 
 <!-- &FDL;-->
  <!--END OF MANUAL.-->
-</article>
+
 </book>
