@@ -97,6 +97,13 @@ Support for wild-cards is enabled and this makes configuration reasonably simple
 Choose Load and the "select a file" dialog should open, choose "nohtml.so and click "OK""</para>
 <para>The "select a file" dialog should go away leaving nohtml (and any other plugins you have loaded) on the list in the plugins window. Select:
 <programlisting>nohtml ==> configure</programlisting> The "NoHtml" configuration dialog should open. </para>
+<para>You will have 4 Checkbox Options:</para>
+<para><emphasis>Preview Mode:</emphasis> - This means that you want the nohtml plugin to parse messages when you click on a message in a Mailbox.</para>
+<para><emphasis>Viewer Mode:</emphasis> - This will parse messages when you Double click on them to bring up the "Message view" Window. Due to a bug or something, if you have Preview mode parsed, then Viewer Mode will be parsed too. Sorry.</para>
+<para><emphasis>Require &lt;HTML&gt; tag before parsing?</emphasis> - If selected, the nohtml plugin will search for &lt;html&gt; in a message before it parses it. This can be useful if you get emails which contain HTML type tags which you want to view.</para>
+<para><emphasis>Replace &amp;sym&#059; type symbols?</emphasis> - If selected, the nohtml plugin will replace some HTML symbols (such as &amp;amp&#059;) within messages. Only supports a very limited subset of the full HTML symbol list.</para>
+<para>To test it, send yourself an email with &lt;b&gt;Bold Text&lt;/b&gt; in it somewhere. On viewing in the specified mode, you should see it without the B tags. 
+</para>
 </sect3>
 </sect2>
 
