@@ -74,7 +74,7 @@
 #define QUICK_HELP(txt, cnst) gtk_text_insert (GTK_TEXT (txt), NULL, NULL, NULL, cnst, -1)
 #define QUICK_HELP_NEW_ACCOUNT	_("Cronos II has support for\n" \
 				"many protocols. This is where\n" \
-				"you choose the protocal for this\n" \
+				"you choose the protocol for this\n" \
 				"account under Cronos II.\n" \
 				"No matter what account you\n" \
 				"choose to use right now, you\n" \
@@ -93,7 +93,7 @@
 				"for this protocol.")
 #define QUICK_HELP_POP		_("POP is the most common\n" \
 				"account type on the Internet.\n" \
-				"This prococol relies on \n" \
+				"This protocol relies on \n" \
 				"authentication by a server.\n" \
 				"Cronos II has full support\n" \
 				"for this protocol.")

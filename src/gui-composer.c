@@ -568,7 +568,7 @@ c2_composer_new (Message *message, C2ComposerType type) {
     gtk_widget_grab_focus (widget->body); /** Patch by Jeremy Witt **/
 
 #ifdef BUILD_ADDRESS_BOOK
-  /* Make completitions list */
+  /* Make competitions list */
   if (!EMailCompletion)
     autocompletition_generate_emailcompletion ();
 #endif
@@ -1280,7 +1280,7 @@ add_dir (GtkWidget *widget, const char *dir_path) {
   }
 
   for (; (dir = readdir (directory)) != NULL;) {
-    if (strneq (dir->d_name, ".", 1)) continue; /* Don't attach hiden files */
+    if (strneq (dir->d_name, ".", 1)) continue; /* Don't attach hidden files */
 #ifndef G_DIR_SEPARATOR
 #define G_DIR_SEPARATOR '/'
 #endif
