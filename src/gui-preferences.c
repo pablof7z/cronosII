@@ -1,4 +1,4 @@
-/*  Cronos II gui-preferences.c
+/*  Cronos II
  *  Copyright (C) 2000-2001 Pablo Fernández Navarro
  *
  *  This program is free software; you can redistribute it and/or modify
@@ -72,28 +72,24 @@
 }
 
 #define QUICK_HELP(txt, cnst) gtk_text_insert (GTK_TEXT (txt), NULL, NULL, NULL, cnst, -1)
-#define QUICK_HELP_NEW_ACCOUNT	_("Cronos II has support for\n" \
-				"many protocols. This is where\n" \
-				"you choose the protocol for this\n" \
-				"account under Cronos II.\n" \
-				"You will be able to configure\n" \
-				"other accounts of different\n" \
-				"types later.\n" \
-				"Clicking the items in the\n" \
-				"list will display  information\n" \
-				"for each protocol.\nEnjoy.")
-
-#define QUICK_HELP_SPOOL	_("Spool is  most common\n" \
-				" on UNIX boxes.\n" \
-				"Spool Mail files are often found \n" \
-				" in the /var/mail directory.\n" \
-				"Cronos II  supports\n" \
-				"for this protocol and local\n" \
-"Mail Transport Agents.")
-
-#define QUICK_HELP_POP		_(" POP is a very common\n" \
+#define QUICK_HELP_NEW_ACCOUNT _("Cronos II supports\n"				\
+				"many mail protocols. \n"			\
+				"Please choose a protocol for this\n"		\
+				"account.\n"					\
+				"Click  items in the\n"				\
+				"list to display some help\n"			\
+				"for each protocol.\n Enjoy.") 
+		
+#define QUICK_HELP_SPOOL    _("The Spool protocol is common\n"		\
+				"on UNIX  computers.\n"				\
+				"Your local mail files are found in files\n"	\
+				"located under the\n"				\
+				"/var directory.\n"				\
+				"Cronos II also has full support\n"			\
+				"for local Mail Transport Agents.")
+#define QUICK_HELP_POP		_("POP is the most common\n" \
 				"account type on the Internet.\n" \
-				"This protocol requires \n" \
+				"This protocol relies on \n" \
 				"authentication by a server.\n" \
 				"Cronos II has full support\n" \
 				"for this protocol.")
@@ -1843,7 +1839,7 @@ static void on_mailboxes_delete_btn_clicked (void) {
       !strcmp (mailbox_selected_mbox, MAILBOX_OUTBOX) ||
       !strcmp (mailbox_selected_mbox, MAILBOX_QUEUE) ||
       !strcmp (mailbox_selected_mbox, MAILBOX_GARBAGE)) {
-    g_warning (_("You can not delete that mailbox %s It is required for normal operation\n"), mailbox_selected_mbox);
+    g_warning (_("You can not delete the mailbox %s It is required for normal operation\n"), mailbox_selected_mbox);
     return;
   }
 
@@ -1995,7 +1991,7 @@ static void prefs_add_page_options (void) {
   /***********
    ** Frame **
    ***********/
-  frame = gtk_frame_new (_("Check for mail timeout (in minutes)"));
+  frame = gtk_frame_new (_("Minutes between automatic mail account checks"));
   gtk_box_pack_start (GTK_BOX (vbox), frame, FALSE, TRUE, 0);
   gtk_widget_show (frame);
 
@@ -2041,7 +2037,7 @@ static void prefs_add_page_options (void) {
   /***********
    ** Label **
    ***********/
-  label = gtk_label_new (_("String to prepend to the original mail: "));
+  label = gtk_label_new (_("String to prepend to the original mail contents: "));
   gtk_box_pack_start (GTK_BOX (hbox), label, FALSE, TRUE, 0);
   gtk_widget_show (label);
 
@@ -2074,6 +2070,8 @@ static void prefs_add_page_options (void) {
   options_message_bigger = gtk_spin_button_new (adj, 1, 0);
   gtk_box_pack_start (GTK_BOX (hbox), options_message_bigger, FALSE, TRUE, 0);
   gtk_widget_show (options_message_bigger);
+  gtk_tooltips_set_tip (tooltips, options_message_bigger,
+		     _("Setting 0 here disables this utility."),NULL);
 
   /***********
    ** label **
@@ -2089,22 +2087,24 @@ static void prefs_add_page_options (void) {
   gtk_box_pack_start (GTK_BOX (vbox), options_empty_garbage, FALSE, FALSE, 0);
   gtk_widget_show (options_empty_garbage);
   if (config->empty_garbage) gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (options_empty_garbage), TRUE);
-
+  gtk_tooltips_set_tip (tooltips, options_empty_garbage,
+			_("Take out the trash every time you close Cronos II."), NULL);
   /*****************
    ** Keep a copy **
    *****************/
-  options_keep_copy = gtk_check_button_new_with_label (_("Store a copy of sent mails in the Outbox mailbox"));
+  options_keep_copy = gtk_check_button_new_with_label (_("Store a copy of Sent mail in the Outbox "));
   gtk_box_pack_start (GTK_BOX (vbox), options_keep_copy, FALSE, FALSE, 0);
   gtk_widget_show (options_keep_copy);
   if (config->use_outbox) gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (options_keep_copy), TRUE);
-
+  gtk_tooltips_set_tip (tooltips, options_keep_copy,
+			_("Selecting this option will have a copy of each mail sent, saved to the outbox."), NULL);
   /** Check for mail at start **/
   options_check_at_start = gtk_check_button_new_with_label (_("Check for mail at start up."));
   gtk_box_pack_start (GTK_BOX (vbox), options_check_at_start, FALSE, FALSE, 0);
   gtk_widget_show (options_check_at_start);
   if (config->check_at_start) gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (options_check_at_start), TRUE);
   gtk_tooltips_set_tip (tooltips, options_check_at_start,
-      		_("Whether to check activated accounts when Cronos II starts or not."), NULL);  
+      		_("Check this to have Cronos II look for new mail at all configured Accounts on launch."), NULL);  
   
   prefs_append_page (vbox, _("Options"), ctree_general);
   gtk_widget_show (vbox);
@@ -2168,7 +2168,7 @@ static void on_appareance_font_btn_clicked (GtkWidget *button, gpointer data) {
   gtk_box_pack_start (GTK_BOX (vbox), widgets->font_sel, TRUE, TRUE, 0);
   gtk_font_selection_set_font_name (GTK_FONT_SELECTION (widgets->font_sel),
 		  gtk_entry_get_text (GTK_ENTRY (widgets->entry)));
-  gtk_font_selection_set_preview_text (GTK_FONT_SELECTION (widgets->font_sel), _("Pablo was in Paris"));
+  gtk_font_selection_set_preview_text (GTK_FONT_SELECTION (widgets->font_sel), _("Pablo was in Paris. Now he lives in Spain"));
   gtk_widget_show (widgets->font_sel);
 
   hsep = gtk_hseparator_new ();
@@ -2652,13 +2652,13 @@ static void prefs_add_page_advanced (void) {
   if (config->use_persistent_smtp_connection)
     gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (advanced_use_persistent_smtp_connection), TRUE);
   gtk_tooltips_set_tip (tooltips, advanced_use_persistent_smtp_connection,
-      			_("Keep the SMTP host connected to continue use that connection to send "
+      			_("Keep SMTP host connected. This may speed up the sending of "
 			  "outgoing messages"), NULL);
   menu = gtk_menu_new ();
   menuitem = gtk_menu_item_new_with_label (_("at start."));
   gtk_widget_show (menuitem);
   gtk_menu_append (GTK_MENU (menu), menuitem);
-  menuitem = gtk_menu_item_new_with_label (_("when required."));
+  menuitem = gtk_menu_item_new_with_label (_("as required."));
   gtk_widget_show (menuitem);
   gtk_menu_append (GTK_MENU (menu), menuitem);
   menuitem = gtk_menu_item_new_with_label (_("when it is opened."));
@@ -2743,7 +2743,7 @@ on_plugins_load_btn_clicked (void) {
   if (!c2_file_exists (dir)) {
     if (mkdir (dir, 0700) < 0) {
       buf2 = g_strerror (errno);
-      buf = g_strdup_printf (_("Couldn't create the directory %s: %s"), dir, buf2);
+      buf = g_strdup_printf (_("Could not create the directory %s: %s"), dir, buf2);
       c2_free (dir);
       gnome_dialog_run_and_close (GNOME_DIALOG (gnome_ok_dialog (buf)));
       return;

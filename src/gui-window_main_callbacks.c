@@ -155,7 +155,7 @@ void on_wm_clist_select_row (GtkWidget *widget, gint row, gint column,
   message = message_get_message (selected_mbox, mid);
   if (!message) {
     gdk_window_set_cursor (WMain->window->window, cursor_normal);
-    gnome_appbar_push (GNOME_APPBAR (WMain->appbar), _("The message couldn't be found"));
+    gnome_appbar_push (GNOME_APPBAR (WMain->appbar), _("Message not found"));
     return;
   }
 

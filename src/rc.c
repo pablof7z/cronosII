@@ -103,7 +103,12 @@ void rc_init (void) {
   rc->font_unread	= g_strdup ("-b&h-lucida-bold-r-normal-*-*-100-*-*-p-*-iso8859-1");
   rc->font_read		= g_strdup ("-b&h-lucida-medium-r-normal-*-*-100-*-*-p-*-iso8859-1");
   rc->font_print	= g_strdup ("-adobe-helvetica-medium-r-normal-*-*-120-*-*-p-*-iso8859-1");
-  rc->title		= g_strdup ("%a v.%v - %M");
+/*  set window manager title here "Conversion chars: */
+/* %a = App Name (Cronos II),%v = Version, */
+/* %m = Messages in selected mailbox, */
+/* %n = New messages in selected mailbox, */
+/* %M = Selected mailbox. */
+  rc->title		= g_strdup ("%a v.%v - %M - %m"); 
   rc->toolbar		= GTK_TOOLBAR_BOTH;
   rc->main_window_width	= 600;
   rc->main_window_height= 400;

@@ -218,7 +218,7 @@ c2_address_book_flush (void)
 	path = g_strconcat (getenv ("HOME"), "/.gnome/GnomeCard.gcrd", NULL);
 	if ((fd = fopen (path, "w")) == NULL)
 	{
-		cronos_error (errno, _("Couldn't open the GnomeCard file\n"),
+		cronos_error (errno, _("Could not open the GnomeCard file\n"),
 			      ERROR_WARNING);
 		c2_free (path);
 	}

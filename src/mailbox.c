@@ -297,7 +297,7 @@ void move_mail (const char *strfrm, const char *strdst, mid_t mid) {
   /* Locate the mailbox in the Linked list */
   if ((dstmbx = search_mailbox_name (config->mailbox_head, (char *) strdst)) == NULL) {
     gdk_threads_enter ();
-    cronos_error (ERROR_INTERNAL, "Couldn't found the mailbox in the Mailbox's List", ERROR_WARNING);
+    cronos_error (ERROR_INTERNAL,"Could not find the mailbox in the Mailbox List", ERROR_WARNING);
     gdk_threads_leave ();
     return;
   }
@@ -392,7 +392,7 @@ void copy_mail (const char *strfrm, const char *strdst, mid_t mid) {
 
   if ((dstmbx = search_mailbox_name (config->mailbox_head, (char *) strdst)) == NULL) {
     gdk_threads_enter ();
-    cronos_error (ERROR_INTERNAL, "Couldn't found the mailbox in the Mailbox's List", ERROR_WARNING);
+    cronos_error (ERROR_INTERNAL,"Could not find the mailbox in the Mailbox List", ERROR_WARNING);
     gdk_threads_leave ();
     return;
   }
