@@ -1,11 +1,11 @@
-<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V3.1//EN"[
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V4.1//EN"[
 <!ENTITY version "-0.2.2-22"> 
 <!ENTITY manver "Version: 2.2.2-mr2">
 <!ENTITY pablo "cronosii@users.sourceforge.net">
 <!ENTITY pete "petergozz@users.sourceforge.net">
 <!ENTITY Yves "ymettier@libertysurf.fr">
 <!ENTITY website "http://cronosii.sourceforge.net/">
-<!ENTITY app "CronosII">
+<!ENTITY app "Cronos II">
 <!ENTITY key "The Default Keyboard Shortcut is:">
 <!ENTITY developers "cronosii-hackers@lists.sourceforge.net">
 <!ENTITY bosko "falling@users.sourceforge.net">
@@ -17,6 +17,7 @@
 <!ENTITY marc "mustangg@users.sourceforge.net">
 <!ENTITY dan "ralptheracoon@uk2.net">
 <!ENTITY FDL SYSTEM "fdl.sgml"> 
+<!ENTITY accounts SYSTEM "accounts.sgml">
 <!ENTITY shortcuts SYSTEM "shortcuts_table.sgml">
 <!ENTITY gtk-brief SYSTEM "gtk-brief.sgml">
 <!ENTITY authors SYSTEM "authors.sgml">
@@ -29,31 +30,32 @@
 <book>
      <title>CronosII. an Email Application</title>
  
-     <titleabbrev>C2</titleabbrev>
-     <bookinfo>
-      
-       <author><firstname>Cronos</><surname>Developers</></author>
+      <bookinfo>
+      <author><firstname>Cronos</><surname>Developers</></author>
      </bookinfo>
      <dedication>
      <para>
-      For CronosII and his users.
+      For Cronos II, his users and developers.
       </para>
     <para>
 Hope this is of some help.
      </para>
      </dedication>
-     <preface><title>Foreword</title>
+     <preface id="manual-preface"><title>Preface</title>
      
-    <para>This is the Users Manual (Compiled Version) for CronosII an email application originally  born of the frustrations of  existing email applications and the coding aspirations of a small team of coders scattered rarely across the face of this big blue marble we all call home.
+    <para>This is the Users Manual  for CronosII an email application originally  born of the frustrations of  existing email applications and the coding aspirations of a small team of coders scattered rarely across the face of this big blue marble we all call home.
 </para>
 <para>Cronos aspires to simplicity, efficacy, stability and most importantly;<emphasis> whatever else it's users want it to be.</emphasis></para>
 <para>The Book  supplied with the tar ball does not contain developers info. Check out the sources for the guidelines and code. Visit the web-site for more information. Or drop us a line and let us know what you think.</para>
     <blockquote><attribution>anon. 2001</attribution><para>Old father time.... he owes me much sleep.</para></blockquote>
      </preface>
   
+    
+
 <article id="index">
-<artheader id="header"> <!-- please do not change this id -->
- 
+    <articleinfo id="header">
+     
+   
     <title>Help Manual Version &manver;  for  &app;&version;</title>
     <copyright>
      <year>2000 2001 2002</year>
@@ -70,8 +72,8 @@ Hope this is of some help.
    -->
   <!-- do not put authorname in the header except in copyright - use
   section "authors" below -->
-
- </artheader>
+</articleinfo>
+ 
 
  <!-- ============= Document Body ============================= -->
 
@@ -101,11 +103,18 @@ Gnome Main (Foot) Menu  ==> Internet  ==> CronosII
     </para>
     <para>Refer to <xref linkend="install"> for<emphasis> Installation instructions.</emphasis></para>
       <para>Refer to <xref linkend="configuration"> for post install <emphasis>configuration</emphasis>.</para>
-     <para> Following is a table of shortcuts with some quick links to commands under
-     the Reference Column.</para>
-     &shortcuts;
+       
   </sect1>
+</article>
+    
 
+<chapter id="Install-c2">
+<title>Install Instructions</title>
+<abstract>
+      <para>
+This section contains Instructions for the initial installation of &app; &version;
+</para>
+</abstract>
 
  <!-- INSTALLATION -->
  
@@ -126,7 +135,7 @@ Gnome Main (Foot) Menu  ==> Internet  ==> CronosII
       
       <para>
       To build and run &app;&version; you need to have the following libraries installed:
-      If you are using a binary package eg. RPM or DEB please ignore this list. It should have been taken care of for you.</para>
+      If you are using a binary package e.g.. RPM or DEB please ignore this list. It should have been taken care of for you.</para>
       <para>
       (my apologies to <trademark>Windows</trademark> Users  I'm not sure what they need beyond GTK)
       </para>
@@ -175,7 +184,7 @@ Gnome Main (Foot) Menu  ==> Internet  ==> CronosII
       </para>
       </listitem>
       </itemizedlist>
-     		 
+    <!--INSTALLING-->  <!--INSTALLING-->  <!--INSTALLING-->  <!--INSTALLING--> 					 
        <sect2 id="installing">
        <title>Installation</title>
       <para>
@@ -201,9 +210,9 @@ Gnome Main (Foot) Menu  ==> Internet  ==> CronosII
       </para>
       </listitem>
       <listitem>
-	    <para>&app; is also available as a<application>Debian binary package</application> ( Since most of the development team use Debian GNU/Linux )</para>
+	    <para>&app; is also available as a <application>Debian binary package</application> ( Since most of the development team use Debian GNU/Linux )</para>
 	    <programlisting>&app;&version;_i386.deb</programlisting>
-	    <para>There official and unofficial (wild) packages. Instructions for these are at  <link linkend="debs">Debian Packages</link></para>
+	    <para>There are official and unofficial (wild) packages. Instructions for these are at  <link linkend="debs">Debian Packages</link></para>
      </listitem>
 	   
       <listitem>
@@ -222,8 +231,9 @@ Gnome Main (Foot) Menu  ==> Internet  ==> CronosII
    Support for these or other formats may be added should the demand for them warrant it.
    </para>
    </note>
+</sect2>
      
-   <sect3 id="gzipped">
+   <sect2 id="gzipped">
    <title>GNU Zipped Source Packages</title>
    <subtitle>gzip</subtitle>
    <para>These are the most common method of distributing application packages (and other stuff ) in the UNIX / LINUX world.  </para>
@@ -270,9 +280,9 @@ Gnome Main (Foot) Menu  ==> Internet  ==> CronosII
    <application>make </application>commands please see the documentation in the tar ball.</para>
    <tip><para><application>#configure --help</application></para>
    <para><application># man make</application></para></tip>   
-   </sect3>
+   </sect2>
    
-   <sect3 id="bzipped">
+   <sect2 id="bzipped">
    <title>Bzipped Tar Balls</title>
    <para>This mode of distribution uses a powerful compression method (<application> # man bzip2 </application> ) 
    that is deliberately  very similar  to gzip at the command line. It is impressive how much size and download time  can be saved using this
@@ -332,9 +342,9 @@ compression method. </para>
    </para>
    </listitem>
    </orderedlist>
-   </sect3>
+   </sect2>
    
-   <sect3 id="rpms">
+   <sect2 id="rpms">
    <title>Red Hat Packages</title>
       <para>These packages are used by many LINUX distributions as a simple and
        effective way of installing software and keeping issues like dependencies in order.
@@ -367,29 +377,30 @@ compression method. </para>
   		 <programlisting>rpm -ta &app;&version;.tar.gz</programlisting></para>
   		 <para> This should (all going well) build a package ready for you to install as a standard
   		 <application>RPM</application> as shown<link linkend="rpms"> above.</link></para></tip>   
-       </sect3>
-<sect3 id="debs">
+       </sect2>
+<sect2 id="debs">
 	<title>Debian packages</title>
 <para> &app; version 0.2.2 and hopefully later versions are now
 	  available from the unstable branch at your local ftp mirror.
 
 </para>
 	<para><programlisting> apt-get install  cronosII</programlisting>  should find you the latest Debian build.</para>
-<para>There are also unofficial debs available from  the &app; download site.</para>
+<para>There are  unofficial debs available from  the &app; download site.</para>
 	  <para> To install Official Debian packages use <programlisting>apt-get install cronosii</programlisting> To install a downloaded Unofficial deb use: <programlisting>dpkg -i &app;&version;_i386.deb</programlisting> or similar.</para>
-       </sect3>
+<para>Please note that the unofficial and official packages may use slightly different package names. You may need to do an uninstall before moving to the other version.</para>
+       
        </sect2>
        </sect1>
        
 
 <!--Configuration -- -- -- -- -- -- -- -- -- -- -- -- -->
  <sect1 id="configuration">
-  <title>Configuration</title>
+  <title>Setting Up &app;</title>
   <para>Before you can use <application>&app; </application> you will need to do some configuration. 
   </para>
   <para>
   The first and  most important step is configuring your Accounts.</para>
-  <para>Please see <xref linkend="configuration-mail-accounts">
+  <para>Please see <xref linkend="accounts">
   </para>
   <para>
 Everything else should work fine in default configuration. 
@@ -406,7 +417,7 @@ Everything else should work fine in default configuration.
  <note>
  <para>This version of the User Help Manual assumes you have installed CronosII
   and have an open version of the application running. The &app; Website (&website;)
-   has a version of this manual with  screen-shots.
+   <emphasis>may have a version of this manual with screen-shots.</emphasis>
  </para>
  </note>
 <para> The Tree style menu to the left of the dialog gives you access to the following configuration options:
@@ -429,7 +440,7 @@ Everything else should work fine in default configuration.
   <listitem><para>Mail</para>
   <para>Read <xref linkend="configuration-mail-mailboxes"></para>
   		<itemizedlist>
-  		<listitem><para><link linkend="configuration-mail-accounts">Accounts</link></para></listitem>
+  		<listitem><para><link linkend="accounts">Accounts</link></para></listitem>
   		<listitem><para><link linkend="configuration-mail-mailboxes">Mailboxes</link></para></listitem>  
   		</itemizedlist>
    </listitem>
@@ -442,17 +453,20 @@ Everything else should work fine in default configuration.
    </listitem>
    <listitem>
    <para>Plug-ins.</para>
-   <para> For now I must refer you to the source documentation and the Plug-in manual available from 
-   the <ulink url="&website;" type="http"> CronosII Website.</ulink> &website; .
-   </para>
+	  <para>Please see <xref linkend="plugins"/> </para>
+	  <para>The latest information should always be available from the &app;<ulink url="&website;">website</ulink> &lt; &website; &gt; .</para>
    </listitem>
-  <listitem><para>Advanced</para>
-  <para>Read <xref linkend="configuration-advanced"></para>
-  		<itemizedlist>
-  		<listitem><para><link linkend="configuration-advanced-net-timeout">Net Timeout</link></para></listitem>
-  		</itemizedlist>
-   </listitem>
-  
+  <listitem>
+<para>Advanced</para>
+  <para>Read <xref linkend="configuration-advanced"/></para>
+	  <itemizedlist>
+  		<listitem><para><link linkend="configuration-advanced-net-timeout">Net Timeout</link>
+	      </para></listitem>
+	    <listitem><para><link linkend="configuration-advanced-persistant-SMTP">Persistent SMTP</link></listitem>
+	    <listitem><para><link linkend="configuration-advanced-addressbook">Initialise Address Book</link></para></listitem>
+  		
+</itemizedlist>
+   </listitem>  
    </itemizedlist>
   
   
@@ -508,226 +522,24 @@ Everything else should work fine in default configuration.
 	 </para>
 	 </sect3>
   </sect2>
+</sect1>
+</chapter>
+  <!--ACCOUNT CONFIGURATION HERE--><!--ACCOUNT CONFIGURATION HERE-->
+<chapter id="initial-configuration">
+<title>Get Connected</title>
+    <abstract>
+<para>This section gets you set up with an initial account and connected to your POP server. It also includes basic SPOOL connections and some more advanced uses you might leave for later.
+      </para>
+    </abstract>
+ &accounts; <!--as an entity -->
+</chapter>
+<chapter id="mid-config">
+<title>Set up &app; the way YOU like it</title>
+<abstract><para>You have a basic working account (or two) now move on an explore the options &app; brings you.</para></abstract>
+  <sect1 id="configuring">
+<title>Beyond your first Account </title>
   
- 
-  
-  	<sect2 id="configuration-mail-accounts">
-  	<title>Accounts</title>
-  	<subtitle>Before you get started</subtitle>
-  	<para>&app; enables you to have many different POP (Post Office Protocol) accounts.</para>
-  	<para>Here's how to set up your first account:</para>
-  	<orderedlist>
-  	<listitem>
-  		<para>Open the <interface>Account Configuration Dialog</interface>
-  		 from the <link linkend="mainwindow">Main Window.</link>
-  		<programlisting>Settings -> Preferences -> Mail / Accounts</programlisting>
-  		</para>
-  	</listitem>
-  	<listitem>
-  		<para>The dialog that opens has a large open window with re-sizable column headers,
-  		 some task buttons to the right, and some completion functions at the bottom. (It's not as bad as it sounds).
-  		 </para>
-  		 <para><programlisting> Select New (on the right)</programlisting>
-  		 A Dialog not unlike a Druid or Wizard opens to steer you onward.
-  		 You need to decide which type of Email account you wish to set up.
-  		 </para> 
-  		 <para>Currently you are given the choice of "Spool" (a UNIX style mail-spool ) or a POP account.
-  		 </para>
-  		 <para> Click on either of them to get more information.</para>
-  	</listitem>
-  	<listitem>
-  	 <para>For now select<programlisting>POP -> NEXT</programlisting>
-  	 </para>
-  	 <para>For Spool Accounts see <xref linkend="configuration-accounts-spool"> below.</para>
-  	 <para>The <interface>New Account Dialog</interface> should open.</para>
-  	 <para>This dialog has 4 tabbed pages where you enter information to configure a functioning account.</para>
-  	 		<orderedlist>
-  	 		<listitem><para>Account Name</para>
-  	 		<para>Give this account a name. Something to clearly identify it. </para>
-  	 		</listitem>
-  	 		<listitem>
-  	 		<para>Name</para>
-  	 		<para>Your local user name will do here.</para>
-  	 		<para>This name will be quoted when you reply to and send mail</para>
-  	 		</listitem>
-  	 		<listitem>
-  	 		<para> E-mail</para>
-  	 		<para>Your E-mail address at that account</para>
-  	 		</listitem>
-  	 		</orderedlist>
-  	</listitem>
-  	<listitem>
-  	<para>Once you have finished entering that..<programlisting>Select Protocol
-  	</programlisting>
-  	</para>
-  	<para>Here we have to get a little more exact ! </para>
-  	<para> Enter the following
-  	 as provided  by your Internet Service Provider or System Administrator.</para>
-  	 		<orderedlist>
-  	 		<listitem>
-  	 		<para>User Name</para>
-  	 		<para>Enter your user name at your SERVER  [e-x-a-c-t-l-y] </para>
-  	 		</listitem>
-  	 		
-  	 		<listitem>
-  	 		<para>Password</para>
-  	 		<para>Enter the password you were issued (or have set up) </para>
-  	 		</listitem>
-  	 		
-  	 		<listitem>
-  	 		<para>
-  	 		POP Server:
-  	 		</para>
-  	 		<para>
-  	 		Enter the name of the pop server (your incoming mailbox at the server)
-  	 		</para>
-  	 		<para>
-  	 		 This is often in the format of <programlisting>pop.yourisp.domain.region</programlisting>
-  	 		</para>
-  	 		</listitem>
-  	 		
-  	 		<listitem>
-  	 		<para>
-  	 		SMTP (Simple Mail Transfer Protocol)
-  	 		 </para>
-  	 		<para>
-  	 		Enter the name of the out going mail server.
-  	 		</para>
-  	 		<para>
-  	 		This often looks like
-  	 		<programlisting>mail.yourisp.domain.region</programlisting>
-  	 		</para>
-  	 		<para>
-  	 		<emphasis>Check all of this.</emphasis>
-  	 		</para>
-  	 		</listitem>
-  	 		
-  	 		<listitem>
-  	 		<para>Ports</para>
-  	 		<para>The default ports set for the POP and SMTP servers should be fine for most people.
-  	 		</para>
-  	 		<para>
-  	 		Your ISP or System Administrator should let you know if others are needed. 
-  	 		(firewalls , intranets, mail monitoring,  or other server level issues may be cause for other ports to be used.)
-  	 		</para>
-  	 		</listitem>
-  	 		</orderedlist>
-   </listitem>
-   	<listitem>
-   	<para>Mailbox</para>
-   	<para>Next choose the Mailbox page</para>
-   	<para>Here you can associate <guisubmenu>This Account</guisubmenu>
-   	 with a<guisubmenu> Particular Mailbox. </guisubmenu>
-   	If you haven't personalised your mailboxes yet just choose the <interface>IN-BOX </interface>
-   	</para>
-   	</listitem>
-   	<listitem>
-   	<para>
-   	Signature
-   	</para>
-   	<para>
-   	Enter a signature to sign email for this account. Many people have very clever ASCII
-   	Art Creations here but your name and email address will be more than sufficient.
-   	
-   	</para>
-   	<para>
-   	By checking the toggle button at the bottom of the dialog &app; will Automatically sign each Email
-   	for this account.
-   	</para>
-   	<para>There is at least one plug-in for &app; which enables a very high level of
-   	customisation for this plug-in including automatically adding the output of 
-   	<application>Fortune</application>to the end of your message.</para>
-   	<para> You might also consider adding your digital signature or a time stamp when your 
-   	message may need authentication.</para>
-   	</listitem>
-   	<listitem>
-   	<para>Advanced</para>
-   	<para>Here are two simple check boxes.</para>
-   	
-   	<para>Keeping the messages on the server is a great way of <emphasis>Temporarily</emphasis> Storing your mail (off-site).
-   	However some ISP providers may get cross if you build up huge amounts of storage at the server. (and may charge you accordingly)
-   	This function may also be useful for people who work with shared mail. 
-   	</para>
-   	<para>By default the new account will be activated (when first you use it)
-   	 to Deactivate the account dselect the second box.
-   	 </para>
-   	 
-   	</listitem>
-   	<listitem>
-   	<para>OK</para>
-   	<para>All finished ? </para>
-   	<para> Your new POP account should be ready to use.
-   	 You just repeat the above steps for as many POP accounts as you have, or add later.</para>
-   	</listitem>
-   	</orderedlist>
-   	
-   	<sect3 id="configuration-accounts-spool">
-   	<title> About Spool Accounts</title>
-   	<para>
-   	The process involved in configuring a spool account is much the same as that used  to set 
-   	up a  POP account: See <xref linkend="configuration-mail-accounts">
-   	</para>
-   	<para>Navigate to the accounts setup dialog:</para>
-   	<para><programlisting>Setting ->  Preferences ->  Accounts  -> New</programlisting></para>
-   	<para>The Account Type Dialog opens:  Select <interface>Spool</interface> then<interface> Next.</interface></para>
-   	<para> The <guimenu>New Accounts</guimenu> Dialog Opens:  This is just the same as 
-   	that used in <xref linkend="configuration-mail-accounts"></para>
-   	<para> The difference here is that you are asking cronos to download mail from your local network spool account.
-   	Many (most ?) UNIX style environments build you a mailbox somewhere under the
-   	<programlisting> /var/spool/mail/user-name </programlisting>
-   	or similar directory when a new User Account is created. .
-   	 </para>
-	<para>The most common Mail server on these systems is<application> Sendmail.</application>
-	</para>
-	<para>
-	 Now, given that your system is like this,  the following entries need to be made 
-	on the <interface>Protocol</interface> page of the <guimenu>New Account Dialog</guimenu>:
-	</para>
-	<itemizedlist>
-		<listitem><para>File:</para>
-		<para>Navigate to your mail box under the /var directory...(use the button to the right)
-		</para>
-		<para>Select Your-mail-box.</para>
-		</listitem>
-		<listitem>
-		<para>SMTP</para>
-		<para>Enter your local mail server application name. (try<application> Sendmail.</application>as a default)
-		</para>
-		</listitem>
-		<listitem>
-		<para>Port</para>
-		<para>The default setting of 25 will work fine for most people on<application> Sendmail.</application>
-		I'm not sure about other mail handlers and your<application> Sendmail.</application>port may have been
-		 moved by your distribution or system administrator. Either way 
-		this should be documented somewhere. Resist the temptation to 
-		play with the<application> Sendmail.</application>configuration scripts. (for now)
-		</para>
-		</listitem>
-</itemizedlist>
-		
-		<para>
-		 On the remaining  two pages associate a mailbox with this account and choose
-		optionally to keep the mail on the server (advised) and to activate the account (or it won't work).
-		</para>
-		<para>
-		Select OK and then Apply from the remaining<guisubmenu>Preferences</guisubmenu>
-		dialog.
-		</para>
-		<para>Close the <guisubmenu>Preferences</guisubmenu>dialog and you should be ready to go.
-		</para>
-		<tip>
-		<para>
-		You can also use the<interface> spool account </interface> to check for mail from other
-		compliant Mail Handlers. e.g.. Pine and Netscape (some small problems).
-		</para>
-		<para>This works for me though it is NOT an <quote>official</quote> use of Cronos, it can be very handy.
-		</para>
-		<para>Proceed as above and Navigate to the appropriate Mail /directory/file under your HOME directory and keep<application> Sendmail.</application>as the Server
-		</para>
-		</tip>
-</sect3>
-   	
-   	<sect3 id="configuration-account-edit">
+   	<sect2 id="configuration-account-edit">
    	<title>Edit an Account</title>
    	<para>To edit an Account  select (from the Main Window) 
    	<programlisting>Settings -> Preferences -> Accounts</programlisting>
@@ -737,10 +549,10 @@ Everything else should work fine in default configuration.
    	 <para>Then to Delete select the delete garbage bin to the right.
    	 </para>
    	 
-   	</sect3>
+   	</sect2>
  
   	
- <sect3 id="configuration-mail-mailboxes">
+ <sect2 id="configuration-mail-mailboxes">
   	<title>Your Own Mailboxes</title>
   	<para>Like most other Email clients &app; allows you to configure your own mailbox structure.
   	</para>
@@ -752,7 +564,6 @@ Everything else should work fine in default configuration.
   	<para>You may however add sub-directories to these mailboxes if you find that useful.
   	</para>
   	</note>
-</sect3>
  </sect2>
  
 <sect2 id="configuration-interface">
@@ -812,7 +623,7 @@ Everything else should work fine in default configuration.
   
   <sect2 id="configuration-advanced">
   <title>Advanced</title>
-  <para>Currently only one function is configurable from here:</para>
+ 
   	<sect3 id="configuration-advanced-net-timeout">
   		<title>Net Timeout</title>
   		<para>Here you set the time &app; will wait for a response from your server as it asks it various things.</para>
@@ -820,7 +631,20 @@ Everything else should work fine in default configuration.
   		from your ISP. The default should be fine for most people but if you have a dirty or slow connection you could try increasing this time for increased reliability.
   		.</para>
   		</sect3>
-   </sect2>
+
+<sect3 id="configuration-advanced-persistant-SMTP">
+<title>Persistent SMTP</title>
+<para>Enter the hostname of your SMTP server to maintain a constant connection. This may help speed up mail sending. (especially if your server requires you to log in with each connect.)</para>
+
+</sect3>
+<sect3 id="configuration-advanced-addressbook ">
+<title>Address Book Initialisation</title>
+<para>Here you choose when you want your &app; Address Book to start up.  i/ When &app; starts ii/ when you type something in an address field and finally when you choose to open it from the main window.</para>
+<para>The Address Book is used for auto-completion of email addresses.</para>
+</sect3>
+
+
+ </sect2>
  </sect1> 
  
  <!--Using the application------------------------------>
@@ -1236,9 +1060,9 @@ All of these are available from the<link linkend="composer-file"> Compose Window
    </para>
    <para>
    Selecting this will open the
-    <interface>
-    <link linkend="composer">Composer Window</link>
-    </interface> with the  message 
+    
+	  <link linkend="composer"><application>Composer Window</application></link>
+     with the  message 
    <link linkend="quote-character"><quote>Prepended</quote></link> and ready to edit and otherwise respond to.
    </para>
    <para>
@@ -1558,9 +1382,10 @@ see <xref linkend="address-entry-fields"> for more information about the fields.
   </sect3>
       
 </sect2>
+</sect1>
    
      <!--MESSAGE-FOLDOUT--> 
-<sect2 id="message-text-menubar">
+<sect1 id="message-text-menubar">
    <title>Main Window Text Tool-bar- Message</title>
    
     <para>This menu is the most important for day to day mail composition and administration</para>
@@ -1680,7 +1505,7 @@ See   <xref linkend="icon-previous">
 </varlistentry>
 </variablelist>
 
-<sect3 id="text-mark">
+<sect2 id="text-mark">
 <title>Main Window Text Menu --Mark</title>
 <subtitle>Mark this message as:</subtitle>
 <para>
@@ -1704,18 +1529,18 @@ This <guisubmenu>Sub-menu</guisubmenu> facilitates identifying your message in s
 	<para>Marks the message as Forwarded</para>
 	</listitem>
 </itemizedlist>
-</sect3>
-<sect3 id="text-expunge">
+</sect2>
+<sect2 id="text-expunge">
 <title>Expunge a Message</title>
-<subtitle>Remove Now</subtitle>
+
 <para>To remove a message without first sending it to the Garbage Bin select this.</para>
 <warning><para>This will be terminal for that message.  The message will not be recoverable without using file recovery tools (and a lot of work)
 </para></warning>
 <para>A <guimenu>Confirmation Dialog</guimenu> opens to help prevent accidents.</para>
 
-</sect3>
+</sect2>
 
-<sect3 id="text-copy">
+<sect2 id="text-copy">
 <title>Copy a Message</title>
 <subtitle>Save this as a text file</subtitle>
 
@@ -1723,7 +1548,7 @@ This <guisubmenu>Sub-menu</guisubmenu> facilitates identifying your message in s
 <para>This opens the <link linkend="select-a-file">Select a File  </link> dialog so that you may save 
 the mail  as a text file.
 </para>
-</sect3>
+
 
 <sect3 id="text-move">
 <title>Move this Mail</title>
@@ -1732,16 +1557,16 @@ the mail  as a text file.
 <para>Shortcut: 	Right -Click mail header and select move.</para>
 <para>The Select a Mailbox  Dialog opens where you choose the Target Mailbox.
 </para>
-</sect3>
+</sect2>
 
-<sect3 id="text-delete">
+<sect2 id="text-delete">
 <title>Delete  this Mail</title>
 <subtitle>Move to the Garbage Bin</subtitle>
 
 <para>Finished with this message ?  Then send it to the Garbage Bin and recycle the space it's taking up.</para>
-</sect3>
+</sect2>
 
-<sect3 id="text-save">
+<sect2 id="text-save">
 <title>Save to File</title>
 <subtitle>The Select a File Dialog</subtitle>
 <para>This dialog window is available from the Main Window Text <link linkend="message-text-menubar"> -Message</link> Menu.</para>
@@ -1750,7 +1575,7 @@ By right clicking on a message and selecting <guisubmenu>Save</guisubmenu> from 
 <para>(This is actually the same menu.)</para>
 <para>The Default Keyboard Shortcut is  <application>Ctrl s </application></para>
 
-<sect4 id="select-a-file">
+<sect3 id="select-a-file">
 <title>The Select A File Window</title>
 <para>This Window opens to allow you to save the mail you are currently working with as a text file.</para>
 <para>
@@ -1822,10 +1647,9 @@ The Window is a file browser with:
 </orderedlist>
 	
 
-</sect4>
 </sect3>
-
 </sect2>
+
 <sect2 id="settings">
 <title>Settings</title>
 <para> So far this menu button opens only the preferences dialog for configuration
@@ -1836,9 +1660,10 @@ of Accounts, Signature files and such.</para>
 </sect2>
 
 </sect1>
+
 <sect1 id="composer">
 <title>Composing Your Mail</title>
-
+<para>This is where you write your mail. It is also where you interact with your accounts and use the address book.</para>
 
  <sect2 id="composer-window">
  <title>Composer Window</title>   
@@ -1907,20 +1732,25 @@ of Accounts, Signature files and such.</para>
     </sect3>
     </sect2> 
     </sect1>
+</chapter>
+<chapter id="extensions">
+<title>Extensions, and other information</title> 
+<abstract><para>This section describes installing and configuring &app; plugins and the &app; Address Book. It also gives information on known bugs and the latest news.</para></abstract>
  
- <!-- Here you should add, if necessary, several more sect1's,
- describing other windows (besides the main one), file formats,
- preferences dialogs,  etc. as appropriate. Try not to make any of
- these sections too long. -->
 
-
- <!--BUGS-->
+&plugins;  
+&addressbook;
 &bugs;
+&latest;
 &authors;
-
+</chapter>
+<chapter id="final-sections">
+    <title>Information</title>
+<abstract><para>This final multi-part section gives information about this document, the &app; Licence, and other reference material associated with the application. </para></abstract>
 
 <sect1 id="manual-authors">
 <title>About this Manual</title>
+ 
 <!--Add usefull stuff here-->
   <para>
    This manual was written by Petergozz <email>&pete;</email>
@@ -1939,8 +1769,7 @@ of Accounts, Signature files and such.</para>
    The DTD for this doc is:<programlisting>DOCTYPE article PUBLIC "-//OASIS//DTD DocBook V3.1//EN" </programlisting>
    </para>
  <note><para> This DTD was chosen for it's ubiquity.
-   We will be moving to the Gnome Documentation Project formats just as soon as we work out what that actually is.!
-   (and it has a chance to stabilise !)
+  
    </para>
    </note>
    
@@ -1957,12 +1786,10 @@ of Accounts, Signature files and such.</para>
    <listitem>
    <para>The Project Leader: <email>&pablo</email></para>
    </listitem>
-   <listitem><para>The French Connection: <email>&Yves; </email>
-   </para>
-   </listitem>
+   
    <listitem>
    <para>
-    the <ulink url="http://developer.gnome.org/projects/gdp" type="http">GNOME Documentation
+    The <ulink url="http://developer.gnome.org/projects/gdp" type="http">GNOME Documentation
    Project</ulink> by sending an  E-mail to   <email>docs@gnome.org</email>.
    </para>
    </listitem>
@@ -1989,7 +1816,7 @@ source code and notes in the &app;&version; tar ball.
 <sect2>
 <title>Graphics and Icons</title>
 <para>
-In the interests of package size screen shots have been kept to a minimum.
+In the interests of package size screen shots have been reduced to a minimum. (of none)
  </para>
 <para>
 Open a working version of &app;  so that you may interact  with the application while you learn how to use it.
@@ -2014,33 +1841,18 @@ As the source document for this manual is written in
 <caution><para>Use Caution here</para></caution>
 <important><para>Important Stuff is tagged like this</para>
 <para>
-(The<quote> tag </quote>graphics when shown  are by default gifs.  )
+(The<quote> tag </quote>graphics when shown  are by default gif's.  )
 </para>
 </important>
 </sect2>
 </sect1>
  
  
- <!--  KEYBOARD SHORTCUTS -->
- <!--Move this to an appendix-->
-<sect1 id="keyboard-shortcuts">
-<title>Keyboard Shortcuts</title>
-<subtitle>Build a better Mouse-trap</subtitle>
-<para>While a mouse or other <quote>pointing device</quote> is a wonderful thing the simple fact is that many operations 
-on most Graphical User Interfaces can be undertaken much more effectively using  Accelerators  
-or Keyboard Shortcuts. While they are not as intuitive for most of us once learned you wonder how you lived without them.</para>
-<para>&app; is no exception to this &lt;pun&gt; rule_ of _thumb &lt;/pun&gt;. </para>
-<para>We hope you find the Default Short-Cuts simple to use and remember but by all means take advantage of  <application>GTK</application>
-and <link linkend="gtk-tips-features">Roll Your Own</link>.</para>
-
-
-&shortcuts;
-
-</sect1>
+ 
 
 
 
-&gtk-brief;
+
  <!-- Application License  -->
 
  <sect1 id="license">
@@ -2102,14 +1914,59 @@ and <link linkend="gtk-tips-features">Roll Your Own</link>.</para>
     or initial caps.
    </para>
    </sect2>
+</sect1>
+ 
 
- </sect1>
-&addressbook;
-&latest;
-&plugins;
+<!--  KEYBOARD SHORTCUTS -->
+ <!--Move this to an appendix-->
+<appendix id="keyboard-shortcuts">
+<title>Keyboard Shortcuts</title>
+<subtitle>Build a better Mouse-trap</subtitle>
+<para>While a mouse or other <quote>pointing device</quote> is a wonderful thing the simple fact is that many operations 
+on most Graphical User Interfaces can be undertaken much more effectively using  Accelerators  
+or Keyboard Shortcuts. While they are not as intuitive for most of us once learned you wonder how you lived without them.</para>
+<para>&app; is no exception to this &lt;pun&gt; rule_ of _thumb &lt;/pun&gt;. </para>
+<para>We hope you find the Default Short-Cuts simple to use and remember but by all means take advantage of  <application>GTK</application>
+and <link linkend="gtk-tips-features">Roll Your Own</link>.</para>
 
 
+&shortcuts;
+&gtk-brief;
+
+</appendix>
+
+
+  <appendix id="resources">
+    
+<title>Resource Files</title>
+    <subtitle>Application Configuration Files</subtitle>
+<para>Like almost every other application &app; &version; keeps a set of configuration files under your local directory. &app; does not install any system wide configuration files.</para>
+    <variablelist>
+      <varlistentry>
+	<term>Home dot CronosII</term>
+	<listitem><para>This is the main configure directory. It contains your mailboxes, uidl (for mail servers), and other configuration specific information<orderedlist>
+	      <listitem>
+	<para>.mbx   : are your mailboxes</para>
+		<para>each of these directories has an index and a numbered series of mail files in human readable format</para>
+	      </listitem>
+	      <listitem>
+		<para>uidl     : a series of identifying numbers used when connecting to mail servers.</para>
+	      </listitem> 
+	      <listitem>
+	<para>cronos.conf    : a very important file that &app; reads when it's starting up. Here are all your mailbox details and sequence, account details and so on. This file contains sensitive information don't leave it lying about</para>
+	      </listitem> 
+	      <listitem>
+	<para>finally there is cronos.rc    : this is used by Gnome/GTK and eventually your window manager to set up the GUI for &app; (and other things I suspect.)</para>
+	      </listitem>
+	    </orderedlist>
+<para>While it is possible to hand edit these files it is not recommended. </para>
+	 
+	</listitem>
+      </varlistentry>
+    </variablelist>
+<para> There are some other "hidden" files for &app; on your system where they are depends on Gconf and Gnome to some extent but a quick browse through .gnome should find conf files for &app; , the <application>cronosII-address-book</application>, and any or or of the <application>plugins</application>.</para>
 <!-- &FDL;-->
+ </appendix>
  <!--END OF MANUAL.-->
 
 </book>

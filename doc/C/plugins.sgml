@@ -5,7 +5,7 @@
 <subtitle>Extensions to &app;</subtitle>
 <note>
 <para>This written for the final release of the original Cronos II. i.e. CronosII-0.2.2-mr2. <para>
-<para>Users of<emphasis> binary packages</emphasis> (DEBs and RPMs) should not need to do any of this as of version cronosii-0.2.2-22 </para>
+<para>Users of<emphasis> binary packages</emphasis> (DEB's and RPM's) should not need to do any of this as of version cronosii-0.2.2-22 </para>
 </note>
 <para>Included with the MR2 release of &app; are three Plugins. These are:
  <orderedlist>
@@ -28,13 +28,13 @@ From the top level directory if they are not.</para>
 <sect2>
 <title>Loading and Configuration</title>
 <para>All Plugins are finally loaded and configured from the Preferences dialog.<programlisting>Settings ==> Preferences ==> Plugins ==> Load.</programlisting></para>
-<para>If the plugin binaries (the plugin-name.so files) are installed to the correct place. &app; will copy them to your &app; configuration and mailbox directory. You may then go ahead and configure them by selecting the loaded plugin and checking configure in the same dialog. Individual instructions are outlined below.</para>
+<para>If the Plugin binaries (the Plugin-name.so files) are installed to the correct place. &app; will copy them to your &app; configuration and mailbox directory. You may then go ahead and configure them by selecting the loaded Plugin and checking configure in the same dialog. Individual instructions are outlined below.</para>
 </sect2>
 
 <sect2 id=plugin-sample>
 <title>Sample</title>
 <para>The Sample Plugin is included unpacked in the &app; source.
-It provides an example for writers of plugins and enables an alert when you receive mail from a particular sender.  </para>
+It provides an example for writers of Plugin and enables an alert when you receive mail from a particular sender.  </para>
 <sect3 id=plugin-sample-configure>
 <title> Configuration</title>
 <para>Open Cronos II. <programlisting>cronos &</programlisting></para>
@@ -65,7 +65,7 @@ Support for wild-cards is enabled and this makes configuration reasonably simple
 <sect3 id=plugin-filters-configuration>
 <title>Loading and Configuring Filters Support</title>
 <para>To load the Filters Plugin navigate to "load": <programlisting>Settings ==> Preferences ==> Plugins ==> Load. </programlisting> The dialog will open at the default install path. Select Filters.so and Click OK. </para>
-<para>Next select<programlisting> "Cronos II Message Filters" and click on "Configure".</programlisting> A dialog titled CronosII Message Filters opens. As this is our first filter rule<programlisting> select "New".</programlisting> A Tabbed Dialog opens titled: New Filter.</para>
+<para>Next select<programlisting> "Cronos II Message Filters" and click on "Configure".</programlisting> A dialog titled Cronos II Message Filters opens. As this is our first filter rule<programlisting> select "New".</programlisting> A Tabbed Dialog opens titled: New Filter.</para>
 <para> The first page contains entry fields to build a rule. The second page, "Actions" tells Cronos II what to do with the mail once a match has been found. </para>
 <example><title>A simple example</title>
 <para> By way of explanation, lets set up a simple example filter:</para>
@@ -82,7 +82,7 @@ Support for wild-cards is enabled and this makes configuration reasonably simple
 <para>Now just because this is an example select<programlisting> "Match Any Rules".</programlisting> This radio button essentially allows you to  filter by ALL these rules (and) or filter by ANY of these rules (or).</para>
 <para> Next select The "Action" tab. Here for example we could select to send the filtered Email to Drafts, Garbage, "MyMailbox" or any other mailboxes we have configured.</para><para>The filter will now find any mail with "your-email-address" in the TO: or FROM: fields of the mail header.</para>
 <para>Currently you may only move messages to those present on the pop-out list.  Any top level mailboxes you add will appear on this list</para>
-<para>Ok, so we have made a filtering rule and given the application some action to take when it finds a mail that matches the rule.<programlisting> Click OK to exit the "New Rule" dialog, then "Exit" "CronosII Message Filters"</programlisting> (this writes the rule to your &app; configure directory). Finally select<programlisting> "Apply" and "OK"</programlisting> and go ahead and test it.</para>
+<para>OK, so we have made a filtering rule and given the application some action to take when it finds a mail that matches the rule.<programlisting> Click OK to exit the "New Rule" dialog, then "Exit" "Cronos II Message Filters"</programlisting> (this writes the rule to your &app; configure directory). Finally select<programlisting> "Apply" and "OK"</programlisting> and go ahead and test it.</para>
 <para>  To test it mail something to yourself and see if it ends up in the correct place. :) With just a little practice and thought you will be able to do all sorts of things with your mail. Don't forget, wild-cards make for a much simpler experience. </para>
 </example>
 
@@ -92,8 +92,7 @@ Support for wild-cards is enabled and this makes configuration reasonably simple
 
 <sect2>
 <title>Availability</title>
-<para>If you would like to get the "Stand Alone" Plugins or find out how to write your own, visit the<ulink type="http" url="&website;"> Cronos Website</ulink> &lt; &website; &gt; and follow the links to manuals and plugins. A html how-to is included in the Source Tarball, look under the plugins directory.
+<para>If you would like to get the "Stand Alone" Plugins or find out how to write your own, visit the<ulink type="http" url="&website;"> Cronos Website</ulink> &lt; &website; &gt; and follow the links to manuals and Plugin. A HTML how-to is included in the Source Tarball, look under the Plugin directory.
 </para>
 </sect2>
-</sect1>
-</article>      
+</sect1>     

@@ -1,7 +1,7 @@
 <!--<!doctype article PUBLIC "-//OASIS//DTD DocBook V3.1//EN"[]>
 <article> -->
 <!-- Parent DOC = CronosII.sgml-->
-<sect2>
+<sect1>
 <title>Shortcuts</title>
 <subtitle>Keyboard and Mouse Shortcuts</subtitle>
 <para>
@@ -335,5 +335,5 @@ entering the new shortcut.</para>
 </tgroup>
 </table>
 
-</sect2>
+</sect1>
 <!--</article>-->

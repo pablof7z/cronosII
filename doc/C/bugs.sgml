@@ -16,7 +16,7 @@
     &app;&version; </para>
  <itemizedlist>
  <listitem> <para>
-	Compilation errors  --upgrade lib gnome-print </para>
+	Compilation errors  --upgrade lib gnome-print  and libgnome-dev</para>
     </listitem>
 
  <listitem> <para>
@@ -25,7 +25,11 @@
  </para> </listitem>
     <listitem> <para> The Search Button is not Functional --(yet)
       </para> </listitem>
-
+<listitem> <para> A strange read write bug on bounced mail. The work around (until fixed) is to
+rm the offending file from the .CronosII/box-name.mbx and restart. You might want to delete the entry from the mbx index file as well. -- pete. <email> &pete; </email>. Apologies for not putting in a full bug reort yet.
+      </para> </listitem>
+<listitem> <para> The mail queue is yet to prove itself to be totaly stable.
+      </para> </listitem>
  </itemizedlist>
  </sect1>
 

@@ -4,8 +4,15 @@ cronosII_help_DATA =         \
         topic.dat
 
 SGML_FILES =                    \
-        cronosII.sgml
-
+	cronosII.sgml	\
+	accounts.sgml	\
+	bugs.sgml	\
+	addressbook.sgml	\
+	authors.sgml	\
+	gtk-brief.sgml	\
+	latest.sgml	\
+	plugins.sgml	\
+	shortcuts_table.sgml
 # files that aren't in a binary/data/library target have to be listed here
 # to be included in the tarball when you 'make dist'
 EXTRA_DIST = \

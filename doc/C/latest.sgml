@@ -3,27 +3,30 @@
 
 <sect1 id="latest">
 <title>Latest Developments</title>
-<subtitle>Whats New </subtitle>
+<subtitle>What's New </subtitle>
 <para> &app;&version; brings the following new stuff:</para>
 
 <orderedlist>
-<listitem><para>Lots of minor typo fixes</para></listitem>
+
+<listitem><para>Bug Fixes in mail body and header reading</para></listitem>
+<listitem><para>Improved support for SMTP accounts</para></listitem>
 <listitem><para>Improved Mail Header Handling. </para></listitem>
 <listitem><para>Some bugfixes in mailbox creation</para></listitem>
 <listitem><para>Some new Icons for a fresher look </para></listitem>
 <listitem><para>Current Filters included (built) in tarball </para></listitem>
-<listitem><para>Manual and other documentation brought to this release. </para></listitem>
+<listitem><para>Tar Ball and binary package should now Auto Install Plugins</para></listitem>
+<listitem><para>Manual and other documentation brought to this release. :)</para></listitem>
 </orderedlist>
 
 
-  <para>Coming soon a new improved CronosII API and User interface.
+  <para>Coming soon a new improved Cronos II API and User interface.
  </para>
 <sect2 id="CronosII-Scratch">
-    <title>CronosII-Scratch</title>
+    <title>Cronos II-Scratch</title>
     <subtitle> Cronos II 0.2.3   - Welcome to the real world. -</subtitle>
 <para>To paraphrase Pablo's original announcement :</para>
 <blockquote><attribution>Pablo </attribution>
-<para>Cronos II 0.2.3 (aka "Welcome to the real world") is CronosII reborn.</para>
+<para>Cronos II 0.2.3 (aka "Welcome to the real world") is Cronos II reborn.</para>
 
   <para>
  Cronos II is growing and is getting bigger,  when  I started
@@ -46,7 +49,7 @@ is to start being used, so we all code with the same things.</para></blockquote>
 <para>A browse of the new code however shows some major features under development ( some dramatic bug-fixes
 and interapp compatibility) Every reported bug to date is being addressed and support for HTML and HTTP is in early development. So stand by for the next round .</para>
 <para> The curious can check all of this out from CVS available from the &app; site. </para>
-<para>The new Cronos II is getting very close to release, in fact it is allready in daily use by some of the development team. Please note work on these Maintenance Releases will STOP when the New CronosII goes stable beta. </para>
+<para>The new Cronos II is getting very close to release, in fact it is already in daily use by some of the development team. Please note work on these Maintenance Releases will STOP when the New Cronos II goes stable beta. </para>
 <para>The latest versions of both this stable version and the new "Scratch" Cronos II can be found at the Sourceforge CVS site. Please visit the<ulink type="http" url="&website"> Web site</ulink> first to catch any latest news.</para>
 
 </sect2>

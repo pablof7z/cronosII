@@ -13,7 +13,7 @@
 <sect2 id=Contributors>
 <title>Contributors</title>
 <subtitle>The Development Team</subtitle>
-<para>In what is a grand Free Software tradition CronosII has been brought to you by an  international Development Team.</para>
+<para>In what is a grand Free Software tradition Cronos II has been brought to you by an  international Development Team.</para>
  <itemizedlist>
  <listitem>
  <para>
@@ -118,8 +118,14 @@ Daniel has contributed quite a few patches to the MR2 source. These include fixe
 </para>
 </listitem>
 </itemizedlist>
+<note><para>The char.bug</para>
+
+<para>A special thanks to the hackers on the<emphasis> Debian (debian.bugs.dist) development newsgroup</emphasis> who fixed some bugs they found running under the Power PC platform. These same patches also fixed some stubborn bugs involving parsing mail headers and config files. As near as I can tell these people where:
+ Aaron Schrab (aaron ATAT schrab.com) ,ROOT (?) jlquin ATAT optonline.net and Seamus. They know who they are :) While I was trying to fix similar problems I may never have seen that solution. Which is why I do the docs :)</para>
+</note>
+
 <para>
-Thank-you to all the people from around this  planet (at least)  who use CronosII and by doing so
+Thank-you to all the people from around this  planet (at least)  who use Cronos II and by doing so
 give support to Open Source Software, GNU, GTK, GNOME, feedback to us, and a clear
 sense of purpose (fear) to the development work.
 </para>
