@@ -56,6 +56,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/cronosII/plugins/filters.so
 %{_datadir}/cronosII/plugins/fortune.so
 %{_datadir}/cronosII/plugins/sample.so
+%{_datadir}/cronosII/plugins/nohtml.so
 %{_mandir}/man1/cronos.1.gz
 %{_mandir}/man1/c2addrbook.1.gz
 %{_mandir}/man1/cronosII-config.1.gz
