@@ -1,4 +1,8 @@
-Fri Dec 14 2001 Pete <gossner@arcom.com.au>
+Sat Dec 15 2001 Pete <petergozz@users.sourceforge.net>
+	* Hopefully the final updates to plugins.
+	
+
+Fri Dec 14 2001 Pete <petergozz@users.sourceforge.net>
 	* Applied Daniel Fairheads patches to 
 	gui-composer.c   gui-preferences.c .
 	These should fix the annoying Mailto: bug and an old potential problem
@@ -10,13 +14,13 @@ Fri Dec 14 2001 Pete <gossner@arcom.com.au>
 	*Having problems with the filters plugin .... sigh .. Why did I go there ..
 	
 	
-Thur Dec 13 2001 Pete <gossner@arcom.com.au>
+Thur Dec 13 2001 Pete <petergozz@users.sourceforge.net>
 	* Brought filters to 0.4.0
 	* Updated source docs to reflect this
 	* Added one Daniel to the splash page (and fixed a typo)
 
 
-Wed Dec 12 2001 Pete Gossner <gossner@arcom.com.au>
+Wed Dec 12 2001 Pete Gossner <petergozz@users.sourceforge.net>
 	* Caught a potential install problem in plugins
 	* Added the binaries etal for the sample plugin
 	* Updated the relevant READMEs in the plugin directories.
@@ -43,7 +47,7 @@ Fri Nov 30 Peter Gossner <petergozz@users.sourceforge.net>
 	Plugins still not making ... mm by mm I am tracking those ....
 		
 
-Fri Nov 30 2001 Peter Gossner <gossner@arcom.com.au>
+Fri Nov 30 2001 Peter Gossner <petergozz@users.sourceforge.net>
 	changed  some of the icons for a fresher look.
 	have tried to get plugins to work but not yet.
 
@@ -338,7 +342,7 @@ Mon Jul  9 18:16:49 CST 2001 Peter Gossner <petergozz@users.sourceforge.net>
 
 º Sun Feb 25 2001 Yves Mettier <ymettier@libertysurf.fr> º
 - Removed the old documentation
-- Added the sgml documentation from Peter Gossner <gossner@arcom.com.au>
+- Added the sgml documentation from Peter Gossner <petergozz@users.sourceforge.net>
 - Added the Makefile.am files to generate the html files.
 
 º Sun Feb 25 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
@@ -623,7 +627,7 @@ Mon Jul  9 18:16:49 CST 2001 Peter Gossner <petergozz@users.sourceforge.net>
   and then clicking in other mailbox that has a list a message (This is probably a bug generated
   by the previous change).
 
-º Wed Jan 10 2001 Pete Gossner <gossner@arcom.com.au> º
+º Wed Jan 10 2001 Pete Gossner <petergozz@users.sourceforge.net> º
 - Updated the site.
 
 º Wed Jan 10 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
@@ -661,7 +665,7 @@ Mon Jul  9 18:16:49 CST 2001 Peter Gossner <petergozz@users.sourceforge.net>
 - Deleted all dependencies in old net related modules (net module, pop module and SMTP module).
 - Recode of the Composer Window.
 
-º Wed Jan 03 2001 Peter Gossner <gossner@arcom.com.au> º
+º Wed Jan 03 2001 Peter Gossner <petergozz@users.sourceforge.net> º
 - Updated the user-manual and the site.
 
 º Wed Jan 03 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
