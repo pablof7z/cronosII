@@ -1,3 +1,11 @@
+Mon Jul  9 18:16:49 CST 2001 Peter Gossner <petergozz@users.sourceforge.net>
+	initiated Change Log format above. (emacs auto detects this)
+	Many small changes. Some final spell checking (because I couldn't stand it any more)
+	Hopefully have intergrated the manual into the build process in a very simple way. (after some 4 different variations) . This should pay off with scrollkeeper looming.
+	config.in altered to reflect this maintenance release.
+	edits to gui-preferences.c
+	edited cronosII.png to clearly show this release.
+	
 º Sun Apr 15 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
 - Spanish translation.
 - Fixed bug #416303.
@@ -71,15 +79,15 @@
 - Editing of existent card is working for the Phone page.
 - Editing of existent card is working for the Etcetera page.
 - Listing the Address Book by one group works.
-- Fixed a crash when there're no Cards.
+- Fixed a crash when there are no Cards.
 - Changes in the c2_address_book_search in order to be able
   to search in any GList and not necessary in the addrbook list.
 
 º Fri Mar 30 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
 - Writing of groups to the Address Book file is working.
 - Fix to write the \r when writing the unknown fields.
-- Ordenation of cards is done case insensitive.
-- Reorganization of the functions in addrbook.c.
+- Order of cards is done case insensitive.
+- Reorganisation of the functions in addrbook.c.
 - Fixed the crash when searching in the Address Book.
 - Fixed the bug of the GnomeFileSelector that unset it as modal when the window
   was destroyed.
@@ -99,7 +107,7 @@
 - Italian translation.
 
 º Sun Mar 25 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
-- Fixed the bug that wouldn't send an attachment under certain circuntanses.
+- Fixed the bug that wouldn't send an attachment under certain circumstances.
 - Fixed a mistake in the streq family functions that Felix Valle made my realize.
 - Work around the Address Book UI (Network page callbacks).
 - Finished the damn Network page and it damn callbacks!
@@ -113,8 +121,8 @@
 - Fixed a crash when an entry in the GnomeCard.gcrd, using QUOTED-PRINTABLE encoding
   uses the same character is the character before the QUOTED-PRINTABLE string.
 - Changes in the init.c and init.h files and in the preferences in order to let the user
-  choose when to do the address book initialization.
-- Changes in the gui-addrbook.c file in order to be ready if the user selects to initializate
+  choose when to do the address book initialisation.
+- Changes in the gui-addrbook.c file in order to be ready if the user selects to initialise
   the address book when opening the Address Book.
 - Changed the version number in the configure.in file.
 - Changes around the cronosII-config script to let it know what features were compiled with Cronos II.
@@ -141,18 +149,18 @@
 - Removed the background color for marked messages from the preferences and the init.
 
 º Thu Mar 15 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
-- Added the icon for vCards.
+- Added the icon for vCard.
 - Dynamic menus for the list of attachs in the main window is working.
 - Support to add a card when someone attach it in a mail.
 - Fixed a bug that would make some entries to lose the last byte (Address Book).
 
 º Wed Mar 14 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
 - Added a function to make a GCompletion struct with the possibles recipients.
-- Autocompletion works.
+- Auto-completion works.
 - Changes so the function c2_address_book_get_card_field won't return a \n.
 - Added support to show a list of Contacts in the Composer Window.
-- Added the completition stuff when using , and ; for multiple recipient mails.
-- The Shift+Tab for selectiong the backwards widget now works.
+- Added the completion stuff when using , and ; for multiple recipient mails.
+- The Shift+Tab for selecting the backwards widget now works.
 - Work around autoconf to make the building of the address book optional.
 - Fixed the bug that made that an incoming message with an attachment with no mime type or
   file name would be named with mem crap. 
@@ -192,7 +200,7 @@
 - Created and released the Cronos II Fortune Plugin.
 
 º Thu Mar 06 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
-- Fixed a crash when repling/forward a mail.
+- Fixed a crash when replying/forward a mail.
 - Added support to use the mouse wheel in the preview message.
 
 º Mon Mar 05 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
@@ -208,17 +216,17 @@
 - Recode of the marking function (as read, unread, replied and forwarded): Speed up.
 - Changed the type of variable of the function that keeps track of the new mails
   to avoid an invalid number.
-- Support to show errors in the appbar and warnings in a popup window.
+- Support to show errors in the appbar and warnings in a pop-up window.
 - Fixed the problem that wouldn't show when a message is marked when loading the mailbox.
 - Fixed the annoyance that every time you wanted to select a file you had to start from
   your home directory.
 
 º Sat Mar 03 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
-- Added a system to update the configuration of the users Cronos II instalation
+- Added a system to update the configuration of the users Cronos II installation
   when updating to a new version.
 - Changes in the new way of deleting mails: speed up and bug fix, what else can I ask?! :)
-- Added a system like scandisk to fix the mail database from the new algorithm: yes, is
-  very much faster than the old one, but is a bit messy, this "scandisk" really works and
+- Added a system like scan-disk to fix the mail database from the new algorithm: yes, is
+  very much faster than the old one, but is a bit messy, this "scan-disk" really works and
   really fixes the database, not like the one our friends from ms coded.
 - Optional (./configure --disable-new-mbox-mode) usage of the new system, if you enable
   the option --disable-new-mbox-mode at ./configure time, you will use the old deleting
@@ -229,7 +237,7 @@
 º Fri Mar 02 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
 - Recode of the mail deleting functions: speed up.
 - Recode of the mailbox_get_next_mid: speed up.
-- Cronos II initialization: speed up.
+- Cronos II initialisation: speed up.
 
 º Thu Mar 01 2001 Jeremy Witt <wittj@onramp.net> º
 - Patch to grab focus of the right widget in the composer window.
@@ -251,7 +259,7 @@
 
 º Mon Feb 26 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
 - Changes around the main UI.
-- Speed up the initialization.
+- Speed up the initialisation.
 - Added an option to check mail when Cronos II starts.
 - Added support to use the net timeout (just for reading).
 
@@ -307,13 +315,13 @@
 º Sun Feb 18 2001 Yves Mettier <ymettier@libertysurf.fr> º
 - French translation.
 - SGML documentation.
-- Patch to integrate the new SGML documentation within Cronos II and withing the package.
+- Patch to integrate the new SGML documentation within Cronos II and within the package.
 
 º Sun Feb 18 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
 - Applied the patches created yesterday in the way to my sister's house in Rosario.
 - Creating plugin needed directories when no existing.
 - Added functions to the dynamic_module API to get a path to the config file.
-- Seted the default directory for loading a plugin to $DATADIR/cronosII/plugins
+- Set the default directory for loading a plugin to $DATADIR/cronosII/plugins
 
 º Sat Feb 17 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
 - Created a patch for the bug with the UIDL support.
@@ -323,9 +331,9 @@
 - Important and cool changes around the autoconf and automake stuff to
   let the support of plugins as an option and to use a brand new script
   cronosII-config which will give some information about the installation
-  very usefull to the modules.
+  very useful to the modules.
 - An important rethink of modules.
-- Many fixes to better dialing with headers files.
+- Many fixes to better dialling with headers files.
 - Exporting header files to the include dir and a main header file: cronosII.h
 - Started the writing of the Cronos II Plugin Developer Manual.
 - Recoded of the sample plugin.
@@ -334,15 +342,15 @@
 - Changes around the Preferences dialog to allow Plug Ins.
 - New Dynamic Modules API.
 - Start coding the Sample module and the GnuPG module.
-- Written emiting function to send the C2_DYNAMIC_MODULE_COMPOSER_INSERT_SIGNATURE.
+- Written emitting function to send the C2_DYNAMIC_MODULE_COMPOSER_INSERT_SIGNATURE.
 
 <RELEASE>0.1.2</RELEASE>
 º Tue Feb 15 2001 Arne Caspari <arnem@informatik.uni-bremen.de> º
 - Fixed a crash when importing spool mailboxes.
 
 º Wed Feb 14 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
-- Support to convert 8bit characters in the headers to valid iso8859-1 (SMTP module).
-- Support to convert iso8859-1 chars to 8bit characters (POP module).
+- Support to convert 8bit characters in the headers to valid ISO8859-1 (SMTP module).
+- Support to convert ISO8859-1 chars to 8bit characters (POP module).
 - Support to DND in the Composer Window.
 - Raising the window_checking when should be done.
 
@@ -379,10 +387,10 @@
 - Support for the View menu in the Composer Window.
 - Decoding before replying to mails with attachments or encoded.
 - Added a linked list of temporary files that are deleted with cronos_exit.
-- Support for saving attached files (needed for displaing them on an html
+- Support for saving attached files (needed for displaying them on an html
   attachment) with the correct name.
 - Changed the way the icon_list is shown (just when there's a real attachment, not when
-  the message is multipart).
+  the message is multi-part).
 
 º Fri Feb 09 2001 Bosko Blagojevic <falling@users.sourceforge.net> º
 - Fixed a random crash when downloading many mails in FreeBSD.
@@ -391,7 +399,7 @@
 - Work around the new Cronos II site.
 - Changes in order to free some variables in the loading of mails.
 - Fixed a potential crash when sending a message bigger than 1024 bytes.
-- Fixed the uncompatibility between Cronos II and Cronos II (SMTP).
+- Fixed the incompatibility between Cronos II and Cronos II (SMTP).
 - Fixed a bug in the message_copy function that made it act weird.
 - Recode of gui-window_message.c and .h: Support for MIME.
 - gui-window_message.c: View menu (functional).
@@ -420,7 +428,7 @@
 
 º Mon Feb 05 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
 - UI support to single account checking.
-- Changes in prefereces in order to update the account menu.
+- Changes in preferences in order to update the account menu.
 - Changes in the core in order to support single account checking.
 - Fixed a bug that would crash Cronos II when saving a part that has the filename in the Content-Disposition.
 
@@ -431,19 +439,19 @@
 - Fixes in order to read the name of an attachment in the disposition field.
 - Added sticky and automatically MIME Window mode.
 - Changes in the main UI.
-- Freeing memory that wasn't being freed when loadiding a mailbox.
+- Freeing memory that wasn't being freed when loading a mailbox.
 - Fixed bugs in the marking of mails with attachments downloaded with the POP module.
 
 º Fri Feb 02 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
 - My 17th birthday (damn, 17, getting older).
-- RECODE from scratch of the MIME module, now wrotten with recursive attachment support
+- RECODE from scratch of the MIME module, now written with recursive attachment support
   (used by Outlook and Netware).
 - Mime part saving to file and viewing.
 - Changes in the main UI.
 - Changes in order to mark mails downloaded with the POP module which have attachments.
 
 º Thu Feb 01 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
-- Fixed a bug that would crash Cronos II in multipart messages which any part doesn't have
+- Fixed a bug that would crash Cronos II in multi-part messages which any part doesn't have
   a parameter.
 - Using a new macro (c2_free) instead of g_free which g_free's and set the argument to NULL to prevent
   double buffer freeing.
@@ -455,7 +463,7 @@
 - Support to understand MIME messages as different parts and to list the different parts as icons
   (just in the main window, TODO in the Message Window).
 - Started the MIME UI.
-- Ability to set an apropiate icon for each mail part according to the content type.
+- Ability to set an appropriate icon for each mail part according to the content type.
 - Changes in order to make streq and family non-case sensitive and a new family of strcaseeq which work with
   case sensitive.
 
@@ -464,13 +472,13 @@
 
 º Sun Jan 28 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
 - Added signature support.
-- Added GMC menues interaction.
+- Added GMC menus interaction.
 
 <RELEASE>0.1.0</RELEASE>
 º Fri Jan 26 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
 - Fixed the bug which will always give the conversion character %n in the title the value of 1 or 0.
 - Spanish translation.
-- Fixed the bug that wouldn't colorate the text body according to what the user specified in the Message
+- Fixed the bug that wouldn't colorise the text body according to what the user specified in the Message
   Window.
 - Fixed the crash in the Message Window->Properties when activating the Close button.
 - Fixed the crash in the Main Window when clicking with button 2 in an empty row.
@@ -504,10 +512,10 @@
 - Fixed the bug that would make Cronos II act weird after sending a mail.
 - Changes to make Cronos II write enough information on Drafts mails to be processed by the new
   SMTP module.
-- Added support to mark automatically a message as replied or forwarded after continueing a saved message
-  (a Draft message that was beeing written as a reply or forward of other message).
+- Added support to mark automatically a message as replied or forwarded after continuing a saved message
+  (a Draft message that was being written as a reply or forward of other message).
 - The mail that has been sent and was in the Drafts mailbox gets deleted.
-- Fixed the moving of files, now tmp files get really deleted.
+- Fixed the moving of files, now temp files get really deleted.
 
 º Mon Jan 15 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
 - Fixed the bug that confirm you when closing a just-saved message (in composer).
@@ -528,17 +536,17 @@
 - Work around autoconf and automake to detect if Cronos II should build with GnomePrint support.
 
 º Fri Jan 12 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
-- Ability to guess the user name and POP host when configuring a new account bassing on the mailaddr.
+- Ability to guess the user name and POP host when configuring a new account based on the mailaddr.
 - Fixed a new bug that wouldn't let you keep editing a mail of the Drafts mailbox.
 - Added the Bug Report menu item in the Main Menu.
 - Cleans up in the code.
-- Speeded up the marking of mails (new, readed, replied or forwarded).
+- Speeded up the marking of mails (new, read, replied or forwarded).
 - Updated autoconf and automake files.
 - Fixed a new bug that wouldn't scroll the CList to the right mail when loading a mailbox.
 
 º Thu Jan 11 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
 - Changes in the UI of the Preferences Dialog.
-- Speeded up the process of marking messages (new, reply, forward and readed).
+- Speeded up the process of marking messages (new, reply, forward and read).
 - Changes in the UI of the Main Window.
 - Threaded the deleting, expunging, copying and moving o mails.
 - Fixed a bug that would crash Cronos II when expunging, moving or deleting all mails of a mailbox
@@ -549,16 +557,16 @@
 - Updated the site.
 
 º Wed Jan 10 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
-- Improved the Window Message by using the Message readed by the CList.
+- Improved the Window Message by using the Message read by the CList.
 - When clicking on a message in the CList (and there's only one message selected) with the
   3 button of the mouse, the current row selected gets unselected and the clicked row gets selected.
 - Remembering which was the mail selected in a loaded mailbox now works correctly.
 - Fixed a bug that would crash Cronos II when replying or forwarding.
-- Added support to manually mark a message as readed, unreaded, replied or forwarded.
+- Added support to manually mark a message as read, unread, replied or forwarded.
 - Changes in the UI of the Preferences Dialog.
 - Added support to configure some colors.
 - Added support to select a message in the list.
-- Created an ugly pixmap to mark messages (please, somebody redisign it!).
+- Created an ugly pixmap to mark messages (please, somebody redesign it!).
 
 º Tue Jan 09 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
 - Little changes in the UI of the Preferences Dialog.
@@ -580,28 +588,28 @@
 
 º Thu Jan 04 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
 - Recode all things related to the old smtp module (net-smtp).
-- Deleted all dependecies in old net related modules (net module, pop module and smtp module).
+- Deleted all dependencies in old net related modules (net module, pop module and SMTP module).
 - Recode of the Composer Window.
 
 º Wed Jan 03 2001 Peter Gossner <gossner@arcom.com.au> º
-- Updated the usermanual and the site.
+- Updated the user-manual and the site.
 
 º Wed Jan 03 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
 - Well, I get really sick of getting segfault for convining the up and down button
   in preferences>accounts, so I comment them away, I'll work on them on future versions...
-- A few changes in the POP module to make it more userfriendly.
+- A few changes in the POP module to make it more user-friendly.
 - Ability to cache resolved hosts into ips (no InterProccess communication, but Internet Protocol :=P).
 - Fixed a bug that made Cronos II to crash when OKing or APPLYing the preferences dialog (account_free)
 - Added a dialog that ask a question (using gnome_question).
 - Asking before expunging.
 
 º Tue Jan 02 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
-- The POP module works "properly", it downloads and delete, but doesn't support UIDL neither TOP.
+- The POP module works "properly", it download and delete, but doesn't support UIDL neither TOP.
 - Changed the UI of preferences>accounts and added two buttons, up and down.
-- New pixmaps made with GIMP 1.2 (it ruls!).
+- New pixmaps made with GIMP 1.2 (it rules!).
 
 º Mon Jan 01 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
-- Millenium change.
+- Millennium change.
 - Most of the new POP module written.
 - Threads usage.
 
@@ -627,7 +635,7 @@
 - Support to use Spool mailbox format.
 
 º Thu Dec 21 2000 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
-- Seted the default imporint directory to /var/spool/mail
+- Set the default import directory to /var/spool/mail
 - Minor changes in the toolbar look (better GNOME 1.2 integration)
 - New widget to select files, original from Glimmer 1.0, with minor changes.
 
