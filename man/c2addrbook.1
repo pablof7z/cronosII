@@ -1,0 +1,104 @@
+.\" This -*- nroff -*- file has been generated from
+.\" DocBook SGML with docbook-to-man on Debian GNU/Linux.
+...\"
+...\"	transcript compatibility for postscript use.
+...\"
+...\"	synopsis:  .P! <file.ps>
+...\"
+.de P!
+\\&.
+.fl			\" force out current output buffer
+\\!%PB
+\\!/showpage{}def
+...\" the following is from Ken Flowers -- it prevents dictionary overflows
+\\!/tempdict 200 dict def tempdict begin
+.fl			\" prolog
+.sy cat \\$1\" bring in postscript file
+...\" the following line matches the tempdict above
+\\!end % tempdict %
+\\!PE
+\\!.
+.sp \\$2u	\" move below the image
+..
+.de pF
+.ie     \\*(f1 .ds f1 \\n(.f
+.el .ie \\*(f2 .ds f2 \\n(.f
+.el .ie \\*(f3 .ds f3 \\n(.f
+.el .ie \\*(f4 .ds f4 \\n(.f
+.el .tm ? font overflow
+.ft \\$1
+..
+.de fP
+.ie     !\\*(f4 \{\
+.	ft \\*(f4
+.	ds f4\"
+'	br \}
+.el .ie !\\*(f3 \{\
+.	ft \\*(f3
+.	ds f3\"
+'	br \}
+.el .ie !\\*(f2 \{\
+.	ft \\*(f2
+.	ds f2\"
+'	br \}
+.el .ie !\\*(f1 \{\
+.	ft \\*(f1
+.	ds f1\"
+'	br \}
+.el .tm ? font underflow
+..
+.ds f1\"
+.ds f2\"
+.ds f3\"
+.ds f4\"
+'\" t 
+.ta 8n 16n 24n 32n 40n 48n 56n 64n 72n  
+.TH "c2addrbook" "1" 
+.PP 
+.nf 
+.ta 8n 16n 24n 32n 40n 48n 56n 64n 72n 
+cronosii@users.sf.net      
+.fi 
+2000  Pablo   Fernandez Navarro   Bosco    Blagojevic   February  6, 2002;  
+.SH "NAME" 
+Cronos II Address Book \(em Maintains a list of contacts and full details. (Much like Gnome Card) 
+.SH "SYNOPSIS" 
+.PP 
+\fBCronos II Address Book\fP [\fB--h \fIhelp\fP\fP]  
+.PP 
+Returns a full list of Gnome options 
+.SH "DESCRIPTION" 
+.PP 
+This manual page documents briefly the 
+\fBCronos II Address Book\fP  
+ 
+ 
+.PP 
+\fBCronos II Address Book\fP is a program that is included in the cronosii email application. It is called "stand alone" so that you can update your mail contacts more conveniently. 
+.PP 
+A full description is available from the \fBHelp Button\fP within \fBcronosii\fP. To launch Cronos II type \fBcronos\fP at a command prompt (under X) or launch from your App. Manager's Menus. (Internet or mail) 
+.SH "OPTIONS" 
+.PP 
+These programs follow the usual GNU and Gnome command line syntax, 
+with long options starting with two dashes (`-').  A summary of 
+options is included below.   
+.IP "          \fB--help\fP         " 10 
+Show summary of gnome  options. 
+.IP "          \fB--version\fP         " 10 
+Show version of program. 
+.SH "SEE ALSO" 
+.PP 
+cronosii (1),  
+.PP 
+The programs are documented more fully by \fICronos II Users Manual\fP available via the 
+\fBGnome Help\fP system. Or from the help button on the main window of Cronos II 
+.SH "AUTHOR" 
+.PP 
+This manual page was written by Peter Gossner petergozz@users.sf.net for 
+the \fBDebian GNU/Linux\fP system (but may be used by others).  Permission is 
+granted to copy, distribute and/or modify this document under 
+the terms of the GNU Free Documentation 
+License, Version 1.1 or any later version published by the Free 
+Software Foundation; with no Invariant Sections, no Front-Cover 
+Texts and no Back-Cover Texts. 
+...\" created by instant / docbook-to-man, Wed 06 Feb 2002, 15:40 
