@@ -1,24 +1,24 @@
 %define name		cronosII
 %define prefix		/usr
-%define sysconfdir	/etc
-%define RELEASE		0
+%define sysconfdir		/etc
+%define RELEASE		1
 %define rel	%{?CUSTOM_RELEASE} %{!?$CUSTOM_RELEASE:%RELEASE}
 
-Summary: Cronos II is a powerful mail client for GNOME.
+Summary: Cronos II is a well featured mail client for GNOME.
 Name: @PACKAGE@
 Version: @VERSION@
 Release: %rel
 Copyright: GPL
 Group: Applications/Internet
 URL: http://cronosII.sourceforge.net
-Source: @PACKAGE@-@VERSION@.tar.gz
+Source0: @PACKAGE@-@VERSION@.tar.gz
 Requires: gnome-libs >= 1.0.0
 Packager: Pablo Fernández Navarro <cronosII@users.sourceforge.net>
 BuildRoot: %{_tmppath}/%{name}-root
 
 %description
-Cronos II is a powerful GNOME mail client that uses its own database storage
-format to ensure the high performance it reachs.
+Cronos II is a powerful GNOME mail client that uses a custom database storage
+format to ensure  high performance.
 If you would like to help with the development,
 contact Cronos II (Pablo Fernández Navarro) <cronosII@users.sourceforge.net>
 
@@ -29,11 +29,11 @@ capable d'atteidre.
 Si vous voulez aider au developpement, contactez Cronos II (Pablo Fernández
 Navarro) <cronosII@users.sourceforge.net>
 
-%prep
+%prep 
 %setup -q
 
 %build
-%configure --disable-debug
+%configure --disable-debug --prefix=/usr
 make
 
 %install
@@ -43,12 +43,105 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+
 %files
 %defattr(-,root,root)
-%doc ABOUT-NLS AUTHORS COPYING ChangeLog FEATURES INSTALL NEWS README doc/C/cronosII/* TODO
+%doc ABOUT-NLS AUTHORS COPYING ChangeLog Changelog-RPM FEATURES INSTALL NEWS NEWS_OTHER README doc/C/cronosII/* TODO
 %{_bindir}/cronos
+%{_bindir}/c2addrbook
+%{_bindir}/cronosII-config
 %{_datadir}/gnome/apps/Internet/cronosII.desktop
+%{_datadir}/gnome/apps/Applications/c2addrbook.desktop
 %{_datadir}/pixmaps/cronosII.png
-%{_datadir}/locale/*/LC_MESSAGES/cronosII.mo
-%{_mandir}/*
-%{_datadir}/gnome/help/cronosII/*
+%{_datadir}/pixmaps/c2addrbook.png
+%{_datadir}/cronosII/plugins/filters.so
+%{_datadir}/cronosII/plugins/fortune.so
+%{_datadir}/cronosII/plugins/sample.so
+%{_mandir}/man1/cronos.1.gz
+%{_mandir}/man1/c2addrbook.1.gz
+%{_mandir}/man1/cronosII-config.1.gz
+%{_datadir}/gnome/help/cronosII/C/warning.gif
+%{_datadir}/gnome/help/cronosII/C/using-cronosii.html
+%{_datadir}/gnome/help/cronosII/C/up.gif
+%{_datadir}/gnome/help/cronosII/C/topic.dat
+%{_datadir}/gnome/help/cronosII/C/toc-plus.gif
+%{_datadir}/gnome/help/cronosII/C/toc-minus.gif
+%{_datadir}/gnome/help/cronosII/C/toc-blank.gif
+%{_datadir}/gnome/help/cronosII/C/tip.gif
+%{_datadir}/gnome/help/cronosII/C/text-menubar.html
+%{_datadir}/gnome/help/cronosII/C/prev.gif
+%{_datadir}/gnome/help/cronosII/C/plugins.html
+%{_datadir}/gnome/help/cronosII/C/note.gif
+%{_datadir}/gnome/help/cronosII/C/next.gif
+%{_datadir}/gnome/help/cronosII/C/manual-authors.html
+%{_datadir}/gnome/help/cronosII/C/mainwindow-icons.html
+%{_datadir}/gnome/help/cronosII/C/license.html
+%{_datadir}/gnome/help/cronosII/C/keyboard-shortcuts.html
+%{_datadir}/gnome/help/cronosII/C/install.html
+%{_datadir}/gnome/help/cronosII/C/index.html
+%{_datadir}/gnome/help/cronosII/C/important.gif
+%{_datadir}/gnome/help/cronosII/C/images/
+%{_datadir}/gnome/help/cronosII/C/home.gif
+%{_datadir}/gnome/help/cronosII/C/gtk.html
+%{_datadir}/gnome/help/cronosII/C/f11.html
+%{_datadir}/gnome/help/cronosII/C/docbook.css
+%{_datadir}/gnome/help/cronosII/C/configuration.html
+%{_datadir}/gnome/help/cronosII/C/composer.html
+%{_datadir}/gnome/help/cronosII/C/caution.gif
+%{_datadir}/gnome/help/cronosII/C/bugs.html
+%{_datadir}/gnome/help/cronosII/C/book1.html
+%{_datadir}/gnome/help/cronosII/C/authors.html
+%{_datadir}/gnome/help/cronosII/C/addressbook-final.html
+%{_datadir}/locale/br/LC_MESSAGES/cronosII.mo
+%{_datadir}/locale/de/LC_MESSAGES/cronosII.mo
+%{_datadir}/locale/es/LC_MESSAGES/cronosII.mo
+%{_datadir}/locale/fr/LC_MESSAGES/cronosII.mo
+%{_datadir}/locale/it/LC_MESSAGES/cronosII.mo
+%{_datadir}/mc/templates/c2addrbook-gmc.desktop
+%{_datadir}/mc/templates/cronosII-gmc.desktop
+%{_includedir}/cronosII/account.h
+%{_includedir}/cronosII/addrbook.h
+%{_includedir}/cronosII/check.h
+%{_includedir}/cronosII/config.h
+%{_includedir}/cronosII/debug.h
+%{_includedir}/cronosII/error.h
+%{_includedir}/cronosII/exit.h
+%{_includedir}/cronosII/gnomefilelist.h
+%{_includedir}/cronosII/gui-about.h
+%{_includedir}/cronosII/gui-addrbook.h
+%{_includedir}/cronosII/gui-composer.h
+%{_includedir}/cronosII/gui-decision_dialog.h
+%{_includedir}/cronosII/gui-export.h
+%{_includedir}/cronosII/gui-import.h
+%{_includedir}/cronosII/gui-logo.h
+%{_includedir}/cronosII/gui-mailbox_tree.h
+%{_includedir}/cronosII/gui-preferences.h
+%{_includedir}/cronosII/gui-print.h
+%{_includedir}/cronosII/gui-select_file.h
+%{_includedir}/cronosII/gui-select_mailbox.h
+%{_includedir}/cronosII/gui-utils.h
+%{_includedir}/cronosII/gui-window_checking.h
+%{_includedir}/cronosII/gui-window_main.h
+%{_includedir}/cronosII/gui-window_main_callbacks.h
+%{_includedir}/cronosII/gui-window_message.h
+%{_includedir}/cronosII/index.h
+%{_includedir}/cronosII/init.h
+%{_includedir}/cronosII/mailbox.h
+%{_includedir}/cronosII/main.h
+%{_includedir}/cronosII/message.h
+%{_includedir}/cronosII/net.h
+%{_includedir}/cronosII/plugin.h
+%{_includedir}/cronosII/pop.h
+%{_includedir}/cronosII/rc.h
+%{_includedir}/cronosII/search.h
+%{_includedir}/cronosII/smtp.h
+%{_includedir}/cronosII/spool.h
+%{_includedir}/cronosII/utils.h
+%{_includedir}/cronosII/version.h
+%{_includedir}/cronosII.h
+
+
+
+
+
+

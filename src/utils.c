@@ -1071,12 +1071,12 @@ fd_bin_cp (const char *strfrm, const char *strdst) {
   g_return_val_if_fail (strdst, FALSE);
 
   if ((frm = fopen (strfrm, "rt")) == NULL) {
-    cronos_error (errno, _("Couldn't open the source file to do a binary copy"), ERROR_WARNING);
+    cronos_error (errno, ("Couldn't open the source file to do a binary copy"), ERROR_WARNING);
     return FALSE;
   }
 
   if ((dst = fopen (strdst, "wt")) == NULL) {
-    cronos_error (errno, _("Couldn't open the target file to do a binary copy"), ERROR_WARNING);
+    cronos_error (errno, ("Couldn't open the target file to do a binary copy"), ERROR_WARNING);
     fclose (frm);
     return FALSE;
   }
@@ -1112,13 +1112,13 @@ gboolean fd_cp (char *str_frm, char *str_dst) {
 
   if ((frm = fopen (str_frm, "r")) == NULL) {
     gdk_threads_enter ();
-    cronos_error (errno, _("Opening a file for moving it into other (from)"), ERROR_WARNING);
+    cronos_error (errno, ("Opening a file for moving it into other (from)"), ERROR_WARNING);
     gdk_threads_leave ();
     return -1;
   }
   if ((dst = fopen (str_dst, "w")) == NULL) {
     gdk_threads_enter ();
-    cronos_error (errno, _("Opening a file for moving it into other (dest)"), ERROR_WARNING);
+    cronos_error (errno, ("Opening a file for moving it into other (dest)"), ERROR_WARNING);
     gdk_threads_leave ();
     fclose (frm);
     return -1;
@@ -1582,7 +1582,7 @@ char *cronos_system (const char *string) {
   char *s = NULL;
   GString *str;
   
-  g_return_val_if_fail (string, _("No command has been passed."));
+  g_return_val_if_fail (string, ("No command has been passed."));
   memset (buf, 0, sizeof (buf));
 
   if ((pipe = popen (string, "r")) == NULL) {

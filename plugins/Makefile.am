@@ -1,5 +1,6 @@
+
 EXTRA_DIST = plugin.html \
-	sample/Makefile \
+	sample/MakefileORIG \
 	sample/sample.c \
 	sample/sample.o \
 	sample/sample.so \
@@ -7,6 +8,21 @@ EXTRA_DIST = plugin.html \
 	sample/ChangeLogette \
 	README \
 	ChangeLog \
-	Filters-Plugin.tar.gz \
-	Fortune-Plugin.tar.gz
+	c2filters-0.4.5patch1/MakefileORIG \
+	c2filters-0.4.5patch1/filters.so \
+	c2filters-0.4.5patch1/filters.c \
+	c2filters-0.4.5patch1/filters.o \
+	c2filters-0.4.5patch1/README \
+	c2filters-0.4.5patch1/Changelog \
+	fortune/AUTHORS \
+	fortune/ChangeLog \
+	fortune/MakefileORIG \
+	fortune/README \
+	fortune/fortune.c \
+	fortune/fortune.o \
+	fortune/fortune.so
+
+
+
+
 

@@ -107,9 +107,10 @@ l = @l@
 sedpath = @sedpath@
 unamepath = @unamepath@
 
-man_MANS = cronos.1
+man_MANS = cronos.1		c2addrbook.1		cronosII-config.1
 
-EXTRA_DIST =  	cronos.1
+
+EXTRA_DIST =  	cronos.1		c2addrbook.1		cronosII-config.1
 
 mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
 CONFIG_HEADER = ../config.h

@@ -4,7 +4,7 @@ AM_CONFIG_HEADER(config.h)
 C2_PLUGIN_MAJOR_VERSION=0
 C2_PLUGIN_MINOR_VERSION=2
 C2_PLUGIN_MICRO_VERSION=2
-AM_INIT_AUTOMAKE(cronosII, 0.2.2)
+AM_INIT_AUTOMAKE(cronosII, 0.2.2-22)
 
 AC_PROG_CC
 AC_ISC_POSIX
@@ -31,7 +31,7 @@ AC_ARG_ENABLE(sysinfo,
 [  --disable-info         don't send system information on outgoing messages],
 	sysinfo=$enableval, sysinfo=yes)
 
-dnl Change on Stable Release
+dnl Change on Stable Release +/or debug=no for debian/GNU or RPM package
 AC_ARG_ENABLE(debug,
 [  --disable-debug         don't use the debugging system],
 	debug=$enableval, debug=yes)
@@ -193,9 +193,12 @@ if test "x$sysinfo" = "xno"; then
 else
   AC_DEFINE_UNQUOTED(XMAILER, "$XMAILER")
 fi
-
+dnl ****************************************************************************
+dnl Define FEATURES here (see cronosII-config.in as well )
+dnl ****************************************************************************
 if test "x$debug" = "xyes"; then
   AC_DEFINE(USE_DEBUG)
+ FEATURES="$FEATURES 'Debugging Enabled'"
 fi
 
 if test "x$plugins" = "xyes"; then
@@ -247,8 +250,8 @@ echo
 echo \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
 echo \* Cronos II $VERSION   \*
 echo \* This is a CVS version of the original CronosII  \*	
-echo \*  Maintenance Release Two  \*	
-echo \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+echo \*  Maintenance Release Two   \*	
+echo \*\*\*\*\*\*\*\  Package building version *\*\*\*\*\*\*\*\*\*\*\*
 echo 
 
 if test "$gnome" = "yes"; then
@@ -267,7 +270,8 @@ else
   echo Building with the faster mailbox handling algorithm
 fi
 
-echo Building to install under ......... .: $prefix
+echo Building to install under ......... .: $prefix  
+
 
 echo configure complete, type \'make\' to start compiling
 

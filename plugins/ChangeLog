@@ -1,3 +1,11 @@
+Thur 07 Feb 2002  Pete <petergozz@users.sf.net>
+	* moved all source level makefiles to MakefileORIG.
+	* updated Makefile.am (./) to include them in tar dist builds.
+Mon 04 Feb 2002 Pete <petergozz@users.sf.net>
+	* Removed CVS directories from fortune.
+	* Attempted (again) to build a deb.
+	* Left tarball unpacked and check make files (build RPM and DEBS)
+	* Removed tarballs to save bandwidth. 
 Wed 19 Dec Pete <petergozz@users.sourceforge.net>
 	* Applied patch1 to Filters 
 	* Rebuilt binary to new state

@@ -45,8 +45,8 @@ void gui_about_new (void) {
   };
   GtkWidget *href;
 
-  window = gnome_about_new ("CronosII", VERSION,
-		  		"(C) 2000-2001 Pablo Fernández Navarro",
+  window = gnome_about_new ("CronosII", VERSION," Debian /GNU edition  
+		  		(C) GPL 2000-2002 Pablo Fernández Navarro",
 				authors,
   				_("A powerful GNOME mail client."),
 			DATADIR "/cronosII/pixmap/splash.png");
@@ -60,16 +60,17 @@ void gui_about_new (void) {
 
   gtk_widget_show (window);
 }
-#else /* Without GNOME */
-void gui_about_new (void) {
-  GtkWidget *window;
-  GtkWidget *vbox;
-  GtkWidget *xpm;
-  GtkWidget *text;
-  GtkWidget *scroll;
-  GtkWidget *btn;
+/*#else*/ /* Without GNOME */
+/* this commented out for package builds  feb 2002 petergozz*/
+/* void gui_about_new (void) { */
+/*   GtkWidget *window; */
+/*   GtkWidget *vbox; */
+/*   GtkWidget *xpm; */
+/*   GtkWidget *text; */
+/*   GtkWidget *scroll; */
+/*   GtkWidget *btn; */
 
-  window = gtk_window_new (GTK_WINDOW_DIALOG);
-  gtk_window_set_transient_for (GTK_WINDOW (window), GTK_WINDOW (WMain->window));
-}
+/*   window = gtk_window_new (GTK_WINDOW_DIALOG); */
+/*   gtk_window_set_transient_for (GTK_WINDOW (window), GTK_WINDOW (WMain->window)); */
+/* } */
 #endif

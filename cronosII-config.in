@@ -3,6 +3,7 @@
 prefix=@prefix@
 exec_prefix=@exec_prefix@
 
+
 bindir=@bindir@
 sbindir=@sbindir@
 libexecdir=@libexecdir@
@@ -19,11 +20,15 @@ features=@FEATURES@
 pkgdatadir=${datadir}/@PACKAGE@
 pkglibdir=${libdir}/@PACKAGE@
 pkgincludedir=${includedir}/@PACKAGE@
+plugindir=${pkgdatadir}/plugins
 MODULE_VERSION=@PACKAGE@-@VERSION@
 module_dirs="$libdir"
-#and because this might come in handy for debugging
+#and because these might come in handy for debugging and sanity
 
-devversion='-MR2'
+devversion='-MR2-22' 
+# output from date -R 
+conf_time='Tue, 12 Feb 2002 02:04:11 +1030'
+
 
 
 # stolen from gnome-libs who stoled it from autoconf
@@ -49,10 +54,10 @@ Generic options
   --version	output gnome version information.
   --help	display this help and exit.
   --features    features that Cronos II was compiled with
-  --dev  build reference for developers 
+  --dev         build reference for developers 
 
 Install directories cronosII was configured to
-  --prefix --mandir  --includedir  --datadir
+    --prefix --mandir  --includedir  --datadir  --plugindir
 
 EOF
 }
@@ -73,7 +78,7 @@ while test $# -gt 0; do
 	exit 0
 	;;
    --dev)
-	echo @PACKAGE@ @VERSION@ $devversion
+	echo @PACKAGE@ @VERSION@ $devversion $conf_time
 	exit 0
 	;;
     --features)
@@ -94,6 +99,10 @@ while test $# -gt 0; do
 	;;
     --datadir)
     	echo $pkgdatadir
+	exit 0
+	;;
+    --plugindir)
+    	echo $plugindir
 	exit 0
 	;;
     --help)

@@ -1,3 +1,7 @@
+Thur 7 Feb 2002 Pete <petergozz@users.sf.net>
+	* Moved Makefile to MakefileORIG to check I wasn't including it in
+	* package builds. (yes I know I wasn't but ..)
+
 Wed 12 Dec 2001 Peter Gossner <petergozz@users.sourceforge.net>
 	* Added to object and static object files which I had obviously
 	* forgotten to cvs add...DOH.
