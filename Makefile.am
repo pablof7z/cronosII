@@ -16,7 +16,6 @@ EXTRA_DIST =			\
 	COPYING		\
 	FEATURES		\
 	NEWS			\
-	NEWS_OTHER		\
 	README		\
 	TODO			\
 	ChangeLog		\
