@@ -1,3 +1,14 @@
+Fri Nov 30 Peter Gossner <petergozz@users.sourceforge.net>
+	Added  versions.h to src/Makefile.am
+	Revised icons. src/xpm [GIMP rules all]
+	Edited some status messages on the main window.
+	Noted that those on the message mouse button3 menu 
+	not functional.
+	The Mad Prof patch stable. :)
+	Having great fun with my local cvs ...
+	Plugins still not making ... mm by mm I am tracking those ....
+		
+
 Fri Nov 30 2001 Peter Gossner <gossner@arcom.com.au>
 	changed  some of the icons for a fresher look.
 	have tried to get plugins to work but not yet.

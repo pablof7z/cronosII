@@ -16,7 +16,7 @@
  *  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  */
 #ifdef HAVE_CONFIG_H
-#  include <config.h>
+#include <config.h>
 #endif
 #include <gnome.h>
 #include <stdio.h>
@@ -37,10 +37,10 @@
 #include "gui-window_main.h"
 
 static void
-on_restart_ok_btn_clicked					(GtkWidget *obj, GtkWidget *window);
+on_restart_ok_btn_clicked      (GtkWidget *obj, GtkWidget *window);
 
 static void
-on_restart_close_btn_clicked					(void);
+on_restart_close_btn_clicked	 (void);
 
 /**
  * c2_version_difference
@@ -119,12 +119,12 @@ c2_version_difference (const char *version) {
       window = gnome_dialog_new (_("Information"), GNOME_STOCK_BUTTON_OK, GNOME_STOCK_BUTTON_CLOSE, NULL);
       label = gtk_label_new (_(
 		"You have installed a new version of Cronos II.\n"
-		"Since this is the first time you run this version\n"
-		"the configuration was upgraded.\n"
+		"This is the first time you have run this version\n"
+		"and the configuration was upgraded.\n"
 		"To be able to use the new configuration and the\n"
 		"new features in this version you need to restart\n"
 		"this software.\n"
-		"To do so, click the Close button and restart the application."
+		"Please, click the Close button and RESTART the application."
 				));
       gtk_box_pack_start (GTK_BOX (GNOME_DIALOG (window)->vbox), label, TRUE, TRUE, GNOME_PAD_SMALL);
       gtk_widget_show (label);

@@ -494,28 +494,28 @@ static GnomeUIInfo mark_menu[] =
 {
   {
     GNOME_APP_UI_ITEM, N_("_Unread"),
-    N_("Mark the selected mails as unread"),
+    N_("Mark the selected mail as unread"),
     on_wm_mark_as_unreaded_clicked, NULL, NULL,
     GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_MAIL,
     GDK_U, GDK_MOD1_MASK, NULL
   },
   {
     GNOME_APP_UI_ITEM, N_("Rea_d"),
-    N_("Mark the selected mails as read"),
+    N_("Mark the selected mail as read"),
     on_wm_mark_as_readed_clicked, NULL, NULL,
     GNOME_APP_PIXMAP_NONE, NULL,
     GDK_V, GDK_MOD1_MASK, NULL
   },
   {
     GNOME_APP_UI_ITEM, N_("_Replied"),
-    N_("Mark the selected mails as replied"),
+    N_("Mark the selected mail as replied"),
     on_wm_mark_as_replied_clicked, NULL, NULL,
     GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_MAIL_RPL,
     GDK_R, GDK_MOD1_MASK, NULL
   },
   {
     GNOME_APP_UI_ITEM, N_("_Forwarded"),
-    N_("Mark the selected mails as forwarded"),
+    N_("Mark the selected mail as forwarded"),
     on_wm_mark_as_forwarded_clicked, NULL, NULL,
     GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_MAIL_FWD,
     GDK_F, GDK_MOD1_MASK, NULL
@@ -923,14 +923,14 @@ static GnomeUIInfo message_menu[] =
   GNOMEUIINFO_SEPARATOR,
   {
     GNOME_APP_UI_ITEM, N_("_Copy"),
-    NULL,
+    N_("Make a copy of this message in any mailbox"),
     on_wm_copy_mail_clicked, NULL, NULL,
     GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_COPY,
     GDK_C, GDK_MOD1_MASK, NULL
   },
   {
     GNOME_APP_UI_ITEM, N_("_Move"),
-    NULL,
+    N_("Move this message to another mailbox"),
     on_wm_move_mail_clicked, NULL, NULL,
     GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_JUMP_TO,
     GDK_M, GDK_MOD1_MASK, NULL
@@ -945,7 +945,7 @@ static GnomeUIInfo message_menu[] =
   },
   {
     GNOME_APP_UI_ITEM, N_("_Expunge"),
-    N_("Expunge the selected messages"),
+    N_("Expunge the selected messages now"),
     on_wm_expunge_clicked, NULL, NULL,
     GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_TRASH_FULL,
     GDK_E, GDK_CONTROL_MASK, NULL
@@ -1254,7 +1254,7 @@ void main_window_toolbar (void) {
                                 GTK_TOOLBAR_CHILD_BUTTON,
                                 NULL,
                                 N_("Save"),
-                                N_("Save the selected mails to a file"), NULL,
+                                N_("Save the selected mail to a file"), NULL,
                                 tmp_toolbar_icon, NULL, NULL);
   gtk_signal_connect (GTK_OBJECT (WMain->tb_w.save), "clicked",
 		  	GTK_SIGNAL_FUNC (on_wm_save_clicked), NULL);
@@ -1264,7 +1264,7 @@ void main_window_toolbar (void) {
                                 GTK_TOOLBAR_CHILD_BUTTON,
                                 NULL,
                                 N_("Print"),
-                                N_("Print the selected mails"), NULL,
+                                N_("Print selected mail"), NULL,
                                 tmp_toolbar_icon, NULL, NULL);
   gtk_signal_connect (GTK_OBJECT (WMain->tb_w.print), "clicked",
       			GTK_SIGNAL_FUNC (on_wm_print_clicked), NULL);
@@ -1286,7 +1286,7 @@ void main_window_toolbar (void) {
                                 GTK_TOOLBAR_CHILD_BUTTON,
                                 NULL,
                                 N_("Delete"),
-                                N_("Delete the selected mails"), NULL,
+                                N_("Delete selected mail"), NULL,
                                 tmp_toolbar_icon, NULL, NULL);
   gtk_signal_connect (GTK_OBJECT (WMain->tb_w._delete), "clicked",
 		  GTK_SIGNAL_FUNC (on_wm_delete_clicked), NULL);
@@ -1298,7 +1298,7 @@ void main_window_toolbar (void) {
                                 GTK_TOOLBAR_CHILD_BUTTON,
                                 NULL,
                                 N_("Reply"),
-                                N_("Reply the selected mails"), NULL,
+                                N_("Reply to the selected mail"), NULL,
                                 tmp_toolbar_icon, NULL, NULL);
   gtk_signal_connect (GTK_OBJECT (WMain->tb_w.reply), "clicked",
 		  GTK_SIGNAL_FUNC (on_wm_reply_clicked), NULL);
@@ -1308,7 +1308,7 @@ void main_window_toolbar (void) {
                                 GTK_TOOLBAR_CHILD_BUTTON,
                                 NULL,
                                 N_("Reply All"),
-                                N_("Reply to all recipients the selected mails"), NULL,
+                                N_("Reply to all recipients of the selected mail"), NULL,
                                 tmp_toolbar_icon, NULL, NULL);
   gtk_signal_connect (GTK_OBJECT (WMain->tb_w.reply_all), "clicked",
 		  GTK_SIGNAL_FUNC (on_wm_reply_all_clicked), NULL);
@@ -1318,7 +1318,7 @@ void main_window_toolbar (void) {
                                 GTK_TOOLBAR_CHILD_BUTTON,
                                 NULL,
                                 N_("Forward"),
-                                N_("Forward the selected mails"), NULL,
+                                N_("Forward selected mail"), NULL,
                                 tmp_toolbar_icon, NULL, NULL);
   gtk_signal_connect (GTK_OBJECT (WMain->tb_w.forward), "clicked",
 		  GTK_SIGNAL_FUNC (on_wm_forward_clicked), NULL);
