@@ -1,0 +1,428 @@
+<HTML
+><HEAD
+><TITLE
+>CronosII. an Email Application</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.49"><LINK
+REL="NEXT"
+TITLE="Foreword"
+HREF="f11.html"></HEAD
+><BODY
+CLASS="BOOK"
+><DIV
+CLASS="BOOK"
+><A
+NAME="AEN1"
+></A
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="TITLE"
+><A
+NAME="AEN1"
+>CronosII. an Email Application</A
+></H1
+><H3
+CLASS="AUTHOR"
+><A
+NAME="AEN5"
+>Cronos Developers</A
+></H3
+><HR></DIV
+><H1
+><A
+NAME="AEN8"
+>Dedication</A
+></H1
+><P
+>      For CronosII and his users.
+      </P
+><P
+>Hope this is of some help.
+     </P
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Table of Contents</B
+></DT
+><DT
+><A
+HREF="f11.html"
+>Foreword</A
+></DT
+><DT
+><A
+HREF="index.html"
+>Help Manual Version Version: 2.2.2-mr1  for  CronosII-0.2.2</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="index.html#INTRO"
+>Introduction</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="index.html#AEN46"
+>Shortcuts</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="install.html"
+>Installing CronosII</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="install.html#INSTALLING"
+>Installation</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="configuration.html"
+>Configuration</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="configuration.html#CONFIGURATION-GENERAL"
+>General Options</A
+></DT
+><DT
+><A
+HREF="configuration.html#CONFIGURATION-MAIL-ACCOUNTS"
+>Accounts</A
+></DT
+><DT
+><A
+HREF="configuration.html#CONFIGURATION-INTERFACE"
+>Interface</A
+></DT
+><DT
+><A
+HREF="configuration.html#CONFIGURATION-ADVANCED"
+>Advanced</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="using-cronosii.html"
+>Using CronosII</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="using-cronosii.html#MAINWINDOW"
+>The Main Window</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="mainwindow-icons.html"
+>The Main Window Icon  Bar</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="mainwindow-icons.html#ICON-CHECK"
+>Check Accounts</A
+></DT
+><DT
+><A
+HREF="mainwindow-icons.html#COMPOSE"
+>Main Window Icon Tool-bar -Compose Button</A
+></DT
+><DT
+><A
+HREF="mainwindow-icons.html#ICON-PRINT"
+>Main Window Icon Tool-bar - - Print Menu</A
+></DT
+><DT
+><A
+HREF="mainwindow-icons.html#ICON-SEARCH"
+>Main Window Icon Tool-bar - - Search</A
+></DT
+><DT
+><A
+HREF="mainwindow-icons.html#ICON-DELETE"
+>Main Window  Icon Tool-bar - - Delete</A
+></DT
+><DT
+><A
+HREF="mainwindow-icons.html#ICON-REPLY"
+>Main Window  Icon Tool-bar - - Reply</A
+></DT
+><DT
+><A
+HREF="mainwindow-icons.html#ICON-REPLY-ALL"
+>Main Window  Icon Tool-bar - - Reply All</A
+></DT
+><DT
+><A
+HREF="mainwindow-icons.html#ICON-FORWARD"
+>Main Window  Icon Tool-bar - - Forward</A
+></DT
+><DT
+><A
+HREF="mainwindow-icons.html#ICON-PREVIOUS"
+>Main Window Icon Tool-bar- -Previous</A
+></DT
+><DT
+><A
+HREF="mainwindow-icons.html#ICON-NEXT"
+>Main Window Icon Tool-bar - - Next</A
+></DT
+><DT
+><A
+HREF="mainwindow-icons.html#ICON-QUIT"
+>Main Window Icon Tool-bar - - Quit</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="text-menubar.html"
+>The Main Window -Text Tool-bar</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="text-menubar.html#FILE-TEXT-MENUBAR"
+>The Main Window Text Tool-bar -File Menu</A
+></DT
+><DT
+><A
+HREF="text-menubar.html#EDIT-TEXT-MENUBAR"
+>Edit</A
+></DT
+><DT
+><A
+HREF="text-menubar.html#VIEW-MENU"
+>The View Menu</A
+></DT
+><DT
+><A
+HREF="text-menubar.html#MAILBOX-TEXT-MENUBAR"
+>The Main Window Text Tool-bar -Mailbox</A
+></DT
+><DT
+><A
+HREF="text-menubar.html#MESSAGE-TEXT-MENUBAR"
+>Main Window Text Tool-bar- Message</A
+></DT
+><DT
+><A
+HREF="text-menubar.html#SETTINGS"
+>Settings</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="composer.html"
+>Composing Your Mail</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="composer.html#COMPOSER-WINDOW"
+>Composer Window</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="bugs.html"
+>Known Bugs and Limitations</A
+></DT
+><DT
+><A
+HREF="authors.html"
+>Authors and Contributors</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="authors.html#CONTRIBUTORS"
+>Contributors</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="manual-authors.html"
+>About this Manual</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="manual-authors.html#CONVENTIONS"
+>Terms and Conventions</A
+></DT
+><DT
+><A
+HREF="manual-authors.html#AEN1665"
+>Graphics and Icons</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="keyboard-shortcuts.html"
+>Keyboard Shortcuts</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="keyboard-shortcuts.html#AEN1699"
+>Shortcuts</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="gtk.html"
+>GTK</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="gtk.html#GTK-TIPS-FEATURES"
+>How To</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="license.html"
+>License</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="license.html#LEGAL"
+>Legal-notice</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="addressbook-final.html"
+>The Address Book</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="addressbook-final.html#ADDRESSBOOK-NOTES"
+>Points of Interest</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="plugins.html"
+>Plug Ins</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="plugins.html#AEN2082"
+>Availability</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="latest.html"
+>Latest Developments</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="latest.html#AEN2090"
+>CronosII-Scratch</A
+></DT
+></DL
+></DD
+></DL
+></DD
+></DL
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="f11.html"
+>Next</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Foreword</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>
