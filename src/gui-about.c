@@ -34,7 +34,7 @@
 #if USE_GNOME
 void gui_about_new (void) {
   GtkWidget *window;
-  const char *authors[] = {
+  const char *authors[] = {    
     "Pablo Fernández Navarro <cronosII@users.sourceforge.net>",
     "Bosko Blagojevic <falling@users.sourceflrge.net>",
     "André Casteliano <digitalcoder@users.sourceforge.net>",
@@ -48,7 +48,7 @@ void gui_about_new (void) {
 		  		"(C) 2000-2001 Pablo Fernández Navarro",
 				authors,
   				_("A powerful GNOME mail client."),
-				DATADIR "/cronosII/pixmap/splash.png");
+			DATADIR "/cronosII/pixmap/splash.png");
   gtk_window_set_modal (GTK_WINDOW (window), TRUE);
   gtk_window_set_transient_for (GTK_WINDOW (window), GTK_WINDOW (WMain->window));
 
