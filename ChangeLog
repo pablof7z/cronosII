@@ -1,3 +1,8 @@
+Wed Apr 17 2002 pete <petergozz@users.sf.net>
+	* Updates checked into gui-about.* 
+	* Update to splash image (lost the orig xcf)
+	* Deadline of 20th set for release.
+	
 Mon Apr 15 2002  pete <petergozz@users.sf.net>
 	* Updates and fixmes to src/guiabout.c splash dialog 
 	* Hmm must update the xpm and track down the final font rendering issues ..
