@@ -1,5 +1,22 @@
 This  Directory contains a clunky work around to have plugins working on CronosII -MR2
 
+****************************************************************
+Plugins should autoinstall during normal installs.
+PLEASE let me know if doesn't happen on your system.
+
+
+
+To rebuild and install :(eg for non i386 or you have hacked something)
+1/ Check that there is headers directory next to the plugin you are installing.
+	If not send abusive mail to petergozz@users.sf.net telling him what you do have.
+2/ make
+3/ cp the .so file(s) to the top level cronosii/ directory (../../)
+3/ make install (assuming you have already done ./configure)
+4/ that should be it.
+	
+********************************************************************
+The following is included for historical interest. It is worth reading if you are rebuilding the plugins........
+
 There are at least three ways of installing the plugins.
 1.  (the quick and nasty way)
 ######################################################################
