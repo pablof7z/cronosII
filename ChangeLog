@@ -1,3 +1,6 @@
+Sat Dec 1 2001  Peter Gossner  <petergozz@users.sourceforge.net>
+	Fixed the clumbsy error I made to cronosII-config
+
 Fri Nov 30 Peter Gossner <petergozz@users.sourceforge.net>
 	Added  versions.h to src/Makefile.am
 	Revised icons. src/xpm [GIMP rules all]
