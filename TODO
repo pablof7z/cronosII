@@ -2,14 +2,15 @@ No Don't let mailboxes with names that uses '/'
 No Speed up copying, moving and deleting (Ref #001)
 No Speed up mailbox loading (Ref #002)
 No Mails should be deleted from the Drafts mailbox once they're sent (And the original mail should be marked as replied or forwarded if it applies).
-No Add an "Empty Trash" option.
+No Add an "Empty Trash" option.(Done in the scratch version)
 Yo Debug using the GMemLogger (thanks Yves!).
-Yo Redesign the pixmaps.
-Yo Sorting.
-Yo IMAP support.
-Yo Filters support.
-Yo HTML support.
-Yo GnuPG/PGP support.
+Yo Redesign the pixmaps.(somewhat done)
+NO  Sorting. -> Cronosii Scratch
+Yo IMAP support.(done ??)
+Yo Filters support. (partially implemented)
+Yo HTML support. (This in place in CronosII-Scratch)
+Yo GnuPG/PGP support. (CronosII-Scratch ????)
 Yo Set a queue of things like updating an index file and do it them when the program is idle.
 Yo An applet for the GNOME panel.
-Yo Themes support.
+no Themes support. -> cronosii-scratch
+
