@@ -145,7 +145,7 @@ fi
 if test "$gnome" = no; then
   echo
   echo "#############################################"
-  echo "# A proper Gnome installation couldn't been #"
+  echo "# A proper Gnome installation has not  been #"
   echo "# found. You need, at least, Gnome 1.0.0 to #"
   echo "# build Cronos II. You might want to        #"
   echo "# download it from http://www.gnome.org.    #"
@@ -243,9 +243,10 @@ cronosII.spec
 
 echo
 echo \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
-echo \* Cronos II $VERSION \*
+echo \* Cronos II $VERSION  			 \*
+echo \* Maintenance Release One		  \*	
 echo \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
-echo
+echo 
 
 if test "$gnome" = "yes"; then
   echo Building with Gnome.............. : Version $GNOME_VER
@@ -263,5 +264,7 @@ else
   echo Building with the faster mailbox handling algorithm
 fi
 
+echo Building to install under ......... .: $prefix
+echo CronosII  \*\* Maintenance Release 1  \*\*
 echo configure complete, type \'make\' to start compiling
 echo
