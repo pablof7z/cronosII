@@ -31,3 +31,6 @@ Pier Carteri <m3tr0@dei.unipd.it>
 
 Jeremy Witt <witti@onramp.net>
 - Patch to give default focus in the Composer window to the To field or to the Body according to some flags.
+
+spaghetty <spaghetty@libero.it>
+- Patch for fixing a bug in the smtp.c file that was already fixed in the CVS, but, the intention is what counts... :)

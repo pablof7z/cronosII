@@ -5,7 +5,7 @@
 -> MIME (Attachments) full support with recursivity and Drag'n Drop;
 -> Plugins support.
 -> [NEW] Address Book (with groups ability).
--> [NEW] Address Autocompletation.
+-> [NEW] Address Autocompletation (by name and/or email).
 -> [NEW] Send later ability.
 -> Not deleting a mail from the server (without downloading it again);
 -> Persistent SMTP connection;

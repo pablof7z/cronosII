@@ -1152,6 +1152,7 @@ on_address_book_card_properties_group_page_down_btn_clicked (GtkWidget *widget,
   }
 
   gtk_clist_append (GTK_CLIST (w->group_list), &text);
+  gtk_entry_set_text (GTK_ENTRY (GTK_COMBO (w->group_entry)->entry), "");
 }
 
 static void
@@ -1218,6 +1219,8 @@ gui_address_book_card_properties_add_network_page (C2AddressBookCardProperties *
   gtk_widget_show (w->network_url);
   gtk_signal_connect (GTK_OBJECT (w->network_url), "changed",
       			GTK_SIGNAL_FUNC (gui_address_book_card_properties_set_active), w);
+  gtk_signal_connect (GTK_OBJECT (w->network_url), "focus_in_event",
+      			GTK_SIGNAL_FUNC (gui_address_book_card_properties_set_help), w);
   if (w->card) gtk_entry_set_text (GTK_ENTRY (w->network_url), w->card->web);
 
   /* hbox */
@@ -2976,6 +2979,14 @@ gui_address_book_card_properties_notebook_switch_page (GtkWidget *object, GtkNot
     gtk_label_set_text (label, _("Contacts can be organizated by groups for a better Address Book\n"
 	  			 "management. Select here the groups where you want this contact to\n"
 				 "be found."));
+  else if (n == NOTEBOOK_PAGE_NETWORK)
+    gtk_label_set_text (label, _("Network information regarding this contact."));
+  else if (n == NOTEBOOK_PAGE_ADDRESSES)
+    gtk_label_set_text (label, _("Address information regarding this contact."));
+  else if (n == NOTEBOOK_PAGE_PHONE)
+    gtk_label_set_text (label, _("Phone information regarding this contact."));
+  else if (n == NOTEBOOK_PAGE_ETCETERA)
+    gtk_label_set_text (label, "");
 }
 
 static void
@@ -3006,23 +3017,25 @@ gui_address_book_card_properties_set_help (GtkWidget *object, GdkEventFocus *foc
   else if (object == GTK_COMBO (w->group_entry)->entry)
     gtk_label_set_text (label, _("Type here the name of a new group or select an existent one from the pull down list."));
   else if (object == w->network_url)
-    gtk_label_set_text (label, _("Homepage of this contact's web site"));
+    gtk_label_set_text (label, _("Homepage of this contact's web site."));
   else if (object == w->network_list)
     gtk_label_set_text (label, _(""));
   else if (object == w->network_entry)
-    gtk_label_set_text (label, _(""));
+    gtk_label_set_text (label, _("Type here the e-mail address for this contact."));
   else if (object == w->address_post_office)
-    gtk_label_set_text (label, _(""));
+    gtk_label_set_text (label, _("Post Office information."));
   else if (object == w->address_extended)
-    gtk_label_set_text (label, _(""));
+    gtk_label_set_text (label, _("Extended information."));
   else if (object == w->address_street)
-    gtk_label_set_text (label, _(""));
+    gtk_label_set_text (label, _("Street information."));
   else if (object == w->address_city)
-    gtk_label_set_text (label, _(""));
+    gtk_label_set_text (label, _("City information."));
   else if (object == w->address_province)
-    gtk_label_set_text (label, _(""));
+    gtk_label_set_text (label, _("Region/Province/State information."));
+  else if (object == w->address_postal_code)
+    gtk_label_set_text (label, _("Postal Code information."));
   else if (object == w->address_country)
-    gtk_label_set_text (label, _(""));
+    gtk_label_set_text (label, _("Country information."));
   else if (object == w->address_type_private)
     gtk_label_set_text (label, _(""));
   else if (object == w->address_type_work)

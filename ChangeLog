@@ -1,5 +1,12 @@
+º Tue Apr 12 2001 Pier Carteri <m3tr0@dei.unipd.it> º
+- Updated italian translation.
+
 º Tue Apr 12 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
 - Autocompletition based on the email address.
+- UI-Address Book. When adding an entry to the group list the entry will get
+  empty.
+- Added some help text in the New/Edit vCard in the address book.
+- Work along the new es.po translation.
 
 º Tue Apr 12 2001 Pablo Fernández Navarro <cronosII@users.sourceforge.net> º
 - Compilation warning fixes.
