@@ -1,3 +1,9 @@
+Mon Apr 15 2002  pete <petergozz@users.sf.net>
+	* Updates and fixmes to src/guiabout.c splash dialog 
+	* Hmm must update the xpm and track down the final font rendering issues ..
+	* Tracked ! The main problem was with my XFS configuration and version.
+	* GDK should bitch about this ?? 
+	
 Sun Apr 14 2002 pete <petergozz@users.sf.net>
 	* Version now at 0.2.2.23 standby for a release
 	* Plugins all repacked to Angel Ramos specs (with some minor mods)
