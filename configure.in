@@ -1,0 +1,267 @@
+AC_INIT(src)
+AM_CONFIG_HEADER(config.h)
+
+C2_PLUGIN_MAJOR_VERSION=0
+C2_PLUGIN_MINOR_VERSION=2
+C2_PLUGIN_MICRO_VERSION=1
+AM_INIT_AUTOMAKE(cronosII, 0.2.2)
+
+AC_PROG_CC
+AC_ISC_POSIX
+
+AC_PROG_AWK
+AC_PROG_INSTALL
+AC_STRUCT_TM
+AC_FUNC_STRFTIME
+AC_CHECK_LIB(pthread, pthread_join)
+AC_CHECK_FUNCS(getcwd gethostname getwd mkdir putenv socket strdup strstr setsockopt)
+AM_PROG_LIBTOOL
+
+ALL_LINGUAS="br de es fr it"
+AM_GNU_GETTEXT
+
+CFLAGS="-Wall"
+
+dnl *************************************************************************
+dnl ** configure switches ***************************************************
+dnl *************************************************************************
+gnome=yes
+AC_ARG_ENABLE(sysinfo,
+[  --disable-info         don't send system information on outgoing messages],
+	sysinfo=$enableval, sysinfo=yes)
+
+dnl Change on Stable Release
+AC_ARG_ENABLE(debug,
+[  --disable-debug         don't use the debugging system],
+	debug=$enableval, debug=yes)
+
+AC_ARG_ENABLE(plugins,
+[  --disable-plugins       don't build dynamic modules (plugins) support],
+	plugins=$enableval, plugins=yes)
+
+AC_ARG_ENABLE(cache,
+[  --disable-cache         don't use the cache system],
+	cache=$enableval, cache=yes)
+
+AC_ARG_ENABLE(addrbook,
+[  --disable-address-book  don't build the Cronos II Address Book],
+	addrbook=$enableval, addrbook=yes)
+
+AC_ARG_ENABLE(old_mbox_mode,
+[  --disable-new-mbox-mode don't use the new mailbox handling],
+	old_mbox_mode=$enableval, old_mbox_mode=no)
+
+AC_PATH_PROG(sedpath, sed)
+
+AC_MSG_CHECKING(spool mail directory)
+if test -d /var/mail; then
+  spoolmaildir=/var/mail
+else
+  spoolmaildir=/var/spool/mail
+fi
+AC_MSG_RESULT($spoolmaildir)
+AC_DEFINE_UNQUOTED(SPOOL_MAIL_DIR, "$spoolmaildir")
+
+if test "_$sedpath" = _; then
+  AC_MSG_ERROR("Cannot find sed: you need it to compile Cronos II\!")
+fi
+
+dnl Create the X-MAILER field
+XMAILER="Cronos II $VERSION"
+AC_PATH_PROG(unamepath, uname)
+if test "_$unamepath" = _; then
+  AC_MSG_WARN("Cannot find uname: system is unknown")
+  system="unknown"
+else
+  AC_MSG_CHECKING(system type)
+  system=`$unamepath -s`
+  AC_MSG_RESULT($system)
+  if test "$system" = "Linux"; then
+    AC_DEFINE(USING_LINUX)
+  fi
+  AC_MSG_CHECKING(system version)
+  sysver=`$unamepath -r`
+  AC_MSG_RESULT($sysver)
+  AC_MSG_CHECKING(machine type)
+  machtype=`$unamepath -m`
+  AC_MSG_RESULT($machtype)
+fi
+
+dnl ************************************************************************
+dnl ** GLIB ****************************************************************
+dnl ************************************************************************
+AC_PATH_PROG(glibpath, glib-config)
+if test "_$glibpath" = _ ; then
+  AC_MSG_ERROR(
+[Cannot find GLIB: Needed to compile. Download it at ftp://ftp.gtk.org/pub])
+else
+  AC_MSG_CHECKING(for GLIB compile flags)
+  GLIB_CFLAGS=`$glibpath --cflags gthread`
+  GLIB_LIBS=`$glibpath --libs gthread`
+  CFLAGS="$CFLAGS $GLIB_CFLAGS"
+  LIBS="$LIBS $GLIB_LIBS"
+  AC_MSG_RESULT(ok)
+  if test "$prefix" = "NONE"; then
+    AC_PATH_PROG(cronosIIpath, cronosII-config)
+    AC_MSG_CHECKING(cronosII-config for a prior installation)
+    if test "_$cronosIIpath" = _; then
+      AC_MSG_RESULT(no prior installation found)
+      AC_MSG_CHECKING(glib-config for a prefix)
+      prefix=`glib-config --prefix`
+      AC_MSG_RESULT($prefix)
+    else
+      prefix=`cronosII-config --prefix`
+      AC_MSG_RESULT($prefix)
+    fi
+  fi
+  AC_DEFINE_UNQUOTED(PREFIX, "$prefix")
+fi
+
+dnl ************************************************************************
+dnl ** GNOME ***************************************************************
+dnl ************************************************************************
+if test "$gnome" = yes; then
+  AC_PATH_PROG(gnomepath, gnome-config)
+  GNOME_CFLAGS=`$gnomepath gnomeui --cflags 2>/dev/null`
+  if test "_$GNOME_CFLAGS" = _; then
+    dnl Gnome is not installed
+    gnome=no
+    AC_MSG_RESULT([Couldn't find Gnome])
+  else
+    GNOME_VER=`$gnomepath --version`
+    GNOME_MAJOR=`echo $GNOME_VER |$sedpath 's/\([[0-9]*]*\).\([[0-9]*]*\).\([[0-9]*]*\)/\1/' 2>/dev/null`
+    if test "_$GNOME_MAJOR" = "_0"; then
+      gnome=no
+      AC_MSG_RESULT([old Gnome found.])
+    else
+      XMAILER="$XMAILER ($GNOME_VER;"
+      GUI_LIBS="$GUI_LIBS `$gnomepath gnomeui --libs 2>/dev/null`"
+      GUI_CFLAGS="$GUI_CFLAGS $GNOME_CFLAGS"
+      CFLAGS="$CFLAGS -DUSE_GNOME"
+    fi
+  fi
+fi
+
+if test "$gnome" = no; then
+  echo
+  echo "#############################################"
+  echo "# A proper Gnome installation couldn't been #"
+  echo "# found. You need, at least, Gnome 1.0.0 to #"
+  echo "# build Cronos II. You might want to        #"
+  echo "# download it from http://www.gnome.org.    #"
+  echo "#############################################"
+  exit 1
+fi
+
+dnl ************************************************************************
+dnl ** GNOMEPRINT **********************************************************
+dnl ************************************************************************
+AM_PATH_GNOME_PRINT([0.20.0], [
+	have_gnome_print=yes
+])
+
+if test "$have_gnome_print" = yes; then
+  AC_DEFINE(HAVE_GNOME_PRINT)
+  GNOMEPRINT=" -lgnomeprint"
+  GDK_PIXBUF=" -lgdk_pixbuf"
+  XML=" -lxml"
+fi
+
+dnl *********************************************************************
+dnl ** CONDITIONALS *****************************************************
+dnl *********************************************************************
+AM_CONDITIONAL(USE_GNOME, test "x$gnome" = "xyes")
+
+dnl *********************************************************************
+dnl ** GCC FLAGS ********************************************************
+dnl *********************************************************************
+if test "x$GCC" = "xyes"; then
+  if test -z "`echo "$CFLAGS" | grep "\-Wall" 2> /dev/null`"; then
+    CFLAGS="$CFLAGS -Wall"
+  fi
+  if test -z "`echo "$CFLAGS" | grep "\-g " 2> /dev/null`" ; then
+    CFLAGS="$CFLAGS -g"
+  fi
+fi
+
+XMAILER="$XMAILER $system $sysver; $machtype)"
+FEATURES="\""
+if test "x$sysinfo" = "xno"; then
+  XMAILER="no"
+else
+  AC_DEFINE_UNQUOTED(XMAILER, "$XMAILER")
+fi
+
+if test "x$debug" = "xyes"; then
+  AC_DEFINE(USE_DEBUG)
+fi
+
+if test "x$plugins" = "xyes"; then
+  AC_DEFINE(USE_PLUGINS)
+  FEATURES="$FEATURES 'plugins'"
+fi
+
+if test "x$cache" = "xyes"; then
+  AC_DEFINE(USE_CACHE)
+  FEATURES="$FEATURES 'cache'"
+fi
+
+if test "x$addrbook" = "xyes"; then
+  AC_DEFINE(BUILD_ADDRESS_BOOK)
+  FEATURES="$FEATURES 'address book'"
+fi
+
+if test "$old_mbox_mode" = "yes"; then
+  AC_DEFINE(USE_OLD_MBOX_HANDLERS)
+fi
+FEATURES="$FEATURES\""
+
+AC_DEFINE_UNQUOTED(C2_PLUGIN_MAJOR_VERSION, $C2_PLUGIN_MAJOR_VERSION)
+AC_DEFINE_UNQUOTED(C2_PLUGIN_MINOR_VERSION, $C2_PLUGIN_MINOR_VERSION)
+AC_DEFINE_UNQUOTED(C2_PLUGIN_MICRO_VERSION, $C2_PLUGIN_MICRO_VERSION)
+CFLAGS="$CFLAGS $GUI_CFLAGS"
+LIBS="$LIBS $GUI_LIBS $GNOMEPRINT$GDK_PIXBUF$XML"
+
+AC_SUBST(LIBS)
+AC_SUBST(CFLAGS)
+AC_SUBST(FEATURES)
+
+AC_OUTPUT([
+Makefile
+cronosII-config
+src/Makefile
+plugins/Makefile
+intl/Makefile
+po/Makefile.in
+doc/Makefile
+doc/C/Makefile
+images/Makefile
+pixmaps/Makefile
+man/Makefile
+cronosII.spec
+])
+
+echo
+echo \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+echo \* Cronos II $VERSION \*
+echo \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+echo
+
+if test "$gnome" = "yes"; then
+  echo Building with Gnome.............. : Version $GNOME_VER
+else
+  echo Building with Gnome.............. : no
+fi
+  echo Building in system............... : $system $sysver\; $machtype
+  echo Building with plugins............ : $plugins
+  echo Building with debug.............. : $debug
+  echo Building with cache.............. : $cache
+  echo Building with address book....... : $addrbook
+if test "$old_mbox_mode" = "yes"; then
+  echo Building with the slower mailbox handling algorithm
+else
+  echo Building with the faster mailbox handling algorithm
+fi
+
+echo configure complete, type \'make\' to start compiling
+echo

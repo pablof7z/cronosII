@@ -1,0 +1,33 @@
+-> Multiple account support;
+-> POP support;
+-> SPOOL support;
+-> SMTP support;
+-> MIME (Attachments) full support with recursivity and Drag'n Drop;
+-> Plugins support.
+-> [NEW] Not deleting a mail from the server (without downloading it again);
+-> [NEW] Persistent SMTP connection;
+-> [NEW] Mouse Wheel support;
+-> Asking before downloading messages that you consider too big;
+-> Saving mails to file;
+-> PostScript Printing system with Preview options;
+-> Cache system;
+-> Ability to mark a mail manually or automatically (mark, readed, unreaded, forwarded and replied);
+-> Signature support;
+-> Dynamic visible headers showing (preview message, message reader and message composer);
+-> Dynamic colors customizing;
+-> Dynamic font customizing;
+-> Dynamic application title customizing (with the ability to program it);
+-> Multiple nested mailboxes;
+-> Mailbox importing;
+-> Mailbox exporting;
+-> Mail copying and moving from mailbox to mailbox;
+-> Mail deleting (using a Garbage mailbox) and expunging;
+-> Replying, replying all and forwarding support;
+-> Continue editing a mail after saving it to the Drafts mailbox;
+-> Highly GNOME integrated;
+-> Highly configurable;
+-> Simple for new users and extended for advanced users;
+-> Usable with or without a mouse;
+-> Configurable Hotkeys;
+-> Comfortable user interface;
+-> Extremely fast and light.

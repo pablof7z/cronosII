@@ -1,0 +1,109 @@
+#!/bin/sh
+
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+
+bindir=@bindir@
+sbindir=@sbindir@
+libexecdir=@libexecdir@
+datadir=@datadir@
+sysconfdir=@sysconfdir@
+sharedstatedir=@sharedstatedir@
+localstatedir=@localstatedir@
+libdir=@libdir@
+infodir=@infodir@
+mandir=@mandir@
+includedir=@includedir@
+features=@FEATURES@
+
+pkgdatadir=${datadir}/@PACKAGE@
+pkglibdir=${libdir}/@PACKAGE@
+pkgincludedir=${includedir}/@PACKAGE@
+MODULE_VERSION=@PACKAGE@-@VERSION@
+module_dirs="$libdir"
+
+# stolen from gnome-libs who stoled it from autoconf
+if (echo "testing\c"; echo 1,2,3) | grep c >/dev/null; then
+  if (echo -n testing; echo 1,2,3) | sed s/-n/xn/ | grep xn >/dev/null; then
+    ac_n= ac_c='
+' ac_t='	'
+  else
+    ac_n=-n ac_c= ac_t=
+  fi
+else
+  ac_n= ac_c='\c' ac_t=
+fi
+
+usage()
+{
+    exit_code=$1
+
+    cat <<EOF
+Usage: cronosII-config [OPTION]
+
+Generic options
+  --version	output gnome version information.
+  --help	display this help and exit.
+  --features    features that Cronos II was compiled with
+
+Install directories cronosII was configured to
+  --prefix --mandir  --includedir  --datadir
+
+EOF
+}
+
+if test $# -eq 0; then
+    usage 1
+fi
+
+while test $# -gt 0; do
+    case "$1" in
+    -*=*) optarg=`echo "$1" | sed 's/[-_a-zA-Z0-9]*=//'` ;;
+    *) optarg= ;;
+    esac
+
+    case $1 in
+    --version)
+	echo @PACKAGE@ @VERSION@
+	exit 0
+	;;
+    --features)
+    	echo $features
+	exit 0
+	;;
+    --prefix)
+	echo $prefix
+	exit 0
+	;;
+    --mandir)
+    	echo $mandir
+	exit 0
+	;;
+    --includedir)
+    	echo $includedir
+	exit 0
+	;;
+    --datadir)
+    	echo $pkgdatadir
+	exit 0
+	;;
+    --help)
+	usage 0
+	;;
+    --*)
+	usage 1
+	;;
+    *)
+	if $error; then
+	    echo Unknown option \`$0\' 1>&2
+	fi
+	;;
+    esac
+    shift
+done
+
+if test -z "$all_flags" || test "x$all_flags" = "x "; then
+    exit 1
+fi
+
+exit 0

@@ -1,0 +1,54 @@
+%define name		cronosII
+%define prefix		/usr
+%define sysconfdir	/etc
+%define RELEASE		0
+%define rel	%{?CUSTOM_RELEASE} %{!?$CUSTOM_RELEASE:%RELEASE}
+
+Summary: Cronos II is a powerful mail client for GNOME.
+Name: @PACKAGE@
+Version: @VERSION@
+Release: %rel
+Copyright: GPL
+Group: Applications/Internet
+URL: http://cronosII.sourceforge.net
+Source: @PACKAGE@-@VERSION@.tar.gz
+Requires: gnome-libs >= 1.0.0
+Packager: Pablo Fernández Navarro <cronosII@users.sourceforge.net>
+BuildRoot: %{_tmppath}/%{name}-root
+
+%description
+Cronos II is a powerful GNOME mail client that uses its own database storage
+format to ensure the high performance it reachs.
+If you would like to help with the development,
+contact Cronos II (Pablo Fernández Navarro) <cronosII@users.sourceforge.net>
+
+%description -l fr
+Cronos II est un puissant lecteur de mails pour GNOME. Il utilise son propre
+format de stockage des mails afin d'avoir les hautes performances qu'il est
+capable d'atteidre.
+Si vous voulez aider au developpement, contactez Cronos II (Pablo Fernández
+Navarro) <cronosII@users.sourceforge.net>
+
+%prep
+%setup -q
+
+%build
+%configure --disable-debug
+make
+
+%install
+rm -rf $RPM_BUILD_ROOT
+%makeinstall
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files
+%defattr(-,root,root)
+%doc ABOUT-NLS AUTHORS COPYING ChangeLog FEATURES INSTALL NEWS README THANKS doc/html/* TODO
+%{_bindir}/cronos
+%{_datadir}/gnome/apps/Internet/cronosII.desktop
+%{_datadir}/pixmaps/cronosII.png
+%{_datadir}/locale/*/LC_MESSAGES/cronosII.mo
+%{_mandir}/*
+%{_datadir}/gnome/help/cronosII/*

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=E-Mail
+Comment=A GNOME mail client.
+Comment[es]=Un cliente de correo electrónico para GNOME.
+Exec=cronos
+Icon=cronosII.png
+Terminal=0
+Type=Application

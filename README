@@ -1,0 +1,36 @@
+				Cronos II 0.2.2
+
+===============
+= What is it? =
+===============
+Cronos II is a powerful GNOME mail client very fast, light and friendly.
+
+===================
+= Where to get it =
+===================
+Check out http://cronosII.sourceforge.net/ for the latest version.
+
+================
+= Requeriments =
+================
+o Gnome-libs (http://www.gnome.org)
+o LinuxThreads (Pthreads)
+
+o Gnome-Print (Optional)
+
+================
+= Installation =
+================
+The standard GNOME Installation method:
+./configure
+make
+make install
+
+You might want to check out the INSTALL file for further information.
+
+======================
+= About this version =
+======================
+This version introduces the Cronos II Address Book with an API created by Bosko Blagojevic
+and Pablo Fernández Navarro and with a UI by Pablo Fernández Navarro.
+Other great news about this version is the Queue mailbox by André Casteliano.
