@@ -144,7 +144,7 @@ sense of purpose (fear) to the development work.
 <note><para>The char  bug</para>
 
 <para>A special thanks to the hackers on the<emphasis> Debian (debian.bugs.dist) development newsgroup</emphasis> who fixed some bugs they found running under the Power PC platform. These same patches also fixed some stubborn bugs involving parsing mail headers and config files. </para><para>As near as I can tell these people where:
- Aaron Schrab (email withheld) , ROOT (?) jlquin (email withheld) and "Seamus" <email>seamus@debian.org</email>. (They know where they are :) While I was trying to fix similar problems I may never have seen that solution. Which is why I do the docs :)</para>
+ Aaron Schrab (email withheld) , Jerry Quinn <email> jlquinn@us.ibm.com</email> "Seamus" <email>seamus@debian.org</email>. (They know where they are :) While I was trying to fix similar problems I may never have seen that solution. Which is why I do the docs :)</para>
 <para>Finally I would like to thank Angel Ramos <email>seamus@debian.org</email> who is now the Debian Maintainer for the CronosII package. He saved me a lot of time at an important stage in this release. </para>
 <para>Viva Open Source !!!</para>
 </note>

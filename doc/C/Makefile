@@ -11,6 +11,9 @@
 # even the implied warranty of MERCHANTABILITY or FITNESS FOR A
 # PARTICULAR PURPOSE.
 
+# This file is not standard but should work with or with the db2 tools or gnomedoc stuff.
+# It installs in all the correct gnome places. --pete feb 2002.
+
 
 SHELL = /bin/sh
 
@@ -64,16 +67,16 @@ AWK = mawk
 CATALOGS =  br.gmo de.gmo es.gmo fr.gmo it.gmo
 CATOBJEXT = .gmo
 CC = gcc
-CFLAGS = -Wall -I/usr/include/glib-1.2 -I/usr/lib/glib/include -D_REENTRANT -DUSE_GNOME -g  -I/usr/include -DNEED_GNOMESUPPORT_H -I/usr/lib/gnome-libs/include -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include
+CFLAGS = -Wall -I/usr/include/glib-1.2 -I/usr/lib/glib/include -D_REENTRANT -DUSE_GNOME -g  -I/usr/include/gnome-1.0 -DNEED_GNOMESUPPORT_H -I/usr/lib/gnome-libs/include -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include
 DATADIRNAME = share
 DLLTOOL = @DLLTOOL@
-FEATURES = " 'plugins' 'cache' 'address book'"
+FEATURES = " 'Debugging Enabled' 'plugins' 'cache' 'address book'"
 GENCAT = 
 GMOFILES =  br.gmo de.gmo es.gmo fr.gmo it.gmo
 GMSGFMT = /usr/bin/msgfmt
 GNOME_CONFIG = /usr/bin/gnome-config
-GNOME_PRINT_CFLAGS = -I/usr/include -DNEED_GNOMESUPPORT_H -I/usr/lib/gnome-libs/include -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/include/gnome-xml
-GNOME_PRINT_LIBS = -rdynamic -L/usr/lib -L/usr/X11R6/lib -lgnomeprint -lgnomeui -lart_lgpl -lgdk_imlib -lSM -lICE -lgnome -lgnomesupport -lesd -laudiofile -ldb-3 -lgdk_pixbuf -lgtk -lgdk -lgmodule -lglib -ldl -lXi -lXext -lX11 -lm -lxml -lz
+GNOME_PRINT_CFLAGS = -I/usr/include/gnome-1.0 -I/usr/include/freetype2 -DNEED_GNOMESUPPORT_H -I/usr/lib/gnome-libs/include -I/usr/include/gtk-1.2 -I/usr/include/glib-1.2 -I/usr/lib/glib/include -I/usr/X11R6/include -I/usr/include/gdk-pixbuf-1.0 -I/usr/include/gnome-xml
+GNOME_PRINT_LIBS = -rdynamic -L/usr/lib -L/usr/X11R6/lib -lgnomeprint -lgnomeui -lgdk_imlib -lSM -lICE -lgnome -lgnomesupport -lesd -laudiofile -ldb-3 -lgdk_pixbuf -lgtk -lgdk -lgmodule -lglib -ldl -lXi -lXext -lX11 -lart_lgpl -lm -lxml -lz -lfreetype
 GTK_CFLAGS = @GTK_CFLAGS@
 GTK_CONFIG = @GTK_CONFIG@
 GTK_LIBS = @GTK_LIBS@
@@ -99,8 +102,8 @@ POSUB = po
 RANLIB = ranlib
 USE_INCLUDED_LIBINTL = no
 USE_NLS = yes
-VERSION = 0.2.2
-cronosIIpath = /usr/bin/cronosII-config
+VERSION = 0.2.2.22
+cronosIIpath = 
 glibpath = /usr/bin/glib-config
 gnomepath = /usr/bin/gnome-config
 l = 
@@ -112,12 +115,12 @@ cronosII_helpdir = $(datadir)/gnome/help/cronosII/C
 cronosII_help_DATA =          topic.dat
 
 
-SGML_FILES =          cronosII.sgml
+SGML_FILES =          cronosII.sgml			 accounts.sgml		 addressbook.sgml			 authors.sgml		bugs.sgml		gtk-brief.sgml		latest.sgml		plugins.sgml		shortcuts_table.sgml	
 
 
 # files that aren't in a binary/data/library target have to be listed here
 # to be included in the tarball when you 'make dist'
-EXTRA_DIST =          topic.dat                       $(SGML_FILES)
+EXTRA_DIST =          topic.dat                       $(SGML_FILES)		cronosII-htmldocs.tar.gz
 
 mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
 CONFIG_HEADER = ../../config.h
@@ -251,7 +254,7 @@ mostlyclean distclean maintainer-clean
 all: cronosII/index.html
 
 cronosII/index.html: $(SGML_FILES)
-	-db2html cronosII.sgml
+#	-db2html cronosII.sgml	left out as a work around gnomedocs.dssl probs. *&^%# --pete feb2002
 
 dist-hook:
 	mkdir $(distdir)/cronosII
@@ -260,11 +263,22 @@ dist-hook:
 	-cp cronosII/stylesheet-images/* $(distdir)/cronosII/stylesheet-images/
 
 install-data-local: cronosII/index.html
-	$(mkinstalldirs) $(cronosII_helpdir)/images
-	-for file in $(srcdir)/cronosII/*.html $(srcdir)/cronosII/*.css $(srcdir)/cronosII/stylesheet-images/*; do \
-	basefile=`basename $$file`; \
-	$(INSTALL_DATA) $(srcdir)/$$file $(cronosII_helpdir)/$$basefile; \
-	done
+# this tar added --pete Feb 2002 (try keeping things nice building an rpm without it !)
+	tar zxvf  $(srcdir)/cronosII-htmldocs.tar.gz ;	
+	$(mkinstalldirs) $(cronosII_helpdir)/stylesheet-images	#/ 
+#	-for file in $(srcdir)/cronosII/*.html  $(srcdir)/cronosII/stylesheet-images/* $(srcdir)/cronosII/*.css ;
+#	do	
+#	basefile=`basename $$file`; \
+#	$(INSTALL_DATA) $(srcdir)/$$file $(cronosII_helpdir)/$$basefile; \
+#	done
+#while that should have done it the following covers some other situations and should not hurt.
+	cp -vf $(srcdir)/cronosII/*.html  $(cronosII_helpdir)/;	
+	-cp -vf $(srcdir)/cronosII/stylesheet-images/*  $(cronosII_helpdir)/stylesheet-images/ ;	
+	-cp -vf $(srcdir)/cronosII/images/*  $(cronosII_helpdir)/;
+
+ #added above cp's feb 2002 this covers the two most common scenarios and should only copy what is required. 
+# next we get rid of the html directory (don't need it any more and it will be a minor hassle for people using sgml tools)
+	-rm -rf $(srcdir)/cronosII/ ; 
 
 cronosII.ps: cronosII.sgml
 	-db2ps $<

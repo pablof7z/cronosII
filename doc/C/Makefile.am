@@ -41,10 +41,10 @@ dist-hook:
 	mkdir $(distdir)/cronosII/stylesheet-images
 	-cp cronosII/stylesheet-images/* $(distdir)/cronosII/stylesheet-images/
 
+
 install-data-local: cronosII/index.html
 # this tar added --pete Feb 2002 (try keeping things nice building an rpm without it !)
-	tar zxvf  $(srcdir)/cronosII-htmldocs.tar.gz ;
-	
+	tar zxvf  $(srcdir)/cronosII-htmldocs.tar.gz ;	
 	$(mkinstalldirs) $(cronosII_helpdir)/stylesheet-images	#/ 
 #	-for file in $(srcdir)/cronosII/*.html  $(srcdir)/cronosII/stylesheet-images/* $(srcdir)/cronosII/*.css ;
 #	do	
@@ -57,6 +57,8 @@ install-data-local: cronosII/index.html
 	-cp -vf $(srcdir)/cronosII/images/*  $(cronosII_helpdir)/;
 
  #added above cp's feb 2002 this covers the two most common scenarios and should only copy what is required. 
+# next we get rid of the html directory (don't need it any more and it will be a minor hassle for people using sgml tools)
+	-rm -rf $(srcdir)/cronosII/ ; 
 
 cronosII.ps: cronosII.sgml
 	-db2ps $<
