@@ -1,3 +1,6 @@
+Sun Apr 21 2002 dan <madprof@madprof.net>
+	* Fixed non NULL pointer bug. 
+
 Sun Apr 21 2002 pete <petergozz@users.sf.net>
 	* Updates to splash.png. plugins/readme and changelogs
 	* Updates to all plugin.so
