@@ -244,7 +244,7 @@ cronosII.spec
 echo
 echo \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
 echo \* Cronos II $VERSION  			 \*
-echo \* Maintenance Release One		  \*	
+echo \* Maintenance Release Two		  \*	
 echo \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
 echo 
 
@@ -265,6 +265,6 @@ else
 fi
 
 echo Building to install under ......... .: $prefix
-echo CronosII  \*\* Maintenance Release 1  \*\*
+echo CronosII  \*\* Maintenance Release 2  \*\*
 echo configure complete, type \'make\' to start compiling
 echo
