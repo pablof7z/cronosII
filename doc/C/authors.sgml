@@ -3,8 +3,7 @@
 <sect1 id="authors">
 <title>Authors and Contributors</title>
 <para>
-<application>&app;</application> was originated  by <ulink type=http url="&pablo;" > Pablo Fernández Navarro</ulink> 
-
+<application>&app;</application> was originated  by Pablo Fernández Navarro.
 </para>
 <para>To find more information about
 <application>&app;</application>, please visit the
@@ -23,6 +22,7 @@
  <para> Project Originator, Leader, and main man generally.
  Pablo works across all code and documentation of user and Developers Support docs.
  </para>
+<para>Originally from Argentina Pablo has now moved to Spain, mostly as a result of the collapse of the social and economic structure in Argentina.</para>
  </listitem>
   <listitem>
 <para> <ulink type="http" url="&Yves;">Yves Mettier</ulink>
@@ -43,6 +43,7 @@
 <ulink type="http" url="&bosko;">Bosko Blagojevic</ulink>
 <email>&bosko;</email>
 </para>
+<para>Co-maintainer of CronosII Scratch (C2). Bosco is hard at work on the new version especially in areas like glib, libc6, IMAP and such.</para>
 <para> Bosko was a self confessed <quote> high school UNIX geek</quote> working on 
  issues with Cronos II and Free-BSD. Bosko and Pablo have implemented a VCard (<quote>Group Ware</quote>) compliant
 address-book for Cronos.
@@ -50,6 +51,7 @@ address-book for Cronos.
 <para>He has now finished High School. He is still a geek.</para>
 <para> Free-BSD porting.
 - Address Book core development.</para>
+<para>The very useful Filters Plugin</para>
 </listitem>
 <listitem>
 <para>
@@ -70,16 +72,16 @@ on the development process. He is overseeing the introduction of better coding p
 <email>&pete;</email>
 </para>
 <para>
-<quote>Roustabout / General Documentation (English)</quote>
+<quote>Roustabout / General Documentation (English)</quote> 
 Peters main aim in life is to make Pablo's life miserable
- by finding new ways of breaking his glib configuration, and totally misunderstanding the Gnome documentation system.
+ by finding new ways of breaking his glib configuration, and totally misunderstanding the Gnome documentation system and having both short and medium term memory problems and something else..
 </para>
 </listitem>
 <listitem>
 <para><ulink type="http" url="&dan;">Daniel Fairhead</ulink>
 <email>&dan;</email></para>
 <para><quote>
-Daniel has contributed quite a few patches to the MR2 source. These include fixes to the header parsing functions, mailbox creation issues and a new icon. (or two). Dan has also been involved with testing and debugging and is now primarily focused on the new Scratch Source.</quote>
+Daniel has contributed quite a few patches to the MR2 source. These include fixes to the header parsing functions, mailbox creation issues and a new icon. (or two). Daniel has also been involved with testing and debugging and is now primarily focused on the new Scratch Source. The most visible contribution by Daniel is the NoHtml plugin.</quote>
 </para></listitem>
 <listitem>
 <para>
@@ -139,12 +141,12 @@ sense of purpose (fear) to the development work.
 -->
 
 <sect2 id="version-thanks">
-<!-- migate to section contribitions-other above per version -->
+<!-- migrate to section contribitions-other above per version -->
     <title>Version &version; Thanks</title>
 <note><para>The char  bug</para>
 
 <para>A special thanks to the hackers on the<emphasis> Debian (debian.bugs.dist) development newsgroup</emphasis> who fixed some bugs they found running under the Power PC platform. These same patches also fixed some stubborn bugs involving parsing mail headers and config files. </para><para>As near as I can tell these people where:
- Aaron Schrab (email withheld) , Jerry Quinn <email> jlquinn@us.ibm.com</email> "Seamus" <email>seamus@debian.org</email>. (They know where they are :) While I was trying to fix similar problems I may never have seen that solution. Which is why I do the docs :)</para>
+ Aaron Schrab , Jerry Quinn <email> jlquinn@us.ibm.com</email> "Seamus" <email>seamus@debian.org</email>. (They know where they are :) While I was trying to fix similar problems I may never have seen that solution. Which is why I do the docs :)</para>
 <para>Finally I would like to thank Angel Ramos <email>seamus@debian.org</email> who is now the Debian Maintainer for the CronosII package. He saved me a lot of time at an important stage in this release. </para>
 <para>Viva Open Source !!!</para>
 </note>

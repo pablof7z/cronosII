@@ -1,11 +1,11 @@
 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V4.1//EN"[
-<!ENTITY version "-0.2.2-22"> 
-<!ENTITY manver "Version: 2.2.2-mr2">
+<!ENTITY version "-0.2.2-23 MR2 - Eclipse"> 
+<!ENTITY manver "Version: 2.2.23">
 <!ENTITY pablo "cronosii@users.sourceforge.net">
 <!ENTITY pete "petergozz@users.sourceforge.net">
 <!ENTITY Yves "ymettier@libertysurf.fr">
 <!ENTITY website "http://cronosii.sourceforge.net/">
-<!ENTITY app "Cronos II">
+<!ENTITY app "CronosII">
 <!ENTITY key "The Default Keyboard Shortcut is:">
 <!ENTITY developers "cronosii-hackers@lists.sourceforge.net">
 <!ENTITY bosko "falling@users.sourceforge.net">
@@ -15,7 +15,7 @@
 <!ENTITY jeremy "witti@onramp.net">
 <!ENTITY spaghetty "spaghetty@libero.it">
 <!ENTITY marc "mustangg@users.sourceforge.net">
-<!ENTITY dan "ralptheracoon@uk2.net">
+<!ENTITY dan "madprof@madprof.net">
 <!ENTITY FDL SYSTEM "fdl.sgml"> 
 <!ENTITY accounts SYSTEM "accounts.sgml">
 <!ENTITY shortcuts SYSTEM "shortcuts_table.sgml">
@@ -28,7 +28,7 @@
 ]>
 <!-- =============Document Header ============================= -->
 <book>
-     <title>CronosII. an Email Application</title>
+     <title>CronosII A GNOME Email Application</title>
  
       <bookinfo>
       <author><firstname>Cronos</><surname>Developers</></author>
@@ -46,7 +46,7 @@ Hope this is of some help.
     <para>This is the Users Manual  for CronosII an email application.
 </para>
 <para>Cronos II aspires to simplicity, efficacy, stability and most importantly;<emphasis> whatever else it's users want it to be.</emphasis></para>
-<para>This Book  does not contain developers info. Check out the sources for the guidelines and code. Visit the web-site for more information. Or drop us a line and let us know what you think.</para>
+<para>This Book  does not contain developers information. Check out the sources for the guidelines and code. Visit the web-site for more information. Or drop us a line and let us know what you think.</para>
     <blockquote><attribution>anon. 2001</attribution><para>Old father time.... he owes me much sleep.</para></blockquote>
      </preface>
   

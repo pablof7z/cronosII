@@ -25,11 +25,12 @@
  </para> </listitem>
     <listitem> <para> The Search Button is not Functional --(yet)
       </para> </listitem>
-<listitem> <para> A strange read write bug on bounced mail. Avoid clicking on strangely name attachments.( eg NUL/NULL or stange binary looking stuff.<emphasis> If the app crashes</emphasis> : The work around (until fixed) is to
-rm the offending file from the .CronosII/box-name.mbx and restart. You might want to delete the entry from the mbx index file as well. -- pete. <email> &pete; </email>. Apologies for not putting in a full bug report yet.
+<listitem> <para> A strange read write bug on bounced mail. Avoid clicking on strangely name attachments.( e.g. NULL/NULL or strange binary looking stuff.<emphasis> If &app; crashes</emphasis> : The work around (until fixed) is to
+rm the offending file from the .CronosII/box-name.mbx and restart. You might want to delete the entry from the mbx index file as well. -- pete. <email> &pete; </email>.
       </para> </listitem>
-<listitem> <para> The mail queue is yet to prove itself to be totaly stable.
+<listitem> <para> The mail queue is yet to prove itself to be totally stable.
       </para> </listitem>
+<listitem><para>The filters Plugin tends to intermittently send mail to the wrong mailboxes. Make sure you use wild cards in the filter rules.</para></listitem>
  </itemizedlist>
  </sect1>
 

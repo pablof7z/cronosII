@@ -1,11 +1,11 @@
 <!-- plugins.sgml-->
-
+<!--DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook V4.1//EN"[]-->
 <sect1 id="plugins">
 <title>Plug Ins</title>
 <subtitle>Extensions to &app;</subtitle>
 <note>
 <para>This written for the final release of the original Cronos II. i.e. CronosII-0.2.2-mr2. <para>
-<para>Users of<emphasis>i386 binary packages</emphasis> (DEB's and RPM's) should not need to manually install any of the plugins. The standard tarball release should also manually install the plugins for you. </para>
+<para>Users of<emphasis>i386 binary packages</emphasis> (DEB's and RPM's) should not need to manually install any of the plugins. The standard tarball release should also install the plugins for you. </para>
 </note>
 <para>Included with the MR2 / Eclipse release of &app; are four Plugins. These are:
  <orderedlist>
@@ -89,19 +89,26 @@ Support for wild-cards is enabled and this makes configuration reasonably simple
 </sect3>
 <sect2 id="plugin-nohtml">
 <title>NoHtml</title>
+	<abstract>	
 <para>The newest addition to the set of plugins for Cronos II is Daniel Fairheads "NoHtml". This effective Plugin strips the html tags from your mail. It is not a "html parser" (CronosII Scratch can do that) but rather "a tag re-interpreter". It strips the content from between the html tags and replaces the content (where appropriate) with the plain text (ASCII) equivalent. </para>
+	</abstract>
 <sect3 id="nohtml-config">
 <title>Configure</title>
-<para>To set "NoHtml" up select the plugins configuration dialog: 
+	  <para>To set <application>"NoHtml"</application> up select the plugins configuration dialog: 
 <programlisting>settings ==> preferences ==> plugins</programlisting> 
-Choose Load and the "select a file" dialog should open, choose "nohtml.so and click "OK""</para>
+		Choose <guibutton>Load</guibutton>  and the "select a file" dialog should open, choose
+		<menuchoice>
+		  <guimenuitem>nohtml.so</guimenuitem>
+		</menuchoice>
+		and click <guibutton>OK</guibutton></para>
 <para>The "select a file" dialog should go away leaving nohtml (and any other plugins you have loaded) on the list in the plugins window. Select:
 <programlisting>nohtml ==> configure</programlisting> The "NoHtml" configuration dialog should open. </para>
 <para>You will have 4 Checkbox Options:</para>
-<para><emphasis>Preview Mode:</emphasis> - This means that you want the nohtml plugin to parse messages when you click on a message in a Mailbox.</para>
-<para><emphasis>Viewer Mode:</emphasis> - This will parse messages when you Double click on them to bring up the "Message view" Window. Due to a bug or something, if you have Preview mode parsed, then Viewer Mode will be parsed too. Sorry.</para>
-<para><emphasis>Require &lt;HTML&gt; tag before parsing?</emphasis> - If selected, the nohtml plugin will search for &lt;html&gt; in a message before it parses it. This can be useful if you get emails which contain HTML type tags which you want to view.</para>
-<para><emphasis>Replace &amp;sym&#059; type symbols?</emphasis> - If selected, the nohtml plugin will replace some HTML symbols (such as &amp;amp&#059;) within messages. Only supports a very limited subset of the full HTML symbol list.</para>
+	  <para><guisubmenu>Preview Mode:</guisubmenu> - This means that you want the nohtml plugin to parse messages when you click on a message in a Mailbox.</para>
+<para><guisubmenu>Viewer Mode:</guisubmenu> - This will parse messages when you Double click on them to bring up the "Message view" Window. Due to a bug or something, if you have Preview mode parsed, then Viewer Mode will be parsed too. Sorry.</para>
+<para><guisubmenu>Require &lt;HTML&gt; tag before parsing?</guisubmenu> - If selected, the nohtml plugin will search for &lt;html&gt; in a message before it parses it. This can be useful if you get email which contain HTML type tags which you want to view.</para>
+<para><guisubmenu>Replace &amp;sym&#059; type symbols?</guisubmenu> - If selected, the nohtml plugin will replace some HTML symbols (such as &amp;amp&#059;) within messages. This currently supports a very limited subset of the full HTML symbol list.</para>
+	  <para>Once you have selected your options click  <guibutton>OK</guibutton>. (The dialog closes) then <guibutton>Apply</guibutton> on the remaining dialog.</para>
 <para>To test it, send yourself an email with &lt;b&gt;Bold Text&lt;/b&gt; in it somewhere. On viewing in the specified mode, you should see it without the B tags. 
 </para>
 </sect3>
@@ -109,7 +116,7 @@ Choose Load and the "select a file" dialog should open, choose "nohtml.so and cl
 
 <sect2>
 <title>Availability</title>
-<para>If you would like to get the "Stand Alone" Plugins or find out how to write your own, visit the<ulink type="http" url="&website;"> Cronos Website</ulink> &lt; &website; &gt; and follow the links to manuals and Plugin. A HTML how-to is included in the Source Tarball, look under the Plugin directory.
+<para>If you would like to get the "Stand Alone" Plugins or find out how to write your own, visit the<ulink type="http" url="&website;"> Cronos Website</ulink> &lt; &website; &gt; and follow the links to Manuals and Plugin. A HTML how-to is included in the Source Tarball, look under the Plugin directory.The full source for all the above plugins is included in the tar releases and in the CVS tree. 
 </para>
 </sect2>
 </sect1>     

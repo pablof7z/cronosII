@@ -7,13 +7,14 @@
 <para> &app;&version; brings the following new stuff:</para>
 
 <orderedlist>
-
+<listitem><para>A new Plugin - NoHtml</para></listitem>
+<listitem><para>Documentation should be GNOME compliant without requiring Gnome-doc tools. </para></listitem>
 <listitem><para>Bug Fixes in mail body and header reading</para></listitem>
 <listitem><para>Improved support for SMTP accounts</para></listitem>
 <listitem><para>Improved Mail Header Handling. </para></listitem>
-<listitem><para>Some bugfixes in mailbox creation</para></listitem>
+<listitem><para>Some bug-fixes in mailbox creation</para></listitem>
 <listitem><para>Some new Icons for a fresher look </para></listitem>
-<listitem><para>Current Filters included (built) in tarball </para></listitem>
+
 <listitem><para>Tar Ball and binary package should now Auto Install Plugins</para></listitem>
 <listitem><para>Manual and other documentation brought to this release. :)</para></listitem>
 </orderedlist>
