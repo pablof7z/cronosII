@@ -4,3 +4,8 @@ Please see the ../README for MR2 install hints.
 
 (thanks)
 
+The sample.so (binary) here was built originally under CronosII ver 0.2.1 and simply copied here.
+
+If you wish to attempt a new build (good luck) backup the existing 'dot o' and 'dot so' files.
+(You have been warned)
+
