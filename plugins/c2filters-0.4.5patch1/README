@@ -1,0 +1,48 @@
+ConosII Message Filters 0.4.5-patch1
+CronosII Filters
+A CronosII Plugin
+
+By Bosko Blagojevic <falling@users.sourceforge.net>
+
+This plugin is a work in progress and is in no way finished 
+yet. It equips CronosII with basic message filtering capabilities.
+
+It requires CronosII 0.2.2
+
+NOTE: This will most likely be the last release of CronosII Filters for the
+old 0.2.x series. The next release will probably be based on the new
+complete re-write of CronosII that we are currently involved in. Enjoy and
+keep checking our website for updates on the CronosII rewrite progress
+(cronosII-scratch).
+
+
+
+To build simply type: make
+
+If you have trouble building (i.e. missing working cronosII 0.2.1 headers),
+take the following steps:
+
+1) Download CronosII 0.2.1 from http://www.cronosii.net/
+2) Extract the CronosII 0.2.1 source
+3) su to root
+4) rm -rf /usr/local/include/cronosII; rm /usr/local/include/cronosII.h
+5) cd cronosII-0.2.1/src
+6) ./configure
+7) mkdir /usr/local/include/cronosII
+8) cp *.h /usr/local/include/cronosII/
+9) cp ../*.h /usr/local/include/cronosII/
+10) cp cronosII.h /usr/local/include/
+
+NOTE: Only try this if you cannot build filters normally! Think about the
+commands you are giving before you hit enter!
+
+TODO:
+* import/export config files
+* document functions (CronosII style)
+* fix bugs as you find them
+* make code prettier and/or more efficient as you see fit
+* make gui prettier and/or more usable as you see fit
+* Implement more possible actions on messages:
+     - Expunge?
+     - Play a sound?
+     - more?

@@ -1,0 +1,54 @@
+Thur 1 Apr 2002 Angel Ramos <seamus@debian.org>
+	* Modified filters.c source in order to compile and compile alone.
+	* Included all the headers that filters.c need to compile. I have
+	  modified the headers for alone compilation success.
+	* Added '-fPIC' to the Makefile in order to compile on hppa 
+	  architecture.
+	* Tested on Debian GNU/Linux.
+
+Wed 19 Dec Pete <petegozz@users.sourceforge.net>
+	* Applied patch1
+	* Rebuilt and test installed binaries
+
+º Sun July 29 2001 Bosko Blagojevic <falling@users.sourceforge.net> º
+- Returned from Europe a few weeks ago (it was amazing!).
+- Improved UI greatly.
+- Changed CronosII Filters configuration file format a bit and implemented 
+  plugin_filters_upgrade_config() to upgrade config files to the new 
+  slightly improved format.
+- Updated the rest of filters (I *think* I got everything...) to use
+  the new format for match rules.
+- Fixed filters_get_word() to properly return a NULL when word requested
+  is not present in the filters string.
+- Added "Reply-To" as possible filters match field
+
+º Sat June 2 2001 Bosko Blagojevic <falling@users.sourceforge.net> º
+- Implemented ability to match within a message's body.
+- Implemented ability to match within an entire message 
+  (headers + body).
+- Took my SAT's today (ohh the horror!)
+
+º Sat May 19 2001 Bosko Blagojevic <falling@users.sourceforge.net> º
+- Implemented ability to match any or match all of the rules for a filter to
+  enact the filter, giving the user more flexibilty.
+- Killed a nasty bug that corrupted internal match strings when editing.
+- Added a cancel button to new/edit filter windows
+- Released 0.4.0
+
+º Thu May 17 2001 Bosko Blagojevic <falling@users.sourceforge.net> º
+- Added ability to move filters rules up/down
+- Renamed structs to comply with CronosII coding specs
+- Removed a lot of stray spaces to replace with tabs instead
+- Cleaned up code style a bit
+
+º Sun May 6 2001 Bosko Blagojevic <falling@users.sourceforge.net> º
+- Released a slighlty improved 0.3.0
+- Fixed a minor bug when creating filters
+- Fixed two strings I forgot to gettext _("")
+- Added 'Delete' as possible action on messages
+- Added 'Copy to Mailbox' as possible action on messages
+- Added GPL header to filters.c
+- Created a neat little tarball package
+
+º Sat May 5 2001 Bosko Blagojevic <falling@users.sourceforge.net> º
+- Initial public release! (0.2.0)
