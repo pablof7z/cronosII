@@ -56,7 +56,7 @@ sock_printf (int sock, const char *fmt, ...) {
 char *
 sock_read (int sock, int *timedout) {
   char str[1024];
-  char *ptr;
+  gint i;
   char c[1];
 #if defined(HAVE_SETSOCKOPT) && defined(SO_RCVTIMEO)
   if (config->timeout) {
@@ -69,18 +69,20 @@ sock_read (int sock, int *timedout) {
   }
 #endif
 
-  str[1023] = '\0';
   *timedout = FALSE;
   
-  for (ptr = str; ptr; ptr++) {
+  for (i = 0; i < 1023; i++) {
     if (read (sock, c, 1) < 0) {
       if (errno == EINTR) *timedout = TRUE;
       return NULL;
     }
-    *ptr = *c;
-    if (*c == '\n') break;
+    str[i] = *c;
+    if (*c == '\n') { 
+			str[i+1] = '\0';
+			break;
+		}
   }
-  *(++ptr) = '\0';
+  str[1023] = '\0';
 
   printf ("S: %s\n", str);
   return g_strdup (str);
