@@ -1,3 +1,8 @@
+Tues 09 Apr 2002 Pete <petergozz@users.sf.net>
+	* Uploaded new plugins sources to CVS.
+	* This means that any plugin may be built "stand alone" by having the /headers directory next to this one (/sample)
+	
+	
 Thur 21 Mar 2002 Angel Ramos <seamus@debian.org>
 	* Modified sample.c source in order to compile and compile alone.
 	* Included all the headers that sample.c need to compile. I have
