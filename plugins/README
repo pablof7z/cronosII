@@ -52,7 +52,7 @@ all should be well.
 this works .
 (just don't ask me why :))
 
-Finally: The alterations made to the sample plugin cause a dialog to open each time CronosII checks your mail. Click it an it goes away. It's sort of handy during but can be annoying. Feel free to fix this.
+Finally: The alterations made to the sample plugin cause a dialog to open each time CronosII checks your mail. Click it an it goes away. It's sort of handy at first  but can be annoying. Feel free to fix this.
 
 If anybody has a fix for this or any other bugs; I would be eager to hear about it.
 
@@ -65,6 +65,8 @@ Hope this helps.
 -- PeterGozz.
 
 Post Script.
-I will work toward a real and transparent fix for this..
+The new CronosII is due to be released very soon (?). 
+(well when its ready).
+Most reported bugs have been fixed in the new version.
 
 

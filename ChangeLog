@@ -1,3 +1,7 @@
+Thur Dec 13 2001 Pete <gossner@arcom.com.au>
+	* Brought filters to 0.4.0
+	* Updated source docs to reflect this
+
 Wed Dec 12 2001 Pete Gossner <gossner@arcom.com.au>
 	* Caught a potential install problem in plugins
 	* Added the binaries etal for the sample plugin

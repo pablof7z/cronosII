@@ -36,7 +36,8 @@ void gui_about_new (void) {
   GtkWidget *window;
   const char *authors[] = {    
     "Pablo Fernández Navarro <cronosII@users.sourceforge.net>",
-    "Bosko Blagojevic <falling@users.sourceflrge.net>",
+    "Bosko Blagojevic <falling@users.sourceforge.net>",
+    "Daniel Fairhead <ralphtheracoon@uk2.net>",
     "André Casteliano <digitalcoder@users.sourceforge.net>",
     "Yves Mettier <ymettier@libertysurf.fr>",
     "Peter Gossner <gossner@arcom.com.au>",

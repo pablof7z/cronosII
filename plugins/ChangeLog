@@ -1,3 +1,11 @@
+Wed 13 Dec 2001 Pete <gossner@arcom.com.au>
+	* Brought the filters up to the latest version I could find. (0.4.0)
+	* Note make dist will fail due to the inclusion of filters and fortune
+	* in Makefile.am They can be removed from that file quite safely.
+	* (I am a little nervous about the binaries being in place during a
+	* build. It works fine here (both packed and unpacked) but I can't
+	* check other dists and OS so there ya go.
+
 Sat Dec  1 17:19:23 CST 2001  Peter Gossner <petergozz@users.sourceforge.net>
 	*	Modified all source files to enable successful build.
 	*	Removed status line support for sample.c

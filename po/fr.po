@@ -28,9 +28,7 @@ msgstr ""
 msgid ""
 "An unknown protocol has been set, not suported by the current version of "
 "Cronos II: %s\n"
-msgstr ""
-"Un protocole unconnu a été spécifié, non supporté par la version actuelle de "
-"Cronos II: %s\n"
+msgstr "Un protocole unconnu a été spécifié, non supporté par la version actuelle de Cronos II: %s\n"
 
 #: src/account.c:83
 #, c-format
@@ -39,9 +37,7 @@ msgid ""
 "the mailbox linked list.\n"
 "This might cause serious bugs in the future.\n"
 msgstr ""
-"La boite aux lettres avec l'ID %d spécifiée dans votre fichier de "
-"configuration dans la liste chaïnée des boites aux lettres, n'a pu ëtre "
-"trouvée.\n"
+"La boite aux lettres avec l'ID %d spécifiée dans votre fichier de configuration dans la liste chaïnée des boites aux lettres, n'a pu ëtre trouvée.\n"
 "Cela peut entrainer de serieux disfonctionnements plus tard.\n"
 
 #: src/addrbook.c:210
@@ -635,9 +631,7 @@ msgstr "Rôle de la personne dans l'organisation."
 msgid ""
 "Type here the name of a new group or select an existent one from the pull "
 "down list."
-msgstr ""
-"Indiquez ici le nom d'un nouveau groupe ou selectionnez un groupe existant "
-"dans la liste déroulante."
+msgstr "Indiquez ici le nom d'un nouveau groupe ou selectionnez un groupe existant dans la liste déroulante."
 
 #: src/gui-addrbook.c:3020
 #, fuzzy
@@ -906,9 +900,7 @@ msgid ""
 "or contact cronosII@users.sourceforge.net\n"
 msgstr ""
 "Ceci est un message en plusieurs parties au format MIME.\n"
-"Si vous lisez ce texte, cela signigie que votre lecteur de courriers ne "
-"comprend pas les messages MIME ni les fichier attachés. Vous devriez passer "
-"à une version supérieure.\n"
+"Si vous lisez ce texte, cela signigie que votre lecteur de courriers ne comprend pas les messages MIME ni les fichier attachés. Vous devriez passer à une version supérieure.\n"
 
 #: src/gui-composer.c:1225 src/gui-window_main_callbacks.c:1114
 msgid "Confirmation"
@@ -1046,8 +1038,7 @@ msgstr "Ouverture du fichier sélectionné pour l'export impossible."
 
 #: src/gui-export.c:211
 msgid "Couln't open the main DB file for exporting the mailbox"
-msgstr ""
-"Ouverture de la BD principale impossible pour exporter la boîte aux lettres"
+msgstr "Ouverture de la BD principale impossible pour exporter la boîte aux lettres"
 
 #: src/gui-export.c:230
 msgid "Exporting..."
@@ -1091,8 +1082,7 @@ msgstr "Import..."
 
 #: src/gui-import.c:232
 msgid "Couldn't open the main DB file for appending the imported message"
-msgstr ""
-"Ouverture impossible de la BD principale pour ajouter le message importé"
+msgstr "Ouverture impossible de la BD principale pour ajouter le message importé"
 
 #: src/gui-import.c:252
 msgid "Couldn't open the mail file for writing the imported message"
@@ -1135,9 +1125,7 @@ msgstr "Unconnu"
 msgid ""
 "You must select a mailbox where to store messages downloaded from this "
 "account."
-msgstr ""
-"Vous devez selectionner une boïte aux lettre pour y stocker les messages "
-"téléchargés depuis ce compte."
+msgstr "Vous devez selectionner une boïte aux lettre pour y stocker les messages téléchargés depuis ce compte."
 
 #: src/gui-preferences.c:903
 msgid "Edit Account"
@@ -1484,9 +1472,7 @@ msgstr "Connection SMTP permanente."
 msgid ""
 "Keep connected to the SMTP host to use again that connection to send "
 "outgoing messages"
-msgstr ""
-"Garder la connexion au serveur SMTP pour l'utiliser à nouveau pour les "
-"messages à envoyer"
+msgstr "Garder la connexion au serveur SMTP pour l'utiliser à nouveau pour les messages à envoyer"
 
 #: src/gui-preferences.c:2616 src/gui-preferences.c:2631
 msgid "Persistant connection to the SMTP host"
@@ -2139,8 +2125,7 @@ msgid ""
 "The dynamic module %s has already registered a callback for the signal %d.\n"
 "Each dynamic module can register just one callback for each signal.\n"
 msgstr ""
-"Le module dynamique %s a déjà enregistré une function de rappel pour le "
-"signal %d.\n"
+"Le module dynamique %s a déjà enregistré une function de rappel pour le signal %d.\n"
 "Chaque module dynamique ne peut enregistrer qu'une fonction de rappel pour "
 "chaque signal.\n"
 
@@ -2149,8 +2134,7 @@ msgstr ""
 msgid ""
 "There's no callback function attached to the signam %d in the dynamic module "
 "%s.\n"
-msgstr ""
-"Pas de fonction de rappel attachée au sigma %d dans le module dynamique %s.\n"
+msgstr "Pas de fonction de rappel attachée au sigma %d dans le module dynamique %s.\n"
 
 #: src/pop.c:119 src/smtp.c:835
 msgid "Failed to create socket"
@@ -2208,8 +2192,7 @@ msgstr "Erreur à l'ouverture du fichier pour y écrire le nouveau mail"
 
 #: src/pop.c:485
 msgid "Error opening the main DB file to store the new mail"
-msgstr ""
-"Erreur à l'ouverture de la BD principale pour y enregistrer le nouveau mail"
+msgstr "Erreur à l'ouverture de la BD principale pour y enregistrer le nouveau mail"
 
 #: src/pop.c:486
 msgid "Opening the main DB file"
@@ -2243,17 +2226,13 @@ msgstr "Confirmer le téléchargement du message"
 #: src/pop.c:769
 msgid ""
 "There's a message bigger than what you allowed to automatically download."
-msgstr ""
-"Un message de taille supérieure à celle autorisée pour le téléchargement "
-"automatique a été trouvé."
+msgstr "Un message de taille supérieure à celle autorisée pour le téléchargement automatique a été trouvé."
 
 #: src/pop.c:822
 msgid ""
 "Since the server doesn't support advanced POP commands very little "
 "information about this message could be extracted."
-msgstr ""
-"Le serveur ne supportant pas les commandes POP avancées peu d'information "
-"sur ce message ont été récupérées."
+msgstr "Le serveur ne supportant pas les commandes POP avancées peu d'information sur ce message ont été récupérées."
 
 #: src/pop.c:863
 msgid "Size:"
@@ -2289,33 +2268,25 @@ msgstr "Temps d'attente de réponse du serveur expiré"
 msgid ""
 "The SMTP server aborted the delivery of the message because the storage "
 "location has been exceed."
-msgstr ""
-"Le serveur SMTP a abandonné la délivrance des messages car la taille de "
-"l'espace de stockage a été dépasséé."
+msgstr "Le serveur SMTP a abandonné la délivrance des messages car la taille de l'espace de stockage a été dépasséé."
 
 #: src/smtp.c:136 src/smtp.c:259 src/smtp.c:338 src/smtp.c:468
 msgid ""
 "Error in the delivery of the message because it has ocurred an error in the "
 "SMTP server."
-msgstr ""
-"Erreur lors de la délivrance des messages car un erreur est survenue sur le "
-"serveur SMTP"
+msgstr "Erreur lors de la délivrance des messages car un erreur est survenue sur le serveur SMTP"
 
 #: src/smtp.c:143 src/smtp.c:266 src/smtp.c:352 src/smtp.c:475
 msgid ""
 "The SMTP server aborted the delivery of the message because there's not "
 "enough system storage."
-msgstr ""
-"Le serveur SMTP a abandonné la délivrance des messages car il n'y a pas "
-"assez d'espace système"
+msgstr "Le serveur SMTP a abandonné la délivrance des messages car il n'y a pas assez d'espace système"
 
 #: src/smtp.c:150 src/smtp.c:273 src/smtp.c:359 src/smtp.c:942
 msgid ""
 "The SMTP server isn't RFC821 complaiment, please send me an E-Mail with the "
 "hostname address."
-msgstr ""
-"Le serveur SMTP n'est pas compatible avec la RFC821. Envoyez un mail à "
-"l'auteuravec l'adresse de ce serveur."
+msgstr "Le serveur SMTP n'est pas compatible avec la RFC821. Envoyez un mail à l'auteuravec l'adresse de ce serveur."
 
 #: src/smtp.c:157 src/smtp.c:280 src/smtp.c:366 src/smtp.c:885 src/smtp.c:951
 msgid "The SMTP server is not available."
@@ -2325,33 +2296,25 @@ msgstr "Le serveur SMTP n'est pas disponible."
 msgid ""
 "The SMTP server aborted the delivery of the message because the mailbox is "
 "unavailable."
-msgstr ""
-"Le serveur SMTP a abandonné la délivrance des messages car la boite aux "
-"lettres n'est pas disponible."
+msgstr "Le serveur SMTP a abandonné la délivrance des messages car la boite aux lettres n'est pas disponible."
 
 #: src/smtp.c:231
 msgid ""
 "The SMTP server aborted the delivery of the message because the user is not "
 "local."
-msgstr ""
-"Le serveur SMTP a abandonné la délivrance des messages car l'utilisateur "
-"n'est pas local."
+msgstr "Le serveur SMTP a abandonné la délivrance des messages car l'utilisateur n'est pas local."
 
 #: src/smtp.c:245
 msgid ""
 "The SMTP server aborted the delivery of the message because the mailbox name "
 "is not allowed."
-msgstr ""
-"Le serveur SMTP a abandonné la délivrance des messages car le nom de boîte "
-"aux lettres n'est pas autorisé."
+msgstr "Le serveur SMTP a abandonné la délivrance des messages car le nom de boîte aux lettres n'est pas autorisé."
 
 #: src/smtp.c:461
 msgid ""
 "The SMTP server aborted the delivery of the message because the transaction "
 "failed."
-msgstr ""
-"Le serveur SMTP a abandonné la délivrance des messages car la transaction a "
-"échoué."
+msgstr "Le serveur SMTP a abandonné la délivrance des messages car la transaction a échoué."
 
 #: src/smtp.c:814
 msgid "Resolving SMTP host..."
@@ -2448,7 +2411,8 @@ msgstr ""
 #~ msgstr "Déboguer"
 
 #~ msgid ""
-#~ "The message \"%s\" couldn't been sent because the specified SMTP hostname\n"
+#~ "The message \"%s\" couldn't been sent because the specified SMTP "
+#~ "hostname\n"
 #~ "of the account \"%s\" couldn't been resolved.\n"
 #~ "This probably means that you have a wrong address or that the server\n"
 #~ "is currently down."
@@ -2532,8 +2496,7 @@ msgstr ""
 #~ msgstr "Mauvais descripteur de fichier"
 
 #~ msgid "The socket structure address is outside the user's address space"
-#~ msgstr ""
-#~ "L'adresse de la structure de socket est hors de l'espace mémoire utilisateur"
+#~ msgstr "L'adresse de la structure de socket est hors de l'espace mémoire utilisateur"
 
 #~ msgid "Descriptor is not asociated with a socket"
 #~ msgstr "Le descripteur n'est pas associé avec une socket"
@@ -2557,8 +2520,7 @@ msgstr ""
 #~ msgstr "Erreur non récupérable dans le nom du serveur"
 
 #~ msgid "Temporal server error, try again later"
-#~ msgstr ""
-#~ "Erreur temporaire de la part du serveur. Essayez à nouveau un peu plus tard"
+#~ msgstr "Erreur temporaire de la part du serveur. Essayez à nouveau un peu plus tard"
 
 #~ msgid "BUG: Unkown function in error.c:"
 #~ msgstr "BUG: fonction inconnue dans error.c:"

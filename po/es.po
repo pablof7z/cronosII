@@ -28,9 +28,7 @@ msgstr ""
 msgid ""
 "An unknown protocol has been set, not suported by the current version of "
 "Cronos II: %s\n"
-msgstr ""
-"Un protocolo desconocido ha sido seteado, no soportado por la versión "
-"corriente de Cronos II: %s\n"
+msgstr "Un protocolo desconocido ha sido seteado, no soportado por la versión corriente de Cronos II: %s\n"
 
 #: src/account.c:83
 #, c-format
@@ -39,8 +37,7 @@ msgid ""
 "the mailbox linked list.\n"
 "This might cause serious bugs in the future.\n"
 msgstr ""
-"Imposible encontrar el buzón con ID %d, especificado en su configuración en "
-"la lista de buzones.\n"
+"Imposible encontrar el buzón con ID %d, especificado en su configuración en la lista de buzones.\n"
 "Esto puede causar serios problemas en el futuro.\n"
 
 #: src/addrbook.c:210
@@ -82,9 +79,7 @@ msgstr "Razón desconocida"
 
 #: src/exit.c:66 src/exit.c:85
 msgid "Opening the main DB file of the Garbage Mailbox for deleting all mails"
-msgstr ""
-"Abriendo el archivo principal de la DB del buzón Basura para eliminar todos "
-"los correos-e"
+msgstr "Abriendo el archivo principal de la DB del buzón Basura para eliminar todos los correos-e"
 
 #: src/gnomefilelist.c:142
 msgid "Go back to a previous directory"
@@ -1140,9 +1135,7 @@ msgstr "Desconocido"
 msgid ""
 "You must select a mailbox where to store messages downloaded from this "
 "account."
-msgstr ""
-"Debe seleccionar un buzón donde guardar los mensajes obtenidos desde esta "
-"cuenta"
+msgstr "Debe seleccionar un buzón donde guardar los mensajes obtenidos desde esta cuenta"
 
 #: src/gui-preferences.c:903
 msgid "Edit Account"
@@ -1352,9 +1345,7 @@ msgstr "Obtener correos al inicio del programa."
 
 #: src/gui-preferences.c:2105
 msgid "Whether to check activated accounts when Cronos II starts or not."
-msgstr ""
-"Seleccione si las cuentas activadas deberían ser chequeadas cuando Cronos II "
-"comienza."
+msgstr "Seleccione si las cuentas activadas deberían ser chequeadas cuando Cronos II comienza."
 
 #: src/gui-preferences.c:2107
 msgid "Options"
@@ -1485,9 +1476,7 @@ msgstr "Utilizar conexión SMTP persistente: "
 msgid ""
 "Keep connected to the SMTP host to use again that connection to send "
 "outgoing messages"
-msgstr ""
-"Quedarse conectado con el servidor SMTP para reutilizar la conexión al "
-"enviar mensajes"
+msgstr "Quedarse conectado con el servidor SMTP para reutilizar la conexión al enviar mensajes"
 
 #: src/gui-preferences.c:2616 src/gui-preferences.c:2631
 msgid "Persistant connection to the SMTP host"
@@ -2111,9 +2100,7 @@ msgstr "Este mensaje dice ser multipart pero parece estar roto.\n"
 
 #: src/message.c:896
 msgid "Opening the main DB file for reading the number of messages in it"
-msgstr ""
-"Abriendo el archivo principal de la DB para extraer el número de mensajes en "
-"él"
+msgstr "Abriendo el archivo principal de la DB para extraer el número de mensajes en él"
 
 #: src/net.c:107
 msgid "Couldn't resolve the server"
@@ -2240,16 +2227,13 @@ msgstr "Confirmar la bajada del correo-e"
 #: src/pop.c:769
 msgid ""
 "There's a message bigger than what you allowed to automatically download."
-msgstr ""
-"Hay un mensaje más grande de lo que se autorizó a obtener automaticamente."
+msgstr "Hay un mensaje más grande de lo que se autorizó a obtener automaticamente."
 
 #: src/pop.c:822
 msgid ""
 "Since the server doesn't support advanced POP commands very little "
 "information about this message could be extracted."
-msgstr ""
-"Ya que el servidor no soporta comandos avanzados POP muy poca información "
-"pudo ser extraida sobre el correo-e."
+msgstr "Ya que el servidor no soporta comandos avanzados POP muy poca información pudo ser extraida sobre el correo-e."
 
 #: src/pop.c:863
 msgid "Size:"
@@ -2285,9 +2269,7 @@ msgstr "Tiempo fuera mientras esperando una respuesta del servidor"
 msgid ""
 "The SMTP server aborted the delivery of the message because the storage "
 "location has been exceed."
-msgstr ""
-"El servidor SMTP abortó el envio del mensaje ya que el espacio de guardado "
-"ha sido excedido en el servidor."
+msgstr "El servidor SMTP abortó el envio del mensaje ya que el espacio de guardado ha sido excedido en el servidor."
 
 #: src/smtp.c:136 src/smtp.c:259 src/smtp.c:338 src/smtp.c:468
 msgid ""
@@ -2301,17 +2283,13 @@ msgstr ""
 msgid ""
 "The SMTP server aborted the delivery of the message because there's not "
 "enough system storage."
-msgstr ""
-"El servidor SMTP abortó el envio del mensaje ya que no hay suficiente "
-"sistema de guardado en el servidor."
+msgstr "El servidor SMTP abortó el envio del mensaje ya que no hay suficiente sistema de guardado en el servidor."
 
 #: src/smtp.c:150 src/smtp.c:273 src/smtp.c:359 src/smtp.c:942
 msgid ""
 "The SMTP server isn't RFC821 complaiment, please send me an E-Mail with the "
 "hostname address."
-msgstr ""
-"El servidor SMTP no es compatible con el RFC821, por favor, envieme un "
-"correo-e con la dirección del servidor."
+msgstr "El servidor SMTP no es compatible con el RFC821, por favor, envieme un correo-e con la dirección del servidor."
 
 #: src/smtp.c:157 src/smtp.c:280 src/smtp.c:366 src/smtp.c:885 src/smtp.c:951
 msgid "The SMTP server is not available."
@@ -2321,31 +2299,25 @@ msgstr "El servidor SMTP no esta disponible."
 msgid ""
 "The SMTP server aborted the delivery of the message because the mailbox is "
 "unavailable."
-msgstr ""
-"El servidor SMTP abortó el envio del mensaje ya que el buzón no esta "
-"disponible."
+msgstr "El servidor SMTP abortó el envio del mensaje ya que el buzón no esta disponible."
 
 #: src/smtp.c:231
 msgid ""
 "The SMTP server aborted the delivery of the message because the user is not "
 "local."
-msgstr ""
-"El servidor SMTP abortó el envio del mensaje ya que el usuario no es local."
+msgstr "El servidor SMTP abortó el envio del mensaje ya que el usuario no es local."
 
 #: src/smtp.c:245
 msgid ""
 "The SMTP server aborted the delivery of the message because the mailbox name "
 "is not allowed."
-msgstr ""
-"El servidror SMTP abortó el envio del mensaje ya que el nombre de buzón no "
-"esta permitido."
+msgstr "El servidror SMTP abortó el envio del mensaje ya que el nombre de buzón no esta permitido."
 
 #: src/smtp.c:461
 msgid ""
 "The SMTP server aborted the delivery of the message because the transaction "
 "failed."
-msgstr ""
-"El servidor SMTP abortó el envio del mensaje ya que la transacción falló."
+msgstr "El servidor SMTP abortó el envio del mensaje ya que la transacción falló."
 
 #: src/smtp.c:814
 msgid "Resolving SMTP host..."
@@ -2418,9 +2390,7 @@ msgstr ""
 #~ msgid ""
 #~ "A message bigger than what you allowed to automatically download has been "
 #~ "found."
-#~ msgstr ""
-#~ "Un mensaje más grande de lo que Ud. autorizó a obtener automaticamente ha "
-#~ "sido encontrado."
+#~ msgstr "Un mensaje más grande de lo que Ud. autorizó a obtener automaticamente ha sido encontrado."
 
 #, fuzzy
 #~ msgid "Composer: %s"
