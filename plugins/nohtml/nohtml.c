@@ -1,6 +1,6 @@
 /* nohtml.c
  *
- *  NoHtml CronosII Plugin
+ *  NoHtml 0.1.1 -- CronosII Plugin
  * 
  *  Copyright (C) 2002 Daniel Fairhead 
  *
@@ -194,7 +194,7 @@ plugin_on_message_open (Message *message, const char *type) {
 			if (*current_char == '>'){
 				in_tag = FALSE;
 				g_string_down(tag);
-				if (strstr(tag->str,"<br>")){
+				if (strcasestr(tag->str,"<br>")){
 					*dst++ = '\n';
 				}
 				g_string_assign(tag,"");
