@@ -8,7 +8,6 @@ src/gnomefilelist.c
 src/gui-about.c
 src/gui-addrbook.c
 src/gui-composer.c
-src/gui-composer.c.c
 src/gui-decision_dialog.c
 src/gui-export.c
 src/gui-import.c

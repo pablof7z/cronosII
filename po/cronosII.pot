@@ -2,23 +2,23 @@
 # Copyright (C) YEAR Free Software Foundation, Inc.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#: src/gui-addrbook.c:2984 src/gui-addrbook.c:2986 src/gui-addrbook.c:3002
-#: src/gui-addrbook.c:3008 src/gui-addrbook.c:3010 src/gui-addrbook.c:3012
-#: src/gui-addrbook.c:3014 src/gui-addrbook.c:3016 src/gui-addrbook.c:3018
-#: src/gui-addrbook.c:3020 src/gui-addrbook.c:3022 src/gui-addrbook.c:3024
-#: src/gui-addrbook.c:3026 src/gui-addrbook.c:3028 src/gui-addrbook.c:3030
-#: src/gui-addrbook.c:3032 src/gui-addrbook.c:3034 src/gui-addrbook.c:3036
-#: src/gui-addrbook.c:3038 src/gui-addrbook.c:3040 src/gui-addrbook.c:3042
-#: src/gui-addrbook.c:3044 src/gui-addrbook.c:3046 src/gui-addrbook.c:3048
-#: src/gui-addrbook.c:3050 src/gui-addrbook.c:3052 src/gui-addrbook.c:3054
-#: src/gui-addrbook.c:3056 src/gui-addrbook.c:3058 src/gui-addrbook.c:3060
-#: src/gui-addrbook.c:3062 src/gui-addrbook.c:3064 src/gui-addrbook.c:3066
-#: src/gui-addrbook.c:3068 src/gui-addrbook.c:3074
+#: src/gui-addrbook.c:2987 src/gui-addrbook.c:2989 src/gui-addrbook.c:3005
+#: src/gui-addrbook.c:3011 src/gui-addrbook.c:3013 src/gui-addrbook.c:3015
+#: src/gui-addrbook.c:3017 src/gui-addrbook.c:3019 src/gui-addrbook.c:3021
+#: src/gui-addrbook.c:3023 src/gui-addrbook.c:3025 src/gui-addrbook.c:3027
+#: src/gui-addrbook.c:3029 src/gui-addrbook.c:3031 src/gui-addrbook.c:3033
+#: src/gui-addrbook.c:3035 src/gui-addrbook.c:3037 src/gui-addrbook.c:3039
+#: src/gui-addrbook.c:3041 src/gui-addrbook.c:3043 src/gui-addrbook.c:3045
+#: src/gui-addrbook.c:3047 src/gui-addrbook.c:3049 src/gui-addrbook.c:3051
+#: src/gui-addrbook.c:3053 src/gui-addrbook.c:3055 src/gui-addrbook.c:3057
+#: src/gui-addrbook.c:3059 src/gui-addrbook.c:3061 src/gui-addrbook.c:3063
+#: src/gui-addrbook.c:3065 src/gui-addrbook.c:3067 src/gui-addrbook.c:3069
+#: src/gui-addrbook.c:3071 src/gui-addrbook.c:3077
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2001-04-06 19:04-0300\n"
+"POT-Creation-Date: 2001-04-09 17:34-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,19 +41,19 @@ msgid ""
 "This might cause serious bugs in the future.\n"
 msgstr ""
 
-#: src/addrbook.c:209
+#: src/addrbook.c:210
 msgid "Couldn't open the GnomeCard file\n"
 msgstr ""
 
-#: src/addrbook.c:821
+#: src/addrbook.c:822
 msgid "Couldn't open the GnomeCard file"
 msgstr ""
 
-#: src/autocompletition.c:481 src/gui-window_main.c:1355
+#: src/autocompletition.c:482 src/gui-window_main.c:1355
 msgid "Contacts"
 msgstr ""
 
-#: src/autocompletition.c:499 src/gui-addrbook.c:1109
+#: src/autocompletition.c:500 src/gui-addrbook.c:1112
 msgid "Groups"
 msgstr ""
 
@@ -134,496 +134,496 @@ msgstr ""
 msgid "Visit the Cronos II homepage"
 msgstr ""
 
-#: src/gui-addrbook.c:50 src/gui-addrbook.c:664 src/gui-preferences.c:1567
+#: src/gui-addrbook.c:52 src/gui-addrbook.c:667 src/gui-preferences.c:1567
 msgid "Name"
 msgstr ""
 
-#: src/gui-addrbook.c:51
+#: src/gui-addrbook.c:53
 msgid "E-Mail Address"
 msgstr ""
 
-#: src/gui-addrbook.c:52
+#: src/gui-addrbook.c:54
 msgid "Comments"
 msgstr ""
 
-#: src/gui-addrbook.c:62
+#: src/gui-addrbook.c:64
 msgid "Cronos II Address Book"
 msgstr ""
 
-#: src/gui-addrbook.c:144
+#: src/gui-addrbook.c:146
 msgid ""
 "No entry match your search.\n"
 "Start from the beggining?"
 msgstr ""
 
-#: src/gui-addrbook.c:156
+#: src/gui-addrbook.c:158
 msgid "No entry match your search.\n"
 msgstr ""
 
-#: src/gui-addrbook.c:214
+#: src/gui-addrbook.c:216
 msgid "_New card"
 msgstr ""
 
-#: src/gui-addrbook.c:215
+#: src/gui-addrbook.c:217
 msgid "Create a new card"
 msgstr ""
 
-#: src/gui-addrbook.c:221
+#: src/gui-addrbook.c:223
 msgid "_Edit card"
 msgstr ""
 
-#: src/gui-addrbook.c:222 src/gui-addrbook.c:314
+#: src/gui-addrbook.c:224 src/gui-addrbook.c:316
 msgid "Edit the selected card"
 msgstr ""
 
-#: src/gui-addrbook.c:228
+#: src/gui-addrbook.c:230
 msgid "_Delete card"
 msgstr ""
 
-#: src/gui-addrbook.c:229 src/gui-addrbook.c:325
+#: src/gui-addrbook.c:231 src/gui-addrbook.c:327
 msgid "Delete the selected card"
 msgstr ""
 
-#: src/gui-addrbook.c:236
+#: src/gui-addrbook.c:238
 msgid "_Close"
 msgstr ""
 
-#: src/gui-addrbook.c:237
+#: src/gui-addrbook.c:239
 msgid "Close the Address Book"
 msgstr ""
 
-#: src/gui-addrbook.c:289 src/gui-composer.c:811 src/gui-composer.c:1225
+#: src/gui-addrbook.c:291 src/gui-composer.c:811 src/gui-composer.c:1225
 #: src/gui-decision_dialog.c:104 src/gui-decision_dialog.c:113
 #: src/gui-window_main.c:1256
 msgid "Save"
 msgstr ""
 
-#: src/gui-addrbook.c:290
+#: src/gui-addrbook.c:292
 msgid "Save changes"
 msgstr ""
 
-#: src/gui-addrbook.c:302 src/gui-preferences.c:1591
+#: src/gui-addrbook.c:304 src/gui-preferences.c:1591
 msgid "New"
 msgstr ""
 
-#: src/gui-addrbook.c:303
+#: src/gui-addrbook.c:305
 msgid "New Card"
 msgstr ""
 
-#: src/gui-addrbook.c:313 src/gui-preferences.c:1619
+#: src/gui-addrbook.c:315 src/gui-preferences.c:1619
 msgid "Edit"
 msgstr ""
 
-#: src/gui-addrbook.c:324 src/gui-preferences.c:1652
+#: src/gui-addrbook.c:326 src/gui-preferences.c:1652
 #: src/gui-window_main.c:1288
 msgid "Delete"
 msgstr ""
 
-#: src/gui-addrbook.c:337 src/gui-composer.c:857
+#: src/gui-addrbook.c:339 src/gui-composer.c:857
 msgid "Close"
 msgstr ""
 
-#: src/gui-addrbook.c:338
+#: src/gui-addrbook.c:340
 msgid "Close this window"
 msgstr ""
 
-#: src/gui-addrbook.c:359
+#: src/gui-addrbook.c:361
 msgid "Search: "
 msgstr ""
 
-#: src/gui-addrbook.c:371
+#: src/gui-addrbook.c:373
 msgid "Group View: "
 msgstr ""
 
-#: src/gui-addrbook.c:476
+#: src/gui-addrbook.c:479
 msgid "New Contact"
 msgstr ""
 
-#: src/gui-addrbook.c:476
+#: src/gui-addrbook.c:479
 msgid "Edit Contact"
 msgstr ""
 
 #. labels
-#: src/gui-addrbook.c:677
+#: src/gui-addrbook.c:680
 msgid "Salutation:"
 msgstr ""
 
-#: src/gui-addrbook.c:684
+#: src/gui-addrbook.c:687
 msgid "First Name:"
 msgstr ""
 
-#: src/gui-addrbook.c:691
+#: src/gui-addrbook.c:694
 msgid "Middle Name:"
 msgstr ""
 
-#: src/gui-addrbook.c:698
+#: src/gui-addrbook.c:701
 msgid "Last Name:"
 msgstr ""
 
-#: src/gui-addrbook.c:705
+#: src/gui-addrbook.c:708
 msgid "Suffix:"
 msgstr ""
 
-#: src/gui-addrbook.c:718
+#: src/gui-addrbook.c:721
 msgid "Show Name:"
 msgstr ""
 
-#: src/gui-addrbook.c:736
+#: src/gui-addrbook.c:739
 msgid "Mr."
 msgstr ""
 
 #. Mr. Mister
-#: src/gui-addrbook.c:737
+#: src/gui-addrbook.c:740
 msgid "Mrs."
 msgstr ""
 
 #. Mrs. Mistress
-#: src/gui-addrbook.c:738
+#: src/gui-addrbook.c:741
 msgid "Dr."
 msgstr ""
 
-#: src/gui-addrbook.c:791
+#: src/gui-addrbook.c:794
 msgid "Sr."
 msgstr ""
 
 #. Sr. ????
-#: src/gui-addrbook.c:792
+#: src/gui-addrbook.c:795
 msgid "Jr."
 msgstr ""
 
 #. birthday label
-#: src/gui-addrbook.c:826
+#: src/gui-addrbook.c:829
 msgid "Birthday:"
 msgstr ""
 
 #. frame
-#: src/gui-addrbook.c:855
+#: src/gui-addrbook.c:858
 msgid "Organization"
 msgstr ""
 
 #. labels
-#: src/gui-addrbook.c:868 src/gui-preferences.c:2932
+#: src/gui-addrbook.c:871 src/gui-preferences.c:2932
 msgid "Name:"
 msgstr ""
 
-#: src/gui-addrbook.c:875
+#: src/gui-addrbook.c:878
 msgid "Title:"
 msgstr ""
 
-#: src/gui-addrbook.c:919
+#: src/gui-addrbook.c:922
 msgid "Personal Information"
 msgstr ""
 
 #. label
-#: src/gui-addrbook.c:1208
+#: src/gui-addrbook.c:1211
 msgid "Web Site:"
 msgstr ""
 
 #. frame
-#: src/gui-addrbook.c:1226
+#: src/gui-addrbook.c:1229
 msgid "E-mail data"
 msgstr ""
 
 #. label
-#: src/gui-addrbook.c:1242
+#: src/gui-addrbook.c:1245
 msgid "Address:"
 msgstr ""
 
 #. frame
-#: src/gui-addrbook.c:1256 src/gui-addrbook.c:1844 src/gui-addrbook.c:2348
+#: src/gui-addrbook.c:1259 src/gui-addrbook.c:1847 src/gui-addrbook.c:2351
 #: src/gui-preferences.c:1566
 msgid "Type"
 msgstr ""
 
 #. btns
-#: src/gui-addrbook.c:1269
+#: src/gui-addrbook.c:1272
 msgid "America On-Line"
 msgstr ""
 
-#: src/gui-addrbook.c:1275
+#: src/gui-addrbook.c:1278
 msgid "Apple Link"
 msgstr ""
 
-#: src/gui-addrbook.c:1281
+#: src/gui-addrbook.c:1284
 msgid "AT&T"
 msgstr ""
 
-#: src/gui-addrbook.c:1287
+#: src/gui-addrbook.c:1290
 msgid "CIS"
 msgstr ""
 
-#: src/gui-addrbook.c:1293
+#: src/gui-addrbook.c:1296
 msgid "e-World"
 msgstr ""
 
-#: src/gui-addrbook.c:1299
+#: src/gui-addrbook.c:1302
 msgid "Internet"
 msgstr ""
 
-#: src/gui-addrbook.c:1306
+#: src/gui-addrbook.c:1309
 msgid "IBM"
 msgstr ""
 
-#: src/gui-addrbook.c:1312
+#: src/gui-addrbook.c:1315
 msgid "MCI"
 msgstr ""
 
-#: src/gui-addrbook.c:1318
+#: src/gui-addrbook.c:1321
 msgid "Power Share"
 msgstr ""
 
-#: src/gui-addrbook.c:1324
+#: src/gui-addrbook.c:1327
 msgid "Prodigy"
 msgstr ""
 
-#: src/gui-addrbook.c:1330
+#: src/gui-addrbook.c:1333
 msgid "TLX"
 msgstr ""
 
-#: src/gui-addrbook.c:1336
+#: src/gui-addrbook.c:1339
 msgid "X400"
 msgstr ""
 
-#: src/gui-addrbook.c:1352 src/gui-addrbook.c:1893 src/gui-addrbook.c:2425
+#: src/gui-addrbook.c:1355 src/gui-addrbook.c:1896 src/gui-addrbook.c:2428
 msgid "Add"
 msgstr ""
 
-#: src/gui-addrbook.c:1362 src/gui-addrbook.c:1903 src/gui-addrbook.c:2435
+#: src/gui-addrbook.c:1365 src/gui-addrbook.c:1906 src/gui-addrbook.c:2438
 msgid "Modify"
 msgstr ""
 
-#: src/gui-addrbook.c:1372 src/gui-addrbook.c:1913 src/gui-addrbook.c:2445
+#: src/gui-addrbook.c:1375 src/gui-addrbook.c:1916 src/gui-addrbook.c:2448
 msgid "Remove"
 msgstr ""
 
 #. frame
-#: src/gui-addrbook.c:1386
+#: src/gui-addrbook.c:1389
 msgid "E-mail list"
 msgstr ""
 
-#: src/gui-addrbook.c:1458
+#: src/gui-addrbook.c:1461
 msgid "Network"
 msgstr ""
 
 #. frame
-#: src/gui-addrbook.c:1746
+#: src/gui-addrbook.c:1749
 msgid "Address data"
 msgstr ""
 
 #. labels
-#: src/gui-addrbook.c:1765
+#: src/gui-addrbook.c:1768
 msgid "Post Office:"
 msgstr ""
 
-#: src/gui-addrbook.c:1770
+#: src/gui-addrbook.c:1773
 msgid "Extended:"
 msgstr ""
 
-#: src/gui-addrbook.c:1775
+#: src/gui-addrbook.c:1778
 msgid "Street:"
 msgstr ""
 
-#: src/gui-addrbook.c:1780
+#: src/gui-addrbook.c:1783
 msgid "City:"
 msgstr ""
 
-#: src/gui-addrbook.c:1785
+#: src/gui-addrbook.c:1788
 msgid "Region:"
 msgstr ""
 
-#: src/gui-addrbook.c:1790
+#: src/gui-addrbook.c:1793
 msgid "Postal Code:"
 msgstr ""
 
-#: src/gui-addrbook.c:1795
+#: src/gui-addrbook.c:1798
 msgid "Country:"
 msgstr ""
 
 #. btns
-#: src/gui-addrbook.c:1857 src/gui-addrbook.c:2369
+#: src/gui-addrbook.c:1860 src/gui-addrbook.c:2372
 msgid "Home"
 msgstr ""
 
-#: src/gui-addrbook.c:1861 src/gui-addrbook.c:2365
+#: src/gui-addrbook.c:1864 src/gui-addrbook.c:2368
 msgid "Work"
 msgstr ""
 
-#: src/gui-addrbook.c:1865
+#: src/gui-addrbook.c:1868
 msgid "Postal Box"
 msgstr ""
 
-#: src/gui-addrbook.c:1869
+#: src/gui-addrbook.c:1872
 msgid "Parcel"
 msgstr ""
 
-#: src/gui-addrbook.c:1873
+#: src/gui-addrbook.c:1876
 msgid "Domestic"
 msgstr ""
 
-#: src/gui-addrbook.c:1877
+#: src/gui-addrbook.c:1880
 msgid "International"
 msgstr ""
 
 #. frame
-#: src/gui-addrbook.c:1927
+#: src/gui-addrbook.c:1930
 msgid "Address list"
 msgstr ""
 
-#: src/gui-addrbook.c:1999
+#: src/gui-addrbook.c:2002
 msgid "Addresses"
 msgstr ""
 
 #. frame
-#: src/gui-addrbook.c:2320
+#: src/gui-addrbook.c:2323
 msgid "Telephone data"
 msgstr ""
 
 #. label
-#: src/gui-addrbook.c:2336
+#: src/gui-addrbook.c:2339
 msgid "Number:"
 msgstr ""
 
 #. btns
-#: src/gui-addrbook.c:2361
+#: src/gui-addrbook.c:2364
 msgid "Preferred"
 msgstr ""
 
-#: src/gui-addrbook.c:2373
+#: src/gui-addrbook.c:2376
 msgid "Voice"
 msgstr ""
 
-#: src/gui-addrbook.c:2377
+#: src/gui-addrbook.c:2380
 msgid "Fax"
 msgstr ""
 
-#: src/gui-addrbook.c:2381
+#: src/gui-addrbook.c:2384
 msgid "Message Recorder"
 msgstr ""
 
-#: src/gui-addrbook.c:2385
+#: src/gui-addrbook.c:2388
 msgid "Cellular"
 msgstr ""
 
-#: src/gui-addrbook.c:2389
+#: src/gui-addrbook.c:2392
 msgid "Pager"
 msgstr ""
 
-#: src/gui-addrbook.c:2393
+#: src/gui-addrbook.c:2396
 msgid "Bulletin Board"
 msgstr ""
 
-#: src/gui-addrbook.c:2397
+#: src/gui-addrbook.c:2400
 msgid "Modem"
 msgstr ""
 
-#: src/gui-addrbook.c:2401
+#: src/gui-addrbook.c:2404
 msgid "Car"
 msgstr ""
 
-#: src/gui-addrbook.c:2405
+#: src/gui-addrbook.c:2408
 msgid "ISDN"
 msgstr ""
 
-#: src/gui-addrbook.c:2409
+#: src/gui-addrbook.c:2412
 msgid "Video"
 msgstr ""
 
 #. frame
-#: src/gui-addrbook.c:2459
+#: src/gui-addrbook.c:2462
 msgid "Phone list"
 msgstr ""
 
-#: src/gui-addrbook.c:2532
+#: src/gui-addrbook.c:2535
 msgid "Phone"
 msgstr ""
 
 #. label
-#: src/gui-addrbook.c:2855
+#: src/gui-addrbook.c:2858
 msgid "Categories:"
 msgstr ""
 
 #. label
-#: src/gui-addrbook.c:2870
+#: src/gui-addrbook.c:2873
 msgid "Comment:"
 msgstr ""
 
 #. frame
-#: src/gui-addrbook.c:2893
+#: src/gui-addrbook.c:2896
 msgid "Security"
 msgstr ""
 
 #. label
-#: src/gui-addrbook.c:2904
+#: src/gui-addrbook.c:2907
 msgid "Public Key:"
 msgstr ""
 
 #. btns
-#: src/gui-addrbook.c:2932
+#: src/gui-addrbook.c:2935
 msgid "PGP"
 msgstr ""
 
-#: src/gui-addrbook.c:2942
+#: src/gui-addrbook.c:2945
 msgid "X509"
 msgstr ""
 
-#: src/gui-addrbook.c:2951
+#: src/gui-addrbook.c:2954
 msgid "Etcetera"
 msgstr ""
 
-#: src/gui-addrbook.c:2971
+#: src/gui-addrbook.c:2974
 msgid "Provide the personal information of this contact in this page."
 msgstr ""
 
-#: src/gui-addrbook.c:2973
+#: src/gui-addrbook.c:2976
 msgid ""
 "Contacts can be organizated by groups for a better Address Book\n"
 "management. Select here the groups where you want this contact to\n"
 "be found."
 msgstr ""
 
-#: src/gui-addrbook.c:2988
+#: src/gui-addrbook.c:2991
 msgid "First name of contact"
 msgstr ""
 
-#: src/gui-addrbook.c:2990
+#: src/gui-addrbook.c:2993
 msgid "Middle name of contact"
 msgstr ""
 
-#: src/gui-addrbook.c:2992
+#: src/gui-addrbook.c:2995
 msgid "Last name of contact"
 msgstr ""
 
-#: src/gui-addrbook.c:2994
+#: src/gui-addrbook.c:2997
 msgid "Type here the name you want to represent this contact in the list"
 msgstr ""
 
-#: src/gui-addrbook.c:2996
+#: src/gui-addrbook.c:2999
 msgid "Birthday of the contact"
 msgstr ""
 
-#: src/gui-addrbook.c:2998
+#: src/gui-addrbook.c:3001
 msgid "Organization where this person works."
 msgstr ""
 
-#: src/gui-addrbook.c:3000
+#: src/gui-addrbook.c:3003
 msgid "Role of the person in the organization."
 msgstr ""
 
-#: src/gui-addrbook.c:3004
+#: src/gui-addrbook.c:3007
 msgid ""
 "Type here the name of a new group or select an existent one from the pull "
 "down list."
 msgstr ""
 
-#: src/gui-addrbook.c:3006
+#: src/gui-addrbook.c:3009
 msgid "Homepage of this contact's web site"
 msgstr ""
 
-#: src/gui-addrbook.c:3070
+#: src/gui-addrbook.c:3073
 msgid "Any other thing?"
 msgstr ""
 
-#: src/gui-addrbook.c:3072
+#: src/gui-addrbook.c:3075
 msgid "Public PGP or GnuPG key."
 msgstr ""
 
@@ -633,7 +633,7 @@ msgstr ""
 
 #. * labels *
 #: src/gui-composer.c:243 src/gui-print.c:284 src/gui-window_main.c:306
-#: src/gui-window_message.c:343 src/pop.c:820
+#: src/gui-window_message.c:343 src/pop.c:829
 msgid "Account:"
 msgstr ""
 
@@ -657,7 +657,7 @@ msgstr ""
 
 #. * SUBJECT *
 #: src/gui-composer.c:263 src/gui-print.c:288 src/gui-window_main.c:288
-#: src/gui-window_message.c:325 src/pop.c:832
+#: src/gui-window_message.c:325 src/pop.c:841
 msgid "Subject:"
 msgstr ""
 
@@ -741,11 +741,11 @@ msgid "Send this message"
 msgstr ""
 
 #: src/gui-composer.c:630
-msgid "Send to _queue"
+msgid "Send _Later"
 msgstr ""
 
 #: src/gui-composer.c:631
-msgid "Send this message to queue"
+msgid "Send this message later"
 msgstr ""
 
 #: src/gui-composer.c:639 src/gui-composer.c:640
@@ -828,7 +828,7 @@ msgstr ""
 msgid "Close this message"
 msgstr ""
 
-#: src/gui-composer.c:1076 src/gui-composer.c.c:275
+#: src/gui-composer.c:1076
 msgid ""
 "This is a multipart message in MIME format.\n"
 "The fact that you reached this text means that your\n"
@@ -868,7 +868,7 @@ msgstr ""
 msgid "Failed to append the mail in the index file."
 msgstr ""
 
-#: src/gui-composer.c:1502 src/gui-composer.c:1596 src/pop.c:458
+#: src/gui-composer.c:1502 src/gui-composer.c:1596 src/pop.c:471
 msgid "Opening the mail file"
 msgstr ""
 
@@ -1431,7 +1431,7 @@ msgid "Configure"
 msgstr ""
 
 #. * Frame *
-#: src/gui-preferences.c:2910 src/version.c:118
+#: src/gui-preferences.c:2910 src/version.c:119
 msgid "Information"
 msgstr ""
 
@@ -1488,13 +1488,13 @@ msgstr ""
 
 #. * From *
 #: src/gui-print.c:283 src/gui-window_main.c:213 src/gui-window_message.c:250
-#: src/pop.c:771
+#: src/pop.c:780
 msgid "From:"
 msgstr ""
 
 #. * DATE *
 #: src/gui-print.c:286 src/gui-window_main.c:325 src/gui-window_message.c:362
-#: src/pop.c:792
+#: src/pop.c:801
 msgid "Date:"
 msgstr ""
 
@@ -2037,126 +2037,126 @@ msgid ""
 "%s.\n"
 msgstr ""
 
-#: src/pop.c:116 src/smtp.c:835
+#: src/pop.c:119 src/smtp.c:835
 msgid "Failed to create socket"
 msgstr ""
 
-#: src/pop.c:144
+#: src/pop.c:147
 msgid "Logging in..."
 msgstr ""
 
-#: src/pop.c:196
+#: src/pop.c:199
 msgid "Checking for number of mails in server..."
 msgstr ""
 
-#: src/pop.c:218
+#: src/pop.c:221
 msgid "No messages in server"
 msgstr ""
 
-#: src/pop.c:219
+#: src/pop.c:222
 msgid "No messages to download"
 msgstr ""
 
-#: src/pop.c:225
+#: src/pop.c:228
 #, c-format
 msgid "%d messages in server"
 msgstr ""
 
-#: src/pop.c:227
+#: src/pop.c:230
 msgid "1 message in server"
 msgstr ""
 
 #. UIDL is optional for POP servers,
 #. * so I won't complain if server doesn't like it
-#: src/pop.c:257
+#: src/pop.c:260
 #, c-format
 msgid "The POP server of the account %s doesn't support UIDL."
 msgstr ""
 
-#: src/pop.c:300
+#: src/pop.c:303
 #, c-format
 msgid "The POP server of the account %s doesn't support LIST."
 msgstr ""
 
-#: src/pop.c:329
+#: src/pop.c:332
 #, c-format
 msgid "The POP server of the account %s doesn't support TOP."
 msgstr ""
 
-#: src/pop.c:381 src/spool.c:84
+#: src/pop.c:384 src/spool.c:84
 msgid "%p%% downloaded (%v of %u messages)"
 msgstr ""
 
-#: src/pop.c:457
+#: src/pop.c:470
 msgid "Error opening the file where to store the new mail"
 msgstr ""
 
-#: src/pop.c:476
+#: src/pop.c:485
 msgid "Error opening the main DB file to store the new mail"
 msgstr ""
 
-#: src/pop.c:477
+#: src/pop.c:486
 msgid "Opening the main DB file"
 msgstr ""
 
-#: src/pop.c:575 src/spool.c:179
+#: src/pop.c:584 src/spool.c:179
 #, c-format
 msgid "%d messages downloaded."
 msgstr ""
 
-#: src/pop.c:577 src/spool.c:181
+#: src/pop.c:586 src/spool.c:181
 msgid "1 message downloaded."
 msgstr ""
 
-#: src/pop.c:650
+#: src/pop.c:659
 msgid "Operation timeout."
 msgstr ""
 
-#: src/pop.c:683
+#: src/pop.c:692
 msgid "Creating the UIDL database"
 msgstr ""
 
-#: src/pop.c:689 src/pop.c:719
+#: src/pop.c:698 src/pop.c:728
 msgid "Opening the UIDL database"
 msgstr ""
 
-#: src/pop.c:752
+#: src/pop.c:761
 msgid "Confirm message downloading"
 msgstr ""
 
-#: src/pop.c:760
+#: src/pop.c:769
 msgid ""
 "There's a message bigger than what you allowed to automatically download."
 msgstr ""
 
-#: src/pop.c:813
+#: src/pop.c:822
 msgid ""
 "Since the server doesn't support advanced POP commands very little "
 "information about this message could be extracted."
 msgstr ""
 
-#: src/pop.c:854
+#: src/pop.c:863
 msgid "Size:"
 msgstr ""
 
-#: src/pop.c:905
+#: src/pop.c:914
 msgid "Do you want to download it?"
 msgstr ""
 
-#: src/pop.c:943
+#: src/pop.c:952
 msgid "Incorrect Password"
 msgstr ""
 
-#: src/pop.c:946
+#: src/pop.c:955
 #, c-format
 msgid "The password of the account %s is wrong"
 msgstr ""
 
-#: src/pop.c:954
+#: src/pop.c:963
 msgid "Username:"
 msgstr ""
 
-#: src/pop.c:958
+#: src/pop.c:967
 msgid "Password:"
 msgstr ""
 
@@ -2261,7 +2261,7 @@ msgstr ""
 msgid "No command has been passed."
 msgstr ""
 
-#: src/version.c:120
+#: src/version.c:121
 msgid ""
 "You have installed a new version of Cronos II.\n"
 "Since this is the first time you run this version\n"

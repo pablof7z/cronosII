@@ -4,9 +4,12 @@
 -> SMTP support;
 -> MIME (Attachments) full support with recursivity and Drag'n Drop;
 -> Plugins support.
--> [NEW] Not deleting a mail from the server (without downloading it again);
--> [NEW] Persistent SMTP connection;
--> [NEW] Mouse Wheel support;
+-> [NEW] Address Book (with groups ability).
+-> [NEW] Address Autocompletation.
+-> [NEW] Send later ability.
+-> Not deleting a mail from the server (without downloading it again);
+-> Persistent SMTP connection;
+-> Mouse Wheel support;
 -> Asking before downloading messages that you consider too big;
 -> Saving mails to file;
 -> PostScript Printing system with Preview options;

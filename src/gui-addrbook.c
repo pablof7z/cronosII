@@ -2,6 +2,8 @@
 #include <config.h>
 #include <time.h>
 
+#include "main.h"
+
 #include "gui-addrbook.h"
 
 #include "addrbook.h"
@@ -45,7 +47,7 @@ C2AddressBookFillType current_fill_type = 0;
 const char *current_flags = NULL;
 
 C2AddressBook *
-c2_address_book_new (void) {
+c2_address_book_new (const char *package) {
   char *titles[] = {
     N_("Name"),
     N_("E-Mail Address"),
@@ -59,7 +61,7 @@ c2_address_book_new (void) {
   /* Initialize if required */
   if (config->addrbook_init == INIT_ADDRESS_BOOK_INIT_OPEN) c2_address_book_init ();
 
-  gaddrbook->window = gnome_app_new (PACKAGE, _("Cronos II Address Book"));
+  gaddrbook->window = gnome_app_new (package, _("Cronos II Address Book"));
   gtk_widget_set_usize (gaddrbook->window, rc->main_window_width, rc->main_window_height);
   gtk_signal_connect (GTK_OBJECT (gaddrbook->window), "delete_event",
       				GTK_SIGNAL_FUNC (on_address_book_delete_event), NULL);
@@ -351,7 +353,7 @@ c2_address_book_create_toolbar (void) {
 
   
   toolbar = gtk_toolbar_new (GTK_ORIENTATION_HORIZONTAL, rc->toolbar);
-  gnome_app_add_toolbar (GNOME_APP (gaddrbook->window), GTK_TOOLBAR (toolbar), "toolbar",
+  gnome_app_add_toolbar (GNOME_APP (gaddrbook->window), GTK_TOOLBAR (toolbar), "search_toolbar",
       			GNOME_DOCK_ITEM_BEH_EXCLUSIVE,
 			GNOME_DOCK_TOP, 2, 0, 0);
   gtk_container_set_border_width (GTK_CONTAINER (toolbar), 2);
@@ -375,10 +377,11 @@ c2_address_book_create_toolbar (void) {
   gaddrbook->group = gtk_combo_new ();
   gtk_toolbar_append_widget (GTK_TOOLBAR (toolbar), gaddrbook->group, NULL, NULL);
   gtk_widget_show (gaddrbook->group);
-  if ((list = c2_address_book_get_available_groups ()) == NULL) return;
-  list = g_list_prepend (list, "");
-  gtk_combo_set_popdown_strings (GTK_COMBO (gaddrbook->group), list);
-  g_list_free (list);
+  if ((list = c2_address_book_get_available_groups ()) != NULL) {
+    list = g_list_prepend (list, "");
+    gtk_combo_set_popdown_strings (GTK_COMBO (gaddrbook->group), list);
+    g_list_free (list);
+  }
   gtk_entry_set_editable (GTK_ENTRY (GTK_COMBO (gaddrbook->group)->entry), FALSE);
   gtk_signal_connect (GTK_OBJECT (GTK_COMBO (gaddrbook->group)->entry), "changed",
       			GTK_SIGNAL_FUNC (on_address_book_group_changed), NULL);

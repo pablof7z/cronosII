@@ -6,7 +6,7 @@ INCLUDES = -I$(top_srcdir) -I$(includedir) \
 
 cronosincludedir = $(includedir)/cronosII
 
-bin_PROGRAMS = cronos
+bin_PROGRAMS = cronos c2addrbook
 
 cronos_SOURCES =			\
 	account.c			\
@@ -88,10 +88,40 @@ cronos_SOURCES =			\
 	smtp.h				\
 	spool.h				\
 	utils.h				\
-	version.h
+	version.h 
 
 cronos_LDADD = $(LIBS) $(INTLLIBS)
 cronos_LDFLAGS = $(LIBS) $(INTLLIBS)
+
+c2addrbook_SOURCES = 			\
+	account.c			\
+	addrbook.c			\
+	bin-addrbook.c			\
+	error.c				\
+	gui-addrbook.c			\
+	init.c				\
+	mailbox.c			\
+	message.c			\
+	plugin.c			\
+	rc.c				\
+	search.c			\
+	utils.c				\
+	version.c			\
+	account.h			\
+	addrbook.h			\
+	error.h				\
+	gui-addrbook.h			\
+	init.h				\
+	mailbox.h			\
+	message.h			\
+	plugin.h			\
+	rc.h				\
+	utils.h				\
+	search.h			\
+	version.h
+
+c2addrbook_LDADD = $(LIBS) $(INTLLIBS)
+c2addrbook_LDFLAGS = $(LIBS) $(INTLLIBS)
 
 cronosinclude_HEADERS =		\
 	account.h		\

@@ -37,9 +37,9 @@ void gui_about_new (void) {
   const char *authors[] = {
     "Pablo Fernández Navarro <cronosII@users.sourceforge.net>",
     "Bosko Blagojevic <falling@users.sourceflrge.net>",
+    "André Casteliano <digitalcoder@users.sourceforge.net>",
     "Yves Mettier <ymettier@libertysurf.fr>",
     "Peter Gossner <gossner@arcom.com.au>",
-    "Arne Caspari <arnem@informatik.uni-bremen.de>",
     NULL
   };
   GtkWidget *href;

@@ -2478,7 +2478,7 @@ on_wm_persistent_smtp_disconnect (void) {
 
 void
 on_wm_address_book_clicked (void) {
-  if (!gaddrbook) gaddrbook = c2_address_book_new ();
+  if (!gaddrbook) gaddrbook = c2_address_book_new (PACKAGE);
   else {
     gtk_widget_show (gaddrbook->window);
     gdk_window_raise (gaddrbook->window->window);

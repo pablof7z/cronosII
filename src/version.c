@@ -32,6 +32,7 @@
 #include "utils.h"
 #include "mailbox.h"
 #include "init.h"
+#include "main.h"
 
 #include "gui-window_main.h"
 
@@ -172,7 +173,7 @@ c2_version_is_minor_or_equal_to_version (C2Version *old_version, const char *str
 
   if ((old_version->major <= ask_version->major) &&
       (old_version->minor <= ask_version->minor) &&
-      (old_version->micro <= ask_version->micro) &&
+      (old_version->micro <= ask_version->micro) ||
       (strne (old_version->patch, ask_version->patch))) ret = TRUE;
 
   c2_free (ask_version->patch);

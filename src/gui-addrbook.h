@@ -153,7 +153,7 @@ typedef enum {
 C2AddressBook *gaddrbook;
 
 C2AddressBook *
-c2_address_book_new						(void);
+c2_address_book_new						(const char *package);
 
 void
 c2_address_book_fill						(C2AddressBook *addrbook,

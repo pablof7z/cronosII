@@ -627,8 +627,8 @@ static GnomeUIInfo filemenu[] = {
     GDK_Return, GDK_CONTROL_MASK, NULL
   },
   {
-    GNOME_APP_UI_ITEM, N_("Send to _queue"),
-    N_("Send this message to queue"),
+    GNOME_APP_UI_ITEM, N_("Send _Later"),
+    N_("Send this message later"),
     NULL, NULL, NULL,
     GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_MAIL_SND,
     GDK_Return, GDK_SHIFT_MASK, NULL,
@@ -788,7 +788,7 @@ make_toolbar (WidgetsComposer *widget) {
   tmp_toolbar_icon = gnome_stock_pixmap_widget (widget->window, GNOME_STOCK_PIXMAP_MAIL_SND);
   widget->tool_send = gtk_toolbar_append_element (GTK_TOOLBAR (widget->toolbar),
                                 GTK_TOOLBAR_CHILD_BUTTON,
-                                NULL, N_("Send"), N_("Send this message"), NULL,
+                                NULL, _("Send"), _("Send this message"), NULL,
                                 tmp_toolbar_icon, NULL, NULL);
   gtk_signal_connect (GTK_OBJECT (widget->tool_send), "clicked",
 		  	GTK_SIGNAL_FUNC (on_send_clicked), (gpointer) widget);
@@ -798,7 +798,7 @@ make_toolbar (WidgetsComposer *widget) {
   tmp_toolbar_icon = gtk_pixmap_new(icon, mask);
   widget->tool_sendqueue = gtk_toolbar_append_element (GTK_TOOLBAR (widget->toolbar),
                                  GTK_TOOLBAR_CHILD_BUTTON,
-                                 NULL, N_("Send to queue"), N_("Send this message to the queue folder"), NULL,
+                                 NULL, _("Send to queue"), _("Send this message to the queue folder"), NULL,
                                  tmp_toolbar_icon, NULL, NULL);
    gtk_signal_connect (GTK_OBJECT (widget->tool_sendqueue), "clicked",
 	 		  	GTK_SIGNAL_FUNC (on_sendqueue_clicked), (gpointer) widget);
@@ -808,7 +808,7 @@ make_toolbar (WidgetsComposer *widget) {
   tmp_toolbar_icon = gnome_stock_pixmap_widget (widget->window, GNOME_STOCK_PIXMAP_SAVE);
   btn = gtk_toolbar_append_element (GTK_TOOLBAR (widget->toolbar),
                                 GTK_TOOLBAR_CHILD_BUTTON,
-                                NULL, N_("Save"), N_("Save this message to the Drafts mailbox"), NULL,
+                                NULL, _("Save"), _("Save this message to the Drafts mailbox"), NULL,
                                 tmp_toolbar_icon, NULL, NULL);
   gtk_signal_connect (GTK_OBJECT (btn), "clicked",
 		  	GTK_SIGNAL_FUNC (on_save_clicked), (gpointer) widget);
@@ -816,7 +816,7 @@ make_toolbar (WidgetsComposer *widget) {
   tmp_toolbar_icon = gnome_stock_pixmap_widget (widget->window, GNOME_STOCK_PIXMAP_SAVE_AS);
   btn = gtk_toolbar_append_element (GTK_TOOLBAR (widget->toolbar),
                                 GTK_TOOLBAR_CHILD_BUTTON,
-                                NULL, N_("To File"), N_("Save this message to a file"), NULL,
+                                NULL, _("To File"), _("Save this message to a file"), NULL,
                                 tmp_toolbar_icon, NULL, NULL);
   gtk_signal_connect (GTK_OBJECT (btn), "clicked",
 		  	GTK_SIGNAL_FUNC (on_save_as_clicked), (gpointer) widget);
@@ -826,7 +826,7 @@ make_toolbar (WidgetsComposer *widget) {
   tmp_toolbar_icon = gnome_stock_pixmap_widget (widget->window, GNOME_STOCK_PIXMAP_OPEN);
   btn = gtk_toolbar_append_element (GTK_TOOLBAR (widget->toolbar),
                                 GTK_TOOLBAR_CHILD_BUTTON,
-                                NULL, N_("Insert"), N_("Insert a file"), NULL,
+                                NULL, _("Insert"), _("Insert a file"), NULL,
                                 tmp_toolbar_icon, NULL, NULL);
   gtk_signal_connect (GTK_OBJECT (btn), "clicked",
 		  	GTK_SIGNAL_FUNC (on_insert_file_clicked), (gpointer) widget);
@@ -834,7 +834,7 @@ make_toolbar (WidgetsComposer *widget) {
   tmp_toolbar_icon = gnome_stock_pixmap_widget (widget->window, GNOME_STOCK_PIXMAP_PROPERTIES);
   btn = gtk_toolbar_append_element (GTK_TOOLBAR (widget->toolbar),
                                 GTK_TOOLBAR_CHILD_BUTTON,
-                                NULL, N_("Sign"), N_("Sign this message"), NULL,
+                                NULL, _("Sign"), _("Sign this message"), NULL,
                                 tmp_toolbar_icon, NULL, NULL);
   gtk_signal_connect (GTK_OBJECT (btn), "clicked",
 		  	GTK_SIGNAL_FUNC (on_insert_signature_clicked), (gpointer) widget);
@@ -844,7 +844,7 @@ make_toolbar (WidgetsComposer *widget) {
   tmp_toolbar_icon = gnome_stock_pixmap_widget (widget->window, GNOME_STOCK_PIXMAP_ATTACH);
   btn = gtk_toolbar_append_element (GTK_TOOLBAR (widget->toolbar),
                                 GTK_TOOLBAR_CHILD_TOGGLEBUTTON,
-                                NULL, N_("Attachs"), N_("Show attachments list"), NULL,
+                                NULL, _("Attachs"), _("Show attachments list"), NULL,
                                 tmp_toolbar_icon, NULL, NULL);
   gtk_signal_connect (GTK_OBJECT (btn), "clicked",
 		  	GTK_SIGNAL_FUNC (on_attachs_clicked), (gpointer) widget);
@@ -854,7 +854,7 @@ make_toolbar (WidgetsComposer *widget) {
   tmp_toolbar_icon = gnome_stock_pixmap_widget (widget->window, GNOME_STOCK_PIXMAP_CLOSE);
   btn = gtk_toolbar_append_element (GTK_TOOLBAR (widget->toolbar),
                                 GTK_TOOLBAR_CHILD_BUTTON,
-                                NULL, N_("Close"), N_("Close this message"), NULL,
+                                NULL, _("Close"), _("Close this message"), NULL,
                                 tmp_toolbar_icon, NULL, NULL);
   gtk_signal_connect (GTK_OBJECT (btn), "clicked",
 		  	GTK_SIGNAL_FUNC (on_close_clicked), (gpointer) widget);

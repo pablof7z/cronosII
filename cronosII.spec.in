@@ -45,7 +45,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
-%doc ABOUT-NLS AUTHORS COPYING ChangeLog FEATURES INSTALL NEWS README THANKS doc/html/* TODO
+%doc ABOUT-NLS AUTHORS COPYING ChangeLog FEATURES INSTALL NEWS README doc/C/cronosII/* TODO
 %{_bindir}/cronos
 %{_datadir}/gnome/apps/Internet/cronosII.desktop
 %{_datadir}/pixmaps/cronosII.png

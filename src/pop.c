@@ -34,6 +34,7 @@
 #include "init.h"
 #include "mailbox.h"
 #include "message.h"
+#include "search.h"
 
 #include "gui-window_checking.h"
 #include "gui-window_main.h"
@@ -85,6 +86,8 @@ check_pop_main (Account *account) {
   FILE *mail;
 
   Message message;
+  char *mailbox;
+  Mailbox *mbox;
   GString *strmsg;
   char *header[HEADER_LAST];
   gboolean reading_header = TRUE;
@@ -449,8 +452,18 @@ dont_use_top:
     gtk_progress_set_percentage (GTK_PROGRESS (window_checking->bytes_progress), 1);
 
     /* Write to the mail file */
-    mid = c2_mailbox_get_next_mid (account->mailbox);
-    buf = c2_mailbox_mail_path (account->mailbox->name, mid);
+    mailbox = account->mailbox->name;
+#if USE_PLUGINS
+    c2_dynamic_module_signal_emit (C2_DYNAMIC_MODULE_MESSAGE_DOWNLOAD_POP, &message,
+      				 	&mailbox, NULL, NULL, NULL);
+#endif
+    mbox = search_mailbox_name (config->mailbox_head, mailbox);
+    if (!mbox) {
+      /* Mailbox couldn't be found, going with the default */
+      mbox = account->mailbox;
+    }
+    mid = c2_mailbox_get_next_mid (mbox);
+    buf = c2_mailbox_mail_path (mailbox, mid);
     if ((mail = fopen (buf, "w")) == NULL) {
       gdk_threads_enter ();
       window_checking_report (C2_CHECK_ERR, account->acc_name,
@@ -461,15 +474,11 @@ dont_use_top:
       continue;
     }
     c2_free (buf);
-#if USE_PLUGINS
-    c2_dynamic_module_signal_emit (C2_DYNAMIC_MODULE_MESSAGE_DOWNLOAD_POP, &message,
-      				 	NULL, NULL, NULL, NULL);
-#endif
     fprintf (mail, "%s", message.message);
     fclose (mail);
 
     /* Write to the index file */
-    buf = c2_mailbox_index_path (account->mailbox->name);
+    buf = c2_mailbox_index_path (mailbox);
     if ((index = fopen (buf, "a")) == NULL) {
       gdk_threads_enter ();
       window_checking_report (C2_CHECK_ERR, account->acc_name,

@@ -2,6 +2,7 @@
 #include <config.h>
 
 #ifdef BUILD_ADDRESS_BOOK
+#include "main.h"
 #include "addrbook.h"
 #include "autocompletition.h"
 #include "debug.h"

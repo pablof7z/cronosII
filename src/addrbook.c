@@ -39,6 +39,7 @@
 #include <errno.h>
 #include <fnmatch.h>
 
+#include "main.h"
 #include "utils.h"
 #include "init.h"
 #include "addrbook.h"
