@@ -45,7 +45,7 @@ void gui_about_new (void) {
     NULL };
   GtkWidget *href;
 
-  window = gnome_about_new ("CronosII", VERSION, "Debian/GNU edition (C) GPL 2000-2002 Pablo Fernández Navarro", authors, _("A fast flexible GNOME Mail Client."), DATADIR "/cronosII/pixmap/splash.png");
+  window = gnome_about_new ("CronosII",VERSION,"Debian/GNU edition (C) GPL 2000-2002 Pablo Fernández Navarro", authors, _("A fast flexible GNOME Mail Client."), DATADIR "/cronosII/pixmap/splash.png");
   gtk_window_set_modal (GTK_WINDOW (window), TRUE);
   gtk_window_set_transient_for (GTK_WINDOW (window), GTK_WINDOW (WMain->window));
 
