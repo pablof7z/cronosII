@@ -1,0 +1,6 @@
+Sat 01 Dec 2001 Peter Gossner <petergozz@users.sourceforge.net>
+	* Removed support for mainwindow status messages as the plugin
+	would not build with it. (its just commented out so give it a go
+	YMMV)
+	* Please see ../README for install instructions.
+
