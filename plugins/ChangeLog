@@ -1,0 +1,10 @@
+Sat Dec  1 17:19:23 CST 2001  Peter Gossner <petergozz@users.sourceforge.net>
+	*	Modified all source files to enable successful build.
+	*	Removed status line support for sample.c
+	*	added the define to the top of filters.c
+	* 	modified header calls to fix typos.
+	*	traced these through the MR2 source all is well.
+
+	* 	(warning: I do docs not C so while this works for me Your kMileage May Vary. :)
+	
+		

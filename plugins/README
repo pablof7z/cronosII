@@ -1,0 +1,65 @@
+This  Directory contains a clunky work around to have plugins working on CronosII -MR2
+
+There are at least two ways of installing the plugins.
+1.  (the quick and nasty way)
+######################################################################
+To install the built binaries :
+<example>
+$tar -zxvf Fortune-Plugin.tar.gz
+
+$cd fortune/
+$su
+$password
+$make install.
+$exit
+$cronos &
+configure the plugins from the the Main Window
+settings > preferences > plugins
+
+NOTE these binaries built on 2.2.20 LINUX i686 box.
+
+They should work on most other systems i686 and up.
+With CronosII-0.2.2 installed.
+
+(thats a totally uneducated guess really )
+
+ELSE
+###########################################################
+2.  A  more graceful way in that the binaries will be built to your system.
+
+ (use the sources included here they are pre-patched and slightly modified )
+######################################################################
+a/ download the source tar ball for CronosII 0.2.1
+	< http://sourceforge.net/project/showfiles.php?group_id=7093 >
+b/. Important:  back up your current ~/.cronos directory (or just move it)
+
+c/ install the 0.2.1 package.
+	(if you still have a .cronosII directory from vers2.2.0 or up the app will seg fault on launch -- don't worry you wont be using it )
+d/ build the plugins from this directory (cp them to the 0.2.1 src/plugins directory if you like)
+
+e/ make install (as root if you need to)
+
+f/ install version 0.2.2 mr2  
+
+all should be well.
+
+####################################################################
+
+this works .
+(just don't ask me why :))
+
+
+If anybody has a fix for this I would be eager to hear about it.
+
+mail to: gossner@arcom.com.au
+
+CronosII-Hackers@lists.sourceforge.net
+
+Hope this helps.
+
+-- PeterGozz.
+
+Post Script.
+I will work toward a real and transparent fix for this..
+
+
