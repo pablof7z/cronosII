@@ -1,0 +1,33 @@
+<!--bugs.sgml-->
+ 
+ <sect1 id="bugs">
+  <title>Known Bugs and Limitations</title>
+ <para> Most Bugs
+    associated with &app; come from building (or attempting to build)
+    on old or broken libraries. Please check
+ <xref linkend="install">
+      and the source documentation or web-site for help in that area.
+ </para>
+  <para> Some Bugs are actually unfinished or unsupported features
+    please see the Website and/or Source documents for TODO's and
+    Features. (your suggestions and contributions are also welcome)
+  </para>
+ <para> The following are known BUG issues current for
+    &app;&version; </para>
+ <itemizedlist>
+ <listitem> <para>
+	Compilation errors  --upgrade lib gnome-print </para>
+    </listitem>
+ <listitem> <para> User Configured Mailboxes move to
+	different subdirectories on save (but don't disappear) This
+	problem hasn't occurred for some time now and may soon be
+	removed from here. </para> </listitem>
+ <listitem> <para>
+	Import and export of mail directory's renders mime headers
+	unreadable to other mail handlers.
+ </para> </listitem>
+    <listitem> <para> The Search Button is not Functional --(yet)
+      </para> </listitem>
+ </itemizedlist>
+ </sect1>
+

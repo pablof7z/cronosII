@@ -1,0 +1,47 @@
+<!--<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook V3.1//EN"[<!entity app "testingbuild">]>-->
+<!--Place holder for latest news and improvements-->
+<!--Parent Document = cronosII.sgml-->
+<!--latest.sgml-->
+<!--<article>-->
+<sect1 id="latest">
+<title>Latest Developments</title>
+<para>This version of CronosII (&app;) brings the following changes:
+</para>
+  <para>Coming soon a new improved CronosII API and User interface.
+ </para>
+<sect2>
+    <title>CronosII-Scratch</title>
+    <subtitle> Cronos II 0.2.3   - Welcome to the real world. -</subtitle>
+<para>To paraphrase Pablo's original announcement :</para>
+<blockquote><attribution>Pablo </attribution>
+<para>Cronos II 0.2.3 (aka "Welcome to the real world") is CronosII reborn.</para>
+
+  <para>
+ Cronos II is growing and is getting bigger,  when  I started
+this project I didn't have any experience at all.  The  basics weren't
+as strong as they are required to be for such a large  project (as this now
+is), thus this version introduces nothing really new for the
+end user, but introduces a LOT of changes for us, developers.</para> 
+<para>
+Basically, this version is more than just a *recode*, it's a restructuring
+of Cronos II.
+</para> 
+<para>
+The main source of Cronos II is separated from
+the modules which interact with certain tasks.
+Also, with this version, the manual I wrote (actually just
+in CVS under the directory /documentation) titled "Cronos II Development manual"
+is to start being used, so we all code with the same things.</para></blockquote>
+
+
+<para>A browse of the new code however shows some major features under development ( some dramatic bug-fixes
+and interapp compatibility) Every reported bug to date is being addressed and support for HTML and HTTP is in early development. So stand by for the next round .</para>
+<para> The curious can check all of this out from CVS available from the &app; site. Please note however Version 0.2.3 aka Scratch will not work (yet) without major hacking. </para>
+<para>The other major developments in place are the new stable address book and of course the<emphasis> implementation of filtering</emphasis>. (though this only works with version 0.2.1 - I believe).</para>
+</sect2>
+</sect1>
+<!--</article>-->
+
+
+
+

@@ -1,0 +1,139 @@
+<!--Parent Document = cronosII.sgml-->
+<!--Authors-->
+<sect1 id="authors">
+<title>Authors and Contributors</title>
+<para>
+<application>&app;</application> was originated  by <ulink type=http url="&pablo;" > Pablo Fernández Navarro</ulink> 
+
+</para>
+<para>To find more information about
+<application>&app;</application>, please visit the
+<ulink type="http" url="&website;">&app; Web site</ulink> &website; .
+</para>
+<sect2 id=Contributors>
+<title>Contributors</title>
+<subtitle>The Development Team</subtitle>
+<para>In what is a grand Free Software tradition CronosII has been brought to you by an  international Development Team.</para>
+ <itemizedlist>
+ <listitem>
+ <para>
+  <ulink type=http url="&pablo;" > Pablo Fernández Navarro</ulink>
+ <email>&pablo;</email>
+ </para>
+ <para> Project Originator, Leader, and main man generally.
+ Pablo works across all code and documentation of user and Developers Support docs.
+ </para>
+ </listitem>
+  <listitem>
+<para> <ulink type="http" url="&Yves;">Yves Mettier</ulink>
+<email>&Yves;</email>
+</para>
+<para>
+ Autoconf and Automake
+</para>
+<para>
+ French translation
+</para>
+<para>
+ Initial integration of this document inside the Cronos package
+</para>
+</listitem>
+<listitem>
+<para>
+<ulink type="http" url="&bosko;">Bosko Blagojevic</ulink>
+<email>&bosko;</email>
+</para>
+<para> Bosko is a self confessed <quote> high school UNIX geek</quote> working on 
+ issues with Cronos II and Free-BSD. Bosko and Pablo have implemented a VCard (<quote>Group Ware</quote>) compliant
+address-book for Cronos.
+</para>
+<para> Free-BSD porting.
+- Address Book core development.</para>
+</listitem>
+<listitem>
+<para>
+<ulink type="http" url="&arne;" >Arne Caspari</ulink>
+<email>&arne;</email>
+Arne has been working on German translations which brought
+  our supported languages up to 4. 
+</para>
+</listitem>
+<listitem>
+<para><ulink type="http" url="&marc;">Marc</ulink>
+<email>&marc;</email>
+Marc is a recent addition to the team and has already had a large impact
+on the development process. He is overseeing the introduction of better coding practices, error tracing etc. The major impact of Marc's work will be apparent in the new Scratch Version. </para>
+</listitem>
+<listitem>
+<para><ulink type="http" url="&pete;">Peter Gossner</ulink>
+<email>&pete;</email>
+</para>
+<para>
+<quote>Roustabout / General Documentation (English)</quote>
+Peters main aim in life is to make Pablo's life miserable
+ by finding new ways of breaking his glib configuration, and totally misunderstanding the Gnome documentation system.
+</para>
+</listitem>
+<listitem>
+<para>
+<ulink type="http" url="&andre;">Andreé Casteliano</ulink>
+<email>&andre;</email>
+</para>
+<para>
+	Patch to use fortune.
+</para>
+<para>
+ Queue Mailbox (send later ability).
+</para>
+</listitem>
+<listitem>
+<para><ulink url="&pier;" type="http">Pier Carteri</ulink>
+<email>&pier;</email>
+- Italian translation.
+</para>
+<para>That brings us up to 5 languages - Thanks Pier.</para>
+</listitem>
+<listitem>
+<para>
+<ulink url="&jeremy;" type="http">Jeremy Witt</ulink>
+<email>&jeremy;</email>
+</para>
+<para>
+	Patch to give default focus in the Composer window to the To field or to
+	the Body according to some flags.
+</para>
+</listitem>
+<listitem>
+<para>
+<ulink url="&spaghetty;" type="http">spaghetty </ulink>
+<email>&spaghetty</email>
+- Patch for fixing a bug in the smtp.c file that was already fixed in the CVS, but, the intention is what counts... :)
+</para>
+</listitem>
+</itemizedlist>
+<para>
+Thank-you to all the people from around this  planet (at least)  who use CronosII and by doing so
+give support to Open Source Software, GNU, GTK, GNOME, feedback to us, and a clear
+sense of purpose (fear) to the development work.
+</para>
+<para>Any comments, suggestions, ideas or assistance contact the Development Team @
+<email>"&developers"</email>.
+</para>
+<para>Bugs may be reported via the Bug  Report tool or mailing lists at  the &app; <ulink type="http" url="&website;">web-site</ulink> &website;
+You can also use <application>Bug Report
+Tool</application> (<application>bug-buddy</application>), available in the GNOME 
+<guisubmenu>Utilities</guisubmenu> sub-menu of <guimenu>Main
+Menu</guimenu>, for submitting bug reports.</para>
+<para><emphasis> Please do not submit bugs to the gnome bug tracking system</emphasis> (they will be ignored).
+Rather select<emphasis> Independent Project</emphasis> and enter <email>cronosii-developer@lists.sourceforge.net</email>
+as the email address in the bug-report tool.
+</para>
+</sect2>
+</sect1>
+
+
+
+
+
+
+

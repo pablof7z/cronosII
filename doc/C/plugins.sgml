@@ -1,0 +1,19 @@
+<!-- plugins.sgml-->
+<!--A place holder for a future user manual on Plugins-->
+<sect1 id="plugins">
+<title>Plug Ins</title>
+<subtitle>Extensions to &app;</subtitle>
+<para>This is NOT a real doc. Currently it is just a place holder for CVS development,
+please feel free to add to any of these documents!!</para>
+<para>For now I will refer you to the <ulink url="&website;" type="http"> CronosII web site</ulink></para>
+<para>However this is an area where Cronos promises much that is both fun and useful. Need a feature 
+for your mail app then write one and plug it into Cronos, if it works and is useful why not release it so everybody may enjoy it.
+</para>
+<para>Join us at the <ulink type="http" url="&developers;"> Developers Mailing List</ulink> to discuss your ideas</para>
+<sect2>
+<title>Availability</title>
+<para>Download your plug-ins from the<ulink type="http" url="&website"> Cronos Website</ulink> &lt; &website; &gt;
+</para>
+</sect2>
+</sect1>
+      

@@ -1,0 +1,111 @@
+<!--<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook V3.1//EN"[ ]-->
+<!--gtk-brief.sgml Tue Mar 20 10:52:07 PM CST 2001 pete petergozz>-->
+<!--Parent Document = cronosII.sgml-->
+<sect1 id="gtk">
+<title>GTK </title>
+<subtitle>A (Very) Quick Intro</subtitle>
+<para>GTK is short for the Gimp Tool Kit</para>
+<para>These libraries along with GDK and the Gnome libraries are the foundation
+ of your gnome install. You may run GTK based applications without gnome but once applications are tied into
+ the gnome libraries you may not readily run them without the gnome libraries installed.
+</para>
+<para>For a more complete (and authoritative) explanation please see:
+</para>
+<orderedlist>
+<listitem>
+<para>
+The <ulink type="http" url="http://www.gtk.org">GTK </ulink> Website at
+http://www.gtk.org.
+</para>
+</listitem>
+<listitem>
+<para>
+The Gnome Developers Resource base
+ via the <ulink type="http" url="http://www.gnome.org">
+Gnome Web Site </ulink> http://www.gnome.org
+</para>
+</listitem>
+</orderedlist>
+<sect2 id="gtk-tips-features">
+<title>
+How To
+</title>
+<para> GTK allows developers to integrate many features into your
+ Graphical User Interface.</para>
+ <para>Not withstanding features like themes, default icons and window decorations the ability to
+ alter / configure shortcuts and move and tear away menus can be productive and fun.</para>
+ <para>
+ Here is how to :
+ </para>
+ <itemizedlist>
+ <listitem>
+ <para>
+ Reconfigure Shortcuts, read <xref linkend="reconfigure-shortcuts">
+ </para>
+ </listitem>
+ <listitem>
+ <para>
+ Break Away Menus, see <xref linkend="breakway-menus">
+ </para>
+ </listitem>
+ <listitem>
+ <para>
+ Move Menu Bars, refer to <xref linkend="move-menu-bars">
+ </para>
+ </listitem>
+ </itemizedlist>
+ <sect3 id ="reconfigure-shortcuts">
+ <title>Shortcuts </title>
+ <subtitle>Roll Your Own</subtitle>
+ <para>
+ Any sub-menu (flip out) menu item may have its shortcut altered from the default
+ by simply leaving the mouse pointer over that item and entering the new shortcut.
+ You don't have to press the control or alt (meta) keys as well, just any key not already being
+ used in that particular menu.
+ </para>
+ </sect3>
+ <sect3 id="breakway-menus">
+ <title>Tear Off Menus</title>
+ <para>Create a floating version of any menu by doing the following:
+ </para>
+ <itemizedlist>
+ <listitem>
+ <para>
+ Open a menu from the tool-bars:
+ </para>
+ <para>
+ Does it have a perforated line across the top of the functions list?
+ If Yes just click on that line... and you now have a floating menu that you can
+ move about wherever you need.
+ </para>
+ </listitem>
+ <listitem>
+ <para>
+ To close this menu click on the arrow on the left hand side at the top of the menu.
+ Or use your window manager controls on the window border.
+ </para>
+ </listitem>
+  </itemizedlist>
+ </sect3>
+ <sect3 id="move-menu-bars">
+ <title>Make some tool space</title>
+ <para> Sometimes 
+ you just need or want too many tool-bars open to sensibly fit at the head
+  of the Application Window..
+ </para>
+ <para>Left Click over the raised (and textured) area at the left of the
+ tool-bar you want to move. Now Drag it anywhere you like including
+ onto your desktop. Often you can drag it to the side of the Application Window
+  and have it set up running vertically down the 
+ side of the Main Window. Some apps remember all of this as well.
+ </para>
+ <para>The results may not be what you expect but then play is
+ an important part of learning for most mammals  so ..
+ have a go........!
+ </para>
+ </sect3>
+</sect2>
+</sect1>
+
+
+

@@ -1,0 +1,339 @@
+<!--<!doctype article PUBLIC "-//OASIS//DTD DocBook V3.1//EN"[]>
+<article> -->
+<!-- Parent DOC = CronosII.sgml-->
+<sect2>
+<title>Shortcuts</title>
+<subtitle>Keyboard and Mouse Shortcuts</subtitle>
+<para>
+The Table of shortcuts following simply lists commands and functions by menu. 
+Most Keyboard shortcuts are readily customised using standard GTK procedures.
+Please see <xref linkend="gtk-tips-features"> for more information.
+</para>
+<para>
+Briefly however; any menu level shortcut may be altered by holding the mouse cursor 
+over the appropriate launch widget and entering the new shortcut instead of clicking.
+If the shortcut is not being used by this application (or possibly your window manager)
+the content of the widget should show the change and launching should simply be a matter of 
+entering the new shortcut.</para>
+<para>If a particular combination does not work try another.
+</para>
+<table frame=all><title>Keyboard Shortcuts</title>
+<tgroup cols=3 align=left colsep=1 rowsep=1>
+<colspec colname=c1>
+<colspec colname=c2>
+<colspec colname=c3>
+<spanspec spanname=hspan namest=c1 nameend=c3 align=center>
+<spanspec spanname=menuspan namest=c1 nameend=c1 align=left>
+
+<thead>
+<row>
+<entry spanname=hspan>Default Keyboard and Mouse Accelerators</entry>
+</row>
+<row>
+<entry>Menu / Command</entry>
+<entry>Shortcut</entry>
+<entry>Manual Reference</entry>
+</row>
+</thead>
+
+<tfoot>
+<row>
+<entry>Menu / Command</entry>
+<entry>Shortcut</entry>
+<entry>Manual Reference</entry>
+</row>
+</tfoot>
+
+<tbody>
+<!--TABLE BODY STARTS HERE--><!--TABLE BODY STARTS HERE--><!--TABLE BODY STARTS HERE-->
+<row>
+ <entry spanname=menuspan>FILE</entry>
+ <entry></entry>
+ <entry>See <xref linkend="text-menubar"></entry>
+</row>
+<row>
+  <entry align=center>Get New Mail</entry>
+  <entry>g</entry>
+  <entry>See <xref linkend="file-get-mail"></entry>
+ </row>
+ <row>
+ <entry spanname=hspan>The Address Book is a new feature introduced with &app; Version 0.2.1 .</entry>
+ </row>
+ <row>
+ <entry spanname=hspan>Development is still in a state of flux.</entry>
+ </row>
+ <row>
+ <entry align=center>Address Book</entry>
+ <entry>(Alt a) Select Menu Item</entry>
+ <entry>See <xref linkend="addressbook"></entry>
+ </row>
+ <row>
+ <entry align=center>Exit</entry>
+ <entry>(Alt x)or Ctrl q or  Select Menu Item</entry>
+ <entry>Quits &app;</entry>
+ </row>
+<row>
+ <entry spanname=menuspan>EDIT</entry>
+ <entry> ALT e</entry>
+ <entry>See <xref linkend="edit-text-menubar"></entry>
+</row>
+ <row>
+ <entry align=center>Find</entry>
+ <entry>Alt e then f or F6</entry>
+ <entry>Not implemented yet</entry>
+ </row>
+  <row>
+<entry spanname=menuspan>VIEW.	( Items on this menu are Mouse Select Only  )</entry>
+<entry></entry>
+<entry>Refer to <xref linkend="view-menu"></entry>
+</row>
+ <row>
+ <entry align=center>From</entry>
+ <entry>Sender Details</entry>
+ <entry>Display sender details.</entry>
+ </row>
+ <row>
+ <entry align=center>Account</entry>
+ <entry>POP or SMTP account configuration </entry>
+ <entry>From which of your accounts. </entry>
+ </row>
+ <row>
+ <entry align=center>To </entry>
+ <entry>Recipient </entry>
+ <entry>Show recipient in <quote>header</quote> </entry>
+ </row>
+ <row>
+ <entry align=center>CC</entry>
+ <entry>Carbon Copy </entry>
+ <entry>Who else will get this message. </entry>
+ </row>
+ <row>
+ <entry align=center>BCC</entry>
+ <entry>Blind Carbon Copy </entry>
+ <entry>Reference Copy No addresses shown </entry>
+ </row>
+ <row>
+ <entry align=center>Date </entry>
+ <entry>Date received </entry>
+ <entry>The date you received this mail</entry>
+ </row>
+ <row>
+ <entry align=center>Subject </entry>
+ <entry>Mail Header Subject </entry>
+ <entry>Show Message Subject</entry>
+ </row>
+ <row>
+ <entry align=center>Priority</entry>
+ <entry> </entry>
+ <entry> </entry>
+ </row>
+ <row>
+ <entry spanname=menuspan>MAILBOX</entry>
+ <entry> Alt a</entry>
+ <entry>Refer to<xref linkend="mailbox-text-menubar"></entry>
+</row>
+ <row>
+ <entry align=center>Speed Up </entry>
+ <entry>Alt a then s </entry>
+ <entry>Refer to <xref linkend="speed-up"></entry>
+ </row>
+ <row>
+ <entry align=center>Import</entry>
+ <entry>Alt a then i </entry>
+ <entry>See <xref linkend="importing"> </entry>
+ </row>
+ <row>
+ <entry align=center>Export </entry>
+ <entry>Alt a then e </entry>
+ <entry>See <xref linkend="exporting"> </entry>
+ </row>
+ <row>
+ <entry spanname=menuspan>MESSAGE</entry>
+ <entry></entry>
+ <entry>Refer to<xref linkend="message-text-menubar"> </entry>
+ </row>
+ <row>
+ <entry align=center>Compose</entry>
+ <entry>Ctrl n (for new)</entry>
+ <entry>See <xref linkend="compose-message"></entry>
+ </row>
+ <row>
+ <entry align=right>Composer File Menu</entry>
+ <entry>Alt f</entry>
+ <entry>Please refer to <xref  linkend="composer-file"></entry>
+ </row>
+ <row>
+ <entry align=right>Send</entry>
+ <entry>Ctrl Return (enter)</entry>
+ <entry>See <xref  linkend="composer-file"></entry>
+ </row>
+ <row>
+ <entry align=right>Save</entry>
+ <entry>Ctrl s</entry>
+ <entry>See <xref linkend="composer-file"></entry>
+ </row>
+ <row>
+ <entry align=right>Save to File</entry>
+ <entry>No default try setting Ctrl l</entry>
+ <entry>See <xref linkend="composer-file"></entry>
+ </row><row>
+ <entry align=right>Close</entry>
+ <entry>Ctrl w (closes Composer)</entry>
+ <entry>See <xref linkend="composer-file"></entry>
+ </row>
+ <row>
+ <entry align=center>Edit</entry>
+ <entry>Alt e</entry>
+ <entry>See <xref linkend="composer-edit"></entry>
+ </row>
+ <row>
+ <entry align=right>Select All</entry>
+ <entry>Alt e then Alt s</entry>
+ <entry>Selects entire message content</entry>
+ </row>
+ <row>
+ <entry align=right>Clear</entry>
+ <entry>Alt e then  l</entry>
+ <entry>Clears message or selected text</entry>
+ </row>
+ <row>
+ <entry align=center>Insert</entry>
+ <entry>alt i</entry>
+ <entry>Insert one of the following:</entry>
+ </row>
+ <row>
+ <entry align=right>File</entry>
+ <entry>Shift f</entry>
+ <entry>See <xref linkend="composer-file"></entry>
+ </row>
+ <row>
+ <entry align=right>Signature</entry>
+ <entry>Alt s</entry>
+ <entry>Inserts the Signature file you set up for the current account</entry>
+ </row>
+ <row>
+ <entry align=right>Attachment</entry>
+ <entry>Alt a</entry>
+ <entry>See<xref linkend="select-a-file"></entry>
+ </row>
+ <row>
+ <entry align=center>View</entry>
+ <entry>Alt v</entry>
+ <entry>See View above</entry>
+ </row>
+ <row>
+ <entry align=center>Save</entry>
+ <entry>Ctrl s</entry>
+ <entry align=center>Save to Drafts Mailbox</entry>
+ </row>
+ <row>
+ <entry align=center >Print</entry>
+ <entry>No Default try Alt p</entry>
+ <entry>Opens the Printer Dialog. Refer to <xref linkend="icon-print"></entry>
+ </row>
+ <row>
+ <entry align=center>Reply</entry>
+ <entry>Ctrl r</entry>
+ <entry>See <xref linkend="icon-reply"> </entry>
+ </row>
+ <row>
+ <entry align=center>Reply All</entry>
+ <entry>Ctrl a</entry>
+ <entry>See <xref linkend="icon-reply-all"></entry>
+ </row>
+ <row>
+ <entry align=center>Forward</entry>
+ <entry>Ctrl f</entry>
+ <entry>Refer to <xref linkend="icon-forward"></entry>
+ </row>
+ <row>
+ <entry align=center>Copy</entry>
+ <entry>Alt c</entry>
+ <entry>Copy the message to another &app; Mailbox</entry>
+ </row>
+  <row>
+ <entry align=center>Move</entry>
+ <entry>Alt m</entry>
+ <entry>Move the message to another Mailbox</entry>
+ </row>
+ <row>
+ <entry align=center>Delete</entry>
+ <entry>d</entry>
+ <entry>Sends Message to Garbage Bin</entry>
+ </row>
+ <row>
+ <entry align=center>Expunge</entry>
+ <entry>Ctrl e</entry>
+ <entry>Removes message (Bypass the Garbage bin)</entry>
+ </row>
+ <row>
+ <entry align=center>Mark</entry>
+ <entry>k</entry>
+ <entry>Remark Message as :</entry>
+ </row>
+ <row>
+ <entry align=right>Unread</entry>
+ <entry>k then Alt U</entry>
+ <entry>Message now Unread</entry>
+ </row>
+  <row>
+ <entry align=right>Read</entry>
+ <entry>k then Alt v</entry>
+ <entry>Message now read</entry>
+ </row>
+ <row>
+ <entry align=right>Replied</entry>
+ <entry>k then Alt r</entry>
+ <entry>Message marked as replied to.</entry>
+ </row>
+ <row>
+ <entry align=right>Forwarded</entry>
+ <entry>k then Alt f</entry>
+ <entry>Mark message as forwarded</entry>
+ </row>
+ <row>
+ <entry align=center>Previous</entry>
+ <entry>UP ARROW or z </entry>
+ <entry>Travel up the message list</entry>
+ </row>
+  <row>
+ <entry align=center>Next</entry>
+ <entry>Down Arrow or x</entry>
+ <entry>Travel Down the message list</entry>
+ </row>
+  <row>
+ <entry spanname=menuspan>SETTINGS</entry>
+ <entry>Alt s</entry>
+ <entry></entry>
+ </row>
+  <row>
+ <entry align=center>Preferences</entry>
+ <entry>Alt s then p</entry>
+ <entry>See </entry>
+ </row>
+  <row>
+ <entry spanname=menuspan>HELP</entry>
+ <entry>Alt h</entry>
+ <entry></entry>
+ </row>
+ <row>
+ <entry align=center>Bug Report</entry>
+ <entry>No Short Cut</entry>
+ <entry>URL for Website Bug Report tools</entry>
+ </row>
+ <row>
+ <entry align=center>Manual</entry>
+ <entry>Mouse Select Only</entry>
+ <entry>Opens This Manual</entry>
+ </row>
+ <row>
+ <entry align=center>About</entry>
+  <entry>a</entry>
+ <entry>GTK / CronosII about dialog</entry>
+  </row> 
+</tbody>
+</tgroup>
+</table>
+
+</sect2>
+<!--</article>-->
